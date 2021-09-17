@@ -20,7 +20,7 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-  <title>Hello World - Hexo</title>
+  <title>10×单细胞测序	V5-step3:DNA Amplification &amp; QC - Hexo</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -165,7 +165,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Hello World">
+            <span class="h2" id="subtitle" title="10×单细胞测序	V5-step3:DNA Amplification & QC">
               
             </span>
 
@@ -175,8 +175,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-09-16 16:47" pubdate>
-        2021年9月16日 下午
+      <time datetime="2021-09-03 17:18" pubdate>
+        2021年9月3日 下午
       </time>
     </span>
   
@@ -187,7 +187,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      75 字
+      1.4k 字
     </span>
   
 
@@ -197,7 +197,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      17
        分钟
     </span>
   
@@ -227,28 +227,402 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Hello World</h1>
+            <h1 style="display: none">10×单细胞测序	V5-step3:DNA Amplification &amp; QC</h1>
             
             <div class="markdown-body">
-              <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+              <h1 id="10×单细胞测序-V5-step3-DNA-Amplification-amp-QC"><a href="#10×单细胞测序-V5-step3-DNA-Amplification-amp-QC" class="headerlink" title="10×单细胞测序    V5-step3:DNA Amplification &amp; QC"></a>10×单细胞测序    V5-step3:DNA Amplification &amp; QC</h1><p><em>整理人：刘可钦</em></p>
+<h2 id="3-0-cDNA-Amplification-amp-QC"><a href="#3-0-cDNA-Amplification-amp-QC" class="headerlink" title="3.0 cDNA Amplification &amp; QC"></a>3.0 cDNA Amplification &amp; QC</h2><p>【试剂准备】</p>
+<table>
+<thead>
+<tr>
+<th>试剂</th>
+<th>试剂存储位置</th>
+<th>试剂取用期间存储标准</th>
+<th>试剂编号</th>
+<th>试剂取用期间操作标准</th>
+<th>试剂长期储存标准</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>cDNA Additive</td>
+<td>-20℃冰箱下部中层试剂盒内</td>
+<td>室温放置</td>
+<td>220067</td>
+<td>解冻，涡旋震荡，确认无沉淀，快速离心</td>
+<td>-20℃存储</td>
+</tr>
+<tr>
+<td>cDNA Primer Mix</td>
+<td>-20℃冰箱下部中层试剂盒内</td>
+<td>室温放置</td>
+<td></td>
+<td>解冻，涡旋震荡，确认无沉淀，快速离心</td>
+<td>-20℃存储</td>
+</tr>
+<tr>
+<td>Beckman Coulter SPRIselect Reagent</td>
+<td>实验台</td>
+<td>室温放置</td>
+<td>/</td>
+<td>在用于配置混匀液前涡旋震荡≥30秒，如仍有块状物，应使用移液枪吹打混匀；使用前不可离心。</td>
+<td>室温存储</td>
+</tr>
+<tr>
+<td>Amplification Master Mix</td>
+<td>-20℃冰箱下部中层试剂盒内</td>
+<td>冰盒放置</td>
+<td>220125</td>
+<td>解冻，涡旋震荡，确认无沉淀，快速离心</td>
+<td>-20℃存储</td>
+</tr>
+<tr>
+<td>Equalbit dsDNA HS Assay Kit</td>
+<td>实验台冰箱上层</td>
+<td>室温放置</td>
+<td>/</td>
+<td>现用现配</td>
+<td>4℃存储</td>
+</tr>
+<tr>
+<td>Qiagen Bugger EB</td>
+<td>实验台</td>
+<td>室温放置</td>
+<td>/</td>
+<td>/</td>
+<td>室温存储</td>
+</tr>
+<tr>
+<td>10× Magnetic Separator</td>
+<td>实验台</td>
+<td>室温放置</td>
+<td>230003</td>
+<td>/</td>
+<td>室温存储</td>
+</tr>
+<tr>
+<td>Prepare 80% Ethanol Prepare 15ml for 8 reactions</td>
+<td>实验台</td>
+<td>室温放置</td>
+<td>/</td>
+<td>现用现配。</td>
+<td>室温存储</td>
+</tr>
+</tbody></table>
+<p><strong>注意，标注测量浓度的试剂盒</strong></p>
+<h2 id="3-1-cDNA-Amplification"><a href="#3-1-cDNA-Amplification" class="headerlink" title="3.1 cDNA Amplification"></a>3.1 cDNA Amplification</h2><ol>
+<li><p>在冰上配置 cDNA Amplification mix，将 mix 涡旋震荡并快速离心。</p>
+<blockquote>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Nuclease-free water</th>
+<th>Amplification Master Mix</th>
+<th>cDNA Additive</th>
+<th>cDNA Primer Mix</th>
+<th>总体积</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>试剂编号</td>
+<td>/</td>
+<td>220125</td>
+<td>220067</td>
+<td>220106</td>
+<td>/</td>
+</tr>
+<tr>
+<td>1x(μl)</td>
+<td>8</td>
+<td>50</td>
+<td>5</td>
+<td>2</td>
+<td>65</td>
+</tr>
+<tr>
+<td>2x(μl)</td>
+<td>17.6</td>
+<td>110</td>
+<td>11</td>
+<td>4.4</td>
+<td>143</td>
+</tr>
+<tr>
+<td>3x(μl)</td>
+<td>26.4</td>
+<td>165</td>
+<td>16.5</td>
+<td>6.6</td>
+<td>214.5</td>
+</tr>
+<tr>
+<td>4x(μl)</td>
+<td>35</td>
+<td>220</td>
+<td>22</td>
+<td>9</td>
+<td>286</td>
+</tr>
+<tr>
+<td>5x(μl)</td>
+<td>44</td>
+<td>275</td>
+<td>27.5</td>
+<td>11</td>
+<td>357.5</td>
+</tr>
+<tr>
+<td>6x(μl)</td>
+<td>52.8</td>
+<td>330</td>
+<td>33</td>
+<td>13.2</td>
+<td>429</td>
+</tr>
+<tr>
+<td>7x(μl)</td>
+<td>58.8</td>
+<td>385</td>
+<td>38.5</td>
+<td>14.7</td>
+<td>497</td>
+</tr>
+<tr>
+<td>8x(μl)</td>
+<td>70</td>
+<td>440</td>
+<td>44</td>
+<td>18</td>
+<td>572</td>
+</tr>
+<tr>
+<td>9x(μl)</td>
+<td>75.6</td>
+<td>495</td>
+<td>49.5</td>
+<td>18.9</td>
+<td>643.5</td>
+</tr>
+<tr>
+<td>10x(μl)</td>
+<td>88</td>
+<td>550</td>
+<td>55</td>
+<td>22</td>
+<td>715</td>
+</tr>
+<tr>
+<td>11x(μl)</td>
+<td>96.8</td>
+<td>605</td>
+<td>60.5</td>
+<td>24.2</td>
+<td>786.5</td>
+</tr>
+<tr>
+<td>12x(μl)</td>
+<td>105.6</td>
+<td>660</td>
+<td>66</td>
+<td>26.4</td>
+<td>858</td>
+</tr>
+</tbody></table>
+</blockquote>
+</li>
+<li><p>向每管样品（35μl）中加入 65μl 的 cDNA Amplification mix。</p>
+</li>
+<li><p>将移液枪量程调至 90μl，吹打混匀 5 次；然后快速离心。</p>
+</li>
+<li><p>在 PCR仪 上选择【10x5amp】程序，将样品放入 PCR仪，然后开始程序。</p>
+<blockquote>
+<table>
+<thead>
+<tr>
+<th>热盖温度</th>
+<th>反应容量</th>
+<th>反应时间</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>105℃</td>
+<td>100μl</td>
+<td>25-50min</td>
+</tr>
+<tr>
+<td>步骤</td>
+<td>温度</td>
+<td>时间</td>
+</tr>
+<tr>
+<td>1</td>
+<td>98℃</td>
+<td>00:00:40</td>
+</tr>
+<tr>
+<td>2</td>
+<td>98℃</td>
+<td>00:00:20</td>
+</tr>
+<tr>
+<td>3</td>
+<td>67℃</td>
+<td>00:00:30</td>
+</tr>
+<tr>
+<td>4</td>
+<td>72℃</td>
+<td>00:01:00</td>
+</tr>
+<tr>
+<td>5</td>
+<td>go to step2, see table below for total # of cycles</td>
+<td>/</td>
+</tr>
+<tr>
+<td>6</td>
+<td>72℃</td>
+<td>00:01:00</td>
+</tr>
+<tr>
+<td>7</td>
+<td>4℃</td>
+<td>hold</td>
+</tr>
+</tbody></table>
+<p><strong>附注</strong>：【cycle数的选择】</p>
+<table>
+<thead>
+<tr>
+<th>Targeted Cell Recovery</th>
+<th>Primary Cells Total Cycles</th>
+<th>Cell Lines Total Cycles</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>100-500</td>
+<td>18</td>
+<td>16</td>
+</tr>
+<tr>
+<td>501-2000</td>
+<td>16</td>
+<td>14</td>
+</tr>
+<tr>
+<td>2001-6000</td>
+<td>14</td>
+<td>12</td>
+</tr>
+<tr>
+<td>6001-10000</td>
+<td>13</td>
+<td>11</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>注意</strong>：tageted cell 一般为 PBMC，故 cycle 数一般设置为 14 ，即总 PCR 反应时长约为 34min。</p>
+</blockquote>
+<p>本步骤结束后可将样本储存于 4℃ 冰箱中，保存 72h，以待进行下一步实验。</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="3-2-cDNA-Cleanup-SPRIselect"><a href="#3-2-cDNA-Cleanup-SPRIselect" class="headerlink" title="3.2 cDNA Cleanup-SPRIselect"></a>3.2 cDNA Cleanup-SPRIselect</h2><ol>
+<li><p>涡旋震荡 SPRIselect Reagent &gt; 30s，使管内无块状沉淀，然后吸取 60μl SPRIselect Reagent(0.6x)，加入样本。再将移液枪量程调至 150μl，吹打混匀 15 次。</p>
+</li>
+<li><p>样本在室温下静置 5min。</p>
+<blockquote>
+<p><em>此时可以开始准备 80% 乙醇加样槽。可将适量 80% 乙醇倒入加样槽中，暂时不用时应将加样槽放在塑料袋中防止污染。</em></p>
+</blockquote>
+</li>
+<li><p>放在 10× Magnetic Separator high 上，直到样本澄清。</p>
+<blockquote>
+<p><strong>需要</strong>：在 10× Magnetic Separator high 上放置 2min，使 beads 充分吸附在管壁上。</p>
+</blockquote>
+</li>
+<li><p>移除上清。</p>
+<blockquote>
+<p><strong>避免</strong>：移除 beads 或将 beads 吸入枪头。</p>
+</blockquote>
+</li>
+<li><p>清洗第一遍：保持样品仍然放置在10× Magnetic Separator high 上，向每个PCR管内加入 200μl 80% 乙醇，等待30s。</p>
+</li>
+<li><p>吸去乙醇。</p>
+</li>
+</ol>
+<blockquote>
+<p><strong>注意</strong>：样品量较多时，可使用排枪。</p>
+</blockquote>
+<ol start="7">
+<li><p>清洗第二遍：保持样品仍然放置在10× Magnetic Separator high 上，向每个PCR管内加入 200μl 80% 乙醇，等待30s。</p>
+</li>
+<li><p>吸去乙醇。</p>
+<blockquote>
+<p><strong>注意</strong>：样品量较多时，可使用排枪。</p>
+</blockquote>
+</li>
+<li><p>将样品PCR管取出，快速离心，然后放在 10× Magnetic Separator low上。</p>
+<blockquote>
+<p><strong>需要</strong>：在快速离心时，贴在样品PCR管内的 beads 应朝向离心机外侧。</p>
+</blockquote>
+</li>
+<li><p>用 200μl 移液枪将样品管内残存的乙醇吸除，然后敞开管盖，在空气中晾干 2min。</p>
+<blockquote>
+<p><strong>需要</strong>：（若样品量较多）在秒表计时超过 1min后，应立刻加入35.5μl Elution Solution I，防止 beads 过干。</p>
+</blockquote>
+</li>
+<li><p>将样品PCR管从 10× Magnetic Separator low 上取下，立刻向每管内加入 45.5μl Buffer EB。</p>
+</li>
+<li><p>移液枪量程调制 45μl，每管样品吹打混匀 15 次，直到管内无块状物残留。</p>
+</li>
+<li><p>室温下静置 2min。</p>
+<blockquote>
+<p><em>此时可开始准备新的PCR管，并写好标签。</em></p>
+</blockquote>
+</li>
+<li><p>将样品PCR管放在 10× Magnetic Separator high 上 2min，直到管内液体澄清。</p>
+</li>
+<li><p>从每管中吸取 45μl 澄清液体，转移至新管。</p>
+</li>
+<li><p>此后可将样本在 4℃ 冰箱中储存 72h，或在 -20℃ 冰箱中储存 7d，然后进行下一步操作。</p>
+</li>
+</ol>
+<h2 id="3-3-cDNA-QC-amp-Quantification"><a href="#3-3-cDNA-QC-amp-Quantification" class="headerlink" title="3.3 cDNA QC &amp; Quantification"></a>3.3 cDNA QC &amp; Quantification</h2><p>【使用 Equalbit dsDNA HS Assay Kit 对样品进行浓度测定】</p>
+<ol>
+<li><p>按照 Equalbit Reagent 和 Equalbit Buffer 1:200 的比例配置工作液。</p>
+</li>
+<li><p>配置标准品：准备好标有“1”和“2”的 0.6ml EP 管，每管加入 190μl 工作液，然后分别吸取 10μl Equalbit Standard # 1 和 Equalbit Standard # 2，加入管中。</p>
+</li>
+<li><p>配置样品：准备好标有样品标签的 0.6ml EP 管，每管加入 199μl 工作液，然后分别吸取 1μl 样品溶液，加入管中。</p>
+</li>
+<li><p>将按照以上步骤配置的标准品和样品涡旋震荡，然后避光反应 2min。</p>
+</li>
+<li><p>通过 Qubit 荧光仪检测浓度。</p>
+<blockquote>
+<p><em>将每个样品的浓度记录在试验台的实验记录本上，作为 V5 step 6 的参考。</em> </p>
+</blockquote>
+</li>
+</ol>
 
             </div>
             <hr>
             <div>
               <div class="post-metas mb-3">
                 
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/BIOINFO-EXPERIMENT-RECORDS/">BIOINFO EXPERIMENT RECORDS</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/SINGLE-CELL-SEQUENCING/">SINGLE CELL SEQUENCING</a>
+                    
+                  </div>
                 
               </div>
               
@@ -263,9 +637,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/09/16/20210910to0916gwasanalysisinr/">
+                      <a href="/2021/09/03/20210903%E5%8D%95%E7%BB%86%E8%83%9E%E6%B5%8B%E5%BA%8FV5step2/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">2021.9.10-9.16实验记录:GWAS analysis in R</span>
+                        <span class="hidden-mobile">10×单细胞测序-V5-step2:Post GEM-RT Cleanup</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -273,8 +647,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/09/03/20210903%E5%8D%95%E7%BB%86%E8%83%9E%E6%B5%8B%E5%BA%8FV5step2/">
-                        <span class="hidden-mobile">10×单细胞测序-V5-step2:Post GEM-RT Cleanup</span>
+                      <a href="/2021/09/03/20210903%E5%8D%95%E7%BB%86%E8%83%9E%E6%B5%8B%E5%BA%8FV5step6/">
+                        <span class="hidden-mobile">V5-step6:5‘ Gene Expression（GEX）Library Construction</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

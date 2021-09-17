@@ -20,7 +20,7 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-  <title>Hello World - Hexo</title>
+  <title>10×单细胞测序-V5-step2:Post GEM-RT Cleanup - Hexo</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -165,7 +165,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Hello World">
+            <span class="h2" id="subtitle" title="10×单细胞测序-V5-step2:Post GEM-RT Cleanup">
               
             </span>
 
@@ -175,8 +175,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-09-16 16:47" pubdate>
-        2021年9月16日 下午
+      <time datetime="2021-09-03 17:18" pubdate>
+        2021年9月3日 下午
       </time>
     </span>
   
@@ -187,7 +187,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      75 字
+      1.3k 字
     </span>
   
 
@@ -197,7 +197,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      16
        分钟
     </span>
   
@@ -227,28 +227,407 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Hello World</h1>
+            <h1 style="display: none">10×单细胞测序-V5-step2:Post GEM-RT Cleanup</h1>
             
             <div class="markdown-body">
-              <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+              <h1 id="10×单细胞测序-V5-step2-Post-GEM-RT-Cleanup"><a href="#10×单细胞测序-V5-step2-Post-GEM-RT-Cleanup" class="headerlink" title="10×单细胞测序    V5-step2: Post GEM-RT Cleanup"></a>10×单细胞测序    V5-step2: Post GEM-RT Cleanup</h1><p><em>整理人：刘可钦</em></p>
+<h2 id="2-0-Post-GEM-RT-Cleanup"><a href="#2-0-Post-GEM-RT-Cleanup" class="headerlink" title="2.0 Post GEM-RT Cleanup"></a>2.0 Post GEM-RT Cleanup</h2><p>【试剂准备】</p>
+<table>
+<thead>
+<tr>
+<th>试剂</th>
+<th>试剂存储位置</th>
+<th>试剂取用期间存储标准</th>
+<th>试剂编号</th>
+<th>试剂取用期间操作标准</th>
+<th>试剂长期储存标准</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Additive A</td>
+<td>-20℃冰箱下部中层试剂盒内</td>
+<td>室温放置</td>
+<td>220074</td>
+<td>解冻，涡旋震荡，确认无沉淀，快速离心</td>
+<td>-20℃存储</td>
+</tr>
+<tr>
+<td>Dynabeads MyOne SILANE</td>
+<td>实验台冰箱上层</td>
+<td>室温放置</td>
+<td>2000048</td>
+<td>在用于配置混匀液前涡旋震荡≥30秒，如仍有块状物，应使用移液枪吹打混匀；使用前不可离心。</td>
+<td>4℃存储</td>
+</tr>
+<tr>
+<td>Buffer Sample Clean Up 1</td>
+<td>-20℃冰箱下部中层试剂盒内</td>
+<td>水浴加热至65℃</td>
+<td>220020</td>
+<td>在65℃水浴锅上温浴十分钟，确认无肉眼可见的结晶物，冷却至室温。</td>
+<td>-20℃存储</td>
+</tr>
+<tr>
+<td>Recovery Agent</td>
+<td>实验台</td>
+<td>室温放置</td>
+<td>220016</td>
+<td>/</td>
+<td>室温存储</td>
+</tr>
+<tr>
+<td>Qiagen Bugger EB</td>
+<td>实验台</td>
+<td>室温放置</td>
+<td>/</td>
+<td>/</td>
+<td>室温存储</td>
+</tr>
+<tr>
+<td>Bio-Rad 10% Tween 20</td>
+<td>实验台</td>
+<td>室温放置</td>
+<td>/</td>
+<td>/</td>
+<td>室温存储</td>
+</tr>
+<tr>
+<td>10× Magnetic Separator</td>
+<td>实验台</td>
+<td>室温放置</td>
+<td>230003</td>
+<td>/</td>
+<td>室温存储</td>
+</tr>
+<tr>
+<td>Prepare 80% Ethanol Prepare 15ml for 8 reactions</td>
+<td>实验台</td>
+<td>室温放置</td>
+<td>/</td>
+<td>现用现配。</td>
+<td>室温存储</td>
+</tr>
+</tbody></table>
+<h2 id="2-1-Post-GEM-RT-Cleanup-Dynabeads"><a href="#2-1-Post-GEM-RT-Cleanup-Dynabeads" class="headerlink" title="2.1 Post GEM-RT Cleanup-Dynabeads"></a>2.1 Post GEM-RT Cleanup-Dynabeads</h2><ol>
+<li><p>在室温下向每个样本中加入 125μl Recovery Agent，然后静置等待 2min。 </p>
+<blockquote>
+<p><strong>需要</strong>：用移液枪头沿管壁旋转并缓慢滴加。</p>
+<p><strong>避免</strong>：震荡混匀或吹打混匀。</p>
+<p><strong>正确操作后的样品外观</strong>：![截屏2021-09-01 下午12.56.24](/Users/keqinliu/Library/Application Support/typora-user-images/截屏2021-09-01 下午12.56.24.png)</p>
+<p><em>此时中可开始制备Dynabeads Cleanup Mix。</em></p>
+</blockquote>
+</li>
+<li><p>用移液枪从底部缓慢吸除 125μl Recovery Agent。</p>
+<blockquote>
+<p><strong>注意</strong>：出现分层现象，上层为水状液体，下层为油状液体。</p>
+<p><strong>需要</strong>：将移液枪枪头伸入PCR管底部。</p>
+<p><strong>避免</strong>：吸入上层水状液体；使样品从PCR管内溢出。</p>
+<p><strong>正确操作后的样品外观</strong>：![截屏2021-09-01 下午1.09.52](/Users/keqinliu/Library/Application Support/typora-user-images/截屏2021-09-01 下午1.09.52.png)</p>
+</blockquote>
+</li>
+<li><p>配置 Dynabeads Cleanup Mix</p>
+<blockquote>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Nuclease-free water</th>
+<th>Buffer Sample Clean Up 1</th>
+<th>Dynabeads MyOne SILANE</th>
+<th>Additive A</th>
+<th>总体积</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>试剂编号</td>
+<td>/</td>
+<td>220020</td>
+<td>2000048</td>
+<td>220074</td>
+<td>/</td>
+</tr>
+<tr>
+<td>1x(μl)</td>
+<td>5</td>
+<td>182</td>
+<td>8</td>
+<td>5</td>
+<td>200</td>
+</tr>
+<tr>
+<td>2x(μl)</td>
+<td>11</td>
+<td>400.4</td>
+<td>17.6</td>
+<td>11</td>
+<td>440</td>
+</tr>
+<tr>
+<td>3x(μl)</td>
+<td>16.5</td>
+<td>600.6</td>
+<td>16.4</td>
+<td>16.5</td>
+<td>660</td>
+</tr>
+<tr>
+<td>4x(μl)</td>
+<td>22</td>
+<td>801</td>
+<td>35</td>
+<td>22</td>
+<td>880</td>
+</tr>
+<tr>
+<td>5x(μl)</td>
+<td>27.5</td>
+<td>1001</td>
+<td>44</td>
+<td>27.5</td>
+<td>1100</td>
+</tr>
+<tr>
+<td>6x(μl)</td>
+<td>33</td>
+<td>1201.2</td>
+<td>52.8</td>
+<td>33</td>
+<td>1320</td>
+</tr>
+<tr>
+<td>7x(μl)</td>
+<td>38.5</td>
+<td>1401.4</td>
+<td>61.6</td>
+<td>38.5</td>
+<td>1540</td>
+</tr>
+<tr>
+<td>8x(μl)</td>
+<td>44</td>
+<td>1602</td>
+<td>70</td>
+<td>44</td>
+<td>1760</td>
+</tr>
+<tr>
+<td>9x(μl)</td>
+<td>49.5</td>
+<td>1801.8</td>
+<td>79.2</td>
+<td>49.5</td>
+<td>1980</td>
+</tr>
+<tr>
+<td>10x(μl)</td>
+<td>55</td>
+<td>2002</td>
+<td>88</td>
+<td>55</td>
+<td>2200</td>
+</tr>
+<tr>
+<td>11x(μl)</td>
+<td>60.5</td>
+<td>2</td>
+<td>96.8</td>
+<td>60.5</td>
+<td>1420</td>
+</tr>
+<tr>
+<td>12x(μl)</td>
+<td>66</td>
+<td>2402.4</td>
+<td>105.6</td>
+<td>66</td>
+<td>1640</td>
+</tr>
+</tbody></table>
+</blockquote>
+</li>
+<li><p>将 Dynabeads Cleanup Mix 涡旋震荡，向每管样品中加入 200μl，用 200μl 移液枪吹打混匀 5 次。</p>
+</li>
+<li><p>在室温下静置 10min。</p>
+<blockquote>
+<p><strong>正确操作后的样品外观</strong>：![截屏2021-09-01 下午2.37.35](/Users/keqinliu/Library/Application Support/typora-user-images/截屏2021-09-01 下午2.37.35.png)</p>
+<p><em>此时可以开始制备Elution Solution I，并准备 80% 乙醇加样槽。可将适量 80% 乙醇倒入加样槽中，暂时不用时应将加样槽放在塑料袋中防止污染。</em></p>
+</blockquote>
+</li>
+<li><p>配置 Elution Solution I。</p>
+<blockquote>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Buffer EB</th>
+<th>10% Tween 20</th>
+<th>Additive A</th>
+<th>总体积</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>试剂编号</td>
+<td>/</td>
+<td>/</td>
+<td>220074</td>
+<td>/</td>
+</tr>
+<tr>
+<td>1x(μl)</td>
+<td>98</td>
+<td>1</td>
+<td>1</td>
+<td>100</td>
+</tr>
+<tr>
+<td>2x(μl)</td>
+<td>196</td>
+<td>2</td>
+<td>2</td>
+<td>200</td>
+</tr>
+<tr>
+<td>3x(μl)</td>
+<td>294</td>
+<td>3</td>
+<td>3</td>
+<td>300</td>
+</tr>
+<tr>
+<td>4x(μl)</td>
+<td>392</td>
+<td>4</td>
+<td>4</td>
+<td>400</td>
+</tr>
+<tr>
+<td>5x(μl)</td>
+<td>490</td>
+<td>5</td>
+<td>5</td>
+<td>500</td>
+</tr>
+<tr>
+<td>6x(μl)</td>
+<td>588</td>
+<td>6</td>
+<td>6</td>
+<td>600</td>
+</tr>
+<tr>
+<td>7x(μl)</td>
+<td>686</td>
+<td>7</td>
+<td>7</td>
+<td>700</td>
+</tr>
+<tr>
+<td>8x(μl)</td>
+<td>784</td>
+<td>8</td>
+<td>8</td>
+<td>800</td>
+</tr>
+<tr>
+<td>9x(μl)</td>
+<td>882</td>
+<td>9</td>
+<td>9</td>
+<td>900</td>
+</tr>
+<tr>
+<td>10x(μl)</td>
+<td>980</td>
+<td>10</td>
+<td>10</td>
+<td>1000</td>
+</tr>
+<tr>
+<td>11x(μl)</td>
+<td>1078</td>
+<td>11</td>
+<td>11</td>
+<td>1100</td>
+</tr>
+<tr>
+<td>12x(μl)</td>
+<td>1176</td>
+<td>12</td>
+<td>12</td>
+<td>1200</td>
+</tr>
+</tbody></table>
+</blockquote>
+</li>
+<li><p>样品静置结束后，放置于 10× Magnetic Separator high 上，直到样本澄清。</p>
+<blockquote>
+<p><strong>需要</strong>：在 10× Magnetic Separator 上放置 2min，使 beads 充分吸附在管壁上。</p>
+<p><strong>注意</strong>：PCR管内的水油分层是正常现象。</p>
+</blockquote>
+</li>
+<li><p>将PCR管内的液体移除。</p>
+<blockquote>
+<p><strong>避免</strong>：移除 beads 或将 beads 吸入枪头。</p>
+</blockquote>
+</li>
+<li><p>清洗第一遍：保持样品仍然放置在10× Magnetic Separator high 上，向每个PCR管内加入 300μl 80% 乙醇，等待30s。</p>
+</li>
+<li><p>吸去乙醇。</p>
+<blockquote>
+<p><strong>注意</strong>：样品量较多时，可使用排枪。</p>
+</blockquote>
+</li>
+<li><p>清洗第二遍：保持样品仍然放置在10× Magnetic Separator high 上，向每个PCR管内加入 200μl 80% 乙醇，等待30s。</p>
+</li>
+<li><p>吸去乙醇。</p>
+<blockquote>
+<p><strong>注意</strong>：样品量较多时，可使用排枪。</p>
+</blockquote>
+</li>
+<li><p>将样品PCR管取出，快速离心，然后放在 10× Magnetic Separator low上。</p>
+<blockquote>
+<p><strong>需要</strong>：在快速离心时，贴在样品PCR管内的 beads 应朝向离心机外侧。</p>
+</blockquote>
+</li>
+<li><p>用 200μl 移液枪将样品管内残存的乙醇吸除，然后敞开管盖，在空气中晾干 2min。</p>
+<blockquote>
+<p><strong>需要</strong>：（若样品量较多）在秒表计时超过 1min后，应立刻加入35.5μl Elution Solution I，防止 beads 过干。</p>
+</blockquote>
+</li>
+<li><p>将样品PCR管从 10× Magnetic Separator low 上取下，立刻向每管内加入 35.5μl Elution Solution I。</p>
+</li>
+<li><p>移液枪量程调制 30μl，每管样品吹打混匀 15 次，直到管内无块状物残留。</p>
+</li>
+<li><p>室温下静置 1min。</p>
+<blockquote>
+<p><em>此时可开始准备新的PCR管，并写好标签。</em></p>
+</blockquote>
+</li>
+<li><p>将样品PCR管放在 10× Magnetic Separator low 上 2min，直到管内液体澄清。</p>
+</li>
+<li><p>从每管中吸取 35μl 澄清液体，转移至新管。</p>
+</li>
+</ol>
 
             </div>
             <hr>
             <div>
               <div class="post-metas mb-3">
                 
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/BIOINFO-EXPERIMENT-RECORDS/">BIOINFO EXPERIMENT RECORDS</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/SINGLE-CELL-SEQUENCING/">SINGLE CELL SEQUENCING</a>
+                    
+                  </div>
                 
               </div>
               
@@ -263,9 +642,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/09/16/20210910to0916gwasanalysisinr/">
+                      <a href="/2021/09/16/hello-world/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">2021.9.10-9.16实验记录:GWAS analysis in R</span>
+                        <span class="hidden-mobile">Hello World</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -273,8 +652,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/09/03/20210903%E5%8D%95%E7%BB%86%E8%83%9E%E6%B5%8B%E5%BA%8FV5step2/">
-                        <span class="hidden-mobile">10×单细胞测序-V5-step2:Post GEM-RT Cleanup</span>
+                      <a href="/2021/09/03/20210903%E5%8D%95%E7%BB%86%E8%83%9E%E6%B5%8B%E5%BA%8FV5step3/">
+                        <span class="hidden-mobile">10×单细胞测序	V5-step3:DNA Amplification & QC</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

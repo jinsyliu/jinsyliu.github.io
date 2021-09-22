@@ -450,31 +450,6 @@
   
   
   <entry>
-    <title>20210719实验记录B16多肽溶液配置方法</title>
-    <link href="/2021/07/19/20210719%E5%AE%9E%E9%AA%8C%E8%AE%B0%E5%BD%95B16%E5%A4%9A%E8%82%BD%E6%BA%B6%E6%B6%B2%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/"/>
-    <url>/2021/07/19/20210719%E5%AE%9E%E9%AA%8C%E8%AE%B0%E5%BD%95B16%E5%A4%9A%E8%82%BD%E6%BA%B6%E6%B6%B2%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/</url>
-    
-    <content type="html"><![CDATA[<p><strong>pdf版获取</strong><br><br></p><div class="row">    <embed src="https://jinsyliu.github.io/pdf/20210719%E5%AE%9E%E9%AA%8C%E8%AE%B0%E5%BD%95B16%E5%A4%9A%E8%82%BD%E6%BA%B6%E6%B6%B2%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95.pdf" width="100%" height="550" type="application/pdf"></div><br>]]></content>
-    
-    
-    <categories>
-      
-      <category>EXPERIMENT RECORDS</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>polypeptide vaccine</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>20210719实验记录geo2r</title>
     <link href="/2021/07/19/20210719%E5%AE%9E%E9%AA%8C%E8%AE%B0%E5%BD%95geo2r/"/>
     <url>/2021/07/19/20210719%E5%AE%9E%E9%AA%8C%E8%AE%B0%E5%BD%95geo2r/</url>
@@ -494,6 +469,31 @@
       <tag>R</tag>
       
       <tag>SGEO</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>20210719实验记录B16多肽溶液配置方法</title>
+    <link href="/2021/07/19/20210719%E5%AE%9E%E9%AA%8C%E8%AE%B0%E5%BD%95B16%E5%A4%9A%E8%82%BD%E6%BA%B6%E6%B6%B2%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/"/>
+    <url>/2021/07/19/20210719%E5%AE%9E%E9%AA%8C%E8%AE%B0%E5%BD%95B16%E5%A4%9A%E8%82%BD%E6%BA%B6%E6%B6%B2%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/</url>
+    
+    <content type="html"><![CDATA[<p><strong>pdf版获取</strong><br><br></p><div class="row">    <embed src="https://jinsyliu.github.io/pdf/20210719%E5%AE%9E%E9%AA%8C%E8%AE%B0%E5%BD%95B16%E5%A4%9A%E8%82%BD%E6%BA%B6%E6%B6%B2%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95.pdf" width="100%" height="550" type="application/pdf"></div><br>]]></content>
+    
+    
+    <categories>
+      
+      <category>EXPERIMENT RECORDS</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>polypeptide vaccine</tag>
       
     </tags>
     
@@ -543,9 +543,9 @@
     
     <tags>
       
-      <tag>GEO</tag>
-      
       <tag>R</tag>
+      
+      <tag>GEO</tag>
       
     </tags>
     
@@ -622,9 +622,9 @@
     
     <tags>
       
-      <tag>R</tag>
-      
       <tag>BIOSTATISTICS</tag>
+      
+      <tag>R</tag>
       
     </tags>
     

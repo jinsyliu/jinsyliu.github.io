@@ -1,0 +1,565 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  
+    <meta name="description" content="">
+  
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+  <title>UCSD Bioinfomatics - Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Liu Keqin</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="UCSD Bioinfomatics">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-01-19 17:18" pubdate>
+        2021年1月19日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      3.3k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      66
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">UCSD Bioinfomatics</h1>
+            
+            <div class="markdown-body">
+              <h1 id="UCSD-Bioinfomatics"><a href="#UCSD-Bioinfomatics" class="headerlink" title="UCSD Bioinfomatics"></a>UCSD Bioinfomatics</h1><p>python version: 3.8</p>
+<h2 id="week-1"><a href="#week-1" class="headerlink" title="week 1"></a>week 1</h2><h3 id="simply-count-k-mers-in-string"><a href="#simply-count-k-mers-in-string" class="headerlink" title="simply count k-mers in string"></a>simply count k-mers in string</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">string1 = <span class="hljs-string">&quot;ACAACTATGCATACTATCGGGAACTATCCT&quot;</span><br><span class="hljs-built_in">print</span>(string1.count(<span class="hljs-string">&quot;ACTAT&quot;</span>))<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="move-a-frame-on-string-to-find-all-the-k-mers"><a href="#move-a-frame-on-string-to-find-all-the-k-mers" class="headerlink" title="move a frame on string to find all the k-mers"></a>move a frame on string to find all the k-mers</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs python">string1 = <span class="hljs-string">&quot;ACGATATCTCGAAATGAGCTATATCTCGTCCTGTACTAAA&quot;</span><br>k_mer1 = <span class="hljs-string">&quot;ATATCTCAT&quot;</span><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">PatternCount</span>(<span class="hljs-params">Text, Pattern</span>):</span><br>    count = <span class="hljs-number">0</span> <br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(Text)):<br>        j = Text[i:i+<span class="hljs-built_in">len</span>(Pattern)]             <br>        <span class="hljs-keyword">if</span> j == Pattern:                                  <br>            count = count + <span class="hljs-number">1</span><br>            <span class="hljs-comment">#print(j)</span><br>        <span class="hljs-keyword">else</span>:<br>            <span class="hljs-keyword">continue</span><br>    <span class="hljs-built_in">print</span>(count)<br><br>PatternCount(string1, k_mer1)<br></code></pre></td></tr></table></figure>
+
+<h3 id="find-the-most-frequent-k-mer-in-the-string"><a href="#find-the-most-frequent-k-mer-in-the-string" class="headerlink" title="find the most frequent k-mer in the string"></a>find the most frequent k-mer in the string</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> collections <span class="hljs-keyword">import</span> Counter<br>string2 = <span class="hljs-string">&quot;CGTTGCTCGCATAGACCGTACGCGACTGACGC&quot;</span><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">FrequentWords</span>(<span class="hljs-params"><span class="hljs-type">Sequence</span>,K</span>):</span><br>	c = (Counter((<span class="hljs-type">Sequence</span>[i:i+K] <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(<span class="hljs-type">Sequence</span>)-K+<span class="hljs-number">1</span>)))).most_common()<br>	<span class="hljs-built_in">print</span>(c)<br>FrequentWords(string2,<span class="hljs-number">3</span>)<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="Solve-the-Reverse-Complement-Problem"><a href="#Solve-the-Reverse-Complement-Problem" class="headerlink" title="Solve the Reverse Complement Problem"></a>Solve the Reverse Complement Problem</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> Bio<br><span class="hljs-keyword">from</span> Bio.Seq <span class="hljs-keyword">import</span> Seq<br>dna1 = Seq(<span class="hljs-string">&quot;AACCGATGACGAAGCGACCGCGAAATCAGACCATGCGTGACAGTGCAAGGTCACCTCGTATCATCCGGCATGGCGACGAGCCGGGATGGAGTTTACCCGTGATGCATGTGATTTAGTTAGAC&quot;</span>)<br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">ReverseDNA</span>(<span class="hljs-params">dan1</span>):</span><br> 	<span class="hljs-keyword">pass</span> ReverseDNA(DNAseq):<br>	complementing_strand = DNAseq.reverse_complement()<br>	<span class="hljs-built_in">print</span>(complementing_strand)<br>ReverseDNA(dna1)<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="Solve-the-Pattern-Matching-Problem"><a href="#Solve-the-Pattern-Matching-Problem" class="headerlink" title="Solve the Pattern Matching Problem"></a>Solve the Pattern Matching Problem</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> Bio<br><span class="hljs-keyword">from</span> Bio.Seq <span class="hljs-keyword">import</span> Seq<br>file_input = <span class="hljs-built_in">open</span>(<span class="hljs-string">&quot;/Users/keqinliu/Downloads/Vibrio_cholerae.txt&quot;</span>, <span class="hljs-string">&quot;r&quot;</span>)<br>dna2 = file_input.read()<br>file_input.close()<br>k_mer2 = <span class="hljs-string">&quot;CTTGATCAT&quot;</span><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">PatternLocation</span>(<span class="hljs-params">Text, Pattern</span>):</span><br>	<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(Text)):<br>		j = Text[i:i+<span class="hljs-built_in">len</span>(Pattern)]<br>		<span class="hljs-keyword">if</span> j == Pattern:<br>			<span class="hljs-built_in">print</span>(i)<br>PatternLocation(dna2, k_mer2)<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="Find-patterns-forming-clumps-in-a-string"><a href="#Find-patterns-forming-clumps-in-a-string" class="headerlink" title="Find patterns forming clumps in a string"></a>Find patterns forming clumps in a string</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> collections <span class="hljs-keyword">import</span> Counter<br>string2 = <span class="hljs-string">&quot;AACAGGGAGTCAGGAAAACTAAGCCACGCAATGTTTATTAGATTACTAGATTACGATTACATTAATTCGTTCGTTACAGAGTTCGTTACAGAATCAGTGGAAACCACCACGGAAAAAACAGACCTCCAAGGTCTACCTGGATAACTTGGTTCGTTTTATCACACTATATCATTATCTGCCGATCACGTGATTAAGGCGCATTCACCGAGCAACTAATTCCATAGATTCTCACTCAGAGGAGATGGTGAGGGACCTCGGCGTACCCATCCCGCAGCAACATGACAAGGTAGCGTTGCATAGCGATCTCTAAAAAGAGCGTCCTAATAAGCAAAGCTTATCGGTTACAGAGACACAGACACGACAGAGACACACCCTGCCTTGGTCGGAGAAGAAGAATGCAGGAAGAGAAGAATGCTTCGTGTTACCAAGTCAGAGTTGTCATTAGCAGTTGTCACACTCGGGCAGATCTTGGGTGTGTGGATGCCTGCCTAGGCCTAGAGCAGAGCGCTCGTATCCTACGTGTAGTCGTATCGCCACCATTCCAACCAATAATATGCAGTAGGGCAGTCCTCGATGATCGTGAGGAGCCACATATGGAGCCACATCATGGGAATGCAATTCGTTGCAATTCGCGGCAATTCGCTGCTTCTCGTCTCTACGATTGGGCTTCTTTTCCCGTCCGACGGCAGCGATTGGTTCCTGATCTAGCGCAGAGTAACTGGGAAATTCGCACCACTTCGACGCAATATGAACTGTCGATTGATTGCATACAAAAAGTCTATTCAAGAAATGTCTATTGGCCGTACTGGGCCACCTAGCGGTAAACACGCCCACGCCCCCGCACGCCCCCGCTTTCGTGGATCTCGCAACTTCTGGCTGCACCTCTAATGTGCAGTTAACAACCGCTATCGGTCTGGAGCGAATTAGAACCGCTGCAGGTCTGTGAACTAACTAGATCAGGTCGCTAAACGGAAAAGTCAGTTGGACTACAACTGAGATAGCTAGATGATTAATTTACATTCCCTCGTGGCCAATATCGTCGCTACAAGGCGGGGTAAACAGAGGTAAAGGTAAACAGGCTGGGGGGCTCGGGGGGCTCGACGACTAGTGTTCAAGATCATTCCCACCTGCTCAGGTACCTTCCGGCCAGTCCGTCGAACAACCAAATTAGCTAATATCAGTCCCAGACTCACGTTTCGGATTTGGTCAGCTACGAATTGGTGGCAATGTGGCCTTATTGCAGACACACAACACCGGGACACCGGGAAGTGCCGATTTAGATGTTACGTGGTACCCGCGGTACCCGCCCCGCCGCCAAGCTATGGGTTACGCGTGCTTTATAATAATCCCCTATGCGTAGTCAGCTTTTCCCCGGGTCCCTATTTGAATCCATTTGAATCCCCTATCGCATCGCATCATCCAGGCAAGTCATACAAAAGATTCGTTTCAGACCCAACAGAGCGGCTTTGGCAGTGTATCACGTCACTGTACAAATGTACCATAACGCTAGACCGTTCAATTCGTATACTCAGACGATGCATTAGCTTCGCGGGAAGTAGACAAAGCGGGACGCATAAGACCATATATTAGATTCACCCTCTGTATTCAGGTAATGATGTATGCCGTGTTCAACCTACTGATGTATCTGCCACATCCGGAGCAGTGTGAGCGTGAGTCAGGTCCTATTACAGTACAAGATTTAGATTGTAGGACCACAGCTGCCCCTTGGATTTGCCGGCTGGTGGCTGTGATCACGAACTCCTCTTTCCTGGGAGCTCCGGGATGGCACGGTTACCAGTGTATCTCTAGTGATTGCAAGGTCTTTTTCGATGAAGCGCTTCCGCTCCTGCCGGCATTGAACCGGGAATGTCAAGTGAAATCAGAAGCGGTATCCGATAAGTTTCGTGCGGCGTCGTACTAGTTCAAAGAATTCGTATGGTTACGGCAATCGTTATGGTATCTCGGTATG&quot;</span><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">FrequentWords</span>(<span class="hljs-params"><span class="hljs-type">Sequence</span>,K,L</span>):</span><br>	<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(<span class="hljs-type">Sequence</span>)):<br>		j = <span class="hljs-type">Sequence</span>[i:i+L]<br>		c = (Counter((j[i:i+K] <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(L-K+<span class="hljs-number">1</span>)))).most_common()<br>		<span class="hljs-built_in">print</span>(c)<br>FrequentWords(string2,<span class="hljs-number">9</span>,<span class="hljs-number">29</span>)<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="week2"><a href="#week2" class="headerlink" title="week2"></a>week2</h2><h3 id="calculate-skew"><a href="#calculate-skew" class="headerlink" title="calculate skew"></a>calculate skew</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs python">string1 = <span class="hljs-string">&quot;TAAAGACTGCCGAGAGGCCAACACGAGTGCTAGAACGAGGGGCGTAAACGCGGGTCCGAT&quot;</span><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">Skew</span>(<span class="hljs-params">genome, i</span>):</span><br>	string1 = genome[<span class="hljs-number">0</span>:i]<br>	count = <span class="hljs-number">0</span><br>	<span class="hljs-built_in">print</span>(<span class="hljs-number">0</span>)<br>	<span class="hljs-keyword">for</span> base <span class="hljs-keyword">in</span> string1:<br>		<span class="hljs-keyword">if</span> base == <span class="hljs-string">&quot;C&quot;</span>:<br>			count += -<span class="hljs-number">1</span><br>		<span class="hljs-keyword">elif</span> base == <span class="hljs-string">&quot;G&quot;</span>:<br>			count += <span class="hljs-number">1</span><br>		<span class="hljs-built_in">print</span>(count)<br>Skew(string1, <span class="hljs-number">14</span>)<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="Minimum-Skew-Problem-Find-a-position-in-a-genome-where-the-skew-diagram-attains-a-minimum"><a href="#Minimum-Skew-Problem-Find-a-position-in-a-genome-where-the-skew-diagram-attains-a-minimum" class="headerlink" title="Minimum Skew Problem: Find a position in a genome where the skew diagram attains a minimum."></a>Minimum Skew Problem: Find a position in a genome where the skew diagram attains a minimum.</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs python">string2 = <span class="hljs-string">&quot;ATAGCCCGCAGCTCGGACAGCGGACCGGCTCGATTCGCGTACACGTAGGAAGAAGGATTCGCCAACCCCATTTGAACAAC&quot;</span><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">skew</span>(<span class="hljs-params">sequence</span>):</span><br>    c = <span class="hljs-number">0</span><br>    g = <span class="hljs-number">0</span><br>    min_skew = <span class="hljs-number">0</span><br>    skew_list = []<br>    index = <span class="hljs-number">0</span><br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> sequence:<br>        index += <span class="hljs-number">1</span><br>        <span class="hljs-keyword">if</span> i == <span class="hljs-string">&#x27;C&#x27;</span>:<br>            c += <span class="hljs-number">1</span><br>        <span class="hljs-keyword">if</span> i == <span class="hljs-string">&#x27;G&#x27;</span>:<br>            g += <span class="hljs-number">1</span><br>        skew = g-c<br>        <span class="hljs-keyword">if</span> skew &lt; min_skew:<br>            skew_list = [index]<br>            min_skew = skew<br>        <span class="hljs-keyword">if</span> skew == min_skew <span class="hljs-keyword">and</span> index <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> skew_list:<br>            skew_list.append(index)    <br>    <span class="hljs-built_in">print</span>(skew_list)<br>skew(string2)<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="Hamming-Distance-Problem-Compute-the-Hamming-distance-between-two-strings"><a href="#Hamming-Distance-Problem-Compute-the-Hamming-distance-between-two-strings" class="headerlink" title="Hamming Distance Problem: Compute the Hamming distance between two strings."></a>Hamming Distance Problem: Compute the Hamming distance between two strings.</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs python">string3 = <span class="hljs-string">&quot;CATTAAGACCTCCCGTTCAATATGTCGTGAGACTCATGTA&quot;</span><br>string4 = <span class="hljs-string">&quot;GGCCGATTGACCATGAACAGTCATGCTTACAGTACCGGAG&quot;</span><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">HammingDistance</span>(<span class="hljs-params">string_1, string_2</span>):</span><br>    hammingdistance = <span class="hljs-number">0</span><br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(string_2)):<br>        <span class="hljs-keyword">if</span> string_1[i] != string_2[i]:<br>            hammingdistance += <span class="hljs-number">1</span><br>    <span class="hljs-built_in">print</span>(hammingdistance)<br><br>HammingDistance(string3, string4)<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="Approximate-Pattern-Matching-Problem-Find-all-approximate-occurrences-of-a-pattern-in-a-string"><a href="#Approximate-Pattern-Matching-Problem-Find-all-approximate-occurrences-of-a-pattern-in-a-string" class="headerlink" title="Approximate Pattern Matching Problem: Find all approximate occurrences of a pattern in a string."></a>Approximate Pattern Matching Problem: Find all approximate occurrences of a pattern in a string.</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs python">text_string = <span class="hljs-string">&quot;TTATCTTATAGTAAAATCCGAGTCGACTTGGTCTG&quot;</span><br>pattern_string = <span class="hljs-string">&quot;TACGCCAGCAA&quot;</span><br>most_mismatches = <span class="hljs-number">5</span><br><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">HammingDistance</span>(<span class="hljs-params">string_1, string_2</span>):</span><br>    hammingdistance = <span class="hljs-number">0</span><br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(string_2)):<br>        <span class="hljs-keyword">if</span> string_1[i] != string_2[i]:<br>            hammingdistance += <span class="hljs-number">1</span><br>    <span class="hljs-keyword">return</span>(hammingdistance)<br><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">PatternFinding</span>(<span class="hljs-params">pattern, text, d</span>):</span><br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(text)-<span class="hljs-built_in">len</span>(pattern)+<span class="hljs-number">1</span>):<br>        pattern_frame = text[i:i+<span class="hljs-built_in">len</span>(pattern)]<br>        <span class="hljs-keyword">if</span> HammingDistance(pattern, pattern_frame) &lt;= d:<br>            <span class="hljs-built_in">print</span>(i)<br><br>PatternFinding(pattern_string, text_string, most_mismatches)<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="count-pattern"><a href="#count-pattern" class="headerlink" title="count pattern"></a>count pattern</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs python">text_string = <span class="hljs-string">&quot;AACAAGCTGATAAACATTTAAAGAG&quot;</span><br>pattern_string = <span class="hljs-string">&quot;AAAAA&quot;</span><br>most_mismatches = <span class="hljs-number">2</span><br><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">HammingDistance</span>(<span class="hljs-params">string_1, string_2</span>):</span><br>    hammingdistance = <span class="hljs-number">0</span><br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(string_2)):<br>        <span class="hljs-keyword">if</span> string_1[i] != string_2[i]:<br>            hammingdistance += <span class="hljs-number">1</span><br>    <span class="hljs-keyword">return</span>(hammingdistance)<br><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">PatternFinding</span>(<span class="hljs-params">pattern, text, d</span>):</span><br>    count = <span class="hljs-number">0</span><br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(text)-<span class="hljs-built_in">len</span>(pattern)+<span class="hljs-number">1</span>):<br>        pattern_frame = text[i:i+<span class="hljs-built_in">len</span>(pattern)]<br>        <span class="hljs-keyword">if</span> HammingDistance(pattern, pattern_frame) &lt;= d:<br>            count += <span class="hljs-number">1</span><br>    <span class="hljs-built_in">print</span>(count)<br><br><br>PatternFinding(pattern_string, text_string, most_mismatches)<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="Frequent-Words-with-Mismatches-Problem-Find-the-most-frequent-k-mers-with-mismatches-in-a-string"><a href="#Frequent-Words-with-Mismatches-Problem-Find-the-most-frequent-k-mers-with-mismatches-in-a-string" class="headerlink" title="Frequent Words with Mismatches Problem: Find the most frequent k-mers with mismatches in a string."></a>Frequent Words with Mismatches Problem: Find the most frequent k-mers with mismatches in a string.</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> itertools<br><span class="hljs-keyword">import</span> time<br><span class="hljs-keyword">from</span> collections <span class="hljs-keyword">import</span> defaultdict<br><br>text_string = <span class="hljs-string">&quot;GAGGAGACCACCAATAAGACCAATAAGACCTTACAATAAGTTACACCGAGTTACTTACAATACCACCGAGAAGA&quot;</span><br>pattern_length = <span class="hljs-number">6</span><br>most_mismatches = <span class="hljs-number">2</span><br><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">FrequentWordsWithMismatches</span>(<span class="hljs-params">Genome, k, d</span>):</span><br>    start = time.process_time()<br>    aprox_frq_words = []<br>    frequencies = defaultdict(<span class="hljs-keyword">lambda</span>: <span class="hljs-number">0</span>)<br>    <span class="hljs-comment"># all existent kmers with d mismatches of current kmer in genome</span><br>    <span class="hljs-keyword">for</span> index <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(Genome) - k + <span class="hljs-number">1</span>):<br>        curr_kmer_and_neighbors = PermuteMotifDistanceTimes(Genome[index : index + k], d)<br>        <span class="hljs-keyword">for</span> kmer <span class="hljs-keyword">in</span> curr_kmer_and_neighbors:<br>            frequencies[kmer] += <span class="hljs-number">1</span> <br><br>    <span class="hljs-keyword">for</span> kmer <span class="hljs-keyword">in</span> frequencies:<br>        <span class="hljs-keyword">if</span> frequencies[kmer] == <span class="hljs-built_in">max</span>(frequencies.values()):<br>            aprox_frq_words.append(kmer)<br>    end = time.process_time()<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Time:&quot;</span>, end - start)<br>    <span class="hljs-built_in">print</span>(aprox_frq_words)<br><br><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">PermuteMotifOnce</span>(<span class="hljs-params">motif, alphabet=&#123;<span class="hljs-string">&quot;A&quot;</span>, <span class="hljs-string">&quot;C&quot;</span>, <span class="hljs-string">&quot;G&quot;</span>, <span class="hljs-string">&quot;T&quot;</span>&#125;</span>):</span><br>    <span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">    Gets all strings within hamming distance 1 of motif and returns it as a</span><br><span class="hljs-string">    list.</span><br><span class="hljs-string">    &quot;&quot;&quot;</span><br>    <span class="hljs-keyword">return</span> <span class="hljs-built_in">list</span>(<span class="hljs-built_in">set</span>(itertools.chain.from_iterable([[<br>        motif[:pos] + nucleotide + motif[pos + <span class="hljs-number">1</span>:] <span class="hljs-keyword">for</span><br>        nucleotide <span class="hljs-keyword">in</span> alphabet] <span class="hljs-keyword">for</span><br>        pos <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(motif))])))<br><br><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">PermuteMotifDistanceTimes</span>(<span class="hljs-params">motif, d</span>):</span><br>    workingSet = &#123;motif&#125;<br>    <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(d):<br>        workingSet = <span class="hljs-built_in">set</span>(itertools.chain.from_iterable(<span class="hljs-built_in">map</span>(PermuteMotifOnce, workingSet)))<br>    <span class="hljs-keyword">return</span> <span class="hljs-built_in">list</span>(workingSet)<br><br>FrequentWordsWithMismatches(text_string, pattern_length, most_mismatches)<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="Frequent-Words-with-Mismatches-and-Reverse-Complements-Problem-Find-the-most-frequent-k-mers-with-mismatches-and-reverse-complements-in-a-string"><a href="#Frequent-Words-with-Mismatches-and-Reverse-Complements-Problem-Find-the-most-frequent-k-mers-with-mismatches-and-reverse-complements-in-a-string" class="headerlink" title="Frequent Words with Mismatches and Reverse Complements Problem: Find the most frequent k-mers (with mismatches and reverse complements) in a string."></a>Frequent Words with Mismatches and Reverse Complements Problem: Find the most frequent k-mers (with mismatches and reverse complements) in a string.</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">mismatches_and_rc</span>(<span class="hljs-params">text,k,d</span>):</span><br>    frequencyarray=&#123;&#125;<br>    rev_text=rev_comp(text)<br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">0</span>,<span class="hljs-number">4</span>**k):<br>        frequencyarray[i]=<span class="hljs-number">0</span><br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> frequencyarray:<br>        count,r_count=<span class="hljs-number">0</span>,<span class="hljs-number">0</span><br>        count=PatternMatching(text,NumberToPattern(i,k),d)<br>        r_count=PatternMatching(rev_text,NumberToPattern(i,k),d)<br>        frequencyarray[i]=count+r_count<br>    <span class="hljs-keyword">return</span> frequencyarray<br>            <br>        <br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">PatternMatching</span>(<span class="hljs-params">text,pat,d</span>):</span><br>    count=<span class="hljs-number">0</span><br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">0</span>,<span class="hljs-built_in">len</span>(text)):<br>        p=text[i:i+<span class="hljs-built_in">len</span>(pat)]<br>        <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(p)!= <span class="hljs-built_in">len</span>(pat): <span class="hljs-keyword">break</span><br>        <span class="hljs-keyword">if</span> hammingdistance(p,pat)&lt;=d:<br>            count=count+<span class="hljs-number">1</span><br>    <span class="hljs-keyword">return</span> count<br><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">PatternToNumber</span>(<span class="hljs-params">pattern</span>):</span><br>    <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(pattern)==<span class="hljs-number">0</span>: <span class="hljs-keyword">return</span><br>    SymbolToNumber = &#123;<span class="hljs-string">&#x27;A&#x27;</span>:<span class="hljs-number">0</span>,<span class="hljs-string">&#x27;C&#x27;</span>:<span class="hljs-number">1</span>,<span class="hljs-string">&#x27;G&#x27;</span>:<span class="hljs-number">2</span>,<span class="hljs-string">&#x27;T&#x27;</span>:<span class="hljs-number">3</span>&#125;<br>    <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(pattern)==<span class="hljs-number">1</span>: <span class="hljs-keyword">return</span> SymbolToNumber[pattern]<br>    n=<span class="hljs-built_in">len</span>(pattern)<br>    symbol=pattern[n-<span class="hljs-number">1</span>]<br>    prefix=pattern[:n-<span class="hljs-number">1</span>]<br>    <span class="hljs-keyword">return</span> (<span class="hljs-number">4</span>*PatternToNumber(prefix)+SymbolToNumber[symbol])<br><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">NumberToPattern</span>(<span class="hljs-params">index,k</span>):</span><br>    NumberToSymbol = &#123;<span class="hljs-number">0</span>:<span class="hljs-string">&#x27;A&#x27;</span>,<span class="hljs-number">1</span>:<span class="hljs-string">&#x27;C&#x27;</span>,<span class="hljs-number">2</span>:<span class="hljs-string">&#x27;G&#x27;</span>,<span class="hljs-number">3</span>:<span class="hljs-string">&#x27;T&#x27;</span>&#125;<br>    <span class="hljs-keyword">if</span> k==<span class="hljs-number">1</span>: <span class="hljs-keyword">return</span> NumberToSymbol[index]<br>    prefix_index=index//<span class="hljs-number">4</span><br>    r=index%<span class="hljs-number">4</span><br>    symbol=NumberToSymbol[r]<br>    <span class="hljs-keyword">return</span> NumberToPattern(prefix_index,k-<span class="hljs-number">1</span>)+symbol<br><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hammingdistance</span>(<span class="hljs-params">p,q</span>):</span><br>    count=<span class="hljs-number">0</span><br>    <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(p)!= <span class="hljs-built_in">len</span>(q):<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;The two sequences vary in lenghts&quot;</span>)<br>        <span class="hljs-keyword">return</span><br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">0</span>,<span class="hljs-built_in">len</span>(p)):<br>        <span class="hljs-keyword">if</span> p[i]!=q[i]:<br>            count=count+<span class="hljs-number">1</span><br>    <span class="hljs-keyword">return</span> count<br><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">rev_comp</span>(<span class="hljs-params">pattern</span>):</span><br>    rpattern=<span class="hljs-string">&#x27;&#x27;</span><br>    a=[]<br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> pattern:<br>        <span class="hljs-keyword">if</span> i==<span class="hljs-string">&#x27;A&#x27;</span>:<br>            a.append(<span class="hljs-string">&#x27;T&#x27;</span>)<br>        <span class="hljs-keyword">if</span> i==<span class="hljs-string">&#x27;T&#x27;</span>:<br>            a.append(<span class="hljs-string">&#x27;A&#x27;</span>)<br>        <span class="hljs-keyword">if</span> i==<span class="hljs-string">&#x27;C&#x27;</span>:<br>            a.append(<span class="hljs-string">&#x27;G&#x27;</span>)<br>        <span class="hljs-keyword">if</span> i==<span class="hljs-string">&#x27;G&#x27;</span>:<br>            a.append(<span class="hljs-string">&#x27;C&#x27;</span>)<br>    rpattern =rpattern.join(a)<br>    <span class="hljs-keyword">return</span>(rpattern[::-<span class="hljs-number">1</span>])<br><br><br>text=<span class="hljs-built_in">input</span>(<span class="hljs-string">&#x27;AAAAAAAAAA&#x27;</span>)<br>k=<span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>(<span class="hljs-number">2</span>))<br>d=<span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>(<span class="hljs-number">1</span>))<br>approx_kmers = mismatches_and_rc(text,k,d)<br><span class="hljs-keyword">for</span> a <span class="hljs-keyword">in</span> approx_kmers:<br>    <span class="hljs-keyword">if</span> approx_kmers[a]== <span class="hljs-built_in">max</span>(approx_kmers.values()):<br>        <span class="hljs-built_in">print</span>(NumberToPattern(a,k),end=<span class="hljs-string">&#x27;&#x27;</span>)<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="week3"><a href="#week3" class="headerlink" title="week3"></a>week3</h2><h3 id="Exercise-Break-What-is-the-expected-number-of-occurrences-of-a-9-mer-in-500-random-DNA-strings-each-of-length-1000-Assume-that-the-sequences-are-formed-by-selecting-each-nucleotide-A-C-G-T-with-the-same-probability-0-25"><a href="#Exercise-Break-What-is-the-expected-number-of-occurrences-of-a-9-mer-in-500-random-DNA-strings-each-of-length-1000-Assume-that-the-sequences-are-formed-by-selecting-each-nucleotide-A-C-G-T-with-the-same-probability-0-25" class="headerlink" title="Exercise Break: What is the expected number of occurrences of a 9-mer in 500 random DNA strings, each of length 1000? Assume that the sequences are formed by selecting each nucleotide (A, C, G, T) with the same probability (0.25)."></a>Exercise Break: What is the expected number of occurrences of a 9-mer in 500 random DNA strings, each of length 1000? Assume that the sequences are formed by selecting each nucleotide (A, C, G, T) with the same probability (0.25).</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> math<br>a = math.<span class="hljs-built_in">pow</span>(<span class="hljs-number">4</span>,<span class="hljs-number">9</span>)<br>b = <span class="hljs-number">500</span>*<span class="hljs-number">992</span>/a<br><span class="hljs-built_in">print</span>(b)<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="Code-Challenge-Implement-MotifEnumeration-reproduced-below"><a href="#Code-Challenge-Implement-MotifEnumeration-reproduced-below" class="headerlink" title="Code Challenge: Implement MotifEnumeration (reproduced below)."></a>Code Challenge: Implement MotifEnumeration (reproduced below).</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">HammingDistance</span>(<span class="hljs-params">p, q</span>):</span><br>    count=<span class="hljs-number">0</span><br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span> (<span class="hljs-number">0</span>,<span class="hljs-built_in">len</span>(p)):<br>        <span class="hljs-keyword">if</span> p[i]!=q[i]:<br>            count+=<span class="hljs-number">1</span><br>    <span class="hljs-keyword">return</span> count<br><br><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">Neighbors</span>(<span class="hljs-params">Pattern, d</span>):</span><br>    <span class="hljs-keyword">if</span> d==<span class="hljs-number">0</span>:<br>        <span class="hljs-keyword">return</span> [Pattern]<br>    <span class="hljs-keyword">elif</span> <span class="hljs-built_in">len</span>(Pattern)==<span class="hljs-number">1</span>:<br>        <span class="hljs-keyword">return</span> [<span class="hljs-string">&#x27;A&#x27;</span>,<span class="hljs-string">&#x27;C&#x27;</span>,<span class="hljs-string">&#x27;G&#x27;</span>,<span class="hljs-string">&#x27;T&#x27;</span>]<br>    Neighborhood=[]<br>    Suffix_Pattern=Pattern[<span class="hljs-number">1</span>:]<br>    FirstSymbol_Pattern=Pattern[<span class="hljs-number">0</span>]<br>    SuffixNeighbors = Neighbors(Suffix_Pattern, d)<br>    <span class="hljs-keyword">for</span> Text <span class="hljs-keyword">in</span> SuffixNeighbors:<br>        <span class="hljs-keyword">if</span> HammingDistance(Suffix_Pattern, Text) &lt; d:<br>            <span class="hljs-keyword">for</span> nucleotide <span class="hljs-keyword">in</span> [<span class="hljs-string">&#x27;A&#x27;</span>,<span class="hljs-string">&#x27;C&#x27;</span>,<span class="hljs-string">&#x27;G&#x27;</span>,<span class="hljs-string">&#x27;T&#x27;</span>]:<br>                Neighborhood.append(nucleotide+Text)<br>        <span class="hljs-keyword">else</span>:<br>            Neighborhood.append(FirstSymbol_Pattern+Text)<br>    <span class="hljs-keyword">return</span> Neighborhood<br><br><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">MotifEnumeration</span>(<span class="hljs-params">dna, k, d</span>):</span><br>    patterns=[]<br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span> (<span class="hljs-number">0</span>,<span class="hljs-built_in">len</span>(dna[<span class="hljs-number">0</span>])-k+<span class="hljs-number">1</span>):<br>        neighbors=Neighbors(dna[<span class="hljs-number">0</span>][i:i+k],d)<br>        <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> neighbors:<br>            count=<span class="hljs-number">0</span><br>            <span class="hljs-keyword">for</span> l <span class="hljs-keyword">in</span> dna:<br>                <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">0</span>,<span class="hljs-built_in">len</span>(l)-k+<span class="hljs-number">1</span>):<br>                    <span class="hljs-keyword">if</span> HammingDistance(j, l[i:i+k])&lt;=d:<br>                        count+=<span class="hljs-number">1</span><br>                        <span class="hljs-keyword">break</span><br>            <span class="hljs-keyword">if</span> count==<span class="hljs-built_in">len</span>(dna):<br>                patterns.append(j)<br>    Patterns = [] <br>    [Patterns.append(x) <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> patterns <span class="hljs-keyword">if</span> x <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> Patterns] <br>    Result = <span class="hljs-string">&quot;&quot;</span><br>    <span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> Patterns:<br>        Result = Result + <span class="hljs-string">&quot; &quot;</span> + <span class="hljs-built_in">str</span>(item)<br>    <span class="hljs-built_in">print</span>(Result)<br><br><br>string_list = [<span class="hljs-string">&quot;TCTAGCTTCGCTCTCTTTGCAACCT&quot;</span>, <span class="hljs-string">&quot;GGCTCACTATCTATCGCACCCTACT&quot;</span>, <span class="hljs-string">&quot;CTATGAAACTATTTCGGACATGAAG&quot;</span>]<br>MotifEnumeration(string_list, <span class="hljs-number">5</span>, <span class="hljs-number">2</span>)<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="Median-String-Problem-Find-a-median-string-solition1-only-to-find-out-all-the-k-mers-which-occur-in-sequence-collection"><a href="#Median-String-Problem-Find-a-median-string-solition1-only-to-find-out-all-the-k-mers-which-occur-in-sequence-collection" class="headerlink" title="Median String Problem: Find a median string.  solition1: only to find out all the k-mers which occur in sequence collection"></a>Median String Problem: Find a median string.  solition1: only to find out all the k-mers which occur in sequence collection</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hamming</span>(<span class="hljs-params">p1, p2</span>):</span><br>    d = <span class="hljs-number">0</span><br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(p1)):<br>        <span class="hljs-keyword">if</span> p1[i] != p2[i]:<br>            d += <span class="hljs-number">1</span><br>    <span class="hljs-keyword">return</span>(d)<br><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">MedianString</span>(<span class="hljs-params">dna, k</span>):</span><br>    <span class="hljs-comment"># iterate through each Dna string</span><br>    kmerList = []<br>    <span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> dna:<br>        String = line<br>        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(String) - k+<span class="hljs-number">1</span>):<br>            pattern = String[i:i+k]<br>            <span class="hljs-keyword">if</span> pattern <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> kmerList:<br>                kmerList.append(pattern)<br>            <br>        <span class="hljs-comment"># pattern that minimizes hamming distance</span><br>        distance = <span class="hljs-built_in">float</span>(<span class="hljs-string">&#x27;inf&#x27;</span>)<br>        <span class="hljs-keyword">for</span> kmer <span class="hljs-keyword">in</span> kmerList:<br>            <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(String) - k+<span class="hljs-number">1</span>):<br>                <span class="hljs-keyword">if</span> distance &gt; hamming(kmer, String[i:i+k]):<br>                    distance = hamming(kmer, String[i:i+k])<br>                    Median = kmer<br>    <span class="hljs-keyword">return</span>(Median)<br><br>dna = [<span class="hljs-string">&quot;ATA&quot;</span>,<br><span class="hljs-string">&quot;ACA&quot;</span>,<br><span class="hljs-string">&quot;AGA&quot;</span>,<br><span class="hljs-string">&quot;AAT&quot;</span>,<br><span class="hljs-string">&quot;AAC&quot;</span>]<br>k = <span class="hljs-number">3</span><br><span class="hljs-built_in">print</span>(MedianString(dna, k))<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="Profile-most-Probable-k-mer-Problem-Find-a-Profile-most-probable-k-mer-in-a-string-Code-Challenge-Solve-the-Profile-most-Probable-k-mer-Problem"><a href="#Profile-most-Probable-k-mer-Problem-Find-a-Profile-most-probable-k-mer-in-a-string-Code-Challenge-Solve-the-Profile-most-Probable-k-mer-Problem" class="headerlink" title="Profile-most Probable k-mer Problem: Find a Profile-most probable k-mer in a string. Code Challenge: Solve the Profile-most Probable k-mer Problem."></a>Profile-most Probable k-mer Problem: Find a Profile-most probable k-mer in a string. Code Challenge: Solve the Profile-most Probable k-mer Problem.</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><code class="hljs python">filename = <span class="hljs-string">&#x27;dataset_159_3.txt&#x27;</span><br><span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(filename, <span class="hljs-string">&quot;r&quot;</span>) <span class="hljs-keyword">as</span> dataset:<br>    data = []<br>    <span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> dataset:<br>        data.append(line.strip())<br>    Text = data[<span class="hljs-number">0</span>]<br>    k = <span class="hljs-built_in">int</span>(data[<span class="hljs-number">1</span>])<br>    raw_profile = data[<span class="hljs-number">2</span>:]<br>    bases = [<span class="hljs-string">&#x27;A&#x27;</span>, <span class="hljs-string">&#x27;C&#x27;</span>, <span class="hljs-string">&#x27;G&#x27;</span>, <span class="hljs-string">&#x27;T&#x27;</span>]<br>    profile_matrix = [<span class="hljs-built_in">list</span>(<span class="hljs-built_in">map</span>(<span class="hljs-built_in">float</span>, raw_profile[i].split())) <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(raw_profile))]<br>    prof_dict = <span class="hljs-built_in">dict</span>(<span class="hljs-built_in">zip</span>(bases, profile_matrix))<br><br><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">compute_probability</span>(<span class="hljs-params">kmer,profile_mat</span>):</span><br>  prob=<span class="hljs-number">1</span><br>  <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">0</span>,<span class="hljs-built_in">len</span>(kmer)):<br>    <span class="hljs-keyword">if</span> kmer[i]==<span class="hljs-string">&#x27;A&#x27;</span>:<br>      prob=prob*profile_mat[<span class="hljs-number">0</span>][i]<br>    <span class="hljs-keyword">if</span> kmer[i]==<span class="hljs-string">&#x27;C&#x27;</span>:<br>      prob=prob*profile_mat[<span class="hljs-number">1</span>][i]<br>    <span class="hljs-keyword">if</span> kmer[i]==<span class="hljs-string">&#x27;G&#x27;</span>:<br>      prob=prob*profile_mat[<span class="hljs-number">2</span>][i]<br>    <span class="hljs-keyword">if</span> kmer[i]==<span class="hljs-string">&#x27;T&#x27;</span>:<br>      prob=prob*profile_mat[<span class="hljs-number">3</span>][i]<br>  <span class="hljs-keyword">return</span> prob<br><br><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">profile</span>(<span class="hljs-params">dna_seq,k,profile_matrix</span>):</span><br>  max_probab=<span class="hljs-number">0</span><br>  <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(dna_seq)-k+<span class="hljs-number">1</span>):<br>    kmer=dna_seq[i:i+k]<br>    pro=compute_probability(kmer,profile_matrix)<br>    <span class="hljs-keyword">if</span> pro&gt;max_probab:<br>      max_probab=pro<br>      sol=kmer<br>  <span class="hljs-keyword">return</span> sol<br><br><span class="hljs-built_in">print</span>(profile(Text, k, profile_matrix))<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="Code-Challenge-Implement-GreedyMotifSearch"><a href="#Code-Challenge-Implement-GreedyMotifSearch" class="headerlink" title="Code Challenge: Implement GreedyMotifSearch."></a>Code Challenge: Implement GreedyMotifSearch.</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br></pre></td><td class="code"><pre><code class="hljs python">in_file = <span class="hljs-built_in">open</span>(<span class="hljs-string">&#x27;dataset_159_5.txt&#x27;</span>, <span class="hljs-string">&#x27;r&#x27;</span>)<br><br>line = <span class="hljs-number">1</span><br>in_kmer = <span class="hljs-number">0</span><br>in_dna=[]<br>ldata = <span class="hljs-string">&#x27;&#x27;</span><br>in_m=<span class="hljs-number">0</span><br><span class="hljs-keyword">for</span> in_data <span class="hljs-keyword">in</span> in_file:<br>    ldata = in_data.strip(<span class="hljs-string">&#x27; \t\n\r&#x27;</span>)<br>    <span class="hljs-keyword">if</span> (line==<span class="hljs-number">1</span>):<br>        in_kmer = <span class="hljs-built_in">int</span>(ldata.split()[<span class="hljs-number">0</span>])<br>        in_m = <span class="hljs-built_in">int</span>(ldata.split()[<span class="hljs-number">1</span>])<br>    <span class="hljs-keyword">elif</span> (line&gt;=<span class="hljs-number">2</span>):<br>        in_dna.append(ldata)    <br>    line+=<span class="hljs-number">1</span><br>    <br>motifs=[]<br>profile_motif_matrix=&#123;&#125;<br><br><span class="hljs-string">&#x27;&#x27;&#x27;</span><br><span class="hljs-string">GGCGTTCAGGCA</span><br><span class="hljs-string">GGC A[0.0, 0.0, 0.0] C[0.0, 0.0, 1.0] T[0.0, 0.0, 0.0] G[1.0, 1.0, 0.0]</span><br><span class="hljs-string">    =&gt; [&#x27;AAGAATCAGTCA&#x27;, &#x27;CAAGGAGTTCGC&#x27;, &#x27;CACGTCAATCAC&#x27;, &#x27;CAATAATATTCG&#x27;]</span><br><span class="hljs-string">    =&gt; [&#x27;GGC&#x27;, &#x27;AAG&#x27;, &#x27;CAA&#x27;, &#x27;CAC&#x27;, &#x27;CAA&#x27;] (max_probability_dna_kmer)</span><br><span class="hljs-string">    =&gt; A[1.0, 4.0, 2.0], C[3.0, 0.0, 2.0], T[0.0, 0.0, 0.0], G[1.0, 1.0, 1.0]/5(in_m)</span><br><span class="hljs-string">        =&gt; max(Col1 1,3,0,1) =&gt; 3 - 5(in_m) = 2 (score_motif)</span><br><span class="hljs-string">        =&gt; max(Col2 4,0,0,1) =&gt; 4 - 5(in_m) = 1 (score_motif)</span><br><span class="hljs-string">        =&gt; max(Col3 2,2,0,1) =&gt; 2 - 5(in_m) = 3 (score_motif) =&gt; 6.0</span><br><span class="hljs-string">    =&gt; A[0.2, 0.8, 0.4], C[0.6, 0.0, 0.4], T[0.0, 0.0, 0.0], G[0.2, 0.2, 0.2]</span><br><span class="hljs-string">GCG A[0.0, 0.0, 0.0] C[0.0, 1.0, 0.0] T[0.0, 0.0, 0.0] G[1.0, 0.0, 1.0]</span><br><span class="hljs-string">    =&gt; [&#x27;AAGAATCAGTCA&#x27;, &#x27;CAAGGAGTTCGC&#x27;, &#x27;CACGTCAATCAC&#x27;, &#x27;CAATAATATTCG&#x27;]</span><br><span class="hljs-string">    =&gt; [&#x27;GCG&#x27;, &#x27;AAG&#x27;, &#x27;CAA&#x27;, &#x27;CAC&#x27;, &#x27;CAA&#x27;] (max_probability_dna_kmer)</span><br><span class="hljs-string">    =&gt; A[0.2, 0.8, 0.4], C[0.6, 0.2, 0.2], T[0.0, 0.0, 0.0], G[0.2, 0.0, 0.4] (/5)</span><br><span class="hljs-string">...</span><br><span class="hljs-string">GCA A[0.0, 0.0, 1.0] C[0.0, 1.0, 0.0] T[0.0, 0.0, 0.0] G[0.0, 0.0, 1.0]</span><br><span class="hljs-string">    =&gt; [&#x27;AAGAATCAGTCA&#x27;, &#x27;CAAGGAGTTCGC&#x27;, &#x27;CACGTCAATCAC&#x27;, &#x27;CAATAATATTCG&#x27;]</span><br><span class="hljs-string">    =&gt; [&#x27;GCA&#x27;, &#x27;AAG&#x27;, &#x27;CAA&#x27;, &#x27;CAC&#x27;, &#x27;CAA&#x27;] (max_probability_dna_kmer)</span><br><span class="hljs-string">    =&gt; A[0.2, 0.8, 0.6], C[0.6, 0.2, 0.2], T[0.0, 0.0, 0.0], G[0.2, 0.0, 0.2] (/5)</span><br><span class="hljs-string">&#x27;&#x27;&#x27;</span><br><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">ScoreMotif</span>():</span><br>    alist=[]<br>    clist=[]<br>    tlist=[]<br>    glist=[]<br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">0</span>,in_kmer):<br>        alist.append(<span class="hljs-number">0.00</span>)<br>        clist.append(<span class="hljs-number">0.00</span>)<br>        tlist.append(<span class="hljs-number">0.00</span>)<br>        glist.append(<span class="hljs-number">0.00</span>)<br>    <span class="hljs-keyword">for</span> j, motif <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(motifs):<br>        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">0</span>,in_kmer):<br>            single =motif[i]<br>            ac = single.count(<span class="hljs-string">&#x27;A&#x27;</span>)           <br>            cc = single.count(<span class="hljs-string">&#x27;C&#x27;</span>)           <br>            tc = single.count(<span class="hljs-string">&#x27;T&#x27;</span>)           <br>            gc = single.count(<span class="hljs-string">&#x27;G&#x27;</span>)           <br>            alist[i]=(alist[i]+<span class="hljs-built_in">float</span>(ac))<br>            clist[i]=(clist[i]+<span class="hljs-built_in">float</span>(cc))<br>            tlist[i]=(tlist[i]+<span class="hljs-built_in">float</span>(tc))<br>            glist[i]=(glist[i]+<span class="hljs-built_in">float</span>(gc))<br>        profile_motif_matrix[<span class="hljs-string">&#x27;A&#x27;</span>] =alist<br>        profile_motif_matrix[<span class="hljs-string">&#x27;C&#x27;</span>] =clist<br>        profile_motif_matrix[<span class="hljs-string">&#x27;G&#x27;</span>] =glist<br>        profile_motif_matrix[<span class="hljs-string">&#x27;T&#x27;</span>] =tlist<br><br>    score_motif=<span class="hljs-number">0</span><br>    <span class="hljs-keyword">if</span>(<span class="hljs-built_in">len</span>(motifs)==in_m):<br>        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">0</span>,in_kmer):<br>            lv=<span class="hljs-number">0</span><br>            a = profile_motif_matrix[<span class="hljs-string">&#x27;A&#x27;</span>][i]<br>            c = profile_motif_matrix[<span class="hljs-string">&#x27;C&#x27;</span>][i]<br>            g = profile_motif_matrix[<span class="hljs-string">&#x27;G&#x27;</span>][i]<br>            t = profile_motif_matrix[<span class="hljs-string">&#x27;T&#x27;</span>][i]<br>            <span class="hljs-keyword">if</span>(a&gt;lv <span class="hljs-keyword">and</span> a!=<span class="hljs-number">0</span>):<br>                lv=a<br>            <span class="hljs-keyword">if</span>(c&gt;lv <span class="hljs-keyword">and</span> c!=<span class="hljs-number">0</span>):<br>                lv=c<br>            <span class="hljs-keyword">if</span>(g&gt;lv <span class="hljs-keyword">and</span> g!=<span class="hljs-number">0</span>):<br>                lv=g<br>            <span class="hljs-keyword">if</span>(t&gt;lv <span class="hljs-keyword">and</span> t!=<span class="hljs-number">0</span>):<br>                lv=t<br>            lv=in_m-lv   <br>            score_motif+=lv<br><br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">0</span>,in_kmer):<br>        profile_motif_matrix[<span class="hljs-string">&#x27;A&#x27;</span>][i]/=(j+<span class="hljs-number">1.0</span>)<br>        profile_motif_matrix[<span class="hljs-string">&#x27;C&#x27;</span>][i]/=(j+<span class="hljs-number">1.0</span>)<br>        profile_motif_matrix[<span class="hljs-string">&#x27;G&#x27;</span>][i]/=(j+<span class="hljs-number">1.0</span>)<br>        profile_motif_matrix[<span class="hljs-string">&#x27;T&#x27;</span>][i]/=(j+<span class="hljs-number">1.0</span>)<br>    <span class="hljs-keyword">return</span> score_motif<br><br>best_motif_score =in_m*in_kmer<br>best_motif= []<br><span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">0</span>,<span class="hljs-built_in">len</span>(in_dna[<span class="hljs-number">0</span>])-in_kmer+<span class="hljs-number">1</span>):<br>    dna_kmer = in_dna[<span class="hljs-number">0</span>][k:k+in_kmer]<br>    motifs.append(dna_kmer)<br>    ScoreMotif()<br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>,<span class="hljs-built_in">len</span>(in_dna)):<br>        max_probability_dna_kmer = -<span class="hljs-number">1</span><br>        dna_kmer=<span class="hljs-string">&#x27;&#x27;</span><br>        <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">0</span>,<span class="hljs-built_in">len</span>(in_dna[i])-in_kmer+<span class="hljs-number">1</span>):<br>            p = in_dna[i][j:j+in_kmer]<br>            probability_dna_kmer =<span class="hljs-number">1</span><br>            <span class="hljs-keyword">for</span> l <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">0</span>,<span class="hljs-built_in">len</span>(p)):<br>                probability_dna_kmer*= profile_motif_matrix[p[l]][l]<br>            <span class="hljs-keyword">if</span>(probability_dna_kmer&gt;max_probability_dna_kmer):<br>                max_probability_dna_kmer = probability_dna_kmer<br>                dna_kmer = p<br>        motifs.append(dna_kmer)<br>        motif_score = ScoreMotif()<br>        <span class="hljs-keyword">if</span>(<span class="hljs-built_in">len</span>(motifs)==in_m):<br>            <span class="hljs-keyword">if</span> (motif_score&lt;best_motif_score):<br>                best_motif=motifs<br>                best_motif_score = motif_score<br>    motifs=[]<br>    profile_motif_matrix=&#123;&#125;<br><br><span class="hljs-keyword">for</span> i, f <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(best_motif):<br>    <span class="hljs-built_in">print</span> (f)<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="week4"><a href="#week4" class="headerlink" title="week4"></a>week4</h2><h3 id="Code-Challenge-Implement-RandomizedMotifSearch"><a href="#Code-Challenge-Implement-RandomizedMotifSearch" class="headerlink" title="Code Challenge: Implement RandomizedMotifSearch."></a>Code Challenge: Implement RandomizedMotifSearch.</h3><p>Input: Integers k and t, followed by a collection of strings Dna.</p>
+<p>Output: A collection BestMotifs resulting from running RandomizedMotifSearch(Dna, k, t) 1,000 times.</p>
+<p>problem occurs: the output seems not correct</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> random<br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">Count</span>(<span class="hljs-params">Motifs</span>):</span><br>    count = &#123;&#125; <span class="hljs-comment"># initializing the count dictionary</span><br>    k = <span class="hljs-built_in">len</span>(Motifs[<span class="hljs-number">0</span>])<br>    <span class="hljs-keyword">for</span> symbol <span class="hljs-keyword">in</span> <span class="hljs-string">&quot;ACGT&quot;</span>:<br>        count[symbol] = []<br>        <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(k):<br>            count[symbol].append(<span class="hljs-number">0</span>)<br><br>    t = <span class="hljs-built_in">len</span>(Motifs)<br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(t):<br>        <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(k):<br>            symbol = Motifs[i][j]<br>            count[symbol][j] += <span class="hljs-number">1</span><br>    <span class="hljs-keyword">return</span> count<br><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">Consensus</span>(<span class="hljs-params">Motifs</span>):</span><br>    k = <span class="hljs-built_in">len</span>(Motifs[<span class="hljs-number">0</span>])<br>    count = Count(Motifs)<br>    consensus = <span class="hljs-string">&quot;&quot;</span><br>    <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(k):<br>        m = <span class="hljs-number">0</span><br>        frequentSymbol = <span class="hljs-string">&quot;&quot;</span><br>        <span class="hljs-keyword">for</span> symbol <span class="hljs-keyword">in</span> <span class="hljs-string">&quot;ACGT&quot;</span>:<br>            <span class="hljs-keyword">if</span> count[symbol][j] &gt; m:<br>                m = count[symbol][j]<br>                frequentSymbol = symbol<br>        consensus += frequentSymbol<br>    <span class="hljs-keyword">return</span> consensus<br><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">Score</span>(<span class="hljs-params">Motifs</span>):</span><br>    consensus = Consensus(Motifs)<br>    t = <span class="hljs-built_in">len</span>(Motifs)<br>    k = <span class="hljs-built_in">len</span>(Motifs[<span class="hljs-number">0</span>])<br>    score = <span class="hljs-number">0</span><br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(k):<br>        FrequentSymbol = consensus[i]<br>        <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(t):<br>            <span class="hljs-keyword">if</span> Motifs[j][i] != FrequentSymbol:<br>                score = score + <span class="hljs-number">1</span><br>    <span class="hljs-keyword">return</span> score<br><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">Pr</span>(<span class="hljs-params">Text, Profile</span>):</span><br>    p = <span class="hljs-number">1</span><br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(Text)):<br>        p = p * Profile[Text[i]][i]<br>    <span class="hljs-keyword">return</span> p<br><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">ProfileMostProbablePattern</span>(<span class="hljs-params">Text, k, Profile</span>):</span><br>    p_dict = &#123;&#125;<br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(Text)- k +<span class="hljs-number">1</span>):<br>        p = Pr(Text[i: i+k], Profile)<br>        p_dict[i] = p<br>    m = <span class="hljs-built_in">max</span>(p_dict.values())<br>    keys = [k <span class="hljs-keyword">for</span> k,v <span class="hljs-keyword">in</span> p_dict.items() <span class="hljs-keyword">if</span> v == m]<br>    ind = keys[<span class="hljs-number">0</span>]<br>    <span class="hljs-keyword">return</span> Text[ind: ind +k]<br><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">Motifs</span>(<span class="hljs-params">Profile, Dna</span>):</span><br>    motifs = []<br>    t = <span class="hljs-built_in">len</span>(Dna)<br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(t):<br>        motif = ProfileMostProbablePattern(Dna[i], k, Profile)<br>        motifs.append(motif)<br>    <span class="hljs-keyword">return</span> motifs<br><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">RandomMotifs</span>(<span class="hljs-params">Dna, k, t</span>):</span><br>    <span class="hljs-comment"># place your code here.</span><br>    motifs= []<br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(t):<br>        ind = random.randint(<span class="hljs-number">0</span>, <span class="hljs-built_in">len</span>(Dna[<span class="hljs-number">0</span>])-k)<br>        motif = Dna[i][ind:ind +k]<br>        motifs.append(motif)<br>    <span class="hljs-keyword">return</span> motifs<br><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">RandomizedMotifSearch</span>(<span class="hljs-params">Dna, k, t</span>):</span><br>    M = RandomMotifs(Dna, k, t)<br>    BestMotifs = M<br>    <span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:<br>        Profile = ProfileWithPseudocounts(M)<br>        M = Motifs(Profile, Dna)<br>        <span class="hljs-keyword">if</span> Score(M) &lt; Score(BestMotifs):<br>            BestMotifs = M<br>        <span class="hljs-keyword">else</span>:<br>            <span class="hljs-keyword">return</span> BestMotifs <br> <br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">ProfileWithPseudocounts</span>(<span class="hljs-params">Motifs</span>):</span><br>    t = <span class="hljs-built_in">len</span>(Motifs)<br>    k = <span class="hljs-built_in">len</span>(Motifs[<span class="hljs-number">0</span>])<br>    count = CountWithPseudocounts(Motifs)<br>    profile= &#123;&#125;<br>    <span class="hljs-comment">## divide the number of motif strings to get frequency</span><br>    <span class="hljs-keyword">for</span> letter <span class="hljs-keyword">in</span> count.keys():<br>        profile[letter] = [<span class="hljs-built_in">float</span>(x)/ (t+<span class="hljs-number">4</span>) <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> count[letter]]<br>    <span class="hljs-keyword">return</span> profile<br><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">CountWithPseudocounts</span>(<span class="hljs-params">Motifs</span>):</span><br>    t = <span class="hljs-built_in">len</span>(Motifs)<br>    k = <span class="hljs-built_in">len</span>(Motifs[<span class="hljs-number">0</span>])<br>    count = &#123;&#125;<br>    <span class="hljs-keyword">for</span> symbol <span class="hljs-keyword">in</span> <span class="hljs-string">&quot;ACGT&quot;</span>:<br>        count[symbol] = []<br>        <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(k):<br>            count[symbol].append(<span class="hljs-number">1</span>)<br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(t):<br>        <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(k):<br>            symbol = Motifs[i][j]<br>            count[symbol][j] += <span class="hljs-number">1</span><br>    <span class="hljs-keyword">return</span> count<br><br>dna = [<span class="hljs-string">&quot;CGCCCCTCTCGGGGGTGTTCAGTAAACGGCCA&quot;</span>,<br><span class="hljs-string">&quot;GGGCGAGGTATGTGTAAGTGCCAAGGTGCCAG&quot;</span>,<br><span class="hljs-string">&quot;TAGTACCGAGACCGAAAGAAGTATACAGGCGT&quot;</span>,<br><span class="hljs-string">&quot;TAGATCAAGTTTCAGGTGCACGTCGGTGAACC&quot;</span>,<br><span class="hljs-string">&quot;AATCCACCAGCTCCACGTGCAATGTTGGCCTA&quot;</span><br>]<br>k = <span class="hljs-number">8</span><br>t = <span class="hljs-number">5</span><br><br><span class="hljs-built_in">print</span>(RandomizedMotifSearch(dna,k,t))<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="distance-between-leaves"><a href="#distance-between-leaves" class="headerlink" title="distance between leaves"></a>distance between leaves</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> sys<br><span class="hljs-keyword">import</span> queue<br><br><span class="hljs-string">&#x27;&#x27;&#x27;</span><br><span class="hljs-string">In this chapter, we define the length of a path in a tree as the sum of the lengths of its edges (rather than the number of edges </span><br><span class="hljs-string">on the path). As a result, the evolutionary distance between two present-day species corresponding to leaves i and j in a tree T is </span><br><span class="hljs-string">equal to the length of the unique path connecting i and j, denoted di,j(T).</span><br><span class="hljs-string">Distances Between Leaves Problem: Compute the distances between leaves in a weighted tree.</span><br><span class="hljs-string">     Input:  An integer n followed by the adjacency list of a weighted tree with n leaves.</span><br><span class="hljs-string">     Output: An n x n matrix (di,j), where di,j is the length of the path between leaves i and j.</span><br><span class="hljs-string">Code Challenge: Solve the Distances Between Leaves Problem. The tree is given as an adjacency list of a graph whose leaves are </span><br><span class="hljs-string">integers between 0 and n - 1; the notation a-&gt;b:c means that node a is connected to node b by an edge of weight c. The matrix </span><br><span class="hljs-string">you return should be space-separated.</span><br><span class="hljs-string">Sample Input:</span><br><span class="hljs-string">4</span><br><span class="hljs-string">0-&gt;4:11</span><br><span class="hljs-string">1-&gt;4:2</span><br><span class="hljs-string">2-&gt;5:6</span><br><span class="hljs-string">3-&gt;5:7</span><br><span class="hljs-string">4-&gt;0:11</span><br><span class="hljs-string">4-&gt;1:2</span><br><span class="hljs-string">4-&gt;5:4</span><br><span class="hljs-string">5-&gt;4:4</span><br><span class="hljs-string">5-&gt;3:7</span><br><span class="hljs-string">5-&gt;2:6</span><br><span class="hljs-string">Sample Output:</span><br><span class="hljs-string">0	13	21	22</span><br><span class="hljs-string">13	0	12	13</span><br><span class="hljs-string">21	12	0	13</span><br><span class="hljs-string">22	13	13	0</span><br><span class="hljs-string">&#x27;&#x27;&#x27;</span><br><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DistanceBetweenLeaves</span>:</span><br>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self</span>):</span><br>        n, adjDict = self._<span class="hljs-built_in">input</span>()<br>        distMatrix = self.calculateDistMatrix(n, adjDict)<br>        self.printDistMatrix(distMatrix)<br><br>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_input</span>(<span class="hljs-params">self</span>):</span><br>        data = sys.stdin.read().strip().split()<br>        n = <span class="hljs-built_in">int</span>(data[<span class="hljs-number">0</span>])<br>        adjDict = <span class="hljs-built_in">dict</span>()<br>        <span class="hljs-keyword">for</span> d <span class="hljs-keyword">in</span> data[<span class="hljs-number">1</span>:]:<br>            d = d.split(<span class="hljs-string">&#x27;-&gt;&#x27;</span>)<br>            d1 = d[<span class="hljs-number">1</span>].split(<span class="hljs-string">&#x27;:&#x27;</span>)<br>            <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> <span class="hljs-built_in">int</span>(d[<span class="hljs-number">0</span>]) <span class="hljs-keyword">in</span> adjDict:<br>                adjDict[<span class="hljs-built_in">int</span>(d[<span class="hljs-number">0</span>])] = []<br>            adjDict[<span class="hljs-built_in">int</span>(d[<span class="hljs-number">0</span>])].append((<span class="hljs-built_in">int</span>(d1[<span class="hljs-number">0</span>]), <span class="hljs-built_in">int</span>(d1[<span class="hljs-number">1</span>])))<br>        <span class="hljs-keyword">return</span> n, adjDict<br>    <br>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">readFromFile</span>(<span class="hljs-params">self</span>):</span><br>        f = <span class="hljs-built_in">open</span>(<span class="hljs-string">&#x27;input.txt&#x27;</span>, <span class="hljs-string">&#x27;r&#x27;</span>)<br>        data = []<br>        <span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> f:<br>            data.append(line.strip())<br>        n = <span class="hljs-built_in">int</span>(data[<span class="hljs-number">0</span>])<br>        adjDict = <span class="hljs-built_in">dict</span>()<br>        <span class="hljs-keyword">for</span> d <span class="hljs-keyword">in</span> data[<span class="hljs-number">1</span>:]:<br>            d = d.split(<span class="hljs-string">&#x27;-&gt;&#x27;</span>)<br>            d1 = d[<span class="hljs-number">1</span>].split(<span class="hljs-string">&#x27;:&#x27;</span>)<br>            <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> <span class="hljs-built_in">int</span>(d[<span class="hljs-number">0</span>]) <span class="hljs-keyword">in</span> adjDict:<br>                adjDict[<span class="hljs-built_in">int</span>(d[<span class="hljs-number">0</span>])] = []<br>            adjDict[<span class="hljs-built_in">int</span>(d[<span class="hljs-number">0</span>])].append((<span class="hljs-built_in">int</span>(d1[<span class="hljs-number">0</span>]), <span class="hljs-built_in">int</span>(d1[<span class="hljs-number">1</span>])))<br>        <span class="hljs-keyword">return</span> n, adjDict<br><br>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">saveResult</span>(<span class="hljs-params">self, result</span>):</span><br>        f = <span class="hljs-built_in">open</span>(<span class="hljs-string">&#x27;result.txt&#x27;</span>, <span class="hljs-string">&#x27;w&#x27;</span>)<br><br>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">printDistMatrix</span>(<span class="hljs-params">self, distMatrix</span>):</span><br>        <span class="hljs-keyword">for</span> d <span class="hljs-keyword">in</span> distMatrix:<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27; &#x27;</span>.join([<span class="hljs-built_in">str</span>(i) <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> d]))<br><br>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculateDistMatrix</span>(<span class="hljs-params">self, n, adjDict</span>):</span><br>        distMatrix = [[<span class="hljs-number">0</span>]*n <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n)]<br><br>        <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">bfs</span>(<span class="hljs-params">s</span>):</span><br>            dist = <span class="hljs-built_in">dict</span>()<br>            q = queue.Queue()<br>            dist[s] = <span class="hljs-number">0</span><br>            q.put(s)<br>            <span class="hljs-keyword">while</span> <span class="hljs-keyword">not</span> q.empty():<br>                currNode = q.get()<br>                <span class="hljs-keyword">for</span> node, weight <span class="hljs-keyword">in</span> adjDict[currNode]:<br>                    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> node <span class="hljs-keyword">in</span> dist:<br>                        dist[node] = dist[currNode] + weight<br>                        <span class="hljs-keyword">if</span> node &lt; n:<br>                            distMatrix[s][node] = dist[node]<br>                        q.put(node)<br><br>        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n):<br>            bfs(i)<br>        <br>        <span class="hljs-keyword">return</span> distMatrix<br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&quot;__main__&quot;</span>:<br>    DistanceBetweenLeaves()<br></code></pre></td></tr></table></figure>
+
+
+
+
+
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/LEARNING-RECORDS/">LEARNING RECORDS</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/PYTHON/">PYTHON</a>
+                    
+                      <a class="hover-with-bg" href="/tags/BIOINFO/">BIOINFO</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/01/19/20210119pythonpractice/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">2021.1.19 python practice</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/12/16/20201216%E5%BE%AE%E5%8D%AB%E6%98%9F%E5%BA%8F%E5%88%97/">
+                        <span class="hidden-mobile">微卫星序列资料准备</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                  
+                
+                
+  <div class="disqus" style="width:100%">
+    <div id="disqus_thread"></div>
+    <script>
+      Fluid.utils.waitElementVisible('disqus_thread', function() {
+        Fluid.utils.createCssLink('https://cdn.jsdelivr.net/npm/disqusjs@1.0/dist/disqusjs.css');
+        Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/disqusjs@1.0/dist/disqus.js', function () {
+          new DisqusJS({
+            shortname: 'fluid',
+            apikey: ''
+          });
+        });
+      });
+    </script>
+    <noscript>Please enable JavaScript to view the
+      <a target="_blank" href="https://disqus.com/?ref_noscript" rel="nofollow noopener noopener">comments powered by Disqus.</a>
+    </noscript>
+  </div>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+</body>
+</html>

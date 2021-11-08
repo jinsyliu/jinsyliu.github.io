@@ -1,0 +1,583 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  
+    <meta name="description" content="">
+  
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+  <title>AO3 data scraping and visualising - Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Liu Keqin</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="AO3 data scraping and visualising">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-11-08 12:18" pubdate>
+        2021年11月8日 中午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.4k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      28
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">AO3 data scraping and visualising</h1>
+            
+            <div class="markdown-body">
+              <h1 id="2021-11-08-AO3-data-scraping-and-visualising"><a href="#2021-11-08-AO3-data-scraping-and-visualising" class="headerlink" title="2021-11-08: AO3 data scraping and visualising"></a>2021-11-08: AO3 data scraping and visualising</h1><p>Access date: 2021-11-03</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/radiolarian/AO3Scraper">scraping API (python)</a></p>
+<p><a target="_blank" rel="noopener" href="https://drive.google.com/drive/folders/1UUJwPtN7pZlpKXOautc8qhKkKfqLhvq4?usp=sharing">Google drive</a></p>
+<h2 id="1-get-access-to-ao3-work-ids"><a href="#1-get-access-to-ao3-work-ids" class="headerlink" title="1. get access to ao3 work ids"></a>1. get access to ao3 work ids</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python ao3_work_ids.py <span class="hljs-string">&quot;url&quot;</span> --out_csv wincest_bottomd.csv<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>url: <a target="_blank" rel="noopener" href="https://archiveofourown.org/works?utf8=%E2%9C%93&amp;work_search%5Bsort_column%5D=revised_at&amp;include_work_search%5Brelationship_ids%5D%5B%5D=35&amp;work_search%5Bother_tag_names%5D=Bottom+Dean+Winchester&amp;work_search%5Bexcluded_tag_names%5D=&amp;work_search%5Bcrossover%5D=&amp;work_search%5Bcomplete%5D=&amp;work_search%5Bwords_from%5D=&amp;work_search%5Bwords_to%5D=&amp;work_search%5Bdate_from%5D=&amp;work_search%5Bdate_to%5D=&amp;work_search%5Bquery%5D=&amp;work_search%5Blanguage_id%5D=&amp;commit=Sort+and+Filter&amp;tag_id=Supernatural">https://archiveofourown.org/works?utf8=%E2%9C%93&amp;work_search%5Bsort_column%5D=revised_at&amp;include_work_search%5Brelationship_ids%5D%5B%5D=35&amp;work_search%5Bother_tag_names%5D=Bottom+Dean+Winchester&amp;work_search%5Bexcluded_tag_names%5D=&amp;work_search%5Bcrossover%5D=&amp;work_search%5Bcomplete%5D=&amp;work_search%5Bwords_from%5D=&amp;work_search%5Bwords_to%5D=&amp;work_search%5Bdate_from%5D=&amp;work_search%5Bdate_to%5D=&amp;work_search%5Bquery%5D=&amp;work_search%5Blanguage_id%5D=&amp;commit=Sort+and+Filter&amp;tag_id=Supernatural</a><br>num_requested_fic: 2206<br>retreived on: 2021-11-03 17:06:29.160746</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python ao3_work_ids.py <span class="hljs-string">&quot;url&quot;</span> --out_csv wincest_bottoms.csv<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>url: <a target="_blank" rel="noopener" href="https://archiveofourown.org/works?utf8=%E2%9C%93&amp;work_search%5Bsort_column%5D=revised_at&amp;include_work_search%5Brelationship_ids%5D%5B%5D=35&amp;work_search%5Bother_tag_names%5D=Bottom+Sam+Winchester&amp;work_search%5Bexcluded_tag_names%5D=&amp;work_search%5Bcrossover%5D=&amp;work_search%5Bcomplete%5D=&amp;work_search%5Bwords_from%5D=&amp;work_search%5Bwords_to%5D=&amp;work_search%5Bdate_from%5D=&amp;work_search%5Bdate_to%5D=&amp;work_search%5Bquery%5D=&amp;work_search%5Blanguage_id%5D=&amp;commit=Sort+and+Filter&amp;tag_id=Supernatural">https://archiveofourown.org/works?utf8=%E2%9C%93&amp;work_search%5Bsort_column%5D=revised_at&amp;include_work_search%5Brelationship_ids%5D%5B%5D=35&amp;work_search%5Bother_tag_names%5D=Bottom+Sam+Winchester&amp;work_search%5Bexcluded_tag_names%5D=&amp;work_search%5Bcrossover%5D=&amp;work_search%5Bcomplete%5D=&amp;work_search%5Bwords_from%5D=&amp;work_search%5Bwords_to%5D=&amp;work_search%5Bdate_from%5D=&amp;work_search%5Bdate_to%5D=&amp;work_search%5Bquery%5D=&amp;work_search%5Blanguage_id%5D=&amp;commit=Sort+and+Filter&amp;tag_id=Supernatural</a><br>num_requested_fic: 1045<br>retreived on: 2021-11-03 16:32:33.772992</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python ao3_work_ids.py <span class="hljs-string">&quot;url&quot;</span> --out_csv wincest_ds.csv<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>url: <a target="_blank" rel="noopener" href="https://archiveofourown.org/works?utf8=%E2%9C%93&amp;work_search%5Bsort_column%5D=revised_at&amp;include_work_search%5Brelationship_ids%5D%5B%5D=35&amp;work_search%5Bother_tag_names%5D=Top+Dean+Winchester/Bottom+Sam+Winchester&amp;work_search%5Bexcluded_tag_names%5D=&amp;work_search%5Bcrossover%5D=&amp;work_search%5Bcomplete%5D=&amp;work_search%5Bwords_from%5D=&amp;work_search%5Bwords_to%5D=&amp;work_search%5Bdate_from%5D=&amp;work_search%5Bdate_to%5D=&amp;work_search%5Bquery%5D=&amp;work_search%5Blanguage_id%5D=&amp;commit=Sort+and+Filter&amp;tag_id=Supernatural">https://archiveofourown.org/works?utf8=%E2%9C%93&amp;work_search%5Bsort_column%5D=revised_at&amp;include_work_search%5Brelationship_ids%5D%5B%5D=35&amp;work_search%5Bother_tag_names%5D=Top+Dean+Winchester%2FBottom+Sam+Winchester&amp;work_search%5Bexcluded_tag_names%5D=&amp;work_search%5Bcrossover%5D=&amp;work_search%5Bcomplete%5D=&amp;work_search%5Bwords_from%5D=&amp;work_search%5Bwords_to%5D=&amp;work_search%5Bdate_from%5D=&amp;work_search%5Bdate_to%5D=&amp;work_search%5Bquery%5D=&amp;work_search%5Blanguage_id%5D=&amp;commit=Sort+and+Filter&amp;tag_id=Supernatural</a><br>num_requested_fic: 465<br>retreived on: 2021-11-03 16:40:31.729596</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python ao3_work_ids.py <span class="hljs-string">&quot;url&quot;</span> --out_csv wincest_sd.csv<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>url: <a target="_blank" rel="noopener" href="https://archiveofourown.org/works?utf8=%E2%9C%93&amp;work_search%5Bsort_column%5D=revised_at&amp;include_work_search%5Brelationship_ids%5D%5B%5D=35&amp;work_search%5Bother_tag_names%5D=Bottom+Dean+Winchester/Top+Sam+Winchester&amp;work_search%5Bexcluded_tag_names%5D=&amp;work_search%5Bcrossover%5D=&amp;work_search%5Bcomplete%5D=&amp;work_search%5Bwords_from%5D=&amp;work_search%5Bwords_to%5D=&amp;work_search%5Bdate_from%5D=&amp;work_search%5Bdate_to%5D=&amp;work_search%5Bquery%5D=&amp;work_search%5Blanguage_id%5D=&amp;commit=Sort+and+Filter&amp;tag_id=Supernatural">https://archiveofourown.org/works?utf8=%E2%9C%93&amp;work_search%5Bsort_column%5D=revised_at&amp;include_work_search%5Brelationship_ids%5D%5B%5D=35&amp;work_search%5Bother_tag_names%5D=Bottom+Dean+Winchester%2FTop+Sam+Winchester&amp;work_search%5Bexcluded_tag_names%5D=&amp;work_search%5Bcrossover%5D=&amp;work_search%5Bcomplete%5D=&amp;work_search%5Bwords_from%5D=&amp;work_search%5Bwords_to%5D=&amp;work_search%5Bdate_from%5D=&amp;work_search%5Bdate_to%5D=&amp;work_search%5Bquery%5D=&amp;work_search%5Blanguage_id%5D=&amp;commit=Sort+and+Filter&amp;tag_id=Supernatural</a><br>num_requested_fic: 509<br>retreived on: 2021-11-03 18:24:05.750942</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python ao3_work_ids.py <span class="hljs-string">&quot;url&quot;</span> --out_csv wincest_topd.csv<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>url: <a target="_blank" rel="noopener" href="https://archiveofourown.org/works?utf8=%E2%9C%93&amp;work_search%5Bsort_column%5D=revised_at&amp;include_work_search%5Brelationship_ids%5D%5B%5D=35&amp;work_search%5Bother_tag_names%5D=Top+Dean+Winchester&amp;work_search%5Bexcluded_tag_names%5D=&amp;work_search%5Bcrossover%5D=&amp;work_search%5Bcomplete%5D=&amp;work_search%5Bwords_from%5D=&amp;work_search%5Bwords_to%5D=&amp;work_search%5Bdate_from%5D=&amp;work_search%5Bdate_to%5D=&amp;work_search%5Bquery%5D=&amp;work_search%5Blanguage_id%5D=&amp;commit=Sort+and+Filter&amp;tag_id=Supernatural">https://archiveofourown.org/works?utf8=%E2%9C%93&amp;work_search%5Bsort_column%5D=revised_at&amp;include_work_search%5Brelationship_ids%5D%5B%5D=35&amp;work_search%5Bother_tag_names%5D=Top+Dean+Winchester&amp;work_search%5Bexcluded_tag_names%5D=&amp;work_search%5Bcrossover%5D=&amp;work_search%5Bcomplete%5D=&amp;work_search%5Bwords_from%5D=&amp;work_search%5Bwords_to%5D=&amp;work_search%5Bdate_from%5D=&amp;work_search%5Bdate_to%5D=&amp;work_search%5Bquery%5D=&amp;work_search%5Blanguage_id%5D=&amp;commit=Sort+and+Filter&amp;tag_id=Supernatural</a><br>num_requested_fic: 2102<br>retreived on: 2021-11-03 16:01:01.307065</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python ao3_work_ids.py <span class="hljs-string">&quot;url&quot;</span> --out_csv wincest_tops.csv<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>url: <a target="_blank" rel="noopener" href="https://archiveofourown.org/works?utf8=%E2%9C%93&amp;work_search%5Bsort_column%5D=revised_at&amp;include_work_search%5Brelationship_ids%5D%5B%5D=35&amp;work_search%5Bother_tag_names%5D=Top+Sam+Winchester&amp;work_search%5Bexcluded_tag_names%5D=&amp;work_search%5Bcrossover%5D=&amp;work_search%5Bcomplete%5D=&amp;work_search%5Bwords_from%5D=&amp;work_search%5Bwords_to%5D=&amp;work_search%5Bdate_from%5D=&amp;work_search%5Bdate_to%5D=&amp;work_search%5Bquery%5D=&amp;work_search%5Blanguage_id%5D=&amp;commit=Sort+and+Filter&amp;tag_id=Supernatural">https://archiveofourown.org/works?utf8=%E2%9C%93&amp;work_search%5Bsort_column%5D=revised_at&amp;include_work_search%5Brelationship_ids%5D%5B%5D=35&amp;work_search%5Bother_tag_names%5D=Top+Sam+Winchester&amp;work_search%5Bexcluded_tag_names%5D=&amp;work_search%5Bcrossover%5D=&amp;work_search%5Bcomplete%5D=&amp;work_search%5Bwords_from%5D=&amp;work_search%5Bwords_to%5D=&amp;work_search%5Bdate_from%5D=&amp;work_search%5Bdate_to%5D=&amp;work_search%5Bquery%5D=&amp;work_search%5Blanguage_id%5D=&amp;commit=Sort+and+Filter&amp;tag_id=Supernatural</a><br>num_requested_fic: 1776<br>retreived on: 2021-11-03 18:12:29.245470</p>
+</blockquote>
+<h2 id="2-get-the-fics"><a href="#2-get-the-fics" class="headerlink" title="2. get the fics"></a>2. get the fics</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python ao3_get_fanfics.py wincest.csv --csv wincest_fanfic.csv<br></code></pre></td></tr></table></figure>
+
+
+
+<ol start="3">
+<li>Generating fics-rating bar chart race by Flourish</li>
+</ol>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><code class="hljs R">wincest_bottomd_fanfic &lt;- read.csv(<span class="hljs-string">&quot;wincest_bottomd_fanfic.csv&quot;</span>)<br><span class="hljs-built_in">min</span>(wincest_bottomd_fanfic$published)<br><span class="hljs-comment">#2007</span><br><span class="hljs-built_in">max</span>(wincest_bottomd_fanfic$published)<br><span class="hljs-comment">#2021</span><br><br>Explicit &lt;- wincest_bottomd_fanfic[which(wincest_bottomd_fanfic$rating == <span class="hljs-string">&quot;Explicit&quot;</span>),]<br>Mature &lt;- wincest_bottomd_fanfic[which(wincest_bottomd_fanfic$rating == <span class="hljs-string">&quot;Mature&quot;</span>), ]<br><br><span class="hljs-comment"># as same as Explicit</span><br>startday2007 &lt;- <span class="hljs-string">&quot;2007-01-01&quot;</span><br>endday2007 &lt;- <span class="hljs-string">&quot;2007-12-31&quot;</span><br>Mature_2007 &lt;- Mature[which(Mature$published &gt;= startday2007 &amp; Mature$published &lt;= endday2007), ]<br><br>startday2008 &lt;- <span class="hljs-string">&quot;2008-01-01&quot;</span><br>endday2008 &lt;- <span class="hljs-string">&quot;2008-12-31&quot;</span><br>Mature_2008 &lt;- Mature[which(Mature$published &gt;= startday2008 &amp; Mature$published &lt;= endday2008), ]<br><br>startday2009 &lt;- <span class="hljs-string">&quot;2009-01-01&quot;</span><br>endday2009 &lt;- <span class="hljs-string">&quot;2009-12-31&quot;</span><br>Mature_2009 &lt;- Mature[which(Mature$published &gt;= startday2009 &amp; Mature$published &lt;= endday2009), ]<br><br>startday2010 &lt;- <span class="hljs-string">&quot;2010-01-01&quot;</span><br>endday2010 &lt;- <span class="hljs-string">&quot;2010-12-31&quot;</span><br>Mature_2010 &lt;- Mature[which(Mature$published &gt;= startday2010 &amp; Mature$published &lt;= endday2010), ]<br><br>startday2011 &lt;- <span class="hljs-string">&quot;2011-01-01&quot;</span><br>endday2011 &lt;- <span class="hljs-string">&quot;2011-12-31&quot;</span><br>Mature_2011 &lt;- Mature[which(Mature$published &gt;= startday2011 &amp; Mature$published &lt;= endday2011), ]<br><br>startday2012 &lt;- <span class="hljs-string">&quot;2012-01-01&quot;</span><br>endday2012 &lt;- <span class="hljs-string">&quot;2012-12-31&quot;</span><br>Mature_2012 &lt;- Mature[which(Mature$published &gt;= startday2012 &amp; Mature$published &lt;= endday2012), ]<br><br>startday2013 &lt;- <span class="hljs-string">&quot;2013-01-01&quot;</span><br>endday2013 &lt;- <span class="hljs-string">&quot;2013-12-31&quot;</span><br>Mature_2013 &lt;- Mature[which(Mature$published &gt;= startday2013 &amp; Mature$published &lt;= endday2013), ]<br><br>startday2014 &lt;- <span class="hljs-string">&quot;2014-01-01&quot;</span><br>endday2014 &lt;- <span class="hljs-string">&quot;2014-12-31&quot;</span><br>Mature_2014 &lt;- Mature[which(Mature$published &gt;= startday2014 &amp; Mature$published &lt;= endday2014), ]<br><br>startday2015 &lt;- <span class="hljs-string">&quot;2015-01-01&quot;</span><br>endday2015 &lt;- <span class="hljs-string">&quot;2015-12-31&quot;</span><br>Mature_2015 &lt;- Mature[which(Mature$published &gt;= startday2015 &amp; Mature$published &lt;= endday2015), ]<br><br>startday2016 &lt;- <span class="hljs-string">&quot;2016-01-01&quot;</span><br>endday2016 &lt;- <span class="hljs-string">&quot;2016-12-31&quot;</span><br>Mature_2016 &lt;- Mature[which(Mature$published &gt;= startday2016 &amp; Mature$published &lt;= endday2016), ]<br><br>startday2017 &lt;- <span class="hljs-string">&quot;2017-01-01&quot;</span><br>endday2017 &lt;- <span class="hljs-string">&quot;2017-12-31&quot;</span><br>Mature_2017 &lt;- Mature[which(Mature$published &gt;= startday2017 &amp; Mature$published &lt;= endday2017), ]<br><br>startday2018 &lt;- <span class="hljs-string">&quot;2018-01-01&quot;</span><br>endday2018 &lt;- <span class="hljs-string">&quot;2018-12-31&quot;</span><br>Explicit_2018 &lt;- Explicit[which(Explicit$published &gt;= startday2018 &amp; Explicit$published &lt;= endday2018), ]<br><br>startday2019 &lt;- <span class="hljs-string">&quot;2019-01-01&quot;</span><br>endday2019 &lt;- <span class="hljs-string">&quot;2019-12-31&quot;</span><br>Mature_2019 &lt;- Mature[which(Mature$published &gt;= startday2019 &amp; Mature$published &lt;= endday2019), ]<br><br>startday2020 &lt;- <span class="hljs-string">&quot;2020-01-01&quot;</span><br>endday2020 &lt;- <span class="hljs-string">&quot;2020-12-31&quot;</span><br>Mature_2020 &lt;- Mature[which(Mature$published &gt;= startday2020 &amp; Mature$published &lt;= endday2020), ]<br></code></pre></td></tr></table></figure>
+
+<p> now manually generating csv.file in excel</p>
+<p>it should look like:</p>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>2007</th>
+<th>2008</th>
+<th>2009</th>
+<th>2010</th>
+<th>2011</th>
+<th>2012</th>
+<th>2013</th>
+<th>2014</th>
+<th>2015</th>
+<th>2016</th>
+<th>2017</th>
+<th>2018</th>
+<th>2019</th>
+<th>2020</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Explicit</td>
+<td>3</td>
+<td>2</td>
+<td>1</td>
+<td>3</td>
+<td>3</td>
+<td>22</td>
+<td>112</td>
+<td>197</td>
+<td>237</td>
+<td>204</td>
+<td>188</td>
+<td>130</td>
+<td>167</td>
+<td>204</td>
+</tr>
+<tr>
+<td>Mature</td>
+<td>0</td>
+<td>0</td>
+<td>2</td>
+<td>4</td>
+<td>3</td>
+<td>9</td>
+<td>22</td>
+<td>46</td>
+<td>39</td>
+<td>38</td>
+<td>48</td>
+<td>20</td>
+<td>29</td>
+<td>48</td>
+</tr>
+</tbody></table>
+<p><a target="_blank" rel="noopener" href="https://public.flourish.studio/visualisation/7761199/">Flourish bar chart race visualising</a></p>
+<h2 id="4-genrating-additional-tags-wordcloud"><a href="#4-genrating-additional-tags-wordcloud" class="headerlink" title="4. genrating additional tags wordcloud"></a>4. genrating additional tags wordcloud</h2><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs R">library(tm)<br>library(wordcloud)<br>library(RColorBrewer)<br>library(wordcloud2)<br>library(<span class="hljs-string">&quot;corpus&quot;</span>)<br>library(<span class="hljs-string">&quot;textreadr&quot;</span>)<br><br>wincest_bottomd_fanfic_tags &lt;- read_doc(<span class="hljs-string">&quot;bottomd_tags.doc&quot;</span>, skip = <span class="hljs-number">0</span>, remove.empty = <span class="hljs-literal">TRUE</span>, trim = <span class="hljs-literal">TRUE</span>, format = <span class="hljs-literal">FALSE</span>)<br><span class="hljs-built_in">class</span>(wincest_bottomd_fanfic_tags)<br><span class="hljs-comment"># large charactar</span><br>wincest_bottomd_fanfic_tags_corpus &lt;- Corpus(VectorSource(wincest_bottomd_fanfic_tags)) <span class="hljs-comment">#Create a corpus </span><br>wincest_bottomd_fanfic_tags_corpus &lt;- tm_map(wincest_bottomd_fanfic_tags_corpus, removeNumbers) <span class="hljs-comment">#filtering</span><br>wincest_bottomd_fanfic_tags_corpus &lt;- tm_map(wincest_bottomd_fanfic_tags_corpus, removePunctuation)<br>wincest_bottomd_fanfic_tags_corpus &lt;- tm_map(wincest_bottomd_fanfic_tags_corpus, stripWhitespace)<br>wincest_bottomd_fanfic_tags_corpus &lt;- tm_map(wincest_bottomd_fanfic_tags_corpus, content_transformer(tolower))<br>wincest_bottomd_fanfic_tags_corpus &lt;- tm_map(wincest_bottomd_fanfic_tags_corpus, removeWords, stopwords(<span class="hljs-string">&quot;english&quot;</span>))<br><br>toSpace &lt;- content_transformer(<span class="hljs-keyword">function</span>(x, pattern) gsub(pattern, <span class="hljs-string">&quot; &quot;</span>, x)) <span class="hljs-comment">#filtering specific words</span><br>wincest_bottomd_fanfic_tags_corpus &lt;- tm_map(wincest_bottomd_fanfic_tags_corpus, toSpace, <span class="hljs-string">&quot;winchester dean&quot;</span>)<br>wincest_bottomd_fanfic_tags_corpus &lt;- tm_map(wincest_bottomd_fanfic_tags_corpus, toSpace, <span class="hljs-string">&quot;dean&quot;</span>)<br>wincest_bottomd_fanfic_tags_corpus &lt;- tm_map(wincest_bottomd_fanfic_tags_corpus, toSpace, <span class="hljs-string">&quot;sam&quot;</span>)<br>wincest_bottomd_fanfic_tags_corpus &lt;- tm_map(wincest_bottomd_fanfic_tags_corpus, toSpace, <span class="hljs-string">&quot;castiel&quot;</span>)<br><br>dtm &lt;- TermDocumentMatrix(wincest_bottomd_fanfic_tags_corpus) <br>matrix &lt;- as.matrix(dtm) <br>words &lt;- sort(rowSums(matrix),decreasing=<span class="hljs-literal">TRUE</span>) <br>df &lt;- data.frame(word = <span class="hljs-built_in">names</span>(words),freq=words)<br><br>set.seed(<span class="hljs-number">1234</span>) <span class="hljs-comment"># for reproducibility </span><br>wordcloud(words = df$word, freq = df$freq, min.freq = <span class="hljs-number">1</span>,           max.words=<span class="hljs-number">200</span>, random.order=<span class="hljs-literal">FALSE</span>, rot.per=<span class="hljs-number">0.35</span>,            colors=brewer.pal(<span class="hljs-number">8</span>, <span class="hljs-string">&quot;Dark2&quot;</span>))<br></code></pre></td></tr></table></figure>
+
+<p><img src="without_filtering.png" srcset="/img/loading.gif" alt="without filtering"></p>
+<p><img src="filtered.png" srcset="/img/loading.gif" alt="filtered"></p>
+<h2 id="5-Try-to-generate-fanfic-body-wordcloud-but-failed"><a href="#5-Try-to-generate-fanfic-body-wordcloud-but-failed" class="headerlink" title="5. Try to generate fanfic body wordcloud (but failed)"></a>5. Try to generate fanfic body wordcloud (but failed)</h2><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs R">wincest_bottomd_fanfic_body &lt;- readLines(<span class="hljs-string">&quot;bottomd_body.txt&quot;</span>)<br><span class="hljs-comment"># large charactar</span><br>wincest_bottomd_fanfic_body_corpus &lt;- Corpus(VectorSource(wincest_bottomd_fanfic_body)) <span class="hljs-comment">#Create a corpus </span><br>wincest_bottomd_fanfic_body_corpus &lt;- tm_map(wincest_bottomd_fanfic_body_corpus, removeNumbers)<br>wincest_bottomd_fanfic_body_corpus &lt;- tm_map(wincest_bottomd_fanfic_body_corpus, removePunctuation)<br>wincest_bottomd_fanfic_body_corpus &lt;- tm_map(wincest_bottomd_fanfic_body_corpus, stripWhitespace)<br>wincest_bottomd_fanfic_body_corpus &lt;- tm_map(wincest_bottomd_fanfic_body_corpus, content_transformer(tolower))<br>wincest_bottomd_fanfic_body_corpus &lt;- tm_map(wincest_bottomd_fanfic_body_corpus, removeWords, stopwords(<span class="hljs-string">&quot;english&quot;</span>))<br><br>dtm &lt;- TermDocumentMatrix(wincest_bottomd_fanfic_body_corpus) <br>View(dtm)<br><span class="hljs-built_in">class</span>(dtm)<br><span class="hljs-comment"># [1] &quot;TermDocumentMatrix&quot;    &quot;simple_triplet_matrix&quot;</span><br><br>matrix &lt;- as.matrix(dtm) <br><span class="hljs-comment"># 错误: 矢量内存用完了(达到了极限?)</span><br>words &lt;- sort(rowSums(matrix),decreasing=<span class="hljs-literal">TRUE</span>) <br><span class="hljs-comment"># Error in rowSums(matrix) : &#x27;x&#x27;必需是阵列，而且至少得有两个维度</span><br>df &lt;- data.frame(word = <span class="hljs-built_in">names</span>(words),freq=words)<br><span class="hljs-comment"># Error in as.data.frame.default(x[[i]], optional = TRUE) : </span><br><span class="hljs-comment"># cannot coerce class ‘&quot;function&quot;’ to a data.frame</span><br>set.seed(<span class="hljs-number">1234</span>) <span class="hljs-comment"># for reproducibility </span><br>wordcloud(words = df$word, freq = df$freq, min.freq = <span class="hljs-number">1</span>,           max.words=<span class="hljs-number">200</span>, random.order=<span class="hljs-literal">FALSE</span>, rot.per=<span class="hljs-number">0.35</span>,            colors=brewer.pal(<span class="hljs-number">8</span>, <span class="hljs-string">&quot;Dark2&quot;</span>))<br></code></pre></td></tr></table></figure>
+
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/BIOINFO-EXPERIMENT-RECORDS/">BIOINFO EXPERIMENT RECORDS</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/R/">R</a>
+                    
+                      <a class="hover-with-bg" href="/tags/AO3/">AO3</a>
+                    
+                      <a class="hover-with-bg" href="/tags/data-scraping/">data scraping</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/10/29/20211029%E7%A0%94%E7%A9%B6%E7%94%9F%E5%BC%80%E9%A2%98%E8%AE%BA%E6%96%87/">
+                        <span class="hidden-mobile">2021.10.29 SIBS研究生开题文件</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                  
+                
+                
+  <div class="disqus" style="width:100%">
+    <div id="disqus_thread"></div>
+    <script>
+      Fluid.utils.waitElementVisible('disqus_thread', function() {
+        Fluid.utils.createCssLink('https://cdn.jsdelivr.net/npm/disqusjs@1.0/dist/disqusjs.css');
+        Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/disqusjs@1.0/dist/disqus.js', function () {
+          new DisqusJS({
+            shortname: 'fluid',
+            apikey: ''
+          });
+        });
+      });
+    </script>
+    <noscript>Please enable JavaScript to view the
+      <a target="_blank" href="https://disqus.com/?ref_noscript" rel="nofollow noopener noopener">comments powered by Disqus.</a>
+    </noscript>
+  </div>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+</body>
+</html>

@@ -289,8 +289,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/07/19/20210719%E5%AE%9E%E9%AA%8C%E8%AE%B0%E5%BD%95B16%E5%A4%9A%E8%82%BD%E6%BA%B6%E6%B6%B2%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/">
-                        <span class="hidden-mobile">20210719实验记录B16多肽溶液配置方法</span>
+                      <a href="/2021/07/19/20210719%E5%AE%9E%E9%AA%8C%E8%AE%B0%E5%BD%95geo2r/">
+                        <span class="hidden-mobile">20210719实验记录geo2r</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -474,6 +474,45 @@
 
 
 
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
 
 
 

@@ -187,7 +187,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      7.3k 字
+      7.1k 字
     </span>
   
 
@@ -197,7 +197,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      84
+      80
        分钟
     </span>
   
@@ -230,17 +230,14 @@
             <h1 style="display: none">2021.9.7-生信笔记-GWAS全基因组关联分析</h1>
             
             <div class="markdown-body">
-              <p><strong>pdf版获取</strong><br><br></p>
-
+              <p><strong>pdf版获取</strong><br><br><br>
 
 	<div class="row">
     <embed src="https://jinsyliu.github.io/pdf/20210907%E7%94%9F%E4%BF%A1%E7%AC%94%E8%AE%B0GWAS%E5%85%A8%E5%9F%BA%E5%9B%A0%E7%BB%84%E5%85%B3%E8%81%94%E5%88%86%E6%9E%90.pdf" width="100%" height="550" type="application/pdf">
 	</div>
 
 
-
-<br>
-
+<br><br></p>
 <h1 id="2021-9-7-生信笔记-GWAS全基因组关联分析"><a href="#2021-9-7-生信笔记-GWAS全基因组关联分析" class="headerlink" title="2021.9.7-生信笔记-GWAS全基因组关联分析"></a>2021.9.7-生信笔记-GWAS全基因组关联分析</h1><h2 id="全基因组关联分析-Genome-wide-association-study-GWAS"><a href="#全基因组关联分析-Genome-wide-association-study-GWAS" class="headerlink" title="全基因组关联分析/Genome-wide association study (GWAS)"></a>全基因组关联分析/Genome-wide association study (GWAS)</h2><p><a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6001694/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6001694/</a></p>
 <h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>全基因组关联分析（Genome-wide association study）是指在人类全基因组范围内找出存在的序列变异，即单核苷酸多态性（single nucleotide polymorphisms, SNP），从中筛选出与疾病相关的SNPs。在全基因组范围内选择遗传变异进行基因分析，比较异常和对照组之间每个遗传变异及其频率的差异，统计分析每个变异与目标性状之间的关联性大小，选出最相关的遗传变异进行验证，并根据验证结果最终确认其与目标性状之间的相关性。</p>
 <blockquote>
@@ -298,41 +295,33 @@
 <blockquote>
 <p>一个文件包含个体及其基因型（genotypes）的信息【ped格式】</p>
 <blockquote>
-<p>![截屏2021-09-08 下午3.50.28](/Users/keqinliu/Library/Application Support/typora-user-images/截屏2021-09-08 下午3.50.28.png)</p>
+<p><img src="/Users/keqinliu/Library/Application Support/typora-user-images/截屏2021-09-08 下午3.50.28.png" srcset="/img/loading.gif" alt="截屏2021-09-08 下午3.50.28"></p>
 </blockquote>
 <p>一个文件装有遗传标记（genetic markers）的资料【map格式】。</p>
 <blockquote>
-<p>![截屏2021-09-08 下午3.50.43](/Users/keqinliu/Library/Application Support/typora-user-images/截屏2021-09-08 下午3.50.43.png)</p>
+<p><img src="/Users/keqinliu/Library/Application Support/typora-user-images/截屏2021-09-08 下午3.50.43.png" srcset="/img/loading.gif" alt="截屏2021-09-08 下午3.50.43"></p>
 </blockquote>
 </blockquote>
 <p>而二进制格式的PLINK数据则由三个文件组成：</p>
 <blockquote>
 <p>一个二进制文件包含个体标识符（individual identifiers (IDs) ）和基因型（genotypes）【bed格式】</p>
 <blockquote>
-<p>![截屏2021-09-08 下午3.51.01](/Users/keqinliu/Library/Application Support/typora-user-images/截屏2021-09-08 下午3.51.01.png)</p>
-</blockquote>
-<blockquote>
+<p><img src="/Users/keqinliu/Library/Application Support/typora-user-images/截屏2021-09-08 下午3.51.01.png" srcset="/img/loading.gif" alt="截屏2021-09-08 下午3.51.01"></p>
 <p>例如，在躁郁症的研究中，bed格式的文件应包含患者和健康人群（对照组）的基因分型结果（genotyping results）</p>
 </blockquote>
 <p>一个文本文件包含有个体信息（information on the individuals）【fam格式】</p>
 <blockquote>
-<p>![截屏2021-09-08 下午3.51.10](/Users/keqinliu/Library/Application Support/typora-user-images/截屏2021-09-08 下午3.51.10.png)</p>
-</blockquote>
-<blockquote>
+<p><img src="/Users/keqinliu/Library/Application Support/typora-user-images/截屏2021-09-08 下午3.51.10.png" srcset="/img/loading.gif" alt="截屏2021-09-08 下午3.51.10"></p>
 <p>例如，在躁郁症的研究中，fam格式的文件应当包含与研究对象有关的数据，如研究对象与其他参与者的家庭关系，性别和临床诊断结果</p>
 </blockquote>
 <p>一个文本文件装有遗传标记（genetic markers）【bim格式】</p>
 <blockquote>
-<p>![截屏2021-09-08 下午3.51.20](/Users/keqinliu/Library/Application Support/typora-user-images/截屏2021-09-08 下午3.51.20.png)</p>
-</blockquote>
-<blockquote>
+<p><img src="/Users/keqinliu/Library/Application Support/typora-user-images/截屏2021-09-08 下午3.51.20.png" srcset="/img/loading.gif" alt="截屏2021-09-08 下午3.51.20"></p>
 <p>而bim格式的文件应当有关SNPs物理位置的信息。</p>
 </blockquote>
 <p>如果要利用协变量（covariates）进行分析，则通常会需要第四个文件，这个文件包含每个个体的协变量的值。</p>
 <blockquote>
-<p>![截屏2021-09-08 下午3.51.32](/Users/keqinliu/Library/Application Support/typora-user-images/截屏2021-09-08 下午3.51.32.png)</p>
-</blockquote>
-<blockquote>
+<p><img src="/Users/keqinliu/Library/Application Support/typora-user-images/截屏2021-09-08 下午3.51.32.png" srcset="/img/loading.gif" alt="截屏2021-09-08 下午3.51.32"></p>
 <p>GWAS中的协变量（covariates）</p>
 <p>一般定义：在实验的设计中，协变量是一个独立变量（解释变量），不为实验者所操纵，但仍影响实验结果。</p>
 <p>但是在GWAS模型中，因子和变量最后都变为了协变量。</p>
@@ -340,7 +329,7 @@
 </blockquote>
 <p>标识符说明：</p>
 <blockquote>
-<p>![截屏2021-09-08 下午3.52.51](/Users/keqinliu/Library/Application Support/typora-user-images/截屏2021-09-08 下午3.52.51.png)</p>
+<p><img src="/Users/keqinliu/Library/Application Support/typora-user-images/截屏2021-09-08 下午3.52.51.png" srcset="/img/loading.gif" alt="截屏2021-09-08 下午3.52.51"></p>
 </blockquote>
 <h5 id="PLINK基本命令"><a href="#PLINK基本命令" class="headerlink" title="PLINK基本命令"></a>PLINK基本命令</h5><p>PLINK 是一个命令行程序。通常，PLINK会从工作目录中文件夹中加载数据文件，并将结果文件保存在这个目录中。</p>
 <blockquote>
@@ -355,7 +344,7 @@
 <p>只包括有北欧和西欧血统的犹他州居民（CEU）</p>
 </blockquote>
 <p>(<a target="_blank" rel="noopener" href="http://hapmap.ncbi.nlm.nih.gov/downloads/genotypes/2010-05_phaseIII/plink_format/">http://hapmap.ncbi.nlm.nih.gov/downloads/genotypes/2010-05_phaseIII/plink_format/</a>; Gibbs et al., 2003)</p>
-<p>由于HapMap数据的样本量相对较小，这些模拟中的遗传效应大小被设定为大于通常在复杂性状的遗传研究中观察到的值。值得注意的是，要检测复杂性状的遗传风险因素，需要更大的样本量（例如，至少在几千人的数量级，但可能甚至是几万或几十万）。带有模拟表型性状的HapMap数据可在<a target="_blank" rel="noopener" href="https://github.com/MareesAT/GWA_tutorial/%EF%BC%881_QC_GWAS.zip%EF%BC%89%E8%8E%B7%E5%BE%97%E3%80%82">https://github.com/MareesAT/GWA_tutorial/（1_QC_GWAS.zip）获得。</a></p>
+<p>由于HapMap数据的样本量相对较小，这些模拟中的遗传效应大小被设定为大于通常在复杂性状的遗传研究中观察到的值。值得注意的是，要检测复杂性状的遗传风险因素，需要更大的样本量（例如，至少在几千人的数量级，但可能甚至是几万或几十万）。带有模拟表型性状的HapMap数据可在<a target="_blank" rel="noopener" href="https://github.com/MareesAT/GWA_tutorial/（1_QC_GWAS.zip）获得。">https://github.com/MareesAT/GWA_tutorial/（1_QC_GWAS.zip）获得。</a></p>
 </blockquote>
 <h5 id="质量控制步骤及简表"><a href="#质量控制步骤及简表" class="headerlink" title="质量控制步骤及简表"></a>质量控制步骤及简表</h5><p>这里提供了七个质量控制步骤的参考，但是QC中的阈值可能因研究的具体特点而不同。</p>
 <p>这七个步骤包括根据以下情况过滤掉SNP和个体。</p>
@@ -368,6 +357,7 @@
 <li>相关性 relatedness</li>
 <li>种族离群（见人口分层）ethnic outliers (see population stratification)</li>
 </ol>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -376,9 +366,10 @@
 <th>阈值设置与详解</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>【step1】Missingness of SNPs and individuals 个体和SNP缺失</td>
-<td>【–geno】Excludes SNPs that are missing in a large proportion of the subjects. In this step, SNPs with low genotype calls are removed.排除在很大一部分受试者中缺失的SNPs。在这一步骤中，基因型调用量低的SNP被删除。                                                                                      【–mind】Excludes individuals who have high rates of genotype missingness. In this step, individual with low genotype calls are removed.排除那些基因型缺失率高的个体。在这一步骤中，基因型调用率低的个体被删除。</td>
+<td>【—geno】Excludes SNPs that are missing in a large proportion of the subjects. In this step, SNPs with low genotype calls are removed.排除在很大一部分受试者中缺失的SNPs。在这一步骤中，基因型调用量低的SNP被删除。                                                                                      【—mind】Excludes individuals who have high rates of genotype missingness. In this step, individual with low genotype calls are removed.排除那些基因型缺失率高的个体。在这一步骤中，基因型调用率低的个体被删除。</td>
 <td>We recommend to first filter SNPs and individuals based on a relaxed threshold (0.2; &gt;20%), as this will filter out SNPs and individuals with very high levels of missingness. Then a filter with a more stringent threshold can be applied (0.02).我们建议首先根据一个宽松的阈值（0.2；&gt;20%）过滤SNP和个体，因为这将过滤掉具有非常高遗漏率的SNP和个体。然后，可以采用更严格的阈值（0.02）的过滤器。（注意，在进行个体筛选之前，应当先进行SNPs的筛选）</td>
 </tr>
 <tr>
@@ -388,13 +379,13 @@
 </tr>
 <tr>
 <td>【step3】Minor allele frequency (MAF)小等位基因频率</td>
-<td>【–maf】Includes only SNPs above the set MAF threshold. 只包括超过设定的 MAF 阈值的 SNPs</td>
+<td>【—maf】Includes only SNPs above the set MAF threshold. 只包括超过设定的 MAF 阈值的 SNPs</td>
 <td>低MAF的SNP很罕见，因此缺乏检测SNP-表型关联的能力。这些SNP也更容易出现基因分型错误。MAF阈值应取决于你的样本大小，较大的样本可以使用较低的MAF阈值。分别来说，对于大样本（N = 100000）与中样本（N = 10000），通常使用0.01和0.05作为MAF阈值。</td>
 </tr>
 <tr>
 <td>【step4】Hardy–Weinberg equilibrium (HWE)哈迪-温伯格平衡</td>
 <td>【‐‐hwe】Excludes markers which deviate from Hardy–Weinberg equilibrium.不包括偏离Hardy-Weinberg平衡的标记。</td>
-<td>是基因分型错误的常见指标，也可能表明进化的选择。对于二元性状，我们建议这样排除：HWE p值在病例中&lt;1e-10，在对照中&lt;1e-6。不太严格的病例阈值可以避免在选择下丢弃疾病相关的SNPs（见在线教程 <a target="_blank" rel="noopener" href="https://github.com/MareesAT/GWA_tutorial/%E5%AF%B9%E4%BA%8E%E5%AE%9A%E9%87%8F%E6%80%A7%E7%8A%B6%EF%BC%8C%E6%88%91%E4%BB%AC%E5%BB%BA%E8%AE%AEHWE">https://github.com/MareesAT/GWA_tutorial/对于定量性状，我们建议HWE</a> p值&lt;1e-6。</td>
+<td>是基因分型错误的常见指标，也可能表明进化的选择。对于二元性状，我们建议这样排除：HWE p值在病例中\&lt;1e-10，在对照中&lt;1e-6。不太严格的病例阈值可以避免在选择下丢弃疾病相关的SNPs（见在线教程 <a target="_blank" rel="noopener" href="https://github.com/MareesAT/GWA_tutorial/对于定量性状，我们建议HWE">https://github.com/MareesAT/GWA_tutorial/对于定量性状，我们建议HWE</a> p值&lt;1e-6。</td>
 </tr>
 <tr>
 <td>【step5】Heterozygosity杂合性</td>
@@ -403,15 +394,17 @@
 </tr>
 <tr>
 <td>【step6】Relatedness相关性</td>
-<td>【‐‐genome】Calculates identity by descent (IBD) of all sample pairs.计算所有样本对的血统特征（IBD）。【–min】设置阈值，并创建一个亲缘关系超过所选阈值的个体列表。意味着可以检测到例如pi-hat&gt;0.2（即二级亲属）的受试者的关系。</td>
-<td>【‐‐genome】在这个分析中使用独立的SNPs（修剪），并且只限于常染色体的分析。                       【–min】隐性关联性会干扰关联分析。如果你有一个基于家庭的样本（如父母-后代），你不需要删除相关的配对，但统计分析应该考虑到家庭关联性。然而，对于基于人群的样本，我们建议使用0.2的pi-hat阈值。</td>
+<td>【‐‐genome】Calculates identity by descent (IBD) of all sample pairs.计算所有样本对的血统特征（IBD）。【—min】设置阈值，并创建一个亲缘关系超过所选阈值的个体列表。意味着可以检测到例如pi-hat&gt;0.2（即二级亲属）的受试者的关系。</td>
+<td>【‐‐genome】在这个分析中使用独立的SNPs（修剪），并且只限于常染色体的分析。                       【—min】隐性关联性会干扰关联分析。如果你有一个基于家庭的样本（如父母-后代），你不需要删除相关的配对，但统计分析应该考虑到家庭关联性。然而，对于基于人群的样本，我们建议使用0.2的pi-hat阈值。</td>
 </tr>
 <tr>
 <td>【step7】Population stratification人口分层</td>
 <td>【‐‐genome】计算所有样本对的血统特征（IBD）。【‐‐cluster ‐‐mds‐plot <em>k</em>】Produces a k‐dimensional representation of any substructure in the data, based on IBS.基于IBS，产生数据中任何子结构的k维表示。</td>
-<td>【–genome】计算所有样本对的血统特征（IBD）。【‐‐cluster ‐‐mds‐plot <em>k</em>】K是维度的数量，需要定义（通常是10）。这是质量控制的一个重要步骤，包括多个程序，但为了完整起见，我们在表中简要地提到了这一步骤。这个步骤将在 “控制人口分层 “一节中详细描述。</td>
+<td>【—genome】计算所有样本对的血统特征（IBD）。【‐‐cluster ‐‐mds‐plot <em>k</em>】K是维度的数量，需要定义（通常是10）。这是质量控制的一个重要步骤，包括多个程序，但为了完整起见，我们在表中简要地提到了这一步骤。这个步骤将在 “控制人口分层 “一节中详细描述。</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h5 id="质量控制教程"><a href="#质量控制教程" class="headerlink" title="质量控制教程"></a>质量控制教程</h5><p><a target="_blank" rel="noopener" href="https://github.com/MareesAT/GWA_tutorial/">https://github.com/MareesAT/GWA_tutorial/</a></p>
 <p>它提供了数据质量控制和可视化的潜在偏见来源的脚本。这些脚本在人类基因组单体型图(HapMap)数据的 CEU 组上执行 QC，可以应用于其他数据集，但基于家庭的数据集和涉及多个不同族裔群体的数据集除外。</p>
 <p>一般来说，如果一个样本包括多个族群(例如，非洲人、亚洲人和欧洲人) ，建议分别对每个族群进行关联测试（tests of association in each of the ethnic groups separately ），并使用合适的方法，例如荟萃分析meta‐analysis，将结果结合起来。</p>
@@ -423,7 +416,7 @@
 </blockquote>
 <p>为了调查生成的成分分数（generated component scores）在哪些个体上偏离了样本的目标人群，绘制被调查样本的分数和已知种族结构的人群（如HapMap/1KG数据）是有帮助的。这个步骤被称为锚定。这使研究者能够获得其样本的民族信息并确定可能的民族异常值。</p>
 <blockquote>
-<p>在<a target="_blank" rel="noopener" href="https://github.com/MareesAT/GWA_tutorial/%EF%BC%882_Population_stratification.zip%EF%BC%89%E4%B8%AD%E6%8F%90%E4%BE%9B%E4%BA%86%E4%B8%80%E4%B8%AA%E8%84%9A%E6%9C%AC%EF%BC%8C%E4%BB%A51KG%E9%A1%B9%E7%9B%AE%E7%9A%84%E6%95%B0%E6%8D%AE%E4%B8%BA%E9%94%9A%E5%AF%B9%E8%87%AA%E5%B7%B1%E7%9A%84%E6%95%B0%E6%8D%AE%E8%BF%9B%E8%A1%8CMDS%EF%BC%88http://www.1000genomes.org/%EF%BC%89%E3%80%82">https://github.com/MareesAT/GWA_tutorial/（2_Population_stratification.zip）中提供了一个脚本，以1KG项目的数据为锚对自己的数据进行MDS（http://www.1000genomes.org/）。</a></p>
+<p>在<a target="_blank" rel="noopener" href="https://github.com/MareesAT/GWA_tutorial/（2_Population_stratification.zip）中提供了一个脚本，以1KG项目的数据为锚对自己的数据进行MDS（http://www.1000genomes.org/）。">https://github.com/MareesAT/GWA_tutorial/（2_Population_stratification.zip）中提供了一个脚本，以1KG项目的数据为锚对自己的数据进行MDS（http://www.1000genomes.org/）。</a></p>
 </blockquote>
 <p>注意，根据MDS分析，属于离群值的个体应从进一步的分析中剔除。排除这些个体后，必须进行新的MDS分析，其主要成分需要作为关联测试的协变量，以校正人群中任何剩余的人群分层。</p>
 <blockquote>
@@ -441,15 +434,15 @@
 <p>更复杂的分析（如Cox回归分析和治愈模型）可以通过使用PLINK中基于R的 “插件 “功能进行。</p>
 </blockquote>
 <h5 id="二元结果测量-Binary-outcome-measure"><a href="#二元结果测量-Binary-outcome-measure" class="headerlink" title="二元结果测量 Binary outcome measure"></a>二元结果测量 Binary outcome measure</h5><blockquote>
-<p>在PLINK中，SNP和二元结果（值1=未受影响，值2=受影响；0和-9代表缺失；前面代表PLINK中的默认选项，可以改变）之间的关联可以用选项【–assoc】或【–logistic】来测试。</p>
-<p>PLINK中的【–assoc】选项执行的是X2的关联测试，不允许包含协变量。</p>
-<p>使用【–logistic】选项，将进行Logistic回归分析，允许包含协变量。</p>
-<p>【–logistic】选项比【–assoc】选项更灵活，但是它的代价是增加了计算时间（包含协变量的检测似乎都会增加计算时间）。</p>
+<p>在PLINK中，SNP和二元结果（值1=未受影响，值2=受影响；0和-9代表缺失；前面代表PLINK中的默认选项，可以改变）之间的关联可以用选项【—assoc】或【—logistic】来测试。</p>
+<p>PLINK中的【—assoc】选项执行的是X2的关联测试，不允许包含协变量。</p>
+<p>使用【—logistic】选项，将进行Logistic回归分析，允许包含协变量。</p>
+<p>【—logistic】选项比【—assoc】选项更灵活，但是它的代价是增加了计算时间（包含协变量的检测似乎都会增加计算时间）。</p>
 </blockquote>
 <h5 id="量化的结果衡量Quantitative-outcome-measure"><a href="#量化的结果衡量Quantitative-outcome-measure" class="headerlink" title="量化的结果衡量Quantitative outcome measure"></a>量化的结果衡量Quantitative outcome measure</h5><blockquote>
-<p>在PLINK中，可以用选项【–assoc】和【–linear】来测试SNPs和定量结果指标之间的关联。</p>
-<p>当PLINK检测到定量结果指标（即除1、2、0或缺失以外的值）时，【–assoc】选项会自动将其视为定量结果指标，执行通常的学生t检验的渐进版本来比较两个平均值。这个选项不允许使用协变量。</p>
-<p>PLINK中的【–linear】以每个单独的SNP作为预测因子进行线性回归分析。与【–logistic】选项类似，【–linear】选项可以使用协变量，而且比【–assoc】选项要慢一些。</p>
+<p>在PLINK中，可以用选项【—assoc】和【—linear】来测试SNPs和定量结果指标之间的关联。</p>
+<p>当PLINK检测到定量结果指标（即除1、2、0或缺失以外的值）时，【—assoc】选项会自动将其视为定量结果指标，执行通常的学生t检验的渐进版本来比较两个平均值。这个选项不允许使用协变量。</p>
+<p>PLINK中的【—linear】以每个单独的SNP作为预测因子进行线性回归分析。与【—logistic】选项类似，【—linear】选项可以使用协变量，而且比【—assoc】选项要慢一些。</p>
 </blockquote>
 <h5 id="多重检验校正-Correction-for-multiple-testing"><a href="#多重检验校正-Correction-for-multiple-testing" class="headerlink" title="多重检验校正 Correction for multiple testing"></a>多重检验校正 Correction for multiple testing</h5><p>现代基因分型阵列可以同时对400万个标记进行基因分型，这就产生了大量的测试，从而产生了相当大的多重测试负担。SNP的归因可能会进一步增加测试的关联数量。各种模拟表明，对于欧洲人群的研究，广泛使用的全基因组意义阈值为$5×10^{-8}$，充分控制了整个基因组中独立SNP的数量，而不考虑研究的实际SNP密度。当测试非洲人群时，由于这些个体的遗传多样性更大，需要更严格的阈值（可能接近$1.0×10^{-8}$）。</p>
 <blockquote>
@@ -466,12 +459,12 @@
 </blockquote>
 <p>permutation testing</p>
 </blockquote>
-<p>因此，PLINK提供了一个选项【–adjust】，生成的输出中显示了未经调整的p值，以及用各种多重检验校正方法校正的p值。</p>
+<p>因此，PLINK提供了一个选项【—adjust】，生成的输出中显示了未经调整的p值，以及用各种多重检验校正方法校正的p值。</p>
 <p>最后，可以用互换法（permutation methods）来处理多重检验的负担。</p>
 <blockquote>
 <p>为了计算基于互换的P值，结果测量标签被随机互换多次（如1,000-1,000,000），这就有效地消除了结果测量和基因型之间的任何真实关联。然后对所有被处理过的数据集进行统计测试。这就提供了测试统计量的经验分布和在无关联的零假设下的P值。</p>
 <p>随后，将从观察数据中得到的原始检验统计量或P值与P值的经验分布进行比较，以确定经验调整的P值。</p>
-<p>为了使用这种方法，可以将两个PLINK选项【–assoc】和【–mperm】结合起来，生成两个p值：</p>
+<p>为了使用这种方法，可以将两个PLINK选项【—assoc】和【—mperm】结合起来，生成两个p值：</p>
 <blockquote>
 <p>EMP1是经验P值（未校正），EMP2是为多重检验校正的经验P值。</p>
 <p>这个过程是计算密集型的，尤其是在需要许多次排列组合的情况下，这对于准确计算非常小的p值是必要的。</p>
@@ -505,11 +498,11 @@
 <p>为了估计PRS能解释多少变化，将比较只包括协变量（如MDS成分）的模型的$R^2$和包括协变量+PRS的模型的$R^2$。由于PRS导致的$R^2$的增加表明遗传风险因素所解释的预测准确性的增加。</p>
 <p>PRS的预测精度主要取决于所分析性状的（共）遗传性、SNP的数量和发现样本的大小。目标样本的大小只影响$R^2$的可靠性，如果感兴趣的性状的（共）遗传性和所使用的发现样本的样本量足够大，通常目标样本中的几千个受试者就足以达到显著的$R^2$。</p>
 <blockquote>
-<p>关于为自己的PRS分析进行功率计算的R脚本，可以参考 <a target="_blank" rel="noopener" href="https://sites.google.com/site/fdudbridge/software%E4%B8%8A%E7%9A%84POLYGENE%E8%84%9A%E6%9C%AC%E3%80%82">https://sites.google.com/site/fdudbridge/software上的POLYGENE脚本。</a></p>
+<p>关于为自己的PRS分析进行功率计算的R脚本，可以参考 <a target="_blank" rel="noopener" href="https://sites.google.com/site/fdudbridge/software上的POLYGENE脚本。">https://sites.google.com/site/fdudbridge/software上的POLYGENE脚本。</a></p>
 </blockquote>
-<p>用于进行PRS分析的程序是PRSice（<a target="_blank" rel="noopener" href="http://prsice.info/%EF%BC%89%EF%BC%8C%E5%8F%AF%E4%BB%A5%E8%BF%9B%E8%A1%8Cclumping%E3%80%81p%E5%80%BC%E9%98%88%E5%80%BC%E3%80%81MDS%E6%88%90%E5%88%86%E7%AD%89%E5%8A%9F%E8%83%BD%E3%80%82">http://prsice.info/），可以进行clumping、p值阈值、MDS成分等功能。</a></p>
+<p>用于进行PRS分析的程序是PRSice（<a target="_blank" rel="noopener" href="http://prsice.info/），可以进行clumping、p值阈值、MDS成分等功能。">http://prsice.info/），可以进行clumping、p值阈值、MDS成分等功能。</a></p>
 <blockquote>
-<p>教程见：<a target="_blank" rel="noopener" href="https://github.com/MareesAT/GWA_tutorial/%EF%BC%884_PRS.doc%EF%BC%89">https://github.com/MareesAT/GWA_tutorial/（4_PRS.doc）</a></p>
+<p>教程见：<a target="_blank" rel="noopener" href="https://github.com/MareesAT/GWA_tutorial/（4_PRS.doc）">https://github.com/MareesAT/GWA_tutorial/（4_PRS.doc）</a></p>
 </blockquote>
 <h3 id="参考数据库"><a href="#参考数据库" class="headerlink" title="参考数据库"></a>参考数据库</h3><p>GTEx</p>
 <blockquote>

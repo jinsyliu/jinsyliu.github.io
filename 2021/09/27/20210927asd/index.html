@@ -237,26 +237,30 @@
 <p><strong>数据来源：</strong></p>
 <p>PGC数据库：<a target="_blank" rel="noopener" href="https://www.med.unc.edu/pgc/download-results/">https://www.med.unc.edu/pgc/download-results/</a></p>
 <p><strong>数据描述：</strong></p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="left">pgcGroup</th>
-<th align="left">phenotype</th>
-<th align="left">publication</th>
-<th align="left">journal</th>
-<th align="left">pubMedIDlink</th>
-<th align="left">Data DOI</th>
+<th style="text-align:left">pgcGroup</th>
+<th style="text-align:left">phenotype</th>
+<th style="text-align:left">publication</th>
+<th style="text-align:left">journal</th>
+<th style="text-align:left">pubMedIDlink</th>
+<th style="text-align:left">Data DOI</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">ASD</td>
-<td align="left">Autism spectrum disorder</td>
-<td align="left">asd2019</td>
-<td align="left">Nature Genetics</td>
-<td align="left"><a target="_blank" rel="noopener" href="https://pubmed.ncbi.nlm.nih.gov/30804558">30804558</a></td>
-<td align="left">10.6084/m9.figshare.14671989</td>
+<tbody>
+<tr>
+<td style="text-align:left">ASD</td>
+<td style="text-align:left">Autism spectrum disorder</td>
+<td style="text-align:left">asd2019</td>
+<td style="text-align:left">Nature Genetics</td>
+<td style="text-align:left"><a target="_blank" rel="noopener" href="https://pubmed.ncbi.nlm.nih.gov/30804558">30804558</a></td>
+<td style="text-align:left">10.6084/m9.figshare.14671989</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p><strong>运行环境：</strong></p>
 <p>MacOS Catalina 10.15.7</p>
 <p><strong>软件及网页工具：</strong></p>
@@ -268,43 +272,29 @@
 <p>dbMDEGA (<a target="_blank" rel="noopener" href="https://dbmdega.shinyapps.io/dbMDEGA/">https://dbmdega.shinyapps.io/dbMDEGA/</a>)</p>
 <p>LocusZoom tool (<a target="_blank" rel="noopener" href="http://locuszoom.org/">http://locuszoom.org/</a>) </p>
 <h2 id="1-查看PGC统计摘要文件格式"><a href="#1-查看PGC统计摘要文件格式" class="headerlink" title="1.查看PGC统计摘要文件格式"></a>1.查看PGC统计摘要文件格式</h2><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs R">iPSYCH_PGC_ASD_Nov2017 &lt;- read.delim(<span class="hljs-string">&quot;/Users/keqinliu/Downloads/14671989/iPSYCH_PGC_ASD_Nov2017&quot;</span>)<br>print(head(iPSYCH_PGC_ASD_Nov2017))<br><span class="hljs-comment">##   CHR        SNP        BP A1 A2  INFO      OR     SE        P</span><br><span class="hljs-comment">## 1   8 rs62513865 101592213  T  C 0.949 1.00652 0.0270 0.808600</span><br><span class="hljs-comment">## 2   8 rs79643588 106973048  A  G 0.997 1.01786 0.0240 0.460600</span><br><span class="hljs-comment">## 3   8 rs17396518 108690829  T  G 0.987 0.96127 0.0140 0.004647</span><br><span class="hljs-comment">## 4   8   rs983166 108681675  A  C 0.998 0.97990 0.0139 0.145200</span><br><span class="hljs-comment">## 5   8 rs28842593 103044620  T  C 0.857 0.99591 0.0203 0.841500</span><br><span class="hljs-comment">## 6   8 rs35107696 109712249  A AT 0.999 1.01308 0.0165 0.430200</span><br></code></pre></td></tr></table></figure>
-
-
-
 <h2 id="2-运行PASCAL"><a href="#2-运行PASCAL" class="headerlink" title="2.运行PASCAL"></a>2.运行PASCAL</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">(base) KeqindeMacBook-Air:PASCAL keqinliu$ Pascal --pval=/Users/keqinliu/Downloads/iPSYCH_PGC_ASD_Nov2017 --runpathway=on --mergedistance=1<br></code></pre></td></tr></table></figure>
-
 <p>出现报错：</p>
 <figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc">Hello I&#x27;m Pascal<br>WARN: Unknown option (ignored): --mergedistance=1<br>genescoring not set. set to sum as default.<br>2021/09/27_10:29:05:N<br><span class="hljs-section">SETTINGS FILE</span><br><span class="hljs-section">-------------</span><br><br><span class="hljs-bullet">- </span>No settings file specified<br><span class="hljs-bullet">- </span>Loading default settings<br><br>random seed:<br>2<br>Writing file: output/settingsOut.txt<br>Class found = ch.unil.genescore.main.Settings<br>Package = package ch.unil.genescore.main<br><span class="hljs-section">LOADING INPUT FILES</span><br><span class="hljs-section">-------------------</span><br><br>Load annotation: resources/annotation/ucsc/ucsc<span class="hljs-emphasis">_known_genes_2013-09-03.txt</span><br><span class="hljs-emphasis">Loading annotation: resources/annotation/ucsc/ucsc_known_genes_2013-09-03.txt</span><br><span class="hljs-emphasis">Reading file: resources/annotation/ucsc/ucsc_known_genes_2013-09-03.txt</span><br><span class="hljs-emphasis">Reading file: resources/annotation/hla/hlaGenesEntrezIds.txt</span><br><span class="hljs-emphasis">- 205 genes removed because they are in the excluded genes file</span><br><span class="hljs-emphasis">Reading file: /Users/keqinliu/Downloads/iPSYCH_PGC_ASD_</span>Nov2017<br><span class="hljs-symbol">WARNING: </span>snp CHRhas no valid p-value (use NA or NaN for omitted values).<br><span class="hljs-symbol">WARNING: </span>snp 8has no valid p-value (use NA or NaN for omitted values).<br><span class="hljs-symbol">WARNING: </span>snp 8has no valid p-value (use NA or NaN for omitted values).<br></code></pre></td></tr></table></figure>
-
 <p>检查报错，发现Pascal提示snp无有效p-value</p>
 <p>于是检查Pascal自带的示例文件 EUR.CARDIoGRAM_2010_lipids.HDL_ONE.txt</p>
 <figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">rs3764261</span>	<span class="hljs-number">7</span>.<span class="hljs-number">10</span>e-<span class="hljs-number">380</span><br><span class="hljs-attribute">rs173539</span>	<span class="hljs-number">2</span>.<span class="hljs-number">50</span>e-<span class="hljs-number">379</span><br><span class="hljs-attribute">rs247616</span>	<span class="hljs-number">8</span>.<span class="hljs-number">54</span>e-<span class="hljs-number">378</span><br><span class="hljs-attribute">rs7205804</span>	<span class="hljs-number">2</span>.<span class="hljs-number">00</span>e-<span class="hljs-number">329</span><br><span class="hljs-attribute">rs1532624</span>	<span class="hljs-number">2</span>.<span class="hljs-number">93</span>e-<span class="hljs-number">327</span><br><span class="hljs-attribute">rs11508026</span>	<span class="hljs-number">2</span>.<span class="hljs-number">08</span>e-<span class="hljs-number">323</span><br><span class="hljs-attribute">rs1800775</span>	<span class="hljs-number">2</span>.<span class="hljs-number">06</span>e-<span class="hljs-number">306</span><br><span class="hljs-attribute">rs711752</span>	<span class="hljs-number">2</span>.<span class="hljs-number">07</span>e-<span class="hljs-number">297</span><br><span class="hljs-attribute">rs1864163</span>	<span class="hljs-number">3</span>.<span class="hljs-number">69</span>e-<span class="hljs-number">281</span><br><span class="hljs-attribute">rs11076175</span>	<span class="hljs-number">3</span>.<span class="hljs-number">99</span>e-<span class="hljs-number">272</span><br><span class="hljs-attribute">rs9939224</span>	<span class="hljs-number">5</span>.<span class="hljs-number">61</span>e-<span class="hljs-number">272</span><br><span class="hljs-attribute">rs7499892</span>	<span class="hljs-number">1</span>.<span class="hljs-number">17</span>e-<span class="hljs-number">271</span><br><span class="hljs-attribute">rs7203984</span>	<span class="hljs-number">2</span>.<span class="hljs-number">34</span>e-<span class="hljs-number">242</span><br><span class="hljs-attribute">rs9926440</span>	<span class="hljs-number">4</span>.<span class="hljs-number">43</span>e-<span class="hljs-number">215</span><br><span class="hljs-attribute">rs9929488</span>	<span class="hljs-number">4</span>.<span class="hljs-number">26</span>e-<span class="hljs-number">190</span><br><span class="hljs-attribute">rs12448528</span>	<span class="hljs-number">5</span>.<span class="hljs-number">60</span>e-<span class="hljs-number">170</span><br><span class="hljs-attribute">rs9989419</span>	<span class="hljs-number">2</span>.<span class="hljs-number">96</span>e-<span class="hljs-number">162</span><br><span class="hljs-attribute">rs12708967</span>	<span class="hljs-number">6</span>.<span class="hljs-number">48</span>e-<span class="hljs-number">160</span><br><span class="hljs-attribute">rs289714</span>	<span class="hljs-number">3</span>.<span class="hljs-number">05</span>e-<span class="hljs-number">153</span><br><span class="hljs-attribute">rs17368435</span>	<span class="hljs-number">8</span>.<span class="hljs-number">57</span>e-<span class="hljs-number">121</span><br></code></pre></td></tr></table></figure>
-
 <p>于是决定将iPSYCH_PGC_ASD_Nov2017统计摘要格式更改为Pascal示例文件的格式：</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs r">iPSYCH_PGC_ASD_Nov2017 &lt;- read.delim(<span class="hljs-string">&quot;/Users/keqinliu/Downloads/iPSYCH_PGC_ASD_Nov2017&quot;</span>)<br>print(head(iPSYCH_PGC_ASD_Nov2017))<br><br>new &lt;- cbind(iPSYCH_PGC_ASD_Nov2017$SNP, iPSYCH_PGC_ASD_Nov2017$P)<br>print(head(new))<br><span class="hljs-comment">##     [,1]         [,2]      </span><br><span class="hljs-comment">## [1,] &quot;rs62513865&quot; &quot;0.8086&quot;  </span><br><span class="hljs-comment">## [2,] &quot;rs79643588&quot; &quot;0.4606&quot;  </span><br><span class="hljs-comment">## [3,] &quot;rs17396518&quot; &quot;0.004647&quot;</span><br><span class="hljs-comment">## [4,] &quot;rs983166&quot;   &quot;0.1452&quot;  </span><br><span class="hljs-comment">## [5,] &quot;rs28842593&quot; &quot;0.8415&quot;  </span><br><span class="hljs-comment">## [6,] &quot;rs35107696&quot; &quot;0.4302&quot;  </span><br></code></pre></td></tr></table></figure>
-
 <p>将修改后的文件保存为：</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs R">write_excel_csv(new, file=<span class="hljs-string">&quot;iPSYCH_PGC_ASD_Nov2017_new&quot;</span>, delim = <span class="hljs-string">&quot; &quot;</span>)<br></code></pre></td></tr></table></figure>
-
 <p>运行Pascal</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">(base) KeqindeMacBook-Air:PASCAL keqinliu$ Pascal --pval=/Users/keqinliu/iPSYCH_PGC_ASD_Nov2017_new --runpathway=on --chr=8<br></code></pre></td></tr></table></figure>
-
 <figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs crystal">Writing <span class="hljs-symbol">file:</span> output/iPSYCH_PGC_ASD_Nov2017_new.sum.numSnpError.chr8.txt<br><br>Reading <span class="hljs-symbol">file:</span> resources/genesets/msigdb/msigBIOCARTA_KEGG_REACTOME.gmt<br><br><span class="hljs-symbol">Loaded:</span><br>- <span class="hljs-number">1077</span> gene sets<br>- <span class="hljs-number">799</span> genes <span class="hljs-keyword">with</span> pathway / gene set <span class="hljs-keyword">annotation</span><br><span class="hljs-symbol">Ignored:</span><br>- <span class="hljs-number">7584</span> genes not found in loaded genome <span class="hljs-keyword">annotation</span> (<span class="hljs-title">UCSC</span> <span class="hljs-title">known</span> <span class="hljs-title">genes</span><br></code></pre></td></tr></table></figure>
-
 <figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc"><span class="hljs-section">CREATING META-GENES</span><br><span class="hljs-section">-------------------</span><br><br>Merging genes of the same pathway that are &lt;1.0mb apart:<br><span class="hljs-bullet">- </span>42 meta-genes created<br><span class="hljs-bullet">- </span>5.023809523809524 genes per meta-gene on average (min=2, max=8)<br><br>Computing gene scores for meta-genes ...<br>Writing file: output/iPSYCH<span class="hljs-emphasis">_PGC_ASD_Nov2017_new.sum.fusion.genescores.chr8.txt</span><br><span class="hljs-emphasis">Format: gene_</span>id, symbol, #snps, runtime, [warnings]<br></code></pre></td></tr></table></figure>
-
 <figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs gams">- Runtime: <span class="hljs-number">0</span>h <span class="hljs-number">0</span><span class="hljs-built_in">min</span> <span class="hljs-number">14</span>s <span class="hljs-number">139</span>ms<br>- <span class="hljs-number">1077</span> gene <span class="hljs-keyword">sets</span> with <span class="hljs-comment">p-value &lt; 1.0</span><br><br>Writing <span class="hljs-comment">file: output</span>/iPSYCH_PGC_ASD_Nov2017_new.PathwaySet--msigBIOCARTA_KEGG_REACTOME--<span class="hljs-keyword">sum</span>.chr8.txt<br></code></pre></td></tr></table></figure>
-
-
-
 <h2 id="3-Pascal生成文件"><a href="#3-Pascal生成文件" class="headerlink" title="3.Pascal生成文件"></a>3.Pascal生成文件</h2><p>共5个：</p>
-<p>iPSYCH_PGC_ASD_Nov2017_new.PathwaySet–msigBIOCARTA_KEGG_REACTOME–sum.chr8.txt</p>
+<p>iPSYCH_PGC_ASD_Nov2017_new.PathwaySet—msigBIOCARTA_KEGG_REACTOME—sum.chr8.txt</p>
 <p>iPSYCH_PGC_ASD_Nov2017_new.sum.genescores.chr8.txt</p>
 <p>iPSYCH_PGC_ASD_Nov2017_new.sum.fusion.genescores.chr8.txt</p>
 <p>iPSYCH_PGC_ASD_Nov2017_new.sum.numSnpError.chr8.txt</p>
 <p>settingsOut.txt</p>
 <h3 id="3-1-检查生成的sum-genescores"><a href="#3-1-检查生成的sum-genescores" class="headerlink" title="3.1.检查生成的sum_genescores"></a>3.1.检查生成的sum_genescores</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs r">sum_genescores &lt;- read.delim(<span class="hljs-string">&quot;/Users/keqinliu/iPSYCH_PGC_ASD_Nov2017_new.sum.genescores.chr8.txt&quot;</span>)<br>print(head(sum_genescores))<br>sum_genescores[order(sum_genescores$pvalue),] <span class="hljs-comment">#按照pvalue升序排列，筛选前10位。</span><br></code></pre></td></tr></table></figure>
-
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -318,7 +308,8 @@
 <th>pvalue</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>chr8</td>
 <td>10530146</td>
 <td>10558103</td>
@@ -418,9 +409,11 @@
 <td>287</td>
 <td>3.868200e-05</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h3 id="3-2-检查生成的pathwayset"><a href="#3-2-检查生成的pathwayset" class="headerlink" title="3.2.检查生成的pathwayset"></a>3.2.检查生成的pathwayset</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs R">PathwaySet &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH_PGC_ASD_Nov2017_new.PathwaySet--msigBIOCARTA_KEGG_REACTOME--sum.chr8.txt&quot;</span>)<br>print(head(PathwaySet))<br>PathwaySet[order(PathwaySet$chi2Pvalue),] <span class="hljs-comment">#按照chi1Pvalue升序排列，筛选pvalue均＜0.05</span><br></code></pre></td></tr></table></figure>
-
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -429,7 +422,8 @@
 <th>empPvalue</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>REACTOME_ACTIVATION_OF_KAINATE_RECEPTORS_UPON_GLUTAMATE_BINDING</td>
 <td>0.02750000</td>
 <td>0.02767</td>
@@ -464,7 +458,9 @@
 <td>0.03875000</td>
 <td>0.03938</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h2 id="4-funcoup5检查基因网络"><a href="#4-funcoup5检查基因网络" class="headerlink" title="4.funcoup5检查基因网络"></a>4.funcoup5检查基因网络</h2><p><a target="_blank" rel="noopener" href="https://funcoup5.scilifelab.se/">https://funcoup5.scilifelab.se/</a></p>
 <p>查询：C8orf74 SOX7 PINX1 MFHAS1 MIR1322 FAM167A C8orf12 ERI1 BLK PPP1R3B</p>
 <p><img src="FunCoup_subnetwork.png" srcset="/img/loading.gif" alt="FunCoup_subnetwork (1)"></p>
@@ -474,6 +470,7 @@
 <p>C8orf74 SOX7 PINX1 MFHAS1 MIR1322 FAM167A C8orf12 ERI1 BLK PPP1R3B</p>
 </blockquote>
 <p><img src="kegg_pathway.png" srcset="/img/loading.gif" alt="截屏2021-09-27 下午2.12.56"></p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -485,7 +482,8 @@
 <th><strong>FWER</strong></th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td><strong>Focal adhesion</strong></td>
 <td>198</td>
 <td>77</td>
@@ -1053,7 +1051,9 @@
 <td>0.000127</td>
 <td>0.0370</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <blockquote>
 <p> Failed query mapping: C20ORF20, FLJ20674</p>
 </blockquote>
@@ -1062,10 +1062,11 @@
 <p>先使用fuma工具，为snp添加基因注释</p>
 <blockquote>
 <p>用户名称：Liu Keqin</p>
-<p>登录邮箱：<a href="mailto:&#x6c;&#105;&#117;&#x6b;&#101;&#113;&#105;&#x6e;&#x32;&#x30;&#50;&#x30;&#64;&#x73;&#105;&#x62;&#115;&#x2e;&#97;&#99;&#x2e;&#x63;&#110;">&#x6c;&#105;&#117;&#x6b;&#101;&#113;&#105;&#x6e;&#x32;&#x30;&#50;&#x30;&#64;&#x73;&#105;&#x62;&#115;&#x2e;&#97;&#99;&#x2e;&#x63;&#110;</a></p>
+<p>登录邮箱：liukeqin2020@sibs.ac.cn</p>
 </blockquote>
 <p><strong>运行参数记录</strong></p>
 <blockquote>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1073,7 +1074,8 @@
 <th>2021-09-27 09:44:20</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>title</td>
 <td>20210927</td>
 </tr>
@@ -1369,7 +1371,9 @@
 <td>ciMapAnnoMeth</td>
 <td>NA</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 </blockquote>
 <h3 id="Manhattan-Plot-GWAS-summary-statistics"><a href="#Manhattan-Plot-GWAS-summary-statistics" class="headerlink" title="Manhattan Plot (GWAS summary statistics)"></a>Manhattan Plot (GWAS summary statistics)</h3><p>For plotting, overlapping data points are not drawn (filtering was performed only for SNPs with P-value ≥ 1e-5, see tutorial for details).</p>
 <p><img src="manhattan_FUMA_jobs147024.png" srcset="/img/loading.gif" alt="manhattan_FUMA_jobs147024"></p>
@@ -1381,120 +1385,126 @@
 <h3 id="QQ-plot-gene-based-test"><a href="#QQ-plot-gene-based-test" class="headerlink" title="QQ plot (gene-based test)"></a>QQ plot (gene-based test)</h3><p>This is a Q-Q plot of the gene-based test computed by MAGMA.</p>
 <p><img src="geneQQplot_FUMA_jobs147024.png" srcset="/img/loading.gif" alt="geneQQplot_FUMA_jobs147024"></p>
 <h3 id="MAGMA-Gene-Set-Analysis"><a href="#MAGMA-Gene-Set-Analysis" class="headerlink" title="MAGMA Gene-Set Analysis"></a>MAGMA Gene-Set Analysis</h3><p>MAGMA gene-set analysis is performed for curated gene sets and GO terms obtained from MsigDB (see here for details).<br>The table displays either significant gene sets with Pbon &lt; 0.05 or top 10 gene sets when there are less than 10 significant gene sets. Full results are downloadable from “Download” tab.<br>Note that MAGMA gene-set analyses uses the full distribution of SNP p-values and is different from a pathway enrichment test as implemented in GENE2FUNC that only tests for enrichment of prioritized genes.</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="left">Gene Set</th>
-<th align="left">N genes</th>
-<th align="left">Beta</th>
-<th align="left">Beta STD</th>
-<th align="left">SE</th>
-<th align="left">P</th>
-<th align="left">Pbon</th>
+<th style="text-align:left">Gene Set</th>
+<th style="text-align:left">N genes</th>
+<th style="text-align:left">Beta</th>
+<th style="text-align:left">Beta STD</th>
+<th style="text-align:left">SE</th>
+<th style="text-align:left">P</th>
+<th style="text-align:left">Pbon</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">GO_bp:go_macrophage_colony_stimulating_factor_production</td>
-<td align="left">5</td>
-<td align="left">1.394</td>
-<td align="left">0.022649</td>
-<td align="left">0.35169</td>
-<td align="left">3.7034e-05</td>
-<td align="left">0.573434456</td>
+<tbody>
+<tr>
+<td style="text-align:left">GO_bp:go_macrophage_colony_stimulating_factor_production</td>
+<td style="text-align:left">5</td>
+<td style="text-align:left">1.394</td>
+<td style="text-align:left">0.022649</td>
+<td style="text-align:left">0.35169</td>
+<td style="text-align:left">3.7034e-05</td>
+<td style="text-align:left">0.573434456</td>
 </tr>
 <tr>
-<td align="left">GO_cc:go_extrinsic_component_of_postsynaptic_membrane</td>
-<td align="left">8</td>
-<td align="left">1.057</td>
-<td align="left">0.021721</td>
-<td align="left">0.28832</td>
-<td align="left">0.00012356</td>
-<td align="left">1</td>
+<td style="text-align:left">GO_cc:go_extrinsic_component_of_postsynaptic_membrane</td>
+<td style="text-align:left">8</td>
+<td style="text-align:left">1.057</td>
+<td style="text-align:left">0.021721</td>
+<td style="text-align:left">0.28832</td>
+<td style="text-align:left">0.00012356</td>
+<td style="text-align:left">1</td>
 </tr>
 <tr>
-<td align="left">GO_bp:go_granulocyte_colony_stimulating_factor_production</td>
-<td align="left">5</td>
-<td align="left">1.3071</td>
-<td align="left">0.021236</td>
-<td align="left">0.36585</td>
-<td align="left">0.00017718</td>
-<td align="left">1</td>
+<td style="text-align:left">GO_bp:go_granulocyte_colony_stimulating_factor_production</td>
+<td style="text-align:left">5</td>
+<td style="text-align:left">1.3071</td>
+<td style="text-align:left">0.021236</td>
+<td style="text-align:left">0.36585</td>
+<td style="text-align:left">0.00017718</td>
+<td style="text-align:left">1</td>
 </tr>
 <tr>
-<td align="left">GO_mf:go_neurotransmitter_receptor_activity</td>
-<td align="left">108</td>
-<td align="left">0.3108</td>
-<td align="left">0.023405</td>
-<td align="left">0.088422</td>
-<td align="left">0.00022052</td>
-<td align="left">1</td>
+<td style="text-align:left">GO_mf:go_neurotransmitter_receptor_activity</td>
+<td style="text-align:left">108</td>
+<td style="text-align:left">0.3108</td>
+<td style="text-align:left">0.023405</td>
+<td style="text-align:left">0.088422</td>
+<td style="text-align:left">0.00022052</td>
+<td style="text-align:left">1</td>
 </tr>
 <tr>
-<td align="left">GO_cc:go_extrinsic_component_of_synaptic_membrane</td>
-<td align="left">12</td>
-<td align="left">0.87453</td>
-<td align="left">0.022008</td>
-<td align="left">0.25263</td>
-<td align="left">0.00026897</td>
-<td align="left">1</td>
+<td style="text-align:left">GO_cc:go_extrinsic_component_of_synaptic_membrane</td>
+<td style="text-align:left">12</td>
+<td style="text-align:left">0.87453</td>
+<td style="text-align:left">0.022008</td>
+<td style="text-align:left">0.25263</td>
+<td style="text-align:left">0.00026897</td>
+<td style="text-align:left">1</td>
 </tr>
 <tr>
-<td align="left">GO_bp:go_extraembryonic_membrane_development</td>
-<td align="left">9</td>
-<td align="left">1.1923</td>
-<td align="left">0.025987</td>
-<td align="left">0.35019</td>
-<td align="left">0.00033198</td>
-<td align="left">1</td>
+<td style="text-align:left">GO_bp:go_extraembryonic_membrane_development</td>
+<td style="text-align:left">9</td>
+<td style="text-align:left">1.1923</td>
+<td style="text-align:left">0.025987</td>
+<td style="text-align:left">0.35019</td>
+<td style="text-align:left">0.00033198</td>
+<td style="text-align:left">1</td>
 </tr>
 <tr>
-<td align="left">Curated_gene_sets:pid_ncadherin_pathway</td>
-<td align="left">33</td>
-<td align="left">0.49317</td>
-<td align="left">0.02057</td>
-<td align="left">0.1451</td>
-<td align="left">0.00033919</td>
-<td align="left">1</td>
+<td style="text-align:left">Curated_gene_sets:pid_ncadherin_pathway</td>
+<td style="text-align:left">33</td>
+<td style="text-align:left">0.49317</td>
+<td style="text-align:left">0.02057</td>
+<td style="text-align:left">0.1451</td>
+<td style="text-align:left">0.00033919</td>
+<td style="text-align:left">1</td>
 </tr>
 <tr>
-<td align="left">GO_bp:go_histone_h3_k27_demethylation</td>
-<td align="left">2</td>
-<td align="left">1.65</td>
-<td align="left">0.016957</td>
-<td align="left">0.49</td>
-<td align="left">0.0003802</td>
-<td align="left">1</td>
+<td style="text-align:left">GO_bp:go_histone_h3_k27_demethylation</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">1.65</td>
+<td style="text-align:left">0.016957</td>
+<td style="text-align:left">0.49</td>
+<td style="text-align:left">0.0003802</td>
+<td style="text-align:left">1</td>
 </tr>
 <tr>
-<td align="left">GO_mf:go_histone_demethylase_activity_h3_k27_specific_</td>
-<td align="left">2</td>
-<td align="left">1.65</td>
-<td align="left">0.016957</td>
-<td align="left">0.49</td>
-<td align="left">0.0003802</td>
-<td align="left">1</td>
+<td style="text-align:left">GO_mf:go_histone_demethylase_activity_h3_k27_specific_</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">1.65</td>
+<td style="text-align:left">0.016957</td>
+<td style="text-align:left">0.49</td>
+<td style="text-align:left">0.0003802</td>
+<td style="text-align:left">1</td>
 </tr>
 <tr>
-<td align="left">GO_cc:go_t_tubule</td>
-<td align="left">52</td>
-<td align="left">0.43768</td>
-<td align="left">0.022904</td>
-<td align="left">0.13185</td>
-<td align="left">0.00045174</td>
-<td align="left">1</td>
+<td style="text-align:left">GO_cc:go_t_tubule</td>
+<td style="text-align:left">52</td>
+<td style="text-align:left">0.43768</td>
+<td style="text-align:left">0.022904</td>
+<td style="text-align:left">0.13185</td>
+<td style="text-align:left">0.00045174</td>
+<td style="text-align:left">1</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h3 id="MAGMA-Tissue-Expression-Analysis"><a href="#MAGMA-Tissue-Expression-Analysis" class="headerlink" title="MAGMA Tissue Expression Analysis"></a>MAGMA Tissue Expression Analysis</h3><p>MAGMA gene-property analysis is performed for gene expression of user selected data sets.<br>Note that MAGMA gene-property analyses uses the full distribution of SNP p-values and is different from a enrichment test of DEG (differentially expressed genes) as implemented in GENE2FUNC that only tests for enrichment of prioritised genes.</p>
 <p><img src="magma_exp_gtex_v8_ts_avg_log2TPM_FUMA_jobs147024.png" srcset="/img/loading.gif" alt="magma_exp_gtex_v8_ts_avg_log2TPM_FUMA_jobs147024"></p>
 <p><img src="magma_exp_gtex_v8_ts_general_avg_log2TPM_FUMA_jobs147024.png" srcset="/img/loading.gif" alt="magma_exp_gtex_v8_ts_general_avg_log2TPM_FUMA_jobs147024"></p>
-<h3 id="Summary-of-SNPs-and-mapped-genes"><a href="#Summary-of-SNPs-and-mapped-genes" class="headerlink" title="Summary of SNPs and mapped genes"></a>Summary of SNPs and mapped genes</h3><table>
+<h3 id="Summary-of-SNPs-and-mapped-genes"><a href="#Summary-of-SNPs-and-mapped-genes" class="headerlink" title="Summary of SNPs and mapped genes"></a>Summary of SNPs and mapped genes</h3><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>item</th>
 <th>number</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>Genomic risk loci</td>
 <td>3</td>
 </tr>
@@ -1518,328 +1528,345 @@
 <td>mapped genes</td>
 <td>8</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h3 id="Functional-consequences-of-SNPs-on-genes"><a href="#Functional-consequences-of-SNPs-on-genes" class="headerlink" title="Functional consequences of SNPs on genes"></a>Functional consequences of SNPs on genes</h3><p><img src="snpAnnotPlot_FUMA_jobs147024.png" srcset="/img/loading.gif" alt="snpAnnotPlot_FUMA_jobs147024"></p>
 <h3 id="Summary-per-genomic-risk-locus"><a href="#Summary-per-genomic-risk-locus" class="headerlink" title="Summary per genomic risk locus"></a>Summary per genomic risk locus</h3><p><img src="lociPlot_FUMA_jobs147024.png" srcset="/img/loading.gif" alt="lociPlot_FUMA_jobs147024"></p>
-<h3 id="Genomic-Locus"><a href="#Genomic-Locus" class="headerlink" title="Genomic Locus"></a>Genomic Locus</h3><table>
+<h3 id="Genomic-Locus"><a href="#Genomic-Locus" class="headerlink" title="Genomic Locus"></a>Genomic Locus</h3><div class="table-container">
+<table>
 <thead>
 <tr>
-<th align="left">Genomic Locus</th>
-<th align="left">uniqID</th>
-<th align="left">rsID</th>
-<th align="left">chr</th>
-<th align="left">pos</th>
-<th align="left">P-value</th>
-<th align="left">start</th>
-<th align="left">end</th>
-<th align="left">nSNPs</th>
-<th align="left">nGWASSNPs</th>
-<th align="left">nIndSigSNPs</th>
-<th align="left">IndSigSNPs</th>
-<th align="left">nLeadSNPs</th>
-<th align="left">LeadSNPs</th>
+<th style="text-align:left">Genomic Locus</th>
+<th style="text-align:left">uniqID</th>
+<th style="text-align:left">rsID</th>
+<th style="text-align:left">chr</th>
+<th style="text-align:left">pos</th>
+<th style="text-align:left">P-value</th>
+<th style="text-align:left">start</th>
+<th style="text-align:left">end</th>
+<th style="text-align:left">nSNPs</th>
+<th style="text-align:left">nGWASSNPs</th>
+<th style="text-align:left">nIndSigSNPs</th>
+<th style="text-align:left">IndSigSNPs</th>
+<th style="text-align:left">nLeadSNPs</th>
+<th style="text-align:left">LeadSNPs</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">1</td>
-<td align="left">8:10576775:C:G</td>
-<td align="left">rs10099100</td>
-<td align="left">8</td>
-<td align="left">10576775</td>
-<td align="left">1.065e-08</td>
-<td align="left">10571591</td>
-<td align="left">10583506</td>
-<td align="left">6</td>
-<td align="left">6</td>
-<td align="left">1</td>
-<td align="left">rs10099100</td>
-<td align="left">1</td>
-<td align="left">rs10099100</td>
+<tbody>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:left">8:10576775:C:G</td>
+<td style="text-align:left">rs10099100</td>
+<td style="text-align:left">8</td>
+<td style="text-align:left">10576775</td>
+<td style="text-align:left">1.065e-08</td>
+<td style="text-align:left">10571591</td>
+<td style="text-align:left">10583506</td>
+<td style="text-align:left">6</td>
+<td style="text-align:left">6</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">rs10099100</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">rs10099100</td>
 </tr>
 <tr>
-<td align="left">2</td>
-<td align="left">20:14836243:G:GTTTTTTT</td>
-<td align="left">rs71190156</td>
-<td align="left">20</td>
-<td align="left">14836243</td>
-<td align="left">2.752e-08</td>
-<td align="left">14697386</td>
-<td align="left">14836243</td>
-<td align="left">49</td>
-<td align="left">49</td>
-<td align="left">1</td>
-<td align="left">rs71190156</td>
-<td align="left">1</td>
-<td align="left">rs71190156</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">20:14836243:G:GTTTTTTT</td>
+<td style="text-align:left">rs71190156</td>
+<td style="text-align:left">20</td>
+<td style="text-align:left">14836243</td>
+<td style="text-align:left">2.752e-08</td>
+<td style="text-align:left">14697386</td>
+<td style="text-align:left">14836243</td>
+<td style="text-align:left">49</td>
+<td style="text-align:left">49</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">rs71190156</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">rs71190156</td>
 </tr>
 <tr>
-<td align="left">3</td>
-<td align="left">20:21248116:A:G</td>
-<td align="left">rs910805</td>
-<td align="left">20</td>
-<td align="left">21248116</td>
-<td align="left">2.041e-09</td>
-<td align="left">20118473</td>
-<td align="left">22105020</td>
-<td align="left">392</td>
-<td align="left">367</td>
-<td align="left">5</td>
-<td align="left">rs910805;rs12625304;rs6035820</td>
-<td align="left">1</td>
-<td align="left">rs910805</td>
+<td style="text-align:left">3</td>
+<td style="text-align:left">20:21248116:A:G</td>
+<td style="text-align:left">rs910805</td>
+<td style="text-align:left">20</td>
+<td style="text-align:left">21248116</td>
+<td style="text-align:left">2.041e-09</td>
+<td style="text-align:left">20118473</td>
+<td style="text-align:left">22105020</td>
+<td style="text-align:left">392</td>
+<td style="text-align:left">367</td>
+<td style="text-align:left">5</td>
+<td style="text-align:left">rs910805;rs12625304;rs6035820</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">rs910805</td>
 </tr>
-</tbody></table>
-<h3 id="lead-SNPs"><a href="#lead-SNPs" class="headerlink" title="lead SNPs"></a>lead SNPs</h3><table>
+</tbody>
+</table>
+</div>
+<h3 id="lead-SNPs"><a href="#lead-SNPs" class="headerlink" title="lead SNPs"></a>lead SNPs</h3><div class="table-container">
+<table>
 <thead>
 <tr>
-<th align="left">No</th>
-<th align="left">Genomic Locus</th>
-<th align="left">uniqID</th>
-<th align="left">rsID</th>
-<th align="left">chr</th>
-<th align="left">pos</th>
-<th align="left">P-value</th>
-<th align="left">nIndSigSNPs</th>
-<th align="left">IndSigSNPs</th>
+<th style="text-align:left">No</th>
+<th style="text-align:left">Genomic Locus</th>
+<th style="text-align:left">uniqID</th>
+<th style="text-align:left">rsID</th>
+<th style="text-align:left">chr</th>
+<th style="text-align:left">pos</th>
+<th style="text-align:left">P-value</th>
+<th style="text-align:left">nIndSigSNPs</th>
+<th style="text-align:left">IndSigSNPs</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">1</td>
-<td align="left">1</td>
-<td align="left">8:10576775:C:G</td>
-<td align="left">rs10099100</td>
-<td align="left">8</td>
-<td align="left">10576775</td>
-<td align="left">1.065e-08</td>
-<td align="left">1</td>
-<td align="left">rs10099100</td>
+<tbody>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">8:10576775:C:G</td>
+<td style="text-align:left">rs10099100</td>
+<td style="text-align:left">8</td>
+<td style="text-align:left">10576775</td>
+<td style="text-align:left">1.065e-08</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">rs10099100</td>
 </tr>
 <tr>
-<td align="left">2</td>
-<td align="left">2</td>
-<td align="left">20:14836243:G:GTTTTTTT</td>
-<td align="left">rs71190156</td>
-<td align="left">20</td>
-<td align="left">14836243</td>
-<td align="left">2.752e-08</td>
-<td align="left">1</td>
-<td align="left">rs71190156</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">20:14836243:G:GTTTTTTT</td>
+<td style="text-align:left">rs71190156</td>
+<td style="text-align:left">20</td>
+<td style="text-align:left">14836243</td>
+<td style="text-align:left">2.752e-08</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">rs71190156</td>
 </tr>
 <tr>
-<td align="left">3</td>
-<td align="left">3</td>
-<td align="left">20:21248116:A:G</td>
-<td align="left">rs910805</td>
-<td align="left">20</td>
-<td align="left">21248116</td>
-<td align="left">2.041e-09</td>
-<td align="left">5</td>
-<td align="left">rs910805;rs12625304;rs6035820</td>
+<td style="text-align:left">3</td>
+<td style="text-align:left">3</td>
+<td style="text-align:left">20:21248116:A:G</td>
+<td style="text-align:left">rs910805</td>
+<td style="text-align:left">20</td>
+<td style="text-align:left">21248116</td>
+<td style="text-align:left">2.041e-09</td>
+<td style="text-align:left">5</td>
+<td style="text-align:left">rs910805;rs12625304;rs6035820</td>
 </tr>
-</tbody></table>
-<h3 id="Ind-Sig-SNPs"><a href="#Ind-Sig-SNPs" class="headerlink" title="Ind.Sig.SNPs"></a>Ind.Sig.SNPs</h3><table>
+</tbody>
+</table>
+</div>
+<h3 id="Ind-Sig-SNPs"><a href="#Ind-Sig-SNPs" class="headerlink" title="Ind.Sig.SNPs"></a>Ind.Sig.SNPs</h3><div class="table-container">
+<table>
 <thead>
 <tr>
-<th align="left">No</th>
-<th align="left">Genomic Locus</th>
-<th align="left">uniqID</th>
-<th align="left">rsID</th>
-<th align="left">chr</th>
-<th align="left">pos</th>
-<th align="left">P-value</th>
-<th align="left">nSNPs</th>
-<th align="left">nGWASSNPs</th>
+<th style="text-align:left">No</th>
+<th style="text-align:left">Genomic Locus</th>
+<th style="text-align:left">uniqID</th>
+<th style="text-align:left">rsID</th>
+<th style="text-align:left">chr</th>
+<th style="text-align:left">pos</th>
+<th style="text-align:left">P-value</th>
+<th style="text-align:left">nSNPs</th>
+<th style="text-align:left">nGWASSNPs</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">1</td>
-<td align="left">1</td>
-<td align="left">8:10576775:C:G</td>
-<td align="left">rs10099100</td>
-<td align="left">8</td>
-<td align="left">10576775</td>
-<td align="left">1.065e-08</td>
-<td align="left">6</td>
-<td align="left">6</td>
+<tbody>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">8:10576775:C:G</td>
+<td style="text-align:left">rs10099100</td>
+<td style="text-align:left">8</td>
+<td style="text-align:left">10576775</td>
+<td style="text-align:left">1.065e-08</td>
+<td style="text-align:left">6</td>
+<td style="text-align:left">6</td>
 </tr>
 <tr>
-<td align="left">2</td>
-<td align="left">2</td>
-<td align="left">20:14836243:G:GTTTTTTT</td>
-<td align="left">rs71190156</td>
-<td align="left">20</td>
-<td align="left">14836243</td>
-<td align="left">2.752e-08</td>
-<td align="left">49</td>
-<td align="left">49</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">20:14836243:G:GTTTTTTT</td>
+<td style="text-align:left">rs71190156</td>
+<td style="text-align:left">20</td>
+<td style="text-align:left">14836243</td>
+<td style="text-align:left">2.752e-08</td>
+<td style="text-align:left">49</td>
+<td style="text-align:left">49</td>
 </tr>
 <tr>
-<td align="left">4</td>
-<td align="left">3</td>
-<td align="left">20:21182388:C:T</td>
-<td align="left">rs12625304</td>
-<td align="left">20</td>
-<td align="left">21182388</td>
-<td align="left">8.16e-09</td>
-<td align="left">4</td>
-<td align="left">4</td>
+<td style="text-align:left">4</td>
+<td style="text-align:left">3</td>
+<td style="text-align:left">20:21182388:C:T</td>
+<td style="text-align:left">rs12625304</td>
+<td style="text-align:left">20</td>
+<td style="text-align:left">21182388</td>
+<td style="text-align:left">8.16e-09</td>
+<td style="text-align:left">4</td>
+<td style="text-align:left">4</td>
 </tr>
 <tr>
-<td align="left">6</td>
-<td align="left">3</td>
-<td align="left">20:21241417:A:T</td>
-<td align="left">rs6035820</td>
-<td align="left">20</td>
-<td align="left">21241417</td>
-<td align="left">2.867e-08</td>
-<td align="left">162</td>
-<td align="left">162</td>
+<td style="text-align:left">6</td>
+<td style="text-align:left">3</td>
+<td style="text-align:left">20:21241417:A:T</td>
+<td style="text-align:left">rs6035820</td>
+<td style="text-align:left">20</td>
+<td style="text-align:left">21241417</td>
+<td style="text-align:left">2.867e-08</td>
+<td style="text-align:left">162</td>
+<td style="text-align:left">162</td>
 </tr>
 <tr>
-<td align="left">7</td>
-<td align="left">3</td>
-<td align="left">20:21248116:A:G</td>
-<td align="left">rs910805</td>
-<td align="left">20</td>
-<td align="left">21248116</td>
-<td align="left">2.041e-09</td>
-<td align="left">182</td>
-<td align="left">182</td>
+<td style="text-align:left">7</td>
+<td style="text-align:left">3</td>
+<td style="text-align:left">20:21248116:A:G</td>
+<td style="text-align:left">rs910805</td>
+<td style="text-align:left">20</td>
+<td style="text-align:left">21248116</td>
+<td style="text-align:left">2.041e-09</td>
+<td style="text-align:left">182</td>
+<td style="text-align:left">182</td>
 </tr>
-</tbody></table>
-<h3 id="mapped-genes"><a href="#mapped-genes" class="headerlink" title="mapped genes"></a>mapped genes</h3><table>
+</tbody>
+</table>
+</div>
+<h3 id="mapped-genes"><a href="#mapped-genes" class="headerlink" title="mapped genes"></a>mapped genes</h3><div class="table-container">
+<table>
 <thead>
 <tr>
-<th align="left">Gene</th>
-<th align="left">Symbol</th>
-<th align="left">HUGO</th>
-<th align="left">entrezID</th>
-<th align="left">chr</th>
-<th align="left">start</th>
-<th align="left">end</th>
-<th align="left">strand</th>
-<th align="left">type</th>
-<th align="left">pLI</th>
-<th align="left">ncRVIS</th>
-<th align="left">posMapSNPs</th>
-<th align="left">posMapMaxCADD</th>
-<th align="left">minGwasP</th>
-<th align="left">Genomic Locus</th>
-<th align="left">IndSigSNPs</th>
+<th style="text-align:left">Gene</th>
+<th style="text-align:left">Symbol</th>
+<th style="text-align:left">HUGO</th>
+<th style="text-align:left">entrezID</th>
+<th style="text-align:left">chr</th>
+<th style="text-align:left">start</th>
+<th style="text-align:left">end</th>
+<th style="text-align:left">strand</th>
+<th style="text-align:left">type</th>
+<th style="text-align:left">pLI</th>
+<th style="text-align:left">ncRVIS</th>
+<th style="text-align:left">posMapSNPs</th>
+<th style="text-align:left">posMapMaxCADD</th>
+<th style="text-align:left">minGwasP</th>
+<th style="text-align:left">Genomic Locus</th>
+<th style="text-align:left">IndSigSNPs</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">ENSG00000088930</td>
-<td align="left">XRN2</td>
-<td align="left">XRN2</td>
-<td align="left">22803</td>
-<td align="left">20</td>
-<td align="left">21283942</td>
-<td align="left">21370463</td>
-<td align="left">1</td>
-<td align="left">protein_coding</td>
-<td align="left">0.813170185835591</td>
-<td align="left">-0.511318347</td>
-<td align="left">103</td>
-<td align="left">13.49</td>
-<td align="left">1.589e-08</td>
-<td align="left">3</td>
-<td align="left">rs910805;rs6035820;rs12625304</td>
+<tbody>
+<tr>
+<td style="text-align:left">ENSG00000088930</td>
+<td style="text-align:left">XRN2</td>
+<td style="text-align:left">XRN2</td>
+<td style="text-align:left">22803</td>
+<td style="text-align:left">20</td>
+<td style="text-align:left">21283942</td>
+<td style="text-align:left">21370463</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">protein_coding</td>
+<td style="text-align:left">0.813170185835591</td>
+<td style="text-align:left">-0.511318347</td>
+<td style="text-align:left">103</td>
+<td style="text-align:left">13.49</td>
+<td style="text-align:left">1.589e-08</td>
+<td style="text-align:left">3</td>
+<td style="text-align:left">rs910805;rs6035820;rs12625304</td>
 </tr>
 <tr>
-<td align="left">ENSG00000125816</td>
-<td align="left">NKX2-4</td>
-<td align="left">NKX2-4</td>
-<td align="left">644524</td>
-<td align="left">20</td>
-<td align="left">21376005</td>
-<td align="left">21378666</td>
-<td align="left">-1</td>
-<td align="left">protein_coding</td>
-<td align="left">0.278447692496314</td>
-<td align="left">-0.618232094</td>
-<td align="left">14</td>
-<td align="left">11.39</td>
-<td align="left">2.126e-08</td>
-<td align="left">3</td>
-<td align="left">rs910805;rs6035820</td>
+<td style="text-align:left">ENSG00000125816</td>
+<td style="text-align:left">NKX2-4</td>
+<td style="text-align:left">NKX2-4</td>
+<td style="text-align:left">644524</td>
+<td style="text-align:left">20</td>
+<td style="text-align:left">21376005</td>
+<td style="text-align:left">21378666</td>
+<td style="text-align:left">-1</td>
+<td style="text-align:left">protein_coding</td>
+<td style="text-align:left">0.278447692496314</td>
+<td style="text-align:left">-0.618232094</td>
+<td style="text-align:left">14</td>
+<td style="text-align:left">11.39</td>
+<td style="text-align:left">2.126e-08</td>
+<td style="text-align:left">3</td>
+<td style="text-align:left">rs910805;rs6035820</td>
 </tr>
 <tr>
-<td align="left">ENSG00000171056</td>
-<td align="left">SOX7</td>
-<td align="left">SOX7</td>
-<td align="left">83595</td>
-<td align="left">8</td>
-<td align="left">10581278</td>
-<td align="left">10697357</td>
-<td align="left">-1</td>
-<td align="left">protein_coding</td>
-<td align="left">0.131241610927833</td>
-<td align="left">0.638029508</td>
-<td align="left">6</td>
-<td align="left">17.85</td>
-<td align="left">1.065e-08</td>
-<td align="left">1</td>
-<td align="left">rs10099100</td>
+<td style="text-align:left">ENSG00000171056</td>
+<td style="text-align:left">SOX7</td>
+<td style="text-align:left">SOX7</td>
+<td style="text-align:left">83595</td>
+<td style="text-align:left">8</td>
+<td style="text-align:left">10581278</td>
+<td style="text-align:left">10697357</td>
+<td style="text-align:left">-1</td>
+<td style="text-align:left">protein_coding</td>
+<td style="text-align:left">0.131241610927833</td>
+<td style="text-align:left">0.638029508</td>
+<td style="text-align:left">6</td>
+<td style="text-align:left">17.85</td>
+<td style="text-align:left">1.065e-08</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">rs10099100</td>
 </tr>
 <tr>
-<td align="left">ENSG00000172264</td>
-<td align="left">MACROD2</td>
-<td align="left">MACROD2</td>
-<td align="left">140733</td>
-<td align="left">20</td>
-<td align="left">13976015</td>
-<td align="left">16033842</td>
-<td align="left">1</td>
-<td align="left">protein_coding</td>
-<td align="left">0.0113567470210345</td>
-<td align="left">3.34668599</td>
-<td align="left">49</td>
-<td align="left">20.4</td>
-<td align="left">2.752e-08</td>
-<td align="left">2</td>
-<td align="left">rs71190156</td>
+<td style="text-align:left">ENSG00000172264</td>
+<td style="text-align:left">MACROD2</td>
+<td style="text-align:left">MACROD2</td>
+<td style="text-align:left">140733</td>
+<td style="text-align:left">20</td>
+<td style="text-align:left">13976015</td>
+<td style="text-align:left">16033842</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">protein_coding</td>
+<td style="text-align:left">0.0113567470210345</td>
+<td style="text-align:left">3.34668599</td>
+<td style="text-align:left">49</td>
+<td style="text-align:left">20.4</td>
+<td style="text-align:left">2.752e-08</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">rs71190156</td>
 </tr>
 <tr>
-<td align="left">ENSG00000183638</td>
-<td align="left">RP1L1</td>
-<td align="left">RP1L1</td>
-<td align="left">94137</td>
-<td align="left">8</td>
-<td align="left">10463859</td>
-<td align="left">10569697</td>
-<td align="left">-1</td>
-<td align="left">protein_coding</td>
-<td align="left">NA</td>
-<td align="left">1.244966111</td>
-<td align="left">5</td>
-<td align="left">3.864</td>
-<td align="left">1.065e-08</td>
-<td align="left">1</td>
-<td align="left">rs10099100</td>
+<td style="text-align:left">ENSG00000183638</td>
+<td style="text-align:left">RP1L1</td>
+<td style="text-align:left">RP1L1</td>
+<td style="text-align:left">94137</td>
+<td style="text-align:left">8</td>
+<td style="text-align:left">10463859</td>
+<td style="text-align:left">10569697</td>
+<td style="text-align:left">-1</td>
+<td style="text-align:left">protein_coding</td>
+<td style="text-align:left">NA</td>
+<td style="text-align:left">1.244966111</td>
+<td style="text-align:left">5</td>
+<td style="text-align:left">3.864</td>
+<td style="text-align:left">1.065e-08</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">rs10099100</td>
 </tr>
 <tr>
-<td align="left">ENSG00000258724</td>
-<td align="left">SOX7</td>
-<td align="left">SOX7</td>
-<td align="left">83595</td>
-<td align="left">8</td>
-<td align="left">10582909</td>
-<td align="left">10697357</td>
-<td align="left">-1</td>
-<td align="left">protein_coding</td>
-<td align="left">NA</td>
-<td align="left">0.638029508</td>
-<td align="left">4</td>
-<td align="left">17.85</td>
-<td align="left">1.065e-08</td>
-<td align="left">1</td>
-<td align="left">rs10099100</td>
+<td style="text-align:left">ENSG00000258724</td>
+<td style="text-align:left">SOX7</td>
+<td style="text-align:left">SOX7</td>
+<td style="text-align:left">83595</td>
+<td style="text-align:left">8</td>
+<td style="text-align:left">10582909</td>
+<td style="text-align:left">10697357</td>
+<td style="text-align:left">-1</td>
+<td style="text-align:left">protein_coding</td>
+<td style="text-align:left">NA</td>
+<td style="text-align:left">0.638029508</td>
+<td style="text-align:left">4</td>
+<td style="text-align:left">17.85</td>
+<td style="text-align:left">1.065e-08</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">rs10099100</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h2 id="7-使用Locus-Zoom绘制Regional-Plots"><a href="#7-使用Locus-Zoom绘制Regional-Plots" class="headerlink" title="7.使用Locus Zoom绘制Regional Plots"></a>7.使用Locus Zoom绘制Regional Plots</h2><p>首先检查每个染色体上包含SNPs的主要区域：</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs R">iPSYCH_PGC_ASD_Nov2017 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/data/14671989/iPSYCH_PGC_ASD_Nov2017&quot;</span>)<br>print(head(iPSYCH_PGC_ASD_Nov2017))<br>subset_ch2 &lt;- subset(iPSYCH_PGC_ASD_Nov2017, CHR==<span class="hljs-string">&quot;2&quot;</span>)<br>subset_ch2[order(subset_ch2$P),]<br><span class="hljs-comment">##         CHR            SNP        BP               A1    A2  INFO      OR     SE         P</span><br><span class="hljs-comment">## 4810052   2     rs59566011 159385181               GA     G 0.947 1.07315 0.0144 9.304e-07</span><br><span class="hljs-comment">## 4805439   2     rs70994211 159385148                T    TA 0.990 0.93557 0.0143 3.410e-06</span><br><span class="hljs-comment">## 3955815   2      rs6430841 140318199                A     G 1.000 1.08275 0.0176 6.402e-06</span><br><span class="hljs-comment">## 349794    2      rs7578456 202235348                A     G 0.991 1.06556 0.0141 6.532e-06</span><br><span class="hljs-comment">## 346713    2      rs2110688 202223429                T     C 0.997 1.06492 0.0141 8.044e-06</span><br></code></pre></td></tr></table></figure>
-
 <p>然后将iPSYCH_PGC_ASD_Nov2017作为输入数据，使用Locus Zoom网页工具绘制Regional Plots (<a target="_blank" rel="noopener" href="http://locuszoom.org/genform.php?type=yourdata">http://locuszoom.org/genform.php?type=yourdata</a>)</p>
 <blockquote>
 <p>值得注意的是，输入Locus Zoom的数据，需要选择PLINK生成的格式，选择以制表符作为分隔符，其他非必须参数可选择默认。</p>
@@ -1874,9 +1901,9 @@
                     
                       <a class="hover-with-bg" href="/tags/GWAS/">GWAS</a>
                     
-                      <a class="hover-with-bg" href="/tags/ASD/">ASD</a>
-                    
                       <a class="hover-with-bg" href="/tags/SNP/">SNP</a>
+                    
+                      <a class="hover-with-bg" href="/tags/ASD/">ASD</a>
                     
                   </div>
                 

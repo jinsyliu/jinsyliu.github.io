@@ -1,0 +1,583 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  
+    <meta name="description" content="">
+  
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+  <title>2021.11.15 GWAS与ASD相关文献阅读报告 - Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Liu Keqin</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="2021.11.15 GWAS与ASD相关文献阅读报告">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-11-15 12:18" pubdate>
+        2021年11月15日 中午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.4k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      33
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">2021.11.15 GWAS与ASD相关文献阅读报告</h1>
+            
+            <div class="markdown-body">
+              <h1 id="2021-11-15-GWAS与ASD相关文献阅读报告"><a href="#2021-11-15-GWAS与ASD相关文献阅读报告" class="headerlink" title="2021-11-15 GWAS与ASD相关文献阅读报告"></a>2021-11-15 GWAS与ASD相关文献阅读报告</h1><p><a target="_blank" rel="noopener" href="https://link.springer.com/article/10.1007/s40473-014-0023-0#Abs1">Genome-Wide Association Studies of Autism</a></p>
+<h2 id="1-染色体突变（chromosomal-mutation）可导致自闭症的易感性"><a href="#1-染色体突变（chromosomal-mutation）可导致自闭症的易感性" class="headerlink" title="1.染色体突变（chromosomal mutation）可导致自闭症的易感性"></a>1.染色体突变（chromosomal mutation）可导致自闭症的易感性</h2><p>连锁研究和细胞遗传学分析导致鉴定了几种新的候选基因，包括神经蛋白 (NRXN) 和神经蛋白 (NLGN)。 据报道，2q31、3q、7q22 和 7q34 存在显着的基因组连锁 。多项研究涉及几个感兴趣的区域，包括 1p13.2、1q31.1、5p13、8q24、13q、15q、16p、17q、19p 和 Xq。 除了 1p13.2 和 2q32 之外，这些区域中的大多数都报告了染色体突变 。</p>
+<blockquote>
+<p>Gupta, Abha R., and Matthew W. State. “Recent advances in the genetics of autism.” <em>Biological psychiatry</em> 61.4 (2007): 429-437.</p>
+<p>Veenstra-VanderWeele, Jeremy, Susan L. Christian, and Edwin H. Cook, Jr. “Autism as a paradigmatic complex genetic disorder.” <em>Annu. Rev. Genomics Hum. Genet.</em> 5 (2004): 379-405.</p>
+</blockquote>
+<h2 id="2-拷贝数变异是与自闭症风险相关的遗传变异之一。"><a href="#2-拷贝数变异是与自闭症风险相关的遗传变异之一。" class="headerlink" title="2.拷贝数变异是与自闭症风险相关的遗传变异之一。"></a>2.拷贝数变异是与自闭症风险相关的遗传变异之一。</h2><p>最确定的自闭症相关 CNV 包括 7q11.23、15q11-13、16p11.2 和 22q11.2 基因座，以及 NRXN1、CNTN4、NLGN 和 SHANK3 基因 。 CNV 已被证明是导致自闭症表型的遗传负担的关键来源。</p>
+<blockquote>
+<p>Durand, Christelle M., et al. “Mutations in the gene encoding the synaptic scaffolding protein SHANK3 are associated with autism spectrum disorders.” <em>Nature genetics</em> 39.1 (2007): 25-27.</p>
+<p>Glessner, Joseph T., et al. “Autism genome-wide copy number variation reveals ubiquitin and neuronal genes.” <em>Nature</em> 459.7246 (2009): 569-573.</p>
+<p>Sanders, Stephan J., et al. “Multiple recurrent de novo CNVs, including duplications of the 7q11. 23 Williams syndrome region, are strongly associated with autism.” <em>Neuron</em> 70.5 (2011): 863-885.</p>
+<p>Bucan, Maja, et al. “Genome-wide analyses of exonic copy number variants in a family-based study point to novel autism susceptibility genes.” <em>PLoS genetics</em> 5.6 (2009): e1000536.</p>
+<p>Elia, Josephine, et al. “Genome-wide copy number variation study associates metabotropic glutamate receptor gene networks with attention deficit hyperactivity disorder.” <em>Nature genetics</em> 44.1 (2012): 78-84.</p>
+<p>Gai, X., et al. “Rare structural variation of synapse and neurotransmission genes in autism.” <em>Molecular psychiatry</em> 17.4 (2012): 402-411.</p>
+<p>Girirajan, Santhosh, et al. “Refinement and discovery of new hotspots of copy-number variation associated with autism spectrum disorder.” <em>The American Journal of Human Genetics</em> 92.2 (2013): 221-237.</p>
+<p>Glessner, Joseph T., John JM Connolly, and Hakon Hakonarson. “Rare genomic deletions and duplications and their role in neurodevelopmental disorders.” <em>Behavioral Neurogenetics</em> (2011): 345-360.</p>
+<p>Glessner, Joseph T., Jin Li, and Hakon Hakonarson. “ParseCNV integrative copy number variation association software with quality tracking.” <em>Nucleic acids research</em> 41.5 (2013): e64-e64.</p>
+<p>Hadley, Dexter, et al. “The impact of the metabotropic glutamate receptor and other gene family interaction networks on autism.” <em>Nature communications</em> 5.1 (2014): 1-10.</p>
+<p>Levy, Dan, et al. “Rare de novo and transmitted copy-number variation in autistic spectrum disorders.” <em>Neuron</em> 70.5 (2011): 886-897.</p>
+<p>Matsunami, Nori, et al. “Identification of rare recurrent copy number variants in high-risk autism families and their prevalence in a large ASD population.” <em>PloS one</em> 8.1 (2013): e52239.</p>
+<p>Pinto, Dalila, et al. “Functional impact of global rare copy number variation in autism spectrum disorders.” <em>Nature</em> 466.7304 (2010): 368-372.</p>
+</blockquote>
+<h2 id="3-新突变在自闭症发展中也有一定的作用。"><a href="#3-新突变在自闭症发展中也有一定的作用。" class="headerlink" title="3.新突变在自闭症发展中也有一定的作用。"></a>3.新突变在自闭症发展中也有一定的作用。</h2><p>最近进行的外显子组测序研究表明，数百个从头突变在自闭症的发展中具有一定作用，明确的证据表明一些特定基因（CHD8、KATANAL2、SCN2A、NTNG1）。 总之，这些结构变异或从头突变，其中许多是高度外显或蛋白质改变但个别罕见，占孤独症遗传风险的有限比例。 相比之下，通过 GWAS 在 CDH9-CDH10、SEMA5A 和 MACROD2 基因座仅报告了少量常见变异。</p>
+<p>此外，稀有变异可能非常重要，因为纯化选择（purifying selection）使个体易患自闭症的等位基因可能保持在罕见的频率上。 有许多变异会以每个基因组数千个的数量级改变或终止蛋白质序列，从而使某些变异的因果关系分配变得复杂。 罕见的变异可能仅对自闭症表型有部分外显率（penetrance），导致对智商或认知的亚临床影响（subclinical impact），并污染对照人群，这些人群可能不像 GWAS 的病例人群那样仔细筛选。</p>
+<blockquote>
+<p><strong>background selection</strong> &amp; <strong>purifying selection</strong></p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Negative_selection_(natural_selection">Negative selection (natural selection)</a>)</p>
+<blockquote>
+<p>在自然选择中，负选择或纯化选择是选择性去除有害的等位基因。这可以通过清除由随机突变引起的有害遗传多态性来稳定选择。 </p>
+<p>可以在群体遗传学水平上清除有害等位基因，只需一个单点突变即可作为选择单位。在这种情况下，有害点突变的携带者每代产生更少的后代，从而降低了基因库中突变的频率。</p>
+<p>在基因座上的强负选择的情况下，有害变体的清除将导致连锁变异的偶尔移除，从而导致被选择基因座周围的变异水平降低。由于与有害等位基因的这种空间接近性而偶然清除非有害等位基因称为<strong>背景选择</strong>。 这种效应随着突变率的降低而增加，但随着重组率的升高而降低。 </p>
+<p><strong>纯化选择</strong>可以分为通过非随机交配进行清除和通过遗传漂变进行清除。通过遗传漂变清除主要可以去除深度隐性等位基因，而自然选择可以去除任何类型的有害等位基因。 </p>
+</blockquote>
+</blockquote>
+<p>Neale, Benjamin M., et al. “Patterns and rates of exonic de novo mutations in autism spectrum disorders.” <em>Nature</em> 485.7397 (2012): 242-245.</p>
+<p>O’Roak, Brian J., et al. “Sporadic autism exomes reveal a highly interconnected protein network of de novo mutations.” <em>Nature</em> 485.7397 (2012): 246-250.</p>
+<p>Sanders, Stephan J., et al. “De novo mutations revealed by whole-exome sequencing are strongly associated with autism.” <em>Nature</em> 485.7397 (2012): 237-241.</p>
+<p>Iossifov, Ivan, et al. “De novo gene disruptions in children on the autistic spectrum.” <em>Neuron</em> 74.2 (2012): 285-299.</p>
+<p>McCarroll, Steven A., Guoping Feng, and Steven E. Hyman. “Genome-scale neurogenetics: methodology and meaning.” <em>Nature neuroscience</em> 17.6 (2014): 756-763.</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4912829/">Genome-scale neurogenetics: methodology and meaning</a></p>
+</blockquote>
+</blockquote>
+<h2 id="4-互作、多因素与表型异质性"><a href="#4-互作、多因素与表型异质性" class="headerlink" title="4.互作、多因素与表型异质性"></a>4.互作、多因素与表型异质性</h2><p>自闭症具有表型异质性的特点，并且在病因上是多因素的。 多个常见变异共同或通过与环境因素的相互作用占自闭症风险的一定比例的假设激发了 GWAS 的基本原理。 </p>
+<h2 id="5-自闭症与兴奋性突触和L型钙通道"><a href="#5-自闭症与兴奋性突触和L型钙通道" class="headerlink" title="5.自闭症与兴奋性突触和L型钙通道"></a>5.自闭症与兴奋性突触和L型钙通道</h2><p>兴奋性突触和 L 型钙通道的突触后成分已成为神经精神病学 GWAS 中出现的主要生物学类别。 具体而言，NRXN、CNTN、GRM、泛素和 SLIT 基因成员显示出多个基因家族成员，这些成员具有与自闭症和相关神经发育障碍相关的变异。</p>
+<h2 id="6-复杂的遗传结构（精神类疾病的多基因性）"><a href="#6-复杂的遗传结构（精神类疾病的多基因性）" class="headerlink" title="6.复杂的遗传结构（精神类疾病的多基因性）"></a>6.复杂的遗传结构（精神类疾病的多基因性）</h2><p>与其他常见疾病相比，解析精神疾病的遗传学需要更大的人口样本，这很可能是由于精神疾病的复杂遗传结构。 遗传风险是个体内部和家庭之间的许多不同基因以及罕见和常见变异协同作用的结果，使得精神疾病具有多基因性。</p>
+<h2 id="7-常见变异的加性效应"><a href="#7-常见变异的加性效应" class="headerlink" title="7.常见变异的加性效应"></a>7.常见变异的加性效应</h2><p>GWAS 确定的许多常见变异具有适度的影响。 具体而言，它们在其他变体的遗传背景中充当遗传风险因素，增加对自闭症的风险或保护，并在蛋白质序列或表达水平上以一定范围内的作用。 克莱等人使用模拟来检查自闭症易感性的加性模型，其中自闭症被大量累积增加 ASD 风险的变体所强调，但单独产生的影响非常小。 他们的模型表明，在多重家族中，大约 60% 的易感性可归因于累加效应，而在单一家族中，这一比例接近 40%。</p>
+<blockquote>
+<p>Abrahams, Brett S., and Daniel H. Geschwind. “Advances in autism genetics: on the threshold of a new neurobiology.” <em>Nature reviews genetics</em> 9.5 (2008): 341-355.</p>
+<p>Klei, Lambertus, et al. “Common genetic variants, acting additively, are a major source of risk for autism.” <em>Molecular autism</em> 3.1 (2012): 1-13.</p>
+</blockquote>
+<h2 id="8-泛素化"><a href="#8-泛素化" class="headerlink" title="8.泛素化"></a>8.泛素化</h2><p>TRIM33 是一种 E3 泛素连接酶，是自闭症中最新的重要 GWAS。据报道，泛素 E3 连接酶的突变与其他神经精神疾病有关，例如 Angelman 综合征，其表型与自闭症 (UBE3A) 重叠；Charcot-Marie-Tooth 病 (LRSAM1)；青少年发病的帕金森病（PARK2);和 X 连锁精神发育迟滞 (CUL4B)。此外，在影响泛素通路的对照中未发现的 CNV，包括 UBE3A、PARK2、RFWD2 和 FBXO40，在自闭症患者中富集。 TRIM33 中的 SNP，rs6537825，显示出与自闭症的最强关联，是非同义的，导致异亮氨酸到苏氨酸的取代，并对大脑中的 TRIM33 表达具有显着的顺式作用调节作用。功能多态性可能会略微改变泛素-蛋白酶体系统的功能，从而降低其效率。 TRIM33 在自闭症患者和正常受试者的人脑中差异表达，据报道，在独立的死后人脑样本中，TRIM33 是与整个基因组差异表达相关的主要位点之一。在患有自闭症和相关疾病的男性中发现 TRIM32/ASTN2被破坏。</p>
+<blockquote>
+<p>Kishino, Tatsuya, Marc Lalande, and Joseph Wagstaff. “UBE3A/E6-AP mutations cause Angelman syndrome.” <em>Nature genetics</em> 15.1 (1997): 70-73.</p>
+<p>Guernsey, Duane L., et al. “Mutation in the gene encoding ubiquitin ligase LRSAM1 in patients with Charcot-Marie-Tooth disease.” <em>PLoS genetics</em> 6.8 (2010): e1001081.</p>
+<p>Abbas, Nacer, et al. “A wide variety of mutations in the parkin gene are responsible for autosomal recessive parkinsonism in Europe.” <em>Human molecular genetics</em> 8.4 (1999): 567-574.</p>
+<p>Tarpey, Patrick S., et al. “Mutations in CUL4B, which encodes a ubiquitin E3 ligase subunit, cause an X-linked mental retardation syndrome associated with aggressive outbursts, seizures, relative macrocephaly, central obesity, hypogonadism, pes cavus, and tremor.” <em>The American Journal of Human Genetics</em> 80.2 (2007): 345-352.</p>
+<p>Zou, Yongxin, et al. “Mutation in CUL4B, which encodes a member of cullin-RING ubiquitin ligase complex, causes X-linked mental retardation.” <em>The American Journal of Human Genetics</em> 80.3 (2007): 561-566.</p>
+<p>Glessner, Joseph T., et al. “Autism genome-wide copy number variation reveals ubiquitin and neuronal genes.” <em>Nature</em> 459.7246 (2009): 569-573.</p>
+<p>Chow, Maggie L., et al. “Age-dependent brain gene expression and copy number anomalies in autism suggest distinct pathological processes at young versus mature ages.” <em>PLoS genetics</em> 8.3 (2012): e1002592.</p>
+<p>Lionel, Anath C., et al. “Disruption of the ASTN2/TRIM32 locus at 9q33. 1 is a risk factor in males for autism spectrum disorders, ADHD and other neurodevelopmental phenotypes.” <em>Human molecular genetics</em> 23.10 (2014): 2752-2768.</p>
+</blockquote>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/LITERATURE-READING/">LITERATURE READING</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/GWAS/">GWAS</a>
+                    
+                      <a class="hover-with-bg" href="/tags/ASD/">ASD</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/11/16/20211116%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BAlatex%E8%A1%8C%E5%86%85%E5%85%AC%E5%BC%8F%E9%97%AE%E9%A2%98/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">2021.11.16 解决HEXO博客中无法显示Latex行内公式问题</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/11/11/20211111%E6%B5%B7%E6%B4%8B%E5%BE%AE%E7%94%9F%E7%89%A9%E4%B8%AD%E6%8A%97%E8%82%BF%E7%98%A4%E8%82%BD%E6%B4%BB%E6%80%A7%E7%9A%84%E5%88%86%E7%A6%BB%E9%89%B4%E5%AE%9A%E8%83%8C%E6%99%AF%E8%B5%84%E6%96%99/">
+                        <span class="hidden-mobile">2021.11.11 海洋微生物中抗肿瘤肽活性的分离鉴定（背景资料）</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                  
+                
+                
+  <div class="disqus" style="width:100%">
+    <div id="disqus_thread"></div>
+    <script>
+      Fluid.utils.waitElementVisible('disqus_thread', function() {
+        Fluid.utils.createCssLink('https://cdn.jsdelivr.net/npm/disqusjs@1.0/dist/disqusjs.css');
+        Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/disqusjs@1.0/dist/disqus.js', function () {
+          new DisqusJS({
+            shortname: 'fluid',
+            apikey: ''
+          });
+        });
+      });
+    </script>
+    <noscript>Please enable JavaScript to view the
+      <a target="_blank" href="https://disqus.com/?ref_noscript" rel="nofollow noopener noopener">comments powered by Disqus.</a>
+    </noscript>
+  </div>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+</body>
+</html>

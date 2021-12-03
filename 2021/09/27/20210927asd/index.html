@@ -230,7 +230,7 @@
             <h1 style="display: none">2021.9.27实验记录iPSYCH_PGC_ASD_Nov2017</h1>
             
             <div class="markdown-body">
-              <h1 id="2021-9-27实验记录iPSYCH-PGC-ASD-Nov2017"><a href="#2021-9-27实验记录iPSYCH-PGC-ASD-Nov2017" class="headerlink" title="2021.9.27实验记录iPSYCH_PGC_ASD_Nov2017"></a>2021.9.27实验记录iPSYCH_PGC_ASD_Nov2017</h1><p><strong>参考文献：</strong></p>
+              <h1><span id="2021-9-27-shi-yan-ji-lu-ipsych-pgc-asd-nov2017">2021.9.27实验记录iPSYCH_PGC_ASD_Nov2017</span><a href="#2021-9-27-shi-yan-ji-lu-ipsych-pgc-asd-nov2017" class="header-anchor">#</a></h1><p><strong>参考文献：</strong></p>
 <blockquote>
 <p>Alonso-Gonzalez, Aitana, et al. “Novel gene-based analysis of ASD GWAS: Insight into the biological role of associated genes.” <em>Frontiers in genetics</em> 10 (2019): 733.</p>
 </blockquote>
@@ -271,8 +271,8 @@
 <p>GENE2FUNC (<a target="_blank" rel="noopener" href="http://fuma.ctglab.nl/">http://fuma.ctglab.nl/</a>)</p>
 <p>dbMDEGA (<a target="_blank" rel="noopener" href="https://dbmdega.shinyapps.io/dbMDEGA/">https://dbmdega.shinyapps.io/dbMDEGA/</a>)</p>
 <p>LocusZoom tool (<a target="_blank" rel="noopener" href="http://locuszoom.org/">http://locuszoom.org/</a>) </p>
-<h2 id="1-查看PGC统计摘要文件格式"><a href="#1-查看PGC统计摘要文件格式" class="headerlink" title="1.查看PGC统计摘要文件格式"></a>1.查看PGC统计摘要文件格式</h2><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs R">iPSYCH_PGC_ASD_Nov2017 &lt;- read.delim(<span class="hljs-string">&quot;/Users/keqinliu/Downloads/14671989/iPSYCH_PGC_ASD_Nov2017&quot;</span>)<br>print(head(iPSYCH_PGC_ASD_Nov2017))<br><span class="hljs-comment">##   CHR        SNP        BP A1 A2  INFO      OR     SE        P</span><br><span class="hljs-comment">## 1   8 rs62513865 101592213  T  C 0.949 1.00652 0.0270 0.808600</span><br><span class="hljs-comment">## 2   8 rs79643588 106973048  A  G 0.997 1.01786 0.0240 0.460600</span><br><span class="hljs-comment">## 3   8 rs17396518 108690829  T  G 0.987 0.96127 0.0140 0.004647</span><br><span class="hljs-comment">## 4   8   rs983166 108681675  A  C 0.998 0.97990 0.0139 0.145200</span><br><span class="hljs-comment">## 5   8 rs28842593 103044620  T  C 0.857 0.99591 0.0203 0.841500</span><br><span class="hljs-comment">## 6   8 rs35107696 109712249  A AT 0.999 1.01308 0.0165 0.430200</span><br></code></pre></td></tr></table></figure>
-<h2 id="2-运行PASCAL"><a href="#2-运行PASCAL" class="headerlink" title="2.运行PASCAL"></a>2.运行PASCAL</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">(base) KeqindeMacBook-Air:PASCAL keqinliu$ Pascal --pval=/Users/keqinliu/Downloads/iPSYCH_PGC_ASD_Nov2017 --runpathway=on --mergedistance=1<br></code></pre></td></tr></table></figure>
+<h2><span id="1-cha-kan-pgc-tong-ji-zhai-yao-wen-jian-ge-shi">1.查看PGC统计摘要文件格式</span><a href="#1-cha-kan-pgc-tong-ji-zhai-yao-wen-jian-ge-shi" class="header-anchor">#</a></h2><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs R">iPSYCH_PGC_ASD_Nov2017 &lt;- read.delim(<span class="hljs-string">&quot;/Users/keqinliu/Downloads/14671989/iPSYCH_PGC_ASD_Nov2017&quot;</span>)<br>print(head(iPSYCH_PGC_ASD_Nov2017))<br><span class="hljs-comment">##   CHR        SNP        BP A1 A2  INFO      OR     SE        P</span><br><span class="hljs-comment">## 1   8 rs62513865 101592213  T  C 0.949 1.00652 0.0270 0.808600</span><br><span class="hljs-comment">## 2   8 rs79643588 106973048  A  G 0.997 1.01786 0.0240 0.460600</span><br><span class="hljs-comment">## 3   8 rs17396518 108690829  T  G 0.987 0.96127 0.0140 0.004647</span><br><span class="hljs-comment">## 4   8   rs983166 108681675  A  C 0.998 0.97990 0.0139 0.145200</span><br><span class="hljs-comment">## 5   8 rs28842593 103044620  T  C 0.857 0.99591 0.0203 0.841500</span><br><span class="hljs-comment">## 6   8 rs35107696 109712249  A AT 0.999 1.01308 0.0165 0.430200</span><br></code></pre></td></tr></table></figure>
+<h2><span id="2-yun-xing-pascal">2.运行PASCAL</span><a href="#2-yun-xing-pascal" class="header-anchor">#</a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">(base) KeqindeMacBook-Air:PASCAL keqinliu$ Pascal --pval=/Users/keqinliu/Downloads/iPSYCH_PGC_ASD_Nov2017 --runpathway=on --mergedistance=1<br></code></pre></td></tr></table></figure>
 <p>出现报错：</p>
 <figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc">Hello I&#x27;m Pascal<br>WARN: Unknown option (ignored): --mergedistance=1<br>genescoring not set. set to sum as default.<br>2021/09/27_10:29:05:N<br><span class="hljs-section">SETTINGS FILE</span><br><span class="hljs-section">-------------</span><br><br><span class="hljs-bullet">- </span>No settings file specified<br><span class="hljs-bullet">- </span>Loading default settings<br><br>random seed:<br>2<br>Writing file: output/settingsOut.txt<br>Class found = ch.unil.genescore.main.Settings<br>Package = package ch.unil.genescore.main<br><span class="hljs-section">LOADING INPUT FILES</span><br><span class="hljs-section">-------------------</span><br><br>Load annotation: resources/annotation/ucsc/ucsc<span class="hljs-emphasis">_known_genes_2013-09-03.txt</span><br><span class="hljs-emphasis">Loading annotation: resources/annotation/ucsc/ucsc_known_genes_2013-09-03.txt</span><br><span class="hljs-emphasis">Reading file: resources/annotation/ucsc/ucsc_known_genes_2013-09-03.txt</span><br><span class="hljs-emphasis">Reading file: resources/annotation/hla/hlaGenesEntrezIds.txt</span><br><span class="hljs-emphasis">- 205 genes removed because they are in the excluded genes file</span><br><span class="hljs-emphasis">Reading file: /Users/keqinliu/Downloads/iPSYCH_PGC_ASD_</span>Nov2017<br><span class="hljs-symbol">WARNING: </span>snp CHRhas no valid p-value (use NA or NaN for omitted values).<br><span class="hljs-symbol">WARNING: </span>snp 8has no valid p-value (use NA or NaN for omitted values).<br><span class="hljs-symbol">WARNING: </span>snp 8has no valid p-value (use NA or NaN for omitted values).<br></code></pre></td></tr></table></figure>
 <p>检查报错，发现Pascal提示snp无有效p-value</p>
@@ -287,13 +287,13 @@
 <figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs crystal">Writing <span class="hljs-symbol">file:</span> output/iPSYCH_PGC_ASD_Nov2017_new.sum.numSnpError.chr8.txt<br><br>Reading <span class="hljs-symbol">file:</span> resources/genesets/msigdb/msigBIOCARTA_KEGG_REACTOME.gmt<br><br><span class="hljs-symbol">Loaded:</span><br>- <span class="hljs-number">1077</span> gene sets<br>- <span class="hljs-number">799</span> genes <span class="hljs-keyword">with</span> pathway / gene set <span class="hljs-keyword">annotation</span><br><span class="hljs-symbol">Ignored:</span><br>- <span class="hljs-number">7584</span> genes not found in loaded genome <span class="hljs-keyword">annotation</span> (<span class="hljs-title">UCSC</span> <span class="hljs-title">known</span> <span class="hljs-title">genes</span><br></code></pre></td></tr></table></figure>
 <figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc"><span class="hljs-section">CREATING META-GENES</span><br><span class="hljs-section">-------------------</span><br><br>Merging genes of the same pathway that are &lt;1.0mb apart:<br><span class="hljs-bullet">- </span>42 meta-genes created<br><span class="hljs-bullet">- </span>5.023809523809524 genes per meta-gene on average (min=2, max=8)<br><br>Computing gene scores for meta-genes ...<br>Writing file: output/iPSYCH<span class="hljs-emphasis">_PGC_ASD_Nov2017_new.sum.fusion.genescores.chr8.txt</span><br><span class="hljs-emphasis">Format: gene_</span>id, symbol, #snps, runtime, [warnings]<br></code></pre></td></tr></table></figure>
 <figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs gams">- Runtime: <span class="hljs-number">0</span>h <span class="hljs-number">0</span><span class="hljs-built_in">min</span> <span class="hljs-number">14</span>s <span class="hljs-number">139</span>ms<br>- <span class="hljs-number">1077</span> gene <span class="hljs-keyword">sets</span> with <span class="hljs-comment">p-value &lt; 1.0</span><br><br>Writing <span class="hljs-comment">file: output</span>/iPSYCH_PGC_ASD_Nov2017_new.PathwaySet--msigBIOCARTA_KEGG_REACTOME--<span class="hljs-keyword">sum</span>.chr8.txt<br></code></pre></td></tr></table></figure>
-<h2 id="3-Pascal生成文件"><a href="#3-Pascal生成文件" class="headerlink" title="3.Pascal生成文件"></a>3.Pascal生成文件</h2><p>共5个：</p>
+<h2><span id="3-pascal-sheng-cheng-wen-jian">3.Pascal生成文件</span><a href="#3-pascal-sheng-cheng-wen-jian" class="header-anchor">#</a></h2><p>共5个：</p>
 <p>iPSYCH_PGC_ASD_Nov2017_new.PathwaySet—msigBIOCARTA_KEGG_REACTOME—sum.chr8.txt</p>
 <p>iPSYCH_PGC_ASD_Nov2017_new.sum.genescores.chr8.txt</p>
 <p>iPSYCH_PGC_ASD_Nov2017_new.sum.fusion.genescores.chr8.txt</p>
 <p>iPSYCH_PGC_ASD_Nov2017_new.sum.numSnpError.chr8.txt</p>
 <p>settingsOut.txt</p>
-<h3 id="3-1-检查生成的sum-genescores"><a href="#3-1-检查生成的sum-genescores" class="headerlink" title="3.1.检查生成的sum_genescores"></a>3.1.检查生成的sum_genescores</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs r">sum_genescores &lt;- read.delim(<span class="hljs-string">&quot;/Users/keqinliu/iPSYCH_PGC_ASD_Nov2017_new.sum.genescores.chr8.txt&quot;</span>)<br>print(head(sum_genescores))<br>sum_genescores[order(sum_genescores$pvalue),] <span class="hljs-comment">#按照pvalue升序排列，筛选前10位。</span><br></code></pre></td></tr></table></figure>
+<h3><span id="3-1-jian-cha-sheng-cheng-de-sum-genescores">3.1.检查生成的sum_genescores</span><a href="#3-1-jian-cha-sheng-cheng-de-sum-genescores" class="header-anchor">#</a></h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs r">sum_genescores &lt;- read.delim(<span class="hljs-string">&quot;/Users/keqinliu/iPSYCH_PGC_ASD_Nov2017_new.sum.genescores.chr8.txt&quot;</span>)<br>print(head(sum_genescores))<br>sum_genescores[order(sum_genescores$pvalue),] <span class="hljs-comment">#按照pvalue升序排列，筛选前10位。</span><br></code></pre></td></tr></table></figure>
 <div class="table-container">
 <table>
 <thead>
@@ -412,7 +412,7 @@
 </tbody>
 </table>
 </div>
-<h3 id="3-2-检查生成的pathwayset"><a href="#3-2-检查生成的pathwayset" class="headerlink" title="3.2.检查生成的pathwayset"></a>3.2.检查生成的pathwayset</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs R">PathwaySet &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH_PGC_ASD_Nov2017_new.PathwaySet--msigBIOCARTA_KEGG_REACTOME--sum.chr8.txt&quot;</span>)<br>print(head(PathwaySet))<br>PathwaySet[order(PathwaySet$chi2Pvalue),] <span class="hljs-comment">#按照chi1Pvalue升序排列，筛选pvalue均＜0.05</span><br></code></pre></td></tr></table></figure>
+<h3><span id="3-2-jian-cha-sheng-cheng-de-pathwayset">3.2.检查生成的pathwayset</span><a href="#3-2-jian-cha-sheng-cheng-de-pathwayset" class="header-anchor">#</a></h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs R">PathwaySet &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH_PGC_ASD_Nov2017_new.PathwaySet--msigBIOCARTA_KEGG_REACTOME--sum.chr8.txt&quot;</span>)<br>print(head(PathwaySet))<br>PathwaySet[order(PathwaySet$chi2Pvalue),] <span class="hljs-comment">#按照chi1Pvalue升序排列，筛选pvalue均＜0.05</span><br></code></pre></td></tr></table></figure>
 <div class="table-container">
 <table>
 <thead>
@@ -461,10 +461,10 @@
 </tbody>
 </table>
 </div>
-<h2 id="4-funcoup5检查基因网络"><a href="#4-funcoup5检查基因网络" class="headerlink" title="4.funcoup5检查基因网络"></a>4.funcoup5检查基因网络</h2><p><a target="_blank" rel="noopener" href="https://funcoup5.scilifelab.se/">https://funcoup5.scilifelab.se/</a></p>
+<h2><span id="4-funcoup5-jian-cha-ji-yin-wang-luo">4.funcoup5检查基因网络</span><a href="#4-funcoup5-jian-cha-ji-yin-wang-luo" class="header-anchor">#</a></h2><p><a target="_blank" rel="noopener" href="https://funcoup5.scilifelab.se/">https://funcoup5.scilifelab.se/</a></p>
 <p>查询：C8orf74 SOX7 PINX1 MFHAS1 MIR1322 FAM167A C8orf12 ERI1 BLK PPP1R3B</p>
 <p><img src="FunCoup_subnetwork.png" srcset="/img/loading.gif" alt="FunCoup_subnetwork (1)"></p>
-<h2 id="5-PathwAX-II查询"><a href="#5-PathwAX-II查询" class="headerlink" title="5.PathwAX II查询"></a>5.PathwAX II查询</h2><p><a target="_blank" rel="noopener" href="https://pathwax.sbc.su.se/">https://pathwax.sbc.su.se/</a></p>
+<h2><span id="5-pathwax-ii-cha-xun">5.PathwAX II查询</span><a href="#5-pathwax-ii-cha-xun" class="header-anchor">#</a></h2><p><a target="_blank" rel="noopener" href="https://pathwax.sbc.su.se/">https://pathwax.sbc.su.se/</a></p>
 <p><strong>查询内容：</strong></p>
 <blockquote>
 <p>C8orf74 SOX7 PINX1 MFHAS1 MIR1322 FAM167A C8orf12 ERI1 BLK PPP1R3B</p>
@@ -1058,7 +1058,7 @@
 <p> Failed query mapping: C20ORF20, FLJ20674</p>
 </blockquote>
 <p><img src="gene_network.png" srcset="/img/loading.gif" alt="截屏2021-09-27 下午2.13.35"></p>
-<h2 id="6-GENE2FUNC-功能注释"><a href="#6-GENE2FUNC-功能注释" class="headerlink" title="6.GENE2FUNC 功能注释"></a>6.GENE2FUNC 功能注释</h2><p><a target="_blank" rel="noopener" href="https://fuma.ctglab.nl/snp2gene">https://fuma.ctglab.nl/snp2gene</a></p>
+<h2><span id="6-gene2func-gong-neng-zhu-shi">6.GENE2FUNC 功能注释</span><a href="#6-gene2func-gong-neng-zhu-shi" class="header-anchor">#</a></h2><p><a target="_blank" rel="noopener" href="https://fuma.ctglab.nl/snp2gene">https://fuma.ctglab.nl/snp2gene</a></p>
 <p>先使用fuma工具，为snp添加基因注释</p>
 <blockquote>
 <p>用户名称：Liu Keqin</p>
@@ -1375,16 +1375,16 @@
 </table>
 </div>
 </blockquote>
-<h3 id="Manhattan-Plot-GWAS-summary-statistics"><a href="#Manhattan-Plot-GWAS-summary-statistics" class="headerlink" title="Manhattan Plot (GWAS summary statistics)"></a>Manhattan Plot (GWAS summary statistics)</h3><p>For plotting, overlapping data points are not drawn (filtering was performed only for SNPs with P-value ≥ 1e-5, see tutorial for details).</p>
+<h3><span id="manhattan-plot-gwas-summary-statistics">Manhattan Plot (GWAS summary statistics)</span><a href="#manhattan-plot-gwas-summary-statistics" class="header-anchor">#</a></h3><p>For plotting, overlapping data points are not drawn (filtering was performed only for SNPs with P-value ≥ 1e-5, see tutorial for details).</p>
 <p><img src="manhattan_FUMA_jobs147024.png" srcset="/img/loading.gif" alt="manhattan_FUMA_jobs147024"></p>
-<h3 id="Mahattan-Plot-gene-based-test"><a href="#Mahattan-Plot-gene-based-test" class="headerlink" title="Mahattan Plot (gene-based test)"></a>Mahattan Plot (gene-based test)</h3><p>Input SNPs were mapped to 18937 protein coding genes. Genome wide significance (red dashed line in the plot) was defined at P = 0.05/18937 = 2.640e-6.</p>
+<h3><span id="mahattan-plot-gene-based-test">Mahattan Plot (gene-based test)</span><a href="#mahattan-plot-gene-based-test" class="header-anchor">#</a></h3><p>Input SNPs were mapped to 18937 protein coding genes. Genome wide significance (red dashed line in the plot) was defined at P = 0.05/18937 = 2.640e-6.</p>
 <p>标注top20的基因：</p>
 <p><img src="geneManhattan_FUMA_jobs147024.png" srcset="/img/loading.gif" alt="geneManhattan_FUMA_jobs147024"></p>
-<h3 id="QQ-plot-GWAS-summary-statisics"><a href="#QQ-plot-GWAS-summary-statisics" class="headerlink" title="QQ plot (GWAS summary statisics)"></a>QQ plot (GWAS summary statisics)</h3><p>For plotting purposes, overlapping data points are not drawn (filtering was performed only for SNPs with P-value ≥ 1e-5, see tutorial for details).</p>
+<h3><span id="qq-plot-gwas-summary-statisics">QQ plot (GWAS summary statisics)</span><a href="#qq-plot-gwas-summary-statisics" class="header-anchor">#</a></h3><p>For plotting purposes, overlapping data points are not drawn (filtering was performed only for SNPs with P-value ≥ 1e-5, see tutorial for details).</p>
 <p><img src="QQplot_FUMA_jobs147024.png" srcset="/img/loading.gif" alt="QQplot_FUMA_jobs147024"></p>
-<h3 id="QQ-plot-gene-based-test"><a href="#QQ-plot-gene-based-test" class="headerlink" title="QQ plot (gene-based test)"></a>QQ plot (gene-based test)</h3><p>This is a Q-Q plot of the gene-based test computed by MAGMA.</p>
+<h3><span id="qq-plot-gene-based-test">QQ plot (gene-based test)</span><a href="#qq-plot-gene-based-test" class="header-anchor">#</a></h3><p>This is a Q-Q plot of the gene-based test computed by MAGMA.</p>
 <p><img src="geneQQplot_FUMA_jobs147024.png" srcset="/img/loading.gif" alt="geneQQplot_FUMA_jobs147024"></p>
-<h3 id="MAGMA-Gene-Set-Analysis"><a href="#MAGMA-Gene-Set-Analysis" class="headerlink" title="MAGMA Gene-Set Analysis"></a>MAGMA Gene-Set Analysis</h3><p>MAGMA gene-set analysis is performed for curated gene sets and GO terms obtained from MsigDB (see here for details).<br>The table displays either significant gene sets with Pbon &lt; 0.05 or top 10 gene sets when there are less than 10 significant gene sets. Full results are downloadable from “Download” tab.<br>Note that MAGMA gene-set analyses uses the full distribution of SNP p-values and is different from a pathway enrichment test as implemented in GENE2FUNC that only tests for enrichment of prioritized genes.</p>
+<h3><span id="magma-gene-set-analysis">MAGMA Gene-Set Analysis</span><a href="#magma-gene-set-analysis" class="header-anchor">#</a></h3><p>MAGMA gene-set analysis is performed for curated gene sets and GO terms obtained from MsigDB (see here for details).<br>The table displays either significant gene sets with Pbon &lt; 0.05 or top 10 gene sets when there are less than 10 significant gene sets. Full results are downloadable from “Download” tab.<br>Note that MAGMA gene-set analyses uses the full distribution of SNP p-values and is different from a pathway enrichment test as implemented in GENE2FUNC that only tests for enrichment of prioritized genes.</p>
 <div class="table-container">
 <table>
 <thead>
@@ -1492,10 +1492,10 @@
 </tbody>
 </table>
 </div>
-<h3 id="MAGMA-Tissue-Expression-Analysis"><a href="#MAGMA-Tissue-Expression-Analysis" class="headerlink" title="MAGMA Tissue Expression Analysis"></a>MAGMA Tissue Expression Analysis</h3><p>MAGMA gene-property analysis is performed for gene expression of user selected data sets.<br>Note that MAGMA gene-property analyses uses the full distribution of SNP p-values and is different from a enrichment test of DEG (differentially expressed genes) as implemented in GENE2FUNC that only tests for enrichment of prioritised genes.</p>
+<h3><span id="magma-tissue-expression-analysis">MAGMA Tissue Expression Analysis</span><a href="#magma-tissue-expression-analysis" class="header-anchor">#</a></h3><p>MAGMA gene-property analysis is performed for gene expression of user selected data sets.<br>Note that MAGMA gene-property analyses uses the full distribution of SNP p-values and is different from a enrichment test of DEG (differentially expressed genes) as implemented in GENE2FUNC that only tests for enrichment of prioritised genes.</p>
 <p><img src="magma_exp_gtex_v8_ts_avg_log2TPM_FUMA_jobs147024.png" srcset="/img/loading.gif" alt="magma_exp_gtex_v8_ts_avg_log2TPM_FUMA_jobs147024"></p>
 <p><img src="magma_exp_gtex_v8_ts_general_avg_log2TPM_FUMA_jobs147024.png" srcset="/img/loading.gif" alt="magma_exp_gtex_v8_ts_general_avg_log2TPM_FUMA_jobs147024"></p>
-<h3 id="Summary-of-SNPs-and-mapped-genes"><a href="#Summary-of-SNPs-and-mapped-genes" class="headerlink" title="Summary of SNPs and mapped genes"></a>Summary of SNPs and mapped genes</h3><div class="table-container">
+<h3><span id="summary-of-snps-and-mapped-genes">Summary of SNPs and mapped genes</span><a href="#summary-of-snps-and-mapped-genes" class="header-anchor">#</a></h3><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1531,9 +1531,9 @@
 </tbody>
 </table>
 </div>
-<h3 id="Functional-consequences-of-SNPs-on-genes"><a href="#Functional-consequences-of-SNPs-on-genes" class="headerlink" title="Functional consequences of SNPs on genes"></a>Functional consequences of SNPs on genes</h3><p><img src="snpAnnotPlot_FUMA_jobs147024.png" srcset="/img/loading.gif" alt="snpAnnotPlot_FUMA_jobs147024"></p>
-<h3 id="Summary-per-genomic-risk-locus"><a href="#Summary-per-genomic-risk-locus" class="headerlink" title="Summary per genomic risk locus"></a>Summary per genomic risk locus</h3><p><img src="lociPlot_FUMA_jobs147024.png" srcset="/img/loading.gif" alt="lociPlot_FUMA_jobs147024"></p>
-<h3 id="Genomic-Locus"><a href="#Genomic-Locus" class="headerlink" title="Genomic Locus"></a>Genomic Locus</h3><div class="table-container">
+<h3><span id="functional-consequences-of-snps-on-genes">Functional consequences of SNPs on genes</span><a href="#functional-consequences-of-snps-on-genes" class="header-anchor">#</a></h3><p><img src="snpAnnotPlot_FUMA_jobs147024.png" srcset="/img/loading.gif" alt="snpAnnotPlot_FUMA_jobs147024"></p>
+<h3><span id="summary-per-genomic-risk-locus">Summary per genomic risk locus</span><a href="#summary-per-genomic-risk-locus" class="header-anchor">#</a></h3><p><img src="lociPlot_FUMA_jobs147024.png" srcset="/img/loading.gif" alt="lociPlot_FUMA_jobs147024"></p>
+<h3><span id="genomic-locus">Genomic Locus</span><a href="#genomic-locus" class="header-anchor">#</a></h3><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1605,7 +1605,7 @@
 </tbody>
 </table>
 </div>
-<h3 id="lead-SNPs"><a href="#lead-SNPs" class="headerlink" title="lead SNPs"></a>lead SNPs</h3><div class="table-container">
+<h3><span id="lead-snps">lead SNPs</span><a href="#lead-snps" class="header-anchor">#</a></h3><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1657,7 +1657,7 @@
 </tbody>
 </table>
 </div>
-<h3 id="Ind-Sig-SNPs"><a href="#Ind-Sig-SNPs" class="headerlink" title="Ind.Sig.SNPs"></a>Ind.Sig.SNPs</h3><div class="table-container">
+<h3><span id="ind-sig-snps">Ind.Sig.SNPs</span><a href="#ind-sig-snps" class="header-anchor">#</a></h3><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1731,7 +1731,7 @@
 </tbody>
 </table>
 </div>
-<h3 id="mapped-genes"><a href="#mapped-genes" class="headerlink" title="mapped genes"></a>mapped genes</h3><div class="table-container">
+<h3><span id="mapped-genes">mapped genes</span><a href="#mapped-genes" class="header-anchor">#</a></h3><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1865,7 +1865,7 @@
 </tbody>
 </table>
 </div>
-<h2 id="7-使用Locus-Zoom绘制Regional-Plots"><a href="#7-使用Locus-Zoom绘制Regional-Plots" class="headerlink" title="7.使用Locus Zoom绘制Regional Plots"></a>7.使用Locus Zoom绘制Regional Plots</h2><p>首先检查每个染色体上包含SNPs的主要区域：</p>
+<h2><span id="7-shi-yong-locus-zoom-hui-zhi-regional-plots">7.使用Locus Zoom绘制Regional Plots</span><a href="#7-shi-yong-locus-zoom-hui-zhi-regional-plots" class="header-anchor">#</a></h2><p>首先检查每个染色体上包含SNPs的主要区域：</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs R">iPSYCH_PGC_ASD_Nov2017 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/data/14671989/iPSYCH_PGC_ASD_Nov2017&quot;</span>)<br>print(head(iPSYCH_PGC_ASD_Nov2017))<br>subset_ch2 &lt;- subset(iPSYCH_PGC_ASD_Nov2017, CHR==<span class="hljs-string">&quot;2&quot;</span>)<br>subset_ch2[order(subset_ch2$P),]<br><span class="hljs-comment">##         CHR            SNP        BP               A1    A2  INFO      OR     SE         P</span><br><span class="hljs-comment">## 4810052   2     rs59566011 159385181               GA     G 0.947 1.07315 0.0144 9.304e-07</span><br><span class="hljs-comment">## 4805439   2     rs70994211 159385148                T    TA 0.990 0.93557 0.0143 3.410e-06</span><br><span class="hljs-comment">## 3955815   2      rs6430841 140318199                A     G 1.000 1.08275 0.0176 6.402e-06</span><br><span class="hljs-comment">## 349794    2      rs7578456 202235348                A     G 0.991 1.06556 0.0141 6.532e-06</span><br><span class="hljs-comment">## 346713    2      rs2110688 202223429                T     C 0.997 1.06492 0.0141 8.044e-06</span><br></code></pre></td></tr></table></figure>
 <p>然后将iPSYCH_PGC_ASD_Nov2017作为输入数据，使用Locus Zoom网页工具绘制Regional Plots (<a target="_blank" rel="noopener" href="http://locuszoom.org/genform.php?type=yourdata">http://locuszoom.org/genform.php?type=yourdata</a>)</p>
 <blockquote>
@@ -1874,15 +1874,15 @@
 </blockquote>
 <p>根据step6生成的曼哈顿图，这里重点关注6，8，17，20号染色体。</p>
 <p>发现6号染色体上的SNPs的对应P值均大于0.05，于是不予考虑。</p>
-<h3 id="EUR-8号染色体-10mb-11mb"><a href="#EUR-8号染色体-10mb-11mb" class="headerlink" title="EUR-8号染色体-10mb-11mb"></a>EUR-8号染色体-10mb-11mb</h3><embed id="pdfPlayer" src="EUR.chr8.10-11mb.pdf" type="application/pdf" width="100%" height="600" >
+<h3><span id="eur-8-hao-ran-se-ti-10mb-11mb">EUR-8号染色体-10mb-11mb</span><a href="#eur-8-hao-ran-se-ti-10mb-11mb" class="header-anchor">#</a></h3><embed id="pdfPlayer" src="EUR.chr8.10-11mb.pdf" type="application/pdf" width="100%" height="600">
 
 
 
-<h3 id="EUR-17号染色体-44mb-45mb"><a href="#EUR-17号染色体-44mb-45mb" class="headerlink" title="EUR-17号染色体-44mb-45mb"></a>EUR-17号染色体-44mb-45mb</h3><embed id="pdfPlayer" src="EUR.chr17.44-45mb.pdf" type="application/pdf" width="100%" height="600" >
+<h3><span id="eur-17-hao-ran-se-ti-44mb-45mb">EUR-17号染色体-44mb-45mb</span><a href="#eur-17-hao-ran-se-ti-44mb-45mb" class="header-anchor">#</a></h3><embed id="pdfPlayer" src="EUR.chr17.44-45mb.pdf" type="application/pdf" width="100%" height="600">
 
 
 
-<h3 id="EUR-20号染色体-21mb-22mb"><a href="#EUR-20号染色体-21mb-22mb" class="headerlink" title="EUR-20号染色体-21mb-22mb"></a>EUR-20号染色体-21mb-22mb</h3><embed id="pdfPlayer" src="EUR.chr20.21-22mb.pdf" type="application/pdf" width="100%" height="600" >
+<h3><span id="eur-20-hao-ran-se-ti-21mb-22mb">EUR-20号染色体-21mb-22mb</span><a href="#eur-20-hao-ran-se-ti-21mb-22mb" class="header-anchor">#</a></h3><embed id="pdfPlayer" src="EUR.chr20.21-22mb.pdf" type="application/pdf" width="100%" height="600">
             </div>
             <hr>
             <div>
@@ -1901,9 +1901,9 @@
                     
                       <a class="hover-with-bg" href="/tags/GWAS/">GWAS</a>
                     
-                      <a class="hover-with-bg" href="/tags/ASD/">ASD</a>
-                    
                       <a class="hover-with-bg" href="/tags/SNP/">SNP</a>
+                    
+                      <a class="hover-with-bg" href="/tags/ASD/">ASD</a>
                     
                   </div>
                 

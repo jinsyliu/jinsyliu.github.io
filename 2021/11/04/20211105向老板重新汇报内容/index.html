@@ -230,7 +230,7 @@
             <h1 style="display: none">2021.11.04 和导师talk记录</h1>
             
             <div class="markdown-body">
-              <h1 id="2021-11-04-REPORT"><a href="#2021-11-04-REPORT" class="headerlink" title="2021-11-04 REPORT"></a>2021-11-04 REPORT</h1><h2 id="X染色体"><a href="#X染色体" class="headerlink" title="X染色体"></a>X染色体</h2><p><img src="https://onlinelibrary.wiley.com/cms/asset/4c424bf7-db0d-485f-afb2-c4b4cd58eb8f/gepi21782-fig-0001-m.png" srcset="/img/loading.gif" alt="image"></p>
+              <h1><span id="2021-11-04-report">2021-11-04 REPORT</span><a href="#2021-11-04-report" class="header-anchor">#</a></h1><h2><span id="x-ran-se-ti">X染色体</span><a href="#x-ran-se-ti" class="header-anchor">#</a></h2><p><img src="https://onlinelibrary.wiley.com/cms/asset/4c424bf7-db0d-485f-afb2-c4b4cd58eb8f/gepi21782-fig-0001-m.png" srcset="/img/loading.gif" alt="image"></p>
 <blockquote>
 <p>包含性染色体处理的GWAS理想流程</p>
 </blockquote>
@@ -260,7 +260,7 @@
 </blockquote>
 <p>不过，通过选择合理的算法和参数设置，将X染色体纳入GWAS应当是可以实现的。</p>
 </blockquote>
-<h2 id="GWAS-summary-statistics"><a href="#GWAS-summary-statistics" class="headerlink" title="GWAS summary statistics"></a>GWAS summary statistics</h2><p>一般包含以下内容：</p>
+<h2><span id="gwas-summary-statistics">GWAS summary statistics</span><a href="#gwas-summary-statistics" class="header-anchor">#</a></h2><p>一般包含以下内容：</p>
 <div class="table-container">
 <table>
 <thead>
@@ -329,7 +329,7 @@
 </tbody>
 </table>
 </div>
-<h2 id="PASCAL算法"><a href="#PASCAL算法" class="headerlink" title="PASCAL算法"></a>PASCAL算法</h2><p>Pascal（通路评分算法）\parencite{lamparter2016fast}是一个易于使用的工具，用于从GWAS结果中进行基因评分和通路分析。Pascal使用外部数据来估计连锁不平衡性。因此，用户只需要提供基因组范围的SNP p值。然后，Pascal得出基因和预定义路径的p值。Pascal不使用蒙特卡洛模拟来推导基因的p值。这导致了速度和准确性的提高。这种基因评分的速度可以用来控制路径评分的假阳性率。对于路径评分，PASCAL实施并测试了富集策略，与超几何富集相比，非常有利。这种比较是在大量的GWAS结果的基础上进行的，使我们有信心推荐Pascal用于GWAS结果的下游分析。Pascal主要是用Java编写的，已经在Unix系统和Mac OsX上进行了测试。</p>
+<h2><span id="pascal-suan-fa">PASCAL算法</span><a href="#pascal-suan-fa" class="header-anchor">#</a></h2><p>Pascal（通路评分算法）\parencite{lamparter2016fast}是一个易于使用的工具，用于从GWAS结果中进行基因评分和通路分析。Pascal使用外部数据来估计连锁不平衡性。因此，用户只需要提供基因组范围的SNP p值。然后，Pascal得出基因和预定义路径的p值。Pascal不使用蒙特卡洛模拟来推导基因的p值。这导致了速度和准确性的提高。这种基因评分的速度可以用来控制路径评分的假阳性率。对于路径评分，PASCAL实施并测试了富集策略，与超几何富集相比，非常有利。这种比较是在大量的GWAS结果的基础上进行的，使我们有信心推荐Pascal用于GWAS结果的下游分析。Pascal主要是用Java编写的，已经在Unix系统和Mac OsX上进行了测试。</p>
 <p>pascal计算包中即包含1KG-EUR的数据用于计算连锁不平衡。</p>
 <p><img src="https://www2.unil.ch/cbg/images/thumb/e/e1/PascalFigure1.jpg/500px-PascalFigure1.jpg" srcset="/img/loading.gif" alt="PascalFigure1.jpg"></p>
 <blockquote>
@@ -342,7 +342,7 @@
 <p>【pascal网络分析（实例）】</p>
 <p>Pascal的效率和准确性为大规模的分析打开了大门，因为在大多数基于网络的GWAS分析方法中，总结基因层面的SNP p值是一个关键步骤。Pascal是这项工作的关键，开发者整合了37个GWAS数据集和近400个组织特异性基因调控回路，系统地分析了受性状相关基因变异干扰的基因的相互联系。这项研究表明，疾病相关的遗传变异往往会扰乱细胞类型或组织中的调控模块，而这些调控模块对该疾病具有高度的特异性，从而对疾病机制有了新的认识。</p>
 </blockquote>
-<h3 id="PASCAL的基本介绍"><a href="#PASCAL的基本介绍" class="headerlink" title="PASCAL的基本介绍"></a><strong>PASCAL的基本介绍</strong></h3><blockquote>
+<h3><span id="pascal-de-ji-ben-jie-shao"><strong>PASCAL的基本介绍</strong></span><a href="#pascal-de-ji-ben-jie-shao" class="header-anchor">#</a></h3><blockquote>
 <p>全基因组关联研究（GWAS）通常产生与性状或疾病相关的SNPs列表。然而，这样的输出结果几乎没有揭示潜在的分子机制，需要有工具从SNP水平的结果中提取生物学洞察力。路径分析工具整合了来自基因组不同位置的多个SNPs的信号，以便将相关的基因组区域映射到已确立的路径上，即已知的协同作用的基因集。</p>
 <p>路径分析的目的是通过将观察到的SNP集合的关联信号汇总为路径水平的信号来提供对相关生物过程的洞察力。这通常分两步进行：首先，单个SNPs被映射到基因上，它们的关联P值被合并为基因分数；其次，基因被分组为路径，它们的基因分数被合并为路径分数。现有的工具在每个步骤所使用的方法以及为纠正由于连锁不平衡引起的相关性而采用的策略上有所不同。</p>
 <p>SNPs通常根据物理距离、连锁不平衡（LD）或两者的结合被映射到基因。基因通常被分配到使用成熟的数据库（如基因本体论、KEGG、PANTHER、REACTOME、BIOCARTA）或内部注释（例如，基于共表达）的路径。</p>
@@ -351,7 +351,7 @@
 <p>一旦基因分数被计算出来，路径分析工具就会使用各种策略在相关基因组之间进行汇总。最常见的用于分析GWAS元分析结果的方法，如流行的GWAS途径分析工具MAGENTA，是基于二元富集度测试，它依靠一个阈值参数来定义哪些基因与性状显著相关。然而，在这种策略下，刚刚错过阈值的弱相关基因的潜在贡献就会丧失，而且对于如何设置阈值参数也没有明确的指导。事实上，在不知道其他选择是否会产生更好的结果的情况下，保持默认参数似乎是一种常见的做法。</p>
 <p>在这项工作中，PASCAL开发者着重于改进路径富集分析的两个主要方面。首先，研究者为MOCS和SOCS统计的P值估计纳入了数字和分析解决方案。这消除了对表型排列或蒙特卡洛模拟的需要，从而使分数计算更快。第二，研究者开发了严格的I型错误控制策略，并实施了改良的Fisher方法来计算无参数的通路得分[19]。虽然算法的某些元素已经在统计遗传学的其他领域提出，但这一方法的新颖性在于将复杂的分析方法独特地结合在一起用于路径分析，从而提高了计算速度、精度、I型误差控制和功率。</p>
 <blockquote>
-<h3 id="PASCAL的优点"><a href="#PASCAL的优点" class="headerlink" title="PASCAL的优点"></a>PASCAL的优点</h3><ol>
+<h3><span id="pascal-de-you-dian">PASCAL的优点</span><a href="#pascal-de-you-dian" class="header-anchor">#</a></h3><ol>
 <li><p>速度快。与VEGAS相比，PASCAL的计算速度大大加快了，所需的时间大幅缩短。对于HapMap估算的数据，VEGAS花了29小时计算18132个基因分数，在单核计算机上运行的PASCAL只花了大约30分钟。对于1KG的输入数据，PASCAL在两个小时内完成了任意一个统计量的计算，而VEGAS则需要10多天。</p>
 </li>
 <li><p>和经典基因分数评分算法有很好的一致性。Pascal和VEGAS的基因分数之间有很好的一致性，但低于$10^{-6}$的基因分数除外（因为将VEGAS限制在108次蒙特卡洛运行，它不能以良好的精度估计小于$10^{-6}$的p值）。相比之下，Pascal可以在p值低至$10^{-15}$的情况下，以较高的精度计算基因得分。总之，Pascal算法中的分析方案在效率和精度方面都有很大的提高。直接比较Pascal的总分和最大基因分数，发现两种评分方法之间有很好的一致性。在两种方法的结果不一致的情况下，最大分值往往更有意义。</p>
@@ -368,7 +368,7 @@
 </li>
 </ol>
 </blockquote>
-<h3 id="PASCAL计算原理"><a href="#PASCAL计算原理" class="headerlink" title="PASCAL计算原理"></a><strong>PASCAL计算原理</strong></h3><ol>
+<h3><span id="pascal-ji-suan-yuan-li"><strong>PASCAL计算原理</strong></span><a href="#pascal-ji-suan-yuan-li" class="header-anchor">#</a></h3><ol>
 <li><p>gene score</p>
 <blockquote>
 <p>Pascal基因评分方法包括以下步骤：首先，如果SNPs位于基因体周围的特定窗口内，就将这个SNP分配给基因。PASCAL的开发者使用了从基因向上和向下延伸50kb的窗口。由于需要一个参考群体来估计SNP关联值的Z-cores之间的相关结构，开发者使用了1000基因组计划（1KG）的欧洲人群，这使得研究者可以将自定义方法灵活地应用于来自不同板块（HapMap、1KG估算、metaboChip或ImmunoChip）的汇总统计。</p>
@@ -500,7 +500,7 @@
 <p>MAGMA的SNP-wise模型也可用于分析原始基因型数据，在这种情况下，原始基因型数据代替了参考数据，SNP的p值在内部计算。基于这些SNP-wise模型的基因组分析与基于多元回归基因分析模型的基因组分析的方式相同。分析得出的基因P值以同样的方式转换为Z值，作为基因组分析的输入。同样，基因-基因相关矩阵R也是用与多元回归模型相同的公式得到的，但使用参考数据来计算。</p>
 </blockquote>
 </blockquote>
-<h2 id="未来研究计划（初步）"><a href="#未来研究计划（初步）" class="headerlink" title="未来研究计划（初步）"></a>未来研究计划（初步）</h2><ol>
+<h2><span id="wei-lai-yan-jiu-ji-hua-chu-bu">未来研究计划（初步）</span><a href="#wei-lai-yan-jiu-ji-hua-chu-bu" class="header-anchor">#</a></h2><ol>
 <li>重新进行此前的工作流程，并参考其他统计资料为PASCAL mapping到的基因界定筛选p值，对pipeline进行改进。</li>
 <li>申请获得PGC及ATLAS GWAS原始数据的使用许可，并调研数据可用性。</li>
 <li>考虑将X染色体纳入ASD GWAS研究范围，并在前人研究的基础上，将特殊的遗传情况通过合理选择调用、归因和关联算法来处理。</li>

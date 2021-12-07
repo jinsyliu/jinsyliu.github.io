@@ -187,7 +187,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      3.1k 字
+      3.3k 字
     </span>
   
 
@@ -197,7 +197,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      59
+      61
        分钟
     </span>
   
@@ -271,6 +271,45 @@
 <p>GENE2FUNC (<a target="_blank" rel="noopener" href="http://fuma.ctglab.nl/">http://fuma.ctglab.nl/</a>)</p>
 <p>dbMDEGA (<a target="_blank" rel="noopener" href="https://dbmdega.shinyapps.io/dbMDEGA/">https://dbmdega.shinyapps.io/dbMDEGA/</a>)</p>
 <p>LocusZoom tool (<a target="_blank" rel="noopener" href="http://locuszoom.org/">http://locuszoom.org/</a>) </p>
+<div class="toc">
+
+<!-- toc -->
+<ul>
+<li><a href="#1-cha-kan-pgc-tong-ji-zhai-yao-wen-jian-ge-shi">1.查看PGC统计摘要文件格式</a></li>
+<li><a href="#2-yun-xing-pascal">2.运行PASCAL</a></li>
+<li><a href="#3-pascal-sheng-cheng-wen-jian">3.Pascal生成文件</a><ul>
+<li><a href="#3-1-jian-cha-sheng-cheng-de-sum-genescores">3.1.检查生成的sum_genescores</a></li>
+<li><a href="#3-2-jian-cha-sheng-cheng-de-pathwayset">3.2.检查生成的pathwayset</a></li>
+</ul>
+</li>
+<li><a href="#4-funcoup5-jian-cha-ji-yin-wang-luo">4.funcoup5检查基因网络</a></li>
+<li><a href="#5-pathwax-ii-cha-xun">5.PathwAX II查询</a></li>
+<li><a href="#6-gene2func-gong-neng-zhu-shi">6.GENE2FUNC 功能注释</a><ul>
+<li><a href="#manhattan-plot-gwas-summary-statistics">Manhattan Plot (GWAS summary statistics)</a></li>
+<li><a href="#mahattan-plot-gene-based-test">Mahattan Plot (gene-based test)</a></li>
+<li><a href="#qq-plot-gwas-summary-statisics">QQ plot (GWAS summary statisics)</a></li>
+<li><a href="#qq-plot-gene-based-test">QQ plot (gene-based test)</a></li>
+<li><a href="#magma-gene-set-analysis">MAGMA Gene-Set Analysis</a></li>
+<li><a href="#magma-tissue-expression-analysis">MAGMA Tissue Expression Analysis</a></li>
+<li><a href="#summary-of-snps-and-mapped-genes">Summary of SNPs and mapped genes</a></li>
+<li><a href="#functional-consequences-of-snps-on-genes">Functional consequences of SNPs on genes</a></li>
+<li><a href="#summary-per-genomic-risk-locus">Summary per genomic risk locus</a></li>
+<li><a href="#genomic-locus">Genomic Locus</a></li>
+<li><a href="#lead-snps">lead SNPs</a></li>
+<li><a href="#ind-sig-snps">Ind.Sig.SNPs</a></li>
+<li><a href="#mapped-genes">mapped genes</a></li>
+</ul>
+</li>
+<li><a href="#7-shi-yong-locus-zoom-hui-zhi-regional-plots">7.使用Locus Zoom绘制Regional Plots</a><ul>
+<li><a href="#eur-8-hao-ran-se-ti-10mb-11mb">EUR-8号染色体-10mb-11mb</a></li>
+<li><a href="#eur-17-hao-ran-se-ti-44mb-45mb">EUR-17号染色体-44mb-45mb</a></li>
+<li><a href="#eur-20-hao-ran-se-ti-21mb-22mb">EUR-20号染色体-21mb-22mb</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+</div>
+
 <h2><span id="1-cha-kan-pgc-tong-ji-zhai-yao-wen-jian-ge-shi">1.查看PGC统计摘要文件格式</span><a href="#1-cha-kan-pgc-tong-ji-zhai-yao-wen-jian-ge-shi" class="header-anchor">#</a></h2><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs R">iPSYCH_PGC_ASD_Nov2017 &lt;- read.delim(<span class="hljs-string">&quot;/Users/keqinliu/Downloads/14671989/iPSYCH_PGC_ASD_Nov2017&quot;</span>)<br>print(head(iPSYCH_PGC_ASD_Nov2017))<br><span class="hljs-comment">##   CHR        SNP        BP A1 A2  INFO      OR     SE        P</span><br><span class="hljs-comment">## 1   8 rs62513865 101592213  T  C 0.949 1.00652 0.0270 0.808600</span><br><span class="hljs-comment">## 2   8 rs79643588 106973048  A  G 0.997 1.01786 0.0240 0.460600</span><br><span class="hljs-comment">## 3   8 rs17396518 108690829  T  G 0.987 0.96127 0.0140 0.004647</span><br><span class="hljs-comment">## 4   8   rs983166 108681675  A  C 0.998 0.97990 0.0139 0.145200</span><br><span class="hljs-comment">## 5   8 rs28842593 103044620  T  C 0.857 0.99591 0.0203 0.841500</span><br><span class="hljs-comment">## 6   8 rs35107696 109712249  A AT 0.999 1.01308 0.0165 0.430200</span><br></code></pre></td></tr></table></figure>
 <h2><span id="2-yun-xing-pascal">2.运行PASCAL</span><a href="#2-yun-xing-pascal" class="header-anchor">#</a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">(base) KeqindeMacBook-Air:PASCAL keqinliu$ Pascal --pval=/Users/keqinliu/Downloads/iPSYCH_PGC_ASD_Nov2017 --runpathway=on --mergedistance=1<br></code></pre></td></tr></table></figure>
 <p>出现报错：</p>

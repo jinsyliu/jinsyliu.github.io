@@ -20,7 +20,7 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-  <title>2021.11.16 解决HEXO博客中无法显示Latex行内公式问题 - Hexo</title>
+  <title>2021.12.08-Pan02药效方案-小鼠给药配置表 - Hexo</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -165,7 +165,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="2021.11.16 解决HEXO博客中无法显示Latex行内公式问题">
+            <span class="h2" id="subtitle" title="2021.12.08-Pan02药效方案-小鼠给药配置表">
               
             </span>
 
@@ -175,8 +175,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-11-16 12:18" pubdate>
-        2021年11月16日 中午
+      <time datetime="2021-12-08 17:18" pubdate>
+        2021年12月8日 下午
       </time>
     </span>
   
@@ -187,7 +187,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      907 字
+      293 字
     </span>
   
 
@@ -197,7 +197,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      11
+      4
        分钟
     </span>
   
@@ -227,27 +227,95 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">2021.11.16 解决HEXO博客中无法显示Latex行内公式问题</h1>
+            <h1 style="display: none">2021.12.08-Pan02药效方案-小鼠给药配置表</h1>
             
             <div class="markdown-body">
-              <h1><span id="jie-jue-hexo-bo-ke-zhong-wu-fa-xian-shi-latex-xing-nei-gong-shi-wen-ti">解决HEXO博客中无法显示Latex行内公式问题</span><a href="#jie-jue-hexo-bo-ke-zhong-wu-fa-xian-shi-latex-xing-nei-gong-shi-wen-ti" class="header-anchor">#</a></h1><h2><span id="wen-ti-ji-yuan-yin">问题及原因</span><a href="#wen-ti-ji-yuan-yin" class="header-anchor">#</a></h2><p>Hexo 默认使用 <code>hexo-renderer-marked</code> 引擎渲染网页，该引擎会把一些特殊的 <code>markdown</code> 符号转换为相应的 <code>html</code> 标签，比如在 <code>markdown</code> 语法中，下划线<code>_</code>代表斜体，会被渲染引擎处理为<code>&lt;em&gt;</code>标签。</p>
-<p>因为类 <code>Latex</code> 格式书写的数学公式下划线<code>_</code>表示下标，有特殊的含义，如果被强制转换为<code>&lt;em&gt;</code>标签，那么 <code>MathJax</code> 引擎在渲染数学公式的时候就会出错。</p>
-<p>类似的语义冲突的符号还包括<code>*, &#123;, &#125;, \\</code>等。</p>
-<h2><span id="jie-jue-fang-an">解决方案</span><a href="#jie-jue-fang-an" class="header-anchor">#</a></h2><h3><span id="1-geng-huan-hexo-de-markdown-xuan-ran-yin-qing">1.更换 Hexo 的 markdown 渲染引擎</span><a href="#1-geng-huan-hexo-de-markdown-xuan-ran-yin-qing" class="header-anchor">#</a></h3><p>hexo-renderer-kramed 引擎是在默认的渲染引擎 hexo-renderer-marked 的基础上修改了一些 bug ，两者比较接近，也比较轻量级。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm uninstall hexo-renderer-marked --save<br>npm install hexo-renderer-kramed --save<br></code></pre></td></tr></table></figure>
-<p>执行上面的命令即可，先卸载原来的渲染引擎，再安装新的。</p>
-<p>然后，跟换引擎后行间公式可以正确渲染了，但是这样还没有完全解决问题，行内公式的渲染还是有问题，因为 <code>hexo-renderer-kramed</code> 引擎也有语义冲突的问题。接下来到博客根目录下，找到<code>node_modules\kramed\lib\rules\inline.js</code>，把第11行的 escape 变量的值做相应的修改：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">//escape: /^\\([\\`*&#123;&#125;\[\]()#$+\-.!_&gt;])/,</span><br><span class="hljs-attr">escape</span>: <span class="hljs-regexp">/^\\([`*\[\]()#$+\-.!_&gt;])/</span>,<br></code></pre></td></tr></table></figure>
-<p>这一步是在原基础上取消了对<code>\,&#123;,&#125;</code>的转义(escape)。<br>同时把第20行的em变量也要做相应的修改。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">//em: /^\b_((?:__|[\s\S])+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,</span><br><span class="hljs-attr">em</span>: <span class="hljs-regexp">/^\*((?:\*\*|[\s\S])+?)\*(?!\*)/</span>,<br></code></pre></td></tr></table></figure>
-<p>重新启动hexo（先clean再generate）,问题完美解决。哦，如果不幸还没解决的话，看看是不是还需要在使用的主题中配置<strong>mathjax</strong>开关。</p>
-<h3><span id="2-zai-hexo-zhu-ti-zhong-kai-qi-mathjax-kai-guan">2.在HEXO主题中开启 MathJax 开关</span><a href="#2-zai-hexo-zhu-ti-zhong-kai-qi-mathjax-kai-guan" class="header-anchor">#</a></h3><p>如果使用了主题，别忘了在主题（Theme）中开启 MathJax 开关，下面以 fluid 主题为例，介绍下如何打开 MathJax 开关。</p>
-<p>进入到主题目录，找到 _config.yml 配置问题，把 math 默认的 false 修改为true，具体如下：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># 数学公式，开启之前需要更换 Markdown 渲染器，否则复杂公式会有兼容问题，具体请见：https://hexo.fluid-dev.com/docs/guide/##latex-数学公式</span><br>  <span class="hljs-comment"># Mathematical formula. If enable, you need to change the Markdown renderer, see: https://hexo.fluid-dev.com/docs/en/guide/#math</span><br>  <span class="hljs-attr">math:</span><br>    <span class="hljs-comment"># 开启后文章默认可用，自定义页面如需使用，需在 Front-matter 中指定 `math: true`</span><br>    <span class="hljs-comment"># If you want to use math on the custom page, you need to set `math: true` in Front-matter</span><br>    <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span><br><br>    <span class="hljs-comment"># 开启后，只有在文章 Front-matter 里指定 `math: true` 才会在文章页启动公式转换，以便在页面不包含公式时提高加载速度</span><br>    <span class="hljs-comment"># If true, only set `math: true` in Front-matter will enable math, to load faster when the page does not contain math</span><br>    <span class="hljs-attr">specific:</span> <span class="hljs-literal">false</span><br><br>    <span class="hljs-comment"># Options: mathjax | katex</span><br>    <span class="hljs-attr">engine:</span> <span class="hljs-string">mathjax</span><br></code></pre></td></tr></table></figure>
-<h3><span id="3-zai-wen-zhang-kai-tou-da-kai-mathjax-kai-guan">3.在文章开头打开mathjax开关</span><a href="#3-zai-wen-zhang-kai-tou-da-kai-mathjax-kai-guan" class="header-anchor">#</a></h3><p>需要在希望显示Latex行内公式的文章Front-matter里打开mathjax开关，如下：</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs markdown">---<br>title: 2021.11.04 和导师talk记录<br>tags: [MY PROJECT, ASD, talk&amp;meeting]<br>index<span class="hljs-emphasis">_img: https://crosstalk.cell.com/hs-fs/hubfs/Images/Claudia%20Willmes/How%20to%20keep%20your%20virtual%20lab%20meeting%20from%20being%20just%20another%20Zoom%20call/Get-Inspired-How-to-keep-your-virtual-lab-meeting-from-being-just-another-Zoom-call-featured.png?width=1000&amp;name=Get-Inspired-How-to-keep-your-virtual-lab-meeting-from-being-just-another-Zoom-call-featured.png</span><br><span class="hljs-emphasis">date: 2021-11-04 17:18:00</span><br><span class="hljs-emphasis">categories: LEARNING RECORDS</span><br><span class="hljs-emphasis">mathjax: true</span><br><span class="hljs-emphasis">---</span><br></code></pre></td></tr></table></figure>
-<p>之所以<strong>要在文章头里设置开关</strong>，是因为考虑只有在用到公式的页面才加载 Mathjax，这样不需要渲染数学公式的页面的访问速度就不会受到影响了。</p>
-<h3><span id="4-xiao-guo-zhan-shi">4.效果展示</span><a href="#4-xiao-guo-zhan-shi" class="header-anchor">#</a></h3><p><a target="_blank" rel="noopener" href="https://jinsyliu.github.io/2021/11/04/20211105%E5%90%91%E8%80%81%E6%9D%BF%E9%87%8D%E6%96%B0%E6%B1%87%E6%8A%A5%E5%86%85%E5%AE%B9/">启用Latex行内公式的播客</a></p>
+              <h1><span id="2021-12-08-pan02-yao-xiao-fang-an-xiao-shu-gei-yao-pei-zhi-biao">2021.12.08-Pan02药效方案-小鼠给药配置表</span><a href="#2021-12-08-pan02-yao-xiao-fang-an-xiao-shu-gei-yao-pei-zhi-biao" class="header-anchor">#</a></h1><h2><span id="1-shi-yan-she-ji-fang-an">1.实验设计方案</span><a href="#1-shi-yan-she-ji-fang-an" class="header-anchor">#</a></h2><p>高剂量组16ug/肽。</p>
+<h2><span id="2-duo-tai-he-zuo-ji-xuan-ze">2.多肽和佐剂选择</span><a href="#2-duo-tai-he-zuo-ji-xuan-ze" class="header-anchor">#</a></h2><p>多肽：每瓶300ug，300uL生理盐水溶解，母液浓度1ug/ul。 </p>
+<p>佐剂：PolyICLC，每瓶250uL，佐剂浓度2ug/ul。 </p>
+<p>用量：计划每组9只小鼠，每只100ul注射液，每次注射900ul, 注射7次。</p>
+<p>按每组照90只小鼠量来配制，即9000uL。</p>
+<h2><span id="3-kang-yuan-tai-pei-zhi-biao">3.抗原肽配置表</span><a href="#3-kang-yuan-tai-pei-zhi-biao" class="header-anchor">#</a></h2><p>【多肽用量取整前】</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>组别</th>
+<th>肽段</th>
+<th>多肽用量</th>
+<th>佐剂</th>
+<th>佐剂用量</th>
+<th>生理盐水</th>
+<th>总量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>/</td>
+<td>/</td>
+<td>/</td>
+<td>/</td>
+<td>9000ul</td>
+<td>9000ul</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Pan02-高剂量组</td>
+<td>16ug/肽，单肽，需母液4.8瓶，总计1440ul</td>
+<td>Poly IC:LC（1.0µg）</td>
+<td>45ul</td>
+<td>7515ul</td>
+<td>9000ul</td>
+</tr>
+<tr>
+<td>3</td>
+<td>/</td>
+<td>/</td>
+<td>Poly IC:LC（1.0µg）</td>
+<td>45ul</td>
+<td>8955ul</td>
+<td>9000ul</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Pan01-WT-高剂量组</td>
+<td>16ug/肽，单肽，需母液4.8瓶，总计1440ul</td>
+<td>Poly IC:LC（1.0µg）</td>
+<td>45ul</td>
+<td>7515ul</td>
+<td>9000ul</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Pan01-高剂量组</td>
+<td>16ug/肽，单肽，需母液4.27瓶，总计1280ul</td>
+<td>Poly IC:LC（0.2µg）</td>
+<td>8ul</td>
+<td>6712ul</td>
+<td>8000ul</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Pan01-高剂量组</td>
+<td>16ug/肽，单肽，需母液4.27瓶，总计1280ul</td>
+<td>Poly IC:LC（1.0µg）</td>
+<td>40ul</td>
+<td>6680ul</td>
+<td>8000ul</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Pan01-高剂量组</td>
+<td>16ug/肽，单肽，需母液4.27瓶，总计1280ul</td>
+<td>Poly IC:LC（6.0µg）</td>
+<td>240ul</td>
+<td>6480ul</td>
+<td>8000ul</td>
+</tr>
+</tbody>
+</table>
+</div>
 
             </div>
             <hr>
@@ -257,7 +325,7 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/PROBLEM-SOLVING/">PROBLEM SOLVING</a>
+                      <a class="hover-with-bg" href="/categories/EXPERIMENT-RECORDS/">EXPERIMENT RECORDS</a>
                     
                   </div>
                 
@@ -265,13 +333,7 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/hexo/">hexo</a>
-                    
-                      <a class="hover-with-bg" href="/tags/markdown/">markdown</a>
-                    
-                      <a class="hover-with-bg" href="/tags/html/">html</a>
-                    
-                      <a class="hover-with-bg" href="/tags/blog/">blog</a>
+                      <a class="hover-with-bg" href="/tags/polypeptide-vaccine/">polypeptide vaccine</a>
                     
                   </div>
                 
@@ -288,18 +350,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/11/23/20211123high_score_genes_filtered_from_PGC_ASD_2017_GWAS_statsum_snps/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">2021.11.12-11.23 high score genes filtered from PGC_ASD_2017_GWAS_statsum snps by MAGMA</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/11/16/20211116%E7%A5%9E%E7%BB%8F%E9%81%97%E4%BC%A0%E5%AD%A6Neurogenetics%E4%B8%8EASD%E7%9B%B8%E5%85%B3%E7%9A%84%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E6%8A%A5%E5%91%8A/">
-                        <span class="hidden-mobile">2021.11.16 神经遗传学Neurogenetics与ASD相关的文献阅读报告</span>
+                      <a href="/2021/12/06/20211129%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB_%E5%AD%A4%E7%8B%AC%E7%97%87%E7%9A%84%E4%BA%A7%E5%89%8D%E8%B5%B7%E6%BA%90_%E5%AD%A4%E7%8B%AC%E7%97%87%E5%8F%91%E5%B1%95%E7%9A%84%E6%97%B6%E9%97%B4%E5%86%85%E5%AE%B9%E5%92%8C%E6%96%B9%E5%BC%8F/">
+                        <span class="hidden-mobile">2021.11.29 文献阅读-孤独症的产前起源-孤独症发展的时间、内容和方式</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

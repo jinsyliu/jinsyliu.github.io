@@ -1,0 +1,517 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  
+    <meta name="description" content="">
+  
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+  <title>Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Liu Keqin</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-10-03 02:12" pubdate>
+        2020年10月3日 凌晨
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.8k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      36
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none"></h1>
+            
+            <div class="markdown-body">
+              <?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>There’ll Be Peace When You Are Done</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+<link rel="stylesheet" type="text/css" href="page_styles.css">
+</head>
+  <body class="calibre">
+<p id="filepos332791" class="calibre_">
+<a href="index_split_006.html#filepos9784">DAVY PEREZ</a>
+</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_1">Sitting in my office overlooking the Warner Bros.’s studio lot, in this moment in time, fifteen years is over one-third of my lifetime. Back in 2005 I was broke, and in many ways, broken. Recently out of a relationship, fired from my job, and drowning under a pile of debt that was going to get a lot worse before it got better . . . that was me. It was also the year I decided to take my creative career more seriously. The same year that a series called Supernatural made its debut. I remember seeing the promos and thinking, “That looks like a show I would like—if I had time to watch television.” Let’s flash-forward to now, hand wave past some intense years of artistic struggle, you know, all the interesting parts full of scrappy trials . . . and get to where, after working many jobs, and selling many things, I was finally beyond the (very) rough patches. I found myself with more time to watch things. I also forced myself to write some things, too. My career caught some breaks, I met some amazing advocates, and eventually in 2016, my life path collided with the show that completely changed my life.</p><p class="calibre_1">Here is an excerpt from a blog post I wrote way back, before my first day on the job:</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_1"><span class="italic">The next step begins Monday, and I am excited to the umpteenth degree. I am going from writing about our real-world monstrosities to a show about brothers who fight monsters in the real world. Horror and sci-fi are the two things that brought me to the written word in the first place. It’s in my blood. I’m literally born on Halloween. To tap into this other side of my creative self and plunge headfirst into a different kind of show feels like the first day of school all over again. Considering I was kicked out of four high schools, that might not be the best analogy . . . but I think you can see my drift. Right now, from the way I see things, it is all gravy. To have the privilege to do what you love as a career, it is a huge blessing, and I am forever grateful to anyone involved with me being able to do that. It’s all a dream come true. To make things even more fantastic, I could not have asked for a better second job in television: Supernatural.</span></p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_1">And now here’s some truth. I’m about to solve a mystery for the fandom that I’ve heard whispers about for some time now. This revelation might make some people feel vindicated, or it might perhaps make some of the newly initiated among you feel even more welcome here. YES! When I showed up on that first day of work, I had only watched twenty-five episodes of the series. I admitted this once in an early Q&amp;A about my experiences on the show. A writer who creates stories for a living was given the mighty responsibility of joining a show in its twelfth season and had not watched its entire run. Did this mean I didn’t understand the characters? What demon deal must I have made to get this job in the first place? How could this brown kid who’s been an outcast his entire life possibly know anything at all about two brothers with broken lives who are slaying personal demons while simultaneously fighting physical monsters?</p><p class="calibre_1">Dean Winchester was likely kicked out of more schools than me, but I know a little bit about unconventional childhoods. Sam has a laundry list longer than mine on how badly his father wrecked his worldview, but again, there’s a well I draw from. I came to this show excited to write things that would scare people but also to explore some new roads. I was interested in these characters who were transitioning from being two boys on the road into being two men with a legacy. Because that’s where I was in my own life. I was moving on from a time of struggle into a more seasoned adulthood. Have I watched more than twenty-five episodes since that first day? That is obviously a rhetorical question.</p><p class="calibre_1">It was not long after diving into a life of Saving People and Hunting Things that I was to experience the single-most life-changing event I’ve encountered to date. The night before leaving for my very first San Diego Comic-Con, my wife and I took a home pregnancy test. It was “just to rule it out” before a week of networking (day drinking). But there was nothing to rule out. Three identical tests later and we were pretty sure this was it. That little blue line was not going away. We were going to be parents. It was the first year of our marriage, and already we were being blessed with a new member of the family. We sat on the couch of our tiny apartment in silent awe. Since that night, much of my identity has become bifurcated: life before my son and now my life with him. The timing is so closely wrapped up with my arrival on the show that the two have become heavily associated: life before Supernatural and now my life after.</p><p class="calibre_1"><span class="italic">Supernatural took a struggling, broken writer and gave him a home and a family. Literally, this show is responsible for employing me consistently enough so that I was able to purchase a home for my wife and son, and our Chihuahua, Pablo. In a figurative sense, the SPNFamily embraced me even before I wrote anything. There were so many messages, follows, threads from fans; my social media blew up. In the sea of opinions that started to crash down, most of it was positive support and excitement for all of the new writers in season 12. It was overwhelming, but also thrilling to see so many people engaged with hearing our stories. And so much has happened for me in the four years since.</span></p><p class="calibre_1">I arrived to the show as a “baby writer.” This term has nothing to do with age. It just means you are an entry level, or just above entry level, minion. Unless you come from privilege, have independent wealth, or had some sort of rock-solid first career before joining the writing ranks, most baby writers live paycheck to paycheck. That was very much the situation I was in. I had spent the money from my first gig paying off debt. The money from my second year as a writer was spent celebrating the union in marriage to my wife, Amanda. It’s a wedding people still talk about. It’s a day she and I still reminisce about, reliving moments that always end in genuine smiles. So, yes, definitely a worthy investment. But when I met executive producer and showrunner Andrew Dabb, I hadn’t worked for six months and was starting to sweat a little. My résumé displayed the two episodes of television I had written to date, and that was it. It made me very unsure of what the future held. My writing sample and the meeting, along with my passion for all things weird and strange, landed me the gig. But there was something else that helped nudge me over the finish line—the Supernatural Family.</p><p class="calibre_1">When I learned of the opportunity, I had ten days to prepare for the meeting with Andrew. I had watched the show, but as I already admitted, I had not been a consistent fan. What the hell was I going to do? Wikis are great for getting you the facts, but there are so many episodes, so many years to comb over, where could I turn to for emotional context? You. I turned to the fans. I read blog posts from multiple sites, old and new. Some will never leave my scarred mind, but most were just genuine passions and curiosities. I took a brief turn at the fanfic and quickly realized that was your space, not mine. I headed back to the places where you talked about just how much this world means to you. Not only did this help me feel ready to talk Supernatural, but it also multiplied my desire to be a part of this! So your passion and my questionable talent are to blame for me getting this job.</p><p class="calibre_1">Flash-forward again now to the present. When those final end credits roll, I will have been a direct part of writing more television than fingers on my hands. The future is always going to be uncertain, but now I have a vision for how to approach the next horizon. The blind corners on the road aren’t so scary anymore. Somewhere in these last few years, among the long days breaking stories locked up in my private bunker, I found something. Two guys staring at me with their angel best friend—that plucky kid they adopted—the demons surrounding them, and all the women in their lives who try to save them as much as the guys don’t believe they need it . . . somewhere in that sea of faces staring me down I heard, “And then what happens, Davy?” That is the place where I found my voice.</p><p class="calibre_1"><span class="italic">Supernatural will leave behind a legacy that will resonate for generations. My own family, both personal and professional, has grown from it. If I haven’t name-dropped anyone specific from the show that is because there are too many to list. It’s all of them. Everyone here has taught me something I will carry with me from this day forward. When I took the job, I thought I was going to come here and secretly evolve Sam and Dean into more fleshed-out, nontoxic versions of a man. I was not prepared for them to do the same to me. And I am forever grateful for the transformation.</span></p><p class="calibre_1">I don’t know if it is denial or just a genuine confidence of how this show will live on, but something about the approaching last episode doesn’t really feel like the end. And maybe that’s just it right there. If family don’t end with blood, then Supernatural don’t end with the finale. The SPNFamily will always be around, and the Winchesters will always be waiting for you in all the stories, both canon and online. In fact, I’m going to fire up my friendly streaming service right now and watch the pilot. Or no, maybe I’ll cue up an episode from season 5, or be an egomaniac and watch something I wrote with tentacles in it. Whatever I end up clicking on, it’s gonna be great to finally watch that twenty-sixth episode. So which one is Sam? Wait, what’s Negan doing there in a robe? Damn, that is a sweet-ass car, though . . .</p><div class="mbp_pagebreak" id="calibre_pb_52"></div>
+</body></html>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/10/03/there_will_be_peace_when_you_are_done/index_split_049/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/10/03/there_will_be_peace_when_you_are_done/index_split_051/">
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                  
+                
+                
+  <div class="disqus" style="width:100%">
+    <div id="disqus_thread"></div>
+    <script>
+      Fluid.utils.waitElementVisible('disqus_thread', function() {
+        Fluid.utils.createCssLink('https://cdn.jsdelivr.net/npm/disqusjs@1.0/dist/disqusjs.css');
+        Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/disqusjs@1.0/dist/disqus.js', function () {
+          new DisqusJS({
+            shortname: 'fluid',
+            apikey: ''
+          });
+        });
+      });
+    </script>
+    <noscript>Please enable JavaScript to view the
+      <a target="_blank" href="https://disqus.com/?ref_noscript" rel="nofollow noopener noopener">comments powered by Disqus.</a>
+    </noscript>
+  </div>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+</body>
+</html>

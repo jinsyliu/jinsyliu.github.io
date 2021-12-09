@@ -1,0 +1,521 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  
+    <meta name="description" content="">
+  
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+  <title>Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Liu Keqin</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-10-03 02:12" pubdate>
+        2020年10月3日 凌晨
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      3.6k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      72
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none"></h1>
+            
+            <div class="markdown-body">
+              <?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>There’ll Be Peace When You Are Done</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+<link rel="stylesheet" type="text/css" href="page_styles.css">
+</head>
+  <body class="calibre">
+<p id="filepos43611" class="calibre_">
+<a href="index_split_006.html#filepos9784">AMY HUTTON</a>
+</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_1"><span class="bold">FADE IN:</span></p><p class="calibre_1"><span class="bold">SYDNEY, AUSTRALIA, JANUARY 2006</span></p><p class="calibre_1"><span class="bold">INTERIOR LOUNGE ROOM:</span></p><p class="calibre_1"><span class="italic">A young woman sits on her sofa, alone, watching television.</span></p><p class="calibre_1"><span class="italic">On-screen a scene plays out of a mother and father saying goodnight to a baby called Sam. In the father’s arms is a young boy. His name is Dean.</span></p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_1"><span class="bold">FLASH-FORWARD 14 YEARS</span></p><p class="calibre_1"><span class="bold">SYDNEY, AUSTRALIA, JANUARY 2020</span></p><p class="calibre_1"><span class="italic">The same woman sits on her sofa watching television. She’s a little older now, and her hair is a whole lot redder. She leans forward, captivated. The children she met in 2006 are now men. The baby called Sam stands over 6 feet, 4 inches tall. The young boy called Dean is not far behind him. The woman sighs wistfully, every word they speak nestling in a new place in her heart. They have become her constant, her touchstone, her home.</span></p><p class="calibre_1"><span class="italic">From an outsider’s view, it appears not much has changed in those fourteen years. The woman still sits alone, still watching the same TV show. But what is not seen is the throng of people right there beside her. Thousands of voices speaking a language she understands completely. Across Australia, across the globe, sharing in her experience. People who have become friends. People with whom she’s traveled the world. People who have given her strength, who have helped her grow, who have helped forge in her a love and acceptance of herself, who have lifted her up and encouraged her to chase her dreams, to be brave, to trust in being the truest version of herself.</span></p><p class="calibre_1"><span class="italic">As she sits all these years later, unconditionally in love, the light bounces off her face, making her tear-filled eyes glisten. She feels connected in a way she never dreamed existed. Emotional tendrils reach out across the planet, in touch with a thousand other beating hearts.</span></p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_1">Okay, okay, it’s a bit dramatic, but it’s none the less true. Who would have guessed, back on that night in January 2006, that watching a new TV show would eventually help shape my life?</p><p class="calibre_1">In 2006, I was working in my first big management-style job: a creative manager in charge of a promotions team for television. It was a good job. It was a great job. Cool and a lot of fun. But along with the fun came a decent amount of responsibility. I was in charge of creative for the first ever pay-per-view movie service in Australia, and there were a lot of eyeballs watching what I was doing. Looking back on those days, I now understand that part of me was acting out a role. That’s not to say I wasn’t good at the job (I was) and I loved it and the people I worked with. But it was like I was wearing someone else on my outsides. Someone who didn’t quite gel with my insides. Around me, my friends were getting married, having kids, doing adult types of things. I wasn’t doing any of that, and I felt kind of out of sync. So, I played along as best as I could, being what I thought a grown-up needed to be, trying to look like the right person in the big job, going to the big meetings with the big bosses, complete with smart skirts and sensible tops. But I knew, deep down, I didn’t feel like me.</p><p class="calibre_1">I don’t know why I decided I needed to be that person—that person who felt they had to change themselves in some way in order to fit in and be accepted. No one ever outwardly told me to do that or gave me that direction. But over the years, I guess I just drifted into it. I guess I simply went along with what I thought everyone else expected me to be.</p><p class="calibre_1">It wasn’t always like that. When I was younger, I was the rebel. I was the kid at school forever in trouble for breaking the uniform rules. The one with the wrong colored tights, wearing the tie and blazer long since banned. The one who dressed in winklepicker shoes to go to the sports carnival, and head-to-toe black. The one wearing crazy eyeliner and earrings as big as her head. I went to pubs when I shouldn’t, dated boys in garage bands, wore bright red lipstick and sprayed color in my hair. For a girl who lived by the beach, I definitely stood out, if only for my purposeful lack of a tan. While my peers were enjoying a day in the surf, I was probably scribbling in my school journal or being ridiculously thrilled about tackling an essay assignment on Macbeth. I was reading plays for kicks and tinkering with some short story that just popped into my head. I can’t remember a time when I wasn’t jotting something down in a notebook. I can’t remember a time when I didn’t love words. It wasn’t like I was trying to stand out; I wasn’t even trying to be different. I was just being me. At seventeen, somehow, I was being my authentic self without even knowing it.</p><p class="calibre_1">That seemed to get harder as I got older. I found myself being sucked into the expectations of what we strangely call the real world (as if there’s any other kind). Without realizing it, I was bending and conforming to become who I thought I was supposed to be, who I thought people wanted me to be. I was so busy trying to make sure I was the right person for the people around me that I forgot who the right person was for me.</p><p class="calibre_1">This makes me sound like Zoolander or something, gazing wide-eyed into a puddle, asking, “Who am I?” But looking back at that time, I don’t feel I was like that. I feel like I’ve always known who I am. I just think that I allowed that sense of self to take a back seat and get muddied by my preconception of others’ expectations, and by my own pliancy. My loss of self is all on me, and I’m acutely aware of it.</p><p class="calibre_1">But all that began to change when I started watching Supernatural.</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_"><img src="images/00004.jpg" srcset="/img/loading.gif" class="calibre_10">
+</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_1">So often media can be a powerful, negative force in how it influences people. As a woman, I’m continually bombarded by messages that don’t necessarily ring of positivity for me, even if positivity is what they claim to be promoting. All these images and conversations representing everything I’m not, and reinforcing the notion that, apparently, I’m doing life wrong. I’m not a wife or mother. I’m not a size 6 with bouncy hair. I’m pretty much none of the things I see as being the media’s construct of a woman. So, who am I if I’m not the things the world is forever telling me I should be?</p><p class="calibre_1">I sometimes find myself thinking about my place as a woman who doesn’t follow society’s traditional gender-assigned role. Intellectually, I know women have come a long way toward gender equality, and I have reaped the benefits of the courageous women who stood up and fought for a world where the law says I cannot be discriminated against because of my sex. But when the first question out of someone’s mouth when they meet me is to ask me if I’m married and have children, it feels like society is still playing catchup.</p><p class="calibre_1">I’m not going to lie: there’ve been times when I’ve struggled with and avoided situations where I knew that I’d be faced with that eternal “Are you married?” conversation that plagues women of a certain age. The awkward silence and incredulous arched eyebrows, followed by some misplaced pity when I say no, is sometimes too exhausting to shoulder. I’ve definitely turned down invitations, I’ve definitely been made to feel less than, and sometimes, if I’m feeling particularly wobbly, I’ve definitely questioned my value as a woman who has chosen a nontraditional path. And boy, does that make me mad at myself! I’m smart and a decent human who’s not ashamed of who I am. I am not disappointed in my life. I dig my life—it’s full of love, family, friendship, adventure, and independence. My need for that independence, my wanderlust and my urge for freedom, is part of what makes me who I am, and I genuinely like who I am, even if sometimes I still stumble a little bit. It’s the life I chose, and it fits my soul, and I shouldn’t be made to apologize for that. I mean, screw destiny right in the face, right?</p><p class="calibre_1">It took me a while to get to that place, where I can quote Dean Winchester and mean it. Finding Supernatural inspired change in me slowly; it wasn’t an overnight thing. I didn’t suddenly dye my hair and get fifty tattoos. But something in the story of those brothers and the family they built up around them stood out to me. Something in their love, their devotion, and their fight for their own identities. Something in the way they lived their lives, their determination to live them as best they could regardless of the circumstances, connected with me on such a deep-down level that it lit a light inside me bright enough to guide me on a journey that would, over the course of more than a decade, totally shift my perspective and alter my entire life.</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_"><img src="images/00013.jpg" srcset="/img/loading.gif" class="calibre_11">
+</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_1">It’s kind of wild to think that a TV show can affect an individual so entirely. Hell, not just affect them, but help them reconnect with not only who they are, but who they want to be and what they want to stand for.</p><p class="calibre_1">I sometimes wonder what would have happened if I hadn’t tuned in to watch Supernatural on that fateful Monday night all those years ago. I often wonder who I would have become without the influence of Supernatural and this profoundly individual adventure. Would I have eventually found my way around to be the same person I am now? Would I have still been brave enough or passionate enough to completely upend my life, as I decided to do in 2018? Because it was Supernatural that inspired that too.</p><p class="calibre_1">Loving something as much as I love Supernatural made me want to talk about it, share my enthusiasm, share my experiences, share my connection. After penning ridiculously long comments on my friends’ blogs that were dedicated to the show, I was encouraged to start my own. So, in April 2010, for Supernatural’s 100th episode, I did just that. At first, I simply wrote episode reviews, but it wasn’t long before I ventured into fan fiction, then convention reports. Then, at some point along the way, I started writing a book. Suddenly, every spare moment I had, I was writing. I was doing this thing that I’d loved all my life, and yet somehow in the mists of time and obligations, had forgotten all about. It was a revelation, remembering my excitement for words. I found the experience incredibly liberating, and inevitably, incredibly exhausting. As I juggled my day job with its ever-increasing stress levels and responsibility, I was writing all night and all weekend. I was getting up in the wee hours of the morning to ensure I got a jump on the day, making sure the article I was working on was uploaded before I trundled off to my real work. During my (rare) lunch breaks, I would polish the fan fiction I’d come up with the night before or read the chapter of my book I’d been working on until 3 a.m. that morning, editing, making notes. Then, as soon as I got home, I’d start writing again. I was existing on a few hours’ sleep, and I started to burn myself out in the process. Between work and my passion, I wasn’t giving my mind that much-needed downtime. In the end, something had to give, and of course, it had to be the writing. The thing I loved the most, the thing that made me feel the most like me.</p><p class="calibre_1">I didn’t even notice at first that I had completely stopped writing. First the book fell to the wayside, because that was the hardest, then it was the fan fiction, and then the blogging, and eventually it was writing altogether. I didn’t even notice, until I looked around and realized all I did was work, think about work, and usually, rant about work. I was no longer doing the thing that gave me so much joy, because I seemed to only have space for the thing that was feeding my mortgage. “Hey,” I thought. “That’s life.” But should it be?</p><p class="calibre_1">I remember Jared Padalecki saying that he used to live by the mantra “life is short,” but now he lives by “life is long.” When I heard him say that, something clicked for me, because life is long, if we’re lucky, and we should all be endeavoring to do something that’s important to us and makes us happy, because we could be doing it for a helluva long time, and we only get one shot.</p><p class="calibre_1">It took a while for me to get up the courage to make the changes to my life I knew I needed to make. That Supernatural inspired me to make. I wanted to do something that made my spirit soar again, I wanted to do something that reflected how I wanted to move forward with my life, something that felt like me, something that made me happy. In my heart, I knew writing was that thing. Whenever I was doing it, I felt such exhilaration, such joy. I wanted so badly to finish the book that I truly had faith in. It had become a dream of mine. I had several failed starts, I’d get back into the discipline, but then I’d have a long, fraying week at work and, boom, I’d stop writing again. I just couldn’t seem to muster the consistent creative mental energy for the level of commitment I needed. When it came to that energy, I gave it at the office. Quite literally.</p><p class="calibre_1">In the end, I knew the only way it was going to happen was if my dream of writing became my priority. If I truly wanted to write, I was just going to have to write. So, one day, in the spring of 2018, after floating the idea with my family and a few close friends, I decided to do it. Follow through on that idea that had been percolating, tickling the corners of my brain for a while. Trust in myself, take a deep breath, and go for it. So, I chucked it all in. Sold my apartment, quit my job, moved back into my family home, and decided to concentrate on becoming a writer full time. Sound crazy? Maybe. Sound easy? It absolutely wasn’t. It was one of the hardest things I’ve ever done. It was terrifying and nerve-racking, and most of the time I felt like I was about to throw up in my mouth. Years of associating my self-worth with my career was a tricky thing to put down. I was tossing it all away. Everything I’d worked for. Stability, security, respect, I walked away from all of it. But I knew it was the right move. I knew it in my gut. As frightening as it was, I never had a doubt. This was about being me. This was about reclaiming and starting my life.</p><p class="calibre_1">I’m pretty sure I would never have gotten to this place if it hadn’t been for Supernatural and all that came with it. If it hadn’t been for Sam and Dean and the lessons they taught me—their continual fight for themselves and each other.</p><p class="calibre_1">One of the many reasons I’m so drawn to Sam and Dean Winchester is because of how they choose to live their lives, and how unapologetic they are about it. They’ve both fought a long, tough, internal battle to discover who they are and where they fit in a world where they’re not only different, but often invisible. That’s something I relate to profoundly. They fight so hard to never lose their sense of self, even when faced with situations that threaten to completely strip away their identity. They never compromise if it’s something they truly believe in. They keep moving forward, trusting in themselves, in each other, and in what they value, regardless of what any given day throws at them. No matter what they’re faced with, they continue to choose the life they’ve learned to embrace and love. I feel like their search for peace in their own skins mirrors mine. I feel like we’ve been on our epic journeys together.</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_"><img src="images/00022.jpg" srcset="/img/loading.gif" class="calibre_6">
+</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_1">When, during Supernatural’s landmark 300th episode in 2019, Dean said that he was good with who he is and good with who Sam is, it was not only a cathartic moment for the characters, but it was also a cathartic moment for me. If I hadn’t been bawling my eyes out at the time, I would have fist-pumped the air. It was such an incredibly positive message to come out of that man’s mouth, a man who has hated himself for most of the time we’ve known him. I was so proud of Dean (who I feel an emotional bond with that’s sometimes a tad overwhelming), and upon reflection of that moment, I realized I was also so proud of me, because at this point I’m good with who I am too. Owning and, more importantly, liking who you are, and what you stand for, is important in this world, and is a valuable lesson for all of us to take to heart. Be confident in who you are, be proud of what you’ve achieved, and be comfortable in your skin. This is what Sam and Dean Winchester have taught me, and what I’ve slowly been able to embrace in my own life over the past fifteen years of watching this show—just like Dean. This is why I will be eternally grateful for the gift that is the Winchesters and Supernatural.</p><p class="calibre_1">As we get older, we’re bombarded with messages that tell us to forgo pleasure for duty. We’re told to be careful, not to risk our livelihoods or our futures. To keep our dreams realistic. Our individuality can be stymied as we follow society’s “rules.” We can end up feeling shame or guilt over doing the things we enjoy, because they might be viewed as selfish, or childish, or a waste of time. It’s a big reason I kept quiet about my passion for Supernatural in the early days, because I knew that people might think it was weird, that I was weird. Apparently, at the time, I still cared about that. Now when people question my devotion to a TV show in a less-than-positive way, I say, “Hey, some people collect stamps.” If that’s what blows your hair back, who am I to judge? Who is anyone to judge? If you dig it, do it. It took me a long time to understand that. It took me a long time to own my happiness.</p><p class="calibre_1">A good pal of mine once said to me that though I always seemed happy, now I seem like I’m who I’m supposed to be. It made me laugh. I said, “Yeah, I feel like that too.” She asked what had changed. I said, “Well you know what, as buckets of crazy as this might sound to you, it was Supernatural and everything that’s come along with it.” The brothers, the story, the cast, the crew, the fans, the friends, the conventions, the love and acceptance. It was seeing actors release long-desired albums, bloggers become showrunners, and other fans putting their art on the line. It’s given me the courage to take risks. Big ones. It’s given me the desire to learn, to do good in this world, and to be a better and more accepting person. It’s changed my internal and external gaze and expanded my horizons. It’s helped redefine who I am. I have a community where I feel wholly represented and uniquely embraced, like a wave of people have my back: the SPNFamily, who always encourage me in absolutely everything I do; the cast, who embolden me; my friends; and, of course, my amazing family, who supported my decision to flip my life 100 percent and are so very proud of me for taking a great big leap of faith. All of this has helped form me into a person that I understand (mostly), and that I’ve grown to love. It helped me reach for and follow my dream. I’m writing full time, every single day. And that book I was telling you about? Guess what? I finished it.</p><p class="calibre_1">I’m in the driver’s seat of my own life now; I’m no longer riding shotgun.</p><p class="calibre_1">And to think, it all started with a couple of boys on a TV show.</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_"><img src="images/00032.jpg" srcset="/img/loading.gif" class="calibre_12">
+</p><div class="mbp_pagebreak" id="calibre_pb_14"></div>
+</body></html>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/10/03/there_will_be_peace_when_you_are_done/index_split_011/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/10/03/there_will_be_peace_when_you_are_done/index_split_013/">
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                  
+                
+                
+  <div class="disqus" style="width:100%">
+    <div id="disqus_thread"></div>
+    <script>
+      Fluid.utils.waitElementVisible('disqus_thread', function() {
+        Fluid.utils.createCssLink('https://cdn.jsdelivr.net/npm/disqusjs@1.0/dist/disqusjs.css');
+        Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/disqusjs@1.0/dist/disqus.js', function () {
+          new DisqusJS({
+            shortname: 'fluid',
+            apikey: ''
+          });
+        });
+      });
+    </script>
+    <noscript>Please enable JavaScript to view the
+      <a target="_blank" href="https://disqus.com/?ref_noscript" rel="nofollow noopener noopener">comments powered by Disqus.</a>
+    </noscript>
+  </div>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+</body>
+</html>

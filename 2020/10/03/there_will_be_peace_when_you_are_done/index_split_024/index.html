@@ -1,0 +1,519 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  
+    <meta name="description" content="">
+  
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+  <title>Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Liu Keqin</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-10-03 02:12" pubdate>
+        2020年10月3日 凌晨
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.7k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      54
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none"></h1>
+            
+            <div class="markdown-body">
+              <?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>There’ll Be Peace When You Are Done</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+<link rel="stylesheet" type="text/css" href="page_styles.css">
+</head>
+  <body class="calibre">
+<p id="filepos163741" class="calibre_">
+<a href="index_split_006.html#filepos9784">ANDREA DREPAUL</a>
+</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_1">Andrea Drepaul here. You may know me as Melanie, the sassy were-wolf villainess from season 14. When Lynn, the editor of this volume, asked me if I was interested in writing a chapter on diversity and inclusivity for this book, I was ecstatic. We human beings are so deeply connected in ways that I am still trying to grasp. (Let me know if you have the secret, will ya?) And yet, there are still things that we let separate us. To understand why diversity and inclusivity are important to me, as well as to our larger society, let’s first take a deeper look at the world in which I grew up.</p><p class="calibre_1">I was born in Brantford, Ontario (home of Wayne Gretzky), to immigrant parents from Guyana and Portugal, making me first-generation Canadian. My parents were both factory workers, and somewhere along that journey they decided to move our family to the small town of Ingersoll, Ontario (aka the black hole . . . or how I felt about it for a long time). Ingersoll was a predominantly Caucasian community. At that time, our family was one of two ethnic families living in that community, the other being African Canadian. Our family was different, there was no denying that. In such a rural place, it was my experience that the general population had never seen a Guyanese person or understood the differences between Caribbean and African cultures. People knew where Portugal was, but if we are being honest, Guyana is not a very well-known country in South America.</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_"><img src="images/00046.jpg" srcset="/img/loading.gif" class="calibre_22">
+</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_1">I don’t ever recall being taught about slavery or indentured workers in South America in history class. If we as human beings take the time to understand our history and culture, it becomes a tool for understanding ourselves more deeply. Imagine what it was like to live in a community where you never saw anyone who looked like you. Maybe for some of you reading this, it was your reality also. For a large part of my life, I spent most of my time trying to blend in. This was an adopted strategy from my father and was viewed as critical to our survival. From his perspective, the best way to live a decent life was to fly under the radar, make no waves, do your job, and be quiet.</p><p class="calibre_1">This conditioning was ingrained in me. I never stopped to question it with my adult mind until much later in my life; I wanted so desperately to be accepted, and looking different wasn’t safe. Because of this, I was a victim of severe bullying. School kids would tease me and call me horrible names every day. Coming home crying was a regular thing for me. Those experiences traumatized me in a deep way . . . in ways that would take me ten years of therapy to crack just the tip of the iceberg of what I taught myself about who I was. What I learned back then—or rather, my core subconscious beliefs—was that it was not safe to stand out or be different. People who stand out are ridiculed and shamed and put back down into “their” place. Don’t make noise, be quiet, and don’t be too smart, or it will make others feel bad. Try to fit in, smile, be happy, don’t talk about how you really feel, and whatever you do, under any circumstance, do not out any of the kids who did anything to you. (Side note: To the kids who called me names and stuck my face in the dirt and made me eat leaves and twigs—you are the reason I fight for equality, justice, diversity, and inclusion.)</p><p class="calibre_1">Growing up in a small town gives you few options in terms of entertainment, so watching films and television became my place to really see the larger world. I began to shift and imagine what this world could possibly look like outside of the confines of my hometown. It lit a fire in me. I wanted to get the heck out of that place and see the world. My beliefs started shifting. I was no longer limiting myself as to who or what I could be. I wanted more. I wanted to be more, to do more. Television changed me.</p><p class="calibre_1">Back then, the rise of diversity in television had started with the success of The Cosby Show, A Different World, and The Fresh Prince of Bel Air. I loved these shows because I saw people who somewhat resembled me. I was also learning about other cultures and history. I found that exciting. I think Hollywood really shaped my world; it was where I learned things that I never knew about. It made me want to get outside the box and go have those experiences myself.</p><p class="calibre_1">DING, DING, DING . . . Cue major defining moment: Shohreh Aghdashloo in House of Sand and Fog. Boom. It was like my eyes lit up and my heart opened wide. This was the first time I felt like I saw a woman on TV who really looked like me. She is Iranian, but her hair, skin tone, and the shape of her face—I distinctly remember feeling like, “Hey that woman looks like me!!!!” It didn’t matter to me that she wasn’t exactly the same, because what I saw was a woman who resembled me, who had a place, a place where she belonged. Then it happened . . . my brain exploded. Wait a minute, if she can do it, why can’t I?</p><p class="calibre_1">Ladies and gentlemen, this is where I learned the true meaning of limitless possibilities. Not in a classroom, not even out in the “real” world, but from a box inside my living room. This is the power of television and film, the positive aspect where you can learn to adopt a new vision of yourself. For me, I could no longer remain in those old core beliefs, bound by the limitations of others trying to keep me down and keep me playing it safe in the world.</p><p class="calibre_1">Wow, right?! You would think this would have been the best thing in the world. Well, let’s just say my mother didn’t think it was so great when I told her, “Hey, Ma, I’m going to finish my degree and then become an actor!!!” (That’s another story, for another book perhaps?) I became the first woman in my family to attend college and graduate with an honors degree. In 2003, I moved to Toronto, a city that boasted a complexity of ethnic diversity and was brimming with culture. It’s the food mecca of the world, in my opinion. Living in Toronto was one of the greatest joys of my life. I felt accepted, and I saw a beautiful melting pot of culture and diversity unlike anything I had seen before. I felt I could shine there in film and television.</p><p class="calibre_1">When I got started in this business, there was a multitude of ethnic actors who were on the audition circuit. The industry was very complex back then and not so open to diverse performers trying to make lifelong careers performing in lead roles. Diverse actors were limited in which roles we could book and which shows we could work on. This was dependent on many different marketing variables, as well as the content that was being produced at the time. It became very evident to me that if I wanted to have a career, I would have to be willing to take some jobs that didn’t make me feel so good about doing them. I remember auditioning for roles of characters that didn’t even have names and were implied to be “bad” people. A large majority of the plotlines of the characters I auditioned for were centered around being a mole, a terrorist, or a killer. Examples: “Terrorist #1,” “Muslim girl,” “Assassin.”</p><p class="calibre_1">Ethnic actors weren’t being given the opportunities to play lead characters because of the way we looked and because we didn’t have nearly enough lead experience to book a show—a catch-22. How could we get to be a lead player if we were not given the same opportunities as non-diverse performers? This was our version of a glass ceiling, and artists didn’t speak publicly about it, mostly out of fear that we wouldn’t work again or would be judged negatively. Even now as I am writing these words, I think of the possible backlash that could come about. Ethnic performers did what was called for; we became better, we studied, we went to classes, we started making our own projects, we took on secondary jobs to pay bills. We trained, and we prepared ourselves for when Hollywood would wake up and see this division. The road from then to now has been paved with a lot of blood, sweat, and tears.</p><p class="calibre_1">Now, in 2020, the landscape of film and television has become increasingly more diverse and inclusive. We can see the rise of fabulous female directors being given the opportunity to direct films and television series, and more ethnic actors being given the opportunity to play leads on screen than ever before. There is recognition from Hollywood that the scales were, in fact, not in balance. For a long time, women and minorities in the film and television industry struggled to pay bills, own houses, and provide a reasonable level of care for their families. But that is finally—slowly—changing.</p><p class="calibre_1">Hollywood has a deep impact on society and effectively shapes what is acceptable, normal, and embraced in our belief systems. It’s the same logic as telling your children they can be anything—but if they never “see” it in the real world or on screen, how can they truly believe it’s possible? For me, this is why representation is so important. There is a domino effect happening right now. People are waking from this “slumber” to realize what is actually possible, and Hollywood is steering that ship.</p><p class="calibre_1">The process is a complex one. Where does this movement leave the individuals who are of “mixed race” or are not easily identifiable as African American, East Indian, or Latin? The “not enough” syndrome also exists, as some diverse performers are not being given the opportunity to work because they are “not Black enough,” “not Indian enough,” “not Asian enough,” etc. This is where the work still needs to be done in the industry. If an individual is diverse, they are diverse. If a person identifies as LGTBQ, they are that. There is no such thing as not being “enough.” That enough-ness stems from a hypervigilance to be as politically correct as possible in a time where every move is being scrutinized. Nobody should feel like they need to do a DNA test to prove their ancestry. But the change that has happened so far is hopeful. I commend and applaud the changes that have been made to even the playing field and represent a more real world. With every year that passes, there is a new focus and new ways to illustrate the larger world at hand.</p><p class="calibre_1">Take, for example, the film Crazy Rich Asians. (I’m obsessed with this film.) In fact, everyone should watch it, not only because it is hysterical and a good rom-com but also because of its attention to detail in telling the stories of the subcultures within the Asian community. It’s not just a film for Asians—it’s a film for all human beings. And it’s a remarkable example of what can be accomplished when Hollywood gets it right. The greatest joy I received from that film was watching it in a theater filled with Asians. Watching them laugh and cry brought me a deep sense of joy and happiness and connectedness, knowing that they could watch people who looked like them fall in love and get their hearts broken. They were validated as human beings through the actors on screen and, by extension, Hollywood. The film was a success because it resonated with the deep human desire to be accepted and loved. And that is something every human being on this planet craves and deserves; it is our birthright. When we make films and television shows that are filled with characters from all walks of life, male or female, LGTBQ, or with disabilities, we are sending a strong message that says, “You are enough. We validate your existence. You matter. You are of value.”</p><p class="calibre_1">This can only lead us to be better human beings. This can help us teach the next generation to be limitless and to have an expansive vision of what they can become or do in this world. These lessons cross gender, race, disability, and religious affiliation. When Hollywood seeks to expand our beliefs, raise awareness, and teach us how to be limitless humans, we can see the ripple effect that trickles down into our psyches.</p><p class="calibre_1">I know this to be true because it happened to me.</p><p class="calibre_1">If it happened to me, then it must be happening for others. The key here is to actually become aware of how deeply we are being impacted by what we watch on television or on the big screen. The diversity and inclusivity movement has allowed me to become introspective of the deeper parts of myself and really analyze who I want to be and what I can contribute to the larger world. Seeing “myself” on the screen when I was young essentially gave me some inner permission to shine, and if you look closely, you can see examples of that everywhere. For example, Freddie Highmore in The Good Doctor plays a surgeon with autism. He’s breaking society’s perception of what is possible. Yes, perhaps there will be a certain number of people who think that would never happen in the “real” world. Whether it could or couldn’t isn’t actually up to us as a collective to decide. Somewhere, someone with autism is seeing himself or herself on TV doing what they love to do and succeeding at it—instant core belief expansion. That individual now knows at some level that becoming more is possible for them.</p><p class="calibre_1">This is what my role as Melanie in Supernatural felt like for me. Becoming more was possible.</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_"><img src="images/00056.jpg" srcset="/img/loading.gif" class="calibre_23">
+</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_1">Prior to booking this role, I hadn’t worked in fourteen months. I was drained and exhausted. I had just gone through a deep transformation of self and was coming out of a dark place into the light, so to speak. For me, this role was “divinely timed,” as I was just beginning to really stand in my authentic self. The journey of Melanie and of me as a human were symbiotic. Melanie is a character who could transform literally into something else. And at the same time, I was transforming inside and changing too.</p><p class="calibre_1">In our society, there is an immense amount of value placed on our physical appearance: the color of our skin, our weight, the clothes we wear, and so on. We are deeply conditioned to this valuing from a very early age. At its core, those who are victims of racism have deep worthiness issues. We don’t always see our own value. The gift of this role is that it allowed me to see my real inner value. I was able to see for the first time that I was not chosen for the color of my skin—I was chosen because of who I am. As a result, I became “more,” not because I wasn’t enough already but because I had made a choice to grow and be more than that. I am grateful to casting, the producers, the episode’s director, Richard Speight, Jr., and the whole cast for embracing me and deeply reflecting back to me what my true value is.</p><p class="calibre_1">That is the power of diversity and inclusivity. There is an awakening happening. Hollywood is becoming woke. We as a society can choose to embrace that change and take joy in knowing that we are part of this evolving awareness. Our future generations will reap the rewards as they expand their beliefs of what is possible.</p><div class="mbp_pagebreak" id="calibre_pb_26"></div>
+</body></html>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/10/03/there_will_be_peace_when_you_are_done/index_split_023/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/10/03/there_will_be_peace_when_you_are_done/index_split_025/">
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                  
+                
+                
+  <div class="disqus" style="width:100%">
+    <div id="disqus_thread"></div>
+    <script>
+      Fluid.utils.waitElementVisible('disqus_thread', function() {
+        Fluid.utils.createCssLink('https://cdn.jsdelivr.net/npm/disqusjs@1.0/dist/disqusjs.css');
+        Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/disqusjs@1.0/dist/disqus.js', function () {
+          new DisqusJS({
+            shortname: 'fluid',
+            apikey: ''
+          });
+        });
+      });
+    </script>
+    <noscript>Please enable JavaScript to view the
+      <a target="_blank" href="https://disqus.com/?ref_noscript" rel="nofollow noopener noopener">comments powered by Disqus.</a>
+    </noscript>
+  </div>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+</body>
+</html>

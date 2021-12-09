@@ -1,0 +1,522 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  
+    <meta name="description" content="">
+  
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+  <title>Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Liu Keqin</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-10-03 02:12" pubdate>
+        2020年10月3日 凌晨
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      3.8k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      75
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none"></h1>
+            
+            <div class="markdown-body">
+              <?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>There’ll Be Peace When You Are Done</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+<link rel="stylesheet" type="text/css" href="page_styles.css">
+</head>
+  <body class="calibre">
+<p id="filepos517809" class="calibre_">
+<a href="index_split_006.html#filepos9784">ADAM FERGUS</a>
+</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_"><span class="italic">(in collaboration with and derived from an interview with Lynn Zubernis)</span></p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_1">As I sit down to write this chapter, I’m wearing the shirt I wore when I ran the Seattle Marathon to raise money to combat childhood hunger. Along with Jared Padalecki, Jensen Ackles, Misha Collins, Rob Benedict (God), Jason Manns, and the SPNFamily, we raised over $250,000. The fact that I’m sitting here wearing this shirt and remembering that day makes me realize what a massive effect the people, both on the show and in the fandom, have had on my life.</p><p class="calibre_1">Where do I start? I suppose it starts with working on Supernatural. I auditioned for the show on a Friday evening. It was what they call a cold audition, meaning I wasn’t part of the initial group of people who were called in. But when it went to callbacks, the casting agency called me. I remember looking at the script I was given and thinking, This is totally in my wheelhouse—it was for a British Cockney guy. Sometimes as an actor, you’re nervous in an audition because you really want the part, but for this audition, I wasn’t nervous. Not because I wasn’t aware of the show and didn’t want to do it, but more because I figured, well, if they didn’t want me initially, I’m going to just go in and give them something different and totally blow their socks off!</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_"><img src="images/00031.jpg" srcset="/img/loading.gif" class="calibre_30">
+</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_1">And that’s a lesson for any actor: the more relaxed you are, the better you can be. I did the audition, and I walked out of the room not thinking I got the job in any way, shape, or form, but that I’d given the best I could and given a good branding of the character that I’d read the night before. So I was delighted when I got the part. I was only guaranteed two episodes, but I ended up doing six. That was the beginning of what has to go down as the most enjoyable and rewarding experience of my acting life. Of course, there are other things I’ve done, plays that have meant a lot to me, movies where it felt monumental because I was working with Sean Penn or Harrison Ford. But the actual process and mechanics of being on set on Supernatural and working with that cast and crew was such an enjoyable experience. It seemed to follow on from my comfort of being so relaxed during the audition.</p><p class="calibre_1">If you’ve been to conventions or watched convention videos, you might have heard my story of my first day working with Jared and Jensen. Jared was tied to a chair in episode 2 of season 12, and I was speaking in my Cockney accent for the first time. I’d been talking to the guys in my normal Irish accent before shooting, and when I switched to my Cockney accent, Jared immediately called, “Cut!” and said, “No, no, no, no, I can’t understand this guy!” Everyone busted up laughing, and I went bright red. And then he did it again . . . and again. I had never experienced anything like that, especially on a TV set where every minute is so valued financially that it leaves no room for messing around. The tone that they set that day put me in a place and in an environment where I believe I was able to do my best work. That was the moment I realized what a special show this was.</p><p class="calibre_1">Sometimes actors are given latitude in changing lines or words, but when you’re doing television it’s not really advisable to ad-lib. Especially when you’re a guest star, you want to toe the line and not waste everyone’s time. When we filmed the episode “Ladies Drink for Free,” it was the first time I got to read something in the script about my character’s past (being orphaned and fending for himself on the streets with a very Artful Dodger–esque character arc). In the scene, Dean, Sam, and my character, Mick Davies, had been drinking into the wee hours of the morning. And the next day, Mick, because he’s a seasoned drinker, gets up fresh as a daisy while Sam and Dean are crippled over their breakfast table unable to talk. Mick walks in and pulls a tomato juice out of the fridge—because that’s all the props people had put in the fridge. So I turned round to the props people and asked, “Is there any orange juice or anything?” They said no, and I said okay. Then I turned to Jensen and said, “It would be funny if I said, ‘Don’t you have any vodka?’ And he said, ‘Oh you’ve gotta do that, put that in there.’” So I did and it was a button on the end of the scene, “Any vodka?” It really lent itself to the scene because Mick was looking for another drink while the boys were dying at the table. And it worked because I was so at home in the Supernatural Family. At that point, I hadn’t done conventions yet, but I was so comfortable among the cast and crew and the leads of the show that I was able to voice that idea and not feel intimidated in any way. And that was thanks to the comfort that I was afforded by the boys and the crew. Being able to do that was important; it made me an artist. I fight with that word as an actor, but it really made me feel like I had some input into creating and furthering this role.</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_"><img src="images/00066.jpg" srcset="/img/loading.gif" class="calibre_24">
+</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_1">My first day in Canada, I got to the room the show provided, and there was already a note on my door from Ruth Connell (Rowena). It said, “From one Celt to another, if you ever want a cup of tea and a chat, let me know.” So, right away, Ruth and I, plus Briana Buckmaster (Donna Hanscum), got together. Ruth told us, “There are these things called conventions . . .” Now, I’d heard of Comic-Con and Star Trek conventions, but I didn’t have any idea what a Supernatural con would look like. Ruth urged me to get onto the circuit, as it’s known, but at the beginning I wasn’t keen on it. I kept thinking that it was more important for me to do a good job on the show. I didn’t want to come across as that bit-player guy trying to elbow his way onto some circuit that’s for the leads of the show.</p><p class="calibre_1">Then the next day, I went on set to do my first costume fitting, and Ruth was on set shadowing Phil Sgriccia (sometimes actors shadow directors to learn what it’s like to be a television director). She asked, “Are you allowed by production to be introduced to the fandom?” And I said, “Yeah, I think I am.” So, right there she snapped a quick photo and put it on Twitter. And my phone just exploded. I remember thinking, Okay there’s something here that I’m not quite aware of . . . the fandom is HUGE.</p><p class="calibre_1">I did my first convention in Blackpool, England. The hilarious thing about a convention there is that Blackpool used to be a destination for holiday vacations with parks and amusements, but now it has kinda fallen apart. We were driving to the hotel where the convention was and the sign said, “Norbrook Hote.” Because the L in “hotel” had fallen right off the wall. It was completely rundown and I thought, Okay, this is a bit weird. Then David Haydn-Jones (Arthur Ketch) and I got up to do our first panel. And for the first time in a long time I was able to get onstage and FEEL the love from the audience that I used to feel when I was doing theater. That “grá,” as we say in Irish . . . that love for you and the thing that you’ve done in your small time on the show. One of the things I miss most about theater is the audience reaction and feeling that difference in applause from night to night . . . either they liked it or they didn’t, or it was a good crowd or a bad crowd. That’s something we live for as actors. It’s also like, wow, they really love what I did, so it’s like getting a gold star from a teacher for doing good work. And you don’t get that so much as an actor.</p><p class="calibre_1">I quickly got up to speed with what the cons were about, and from there we went straight to Rome to do another, and then back to filming, and then I think Chicago was my first Creation con. At that point I thought, There’s something different about all this. A friend of mine at the time, who’s a restaurateur, said to me once, “Let me get this straight—people pay for your autograph and your photo and spend hundreds if not more dollars over a weekend? I don’t get it.” I responded, “Well we went to that golf trip a few weeks ago. You’re not very good at golf, but you still spent a couple thousand dollars on that golf trip and you got fun out of it.” That was my answer then, but now I’d answer differently, because it’s not really about us at these cons. It is to a certain degree, but people get so much more out of this than just us standing onstage. It’s about community. When we talk about SPNFamily, it doesn’t mean the actors and then the rest—it’s a family. And like every other family, it has its ups and downs and problems, but it’s all about seeing people who rescue you from the dark parts of life we all have. There’s a certain type of person who is a Supernatural fan, and I think they’re more awakened than the majority of the populace, because they’re more in touch with their feelings. And they feel so at home, be they gay, straight, transgender, a jock, or whatever, they can walk into that room and say, “I’m comfortable with who I am right now.”</p><p class="calibre_1">I’d never really experienced that before, and it’s powerful.</p><p class="calibre_1">It reminded me of what I learned doing my very first professional play. It was a play for Dublin Gay Pride, and I was to play the lead and make out with a guy and I had to be naked on stage. I had struggled, when I first decided to be an actor, with why I wanted to be an actor. Did I want to be in this profession because I really loved acting, or was it some kind of drive to be in the limelight or be famous? But I can say with confidence now, when you’re still an actor after twenty years, like I am, it’s because you love the actual work. It’s because acting is all you can do. When I got that role I thought, If I can do this, I can do anything. Because my experience so far was that I’d gone to a Catholic boys’ boarding school and homosexuality was always pushed under the carpet or frowned upon or joked about (though in a very homoerotic way). But that night, for that performance, some of the biggest rugby players in Dublin (football players, you would call them in the US) came out and they sat in the front row and watched that play and at the end they all said to me, “Holy shit, dude, that was remarkable, that was great.” There was no nudge-nudge or anything. I was twenty-two years old, barely out of school, and we hadn’t washed all that stupidity off us at that time, so it was a real life-changing moment, an experience that has always stuck with me—that feeling I had when I saw the big 6'7" captain of the rugby team stand up and applaud. I was like, Fuck, I didn’t realize I wanted his approval, but then it meant so much when I got it. I probably would have cared too much if he had laughed (though, mature man that I am now, I realize it would be more a reflection on him than on me). Which brings me back to conventions. When you walk out onstage, as David and I do so often together, there is a feeling of acceptance. That’s what being part of the SPNFamily is all about.</p><p class="calibre_1">I’m so grateful to the fans that I can keep reliving this and keep seeing people who enjoy my work. We talk about ego, but I think there’s no harm in saying that I love meeting fans because they love talking to me about stuff I did that I’m proud of. Anyone who says otherwise is probably trying to rain on your parade.</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_"><img src="images/00066.jpg" srcset="/img/loading.gif" class="calibre_24">
+</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_1">I get asked a lot where I think Mick’s story line would have gone if he had stayed on the show. I think that last speech he gave—which was cut off by a bullet in the back of the head—shows that he’d definitely be with the Winchesters. That’s the path he had chosen, and it was such a beautiful little arc, such a wholesome, fully formed arc. I would have liked to stay on the show, of course, since it was the most enjoyable acting experience I’ve had, but I’m okay with the way it ended.</p><p class="calibre_1">I had always thought that I’m not a network actor, that I’m too dramatic from my past as a theater actor to be on these procedural television shows. I’ve gone out for other network shows and only booked a couple, but when I booked Supernatural I thought, Oh, I’m so wrong about network television, because the writing is exceptional on this show. Back in the day I did a show called Being Erica, and the lead of that show, Erin Karpluk, asked me to help her out with an audition for Supernatural. So I went over to her house and read with her, and she ended up booking the part for two episodes. Then, when I told my buddy Mark Rolston (an amazing actor who’s been in Aliens, Shawshank Redemption, The Departed, and more) that I was going to be on Supernatural, he said that he had played Alastair on the show. He said, “Dude, you’re gonna have a blast.”</p><p class="calibre_1">And I did. And it changed my life. Back in the day, when people recognized me on the street, I would have to list like seventeen things that they might have seen me in. Now, it’s always Supernatural. I only did six episodes, but it goes to show the strength and the reach of the series.</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_"><img src="images/00066.jpg" srcset="/img/loading.gif" class="calibre_24">
+</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_1">Shows that exist for a long period of time do so for different reasons. Maybe they have something about them, be it like Game of Thrones, which was an epic show forced upon us by HBO with all this big advertising and famous actors, and it’s great. Then there are shows that get their audience because of their quality. That quality initially comes from the numbers 1 and 2 on the call sheet. And that speaks to what I said about Jared earlier . . . how he brought me into the community. He and Jensen both, after 300-something episodes, walk on the set, and it’s like it’s their first episode. They give 110 percent. They make it so special for everybody coming in. But it also speaks to why they still love doing the show. It’s not just the money or the comfort of being an actor and not being out of work. Sure, that’s a very enviable situation for any actor, but there’s something more, something beyond seasons 7, 8, 9 . . . and still they want to stay on the show. And that has to be the writing. The writing is paramount to this show’s success and longevity. All the writers on the show love writing the show, and it’s cyclical because they love writing the show because the guys keep reinventing themselves, working hard to produce every single episode.</p><p class="calibre_1">I remember one day while shooting, I was in Jensen’s trailer, and Jared, Jensen, and I were having a chat, and the show came on the TV. We all watched an episode that the three of us were in while waiting to be called back to set. Jared and Jensen watch the show religiously; they critique it thoroughly because they’re invested in it. And I think that’s the reason it’s gone so long. The boys, the directors, the producers, the writers—I’m not giving my Oscar thank-you speech here, but that’s truly why the show has existed for the time that it has.</p><p class="calibre_1">As far as the legacy of Supernatural, we’re still in the tail end of the honeymoon period as I write this, before the show disappears. People love it as much as they always have, if not more, because they know it’s ending. I don’t know how they’ll feel next year after the last convention is finished, but it seems to me that Supernatural has to go on in some capacity, whether it’s a spinoff or something else that keeps the Supernatural dream alive. Jared is doing Walker, Texas Ranger, and I’m sure Jensen will be off to dizzying heights. And Misha is an entity unto himself . . . he could do anything, including be president. I’d vote for him. He’s a true hero of mine, a gentleman and an absolute scholar. But I can imagine those guys in a few years wanting to reunite and do a Supernatural movie or something. I think anything is possible with this fandom and this group of actors and producers and writers.</p><p class="calibre_1">I remember when Ricky Gervais did The Office, and after two seasons he said he was ready to finish. And I had so much admiration for that guy because he didn’t bow to producers or the moneymen who wanted to bleed it out and make loads of money for the next twenty years. As an artist, that’s really admirable. But since I’ve been part of this Supernatural fandom, I’m like, Fuck, guys, why do you really have to finish? After fifteen seasons, we could do twenty. There’s nothing to say we couldn’t because the writers have consistently reinvented the show with such poise and such accuracy, and that’s not easy. If you told someone fifteen years ago that you’re going to write a show about two guys fighting demons, werewolves, and vampires, and you asked them how long that could possibly last, they wouldn’t say, “Probably fifteen years.” They would more likely say, “Two, maybe three max.” But for the reasons I just explained, Supernatural has gone this long and it could go until the boys are in wheelchairs! For Supernatural, it truly has been a fifteen-year marathon.</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_"><img src="images/00066.jpg" srcset="/img/loading.gif" class="calibre_24">
+</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_1">There are things in life that you always think you want to do. I want to go to the moon or I want to go to space or see the Titanic or whatever . . . hypothetical things. I’m a big dreamer—you kinda have to be as an actor—but I never really wanted to run a marathon other than so I could say that I ran a marathon. And I honestly didn’t realize the extent of the task. I was a smoker right up until five weeks before running the Seattle Marathon. And I only gave it up when my girlfriend, Haley, knocked me on the head as I was lighting up and said, “You’re about to run a marathon!”</p><p class="calibre_1">I’m in such awe of the other guys, especially Misha, who was the driving force behind this charity run. Misha did all the work so I could just be part of this massive thing we did simply by running. I didn’t train that well . . . not the actual regimented training you should do for a marathon. So I got there the morning of the run, and I was shitting myself because I was really worried about not finishing. I mean, what if Jensen, Jared, Misha, Rob, and Jason all finish and I don’t? But the competitor in me kicked in. I ran the first 5 miles with Rachel Miner (Meg 2.0), each of us taking turns pushing her wheelchair, which she uses due to her multiple sclerosis. Rachel stopped at mile 5 and the rest of us ran on. We got to mile 7, the first water stop. My girlfriend came up with everyone to help out, and I said to her, “Um, my knee is already sore.” She said, “You’ve got 19 miles to go, so keep trucking!”</p><p class="calibre_1">Jason and Rob drifted off to complete the run on their own, and at mile 10, Jared and Jensen ran off ahead. So it was just me and Misha. Misha used to run every morning, but he was injured going into the marathon and was doing all he could just to hang on. We got to mile 19, and I swear to God, if it wasn’t for the Supernatural fandom, we both would have walked the next 7 miles. But there were fans at almost every corner. So we’d walk for a couple of minutes and then were like, Oh, the fans are coming up, let’s go! So we’d run and then once we started running, we didn’t want to stop.</p><p class="calibre_1">At dinner that night I had to ask the waiter for two bags of ice, which I strapped to my knees with napkins. I could barely walk.</p><p class="calibre_1">But we raised over $250,000 for Random Acts. I say “we” in the grander sense, but I’m proud to be part of that and happy I was given the opportunity. I’m so honored to be their friend and to be a part of this show.</p><div class="mbp_pagebreak" id="calibre_pb_78"></div>
+</body></html>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/10/03/there_will_be_peace_when_you_are_done/index_split_075/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/10/03/there_will_be_peace_when_you_are_done/index_split_077/">
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                  
+                
+                
+  <div class="disqus" style="width:100%">
+    <div id="disqus_thread"></div>
+    <script>
+      Fluid.utils.waitElementVisible('disqus_thread', function() {
+        Fluid.utils.createCssLink('https://cdn.jsdelivr.net/npm/disqusjs@1.0/dist/disqusjs.css');
+        Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/disqusjs@1.0/dist/disqus.js', function () {
+          new DisqusJS({
+            shortname: 'fluid',
+            apikey: ''
+          });
+        });
+      });
+    </script>
+    <noscript>Please enable JavaScript to view the
+      <a target="_blank" href="https://disqus.com/?ref_noscript" rel="nofollow noopener noopener">comments powered by Disqus.</a>
+    </noscript>
+  </div>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+</body>
+</html>

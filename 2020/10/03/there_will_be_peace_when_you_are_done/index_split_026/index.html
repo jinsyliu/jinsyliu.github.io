@@ -1,0 +1,521 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  
+    <meta name="description" content="">
+  
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+  <title>Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Liu Keqin</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-10-03 02:12" pubdate>
+        2020年10月3日 凌晨
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.3k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      46
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none"></h1>
+            
+            <div class="markdown-body">
+              <?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>There’ll Be Peace When You Are Done</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+<link rel="stylesheet" type="text/css" href="page_styles.css">
+</head>
+  <body class="calibre">
+<p id="filepos179802" class="calibre_">
+<a href="index_split_006.html#filepos9784">EMERSON LOPEZ ODANGO</a>
+</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_1">When I first watched “Weekend at Bobby’s,” what struck me the most about this monster-of-the-week episode was that it featured a Japanese monster—an ōkami . In the six seasons of Supernatural that had aired by then, this was the first time I noticed that there was a narrative focus on someone—or something—from my side of the Pacific Ocean. After following a bunch of white dudes traveling across the continental United States all these years, this was intriguing. Season 6, even more so than the ones before, brought to our attention that there really are other monsters out there in the world beyond the places that had already been shown to us in Supernatural .</p><p class="calibre_1">Many of us already know that intimately well. I grew up in the United States listening to my elders’ stories about their lives in the Philippines and their encounters with the aswang, the vampire-like witches that feed on the unborn or the dead, or the sigbin, the monster that appears as a large white dog knocking on your door. They tell these stories as truth, as lived experiences. As a child, I took comfort in knowing that those monsters were not here now, because they roamed the Philippines, and my family and I were in the United States. My parents would usually tell stories of the distant past when they were children, when they had to look out for the mermaid-like siyokoy when they played in rivers. I doubt any Filipino parent in America has told their child to watch out for such things when swimming at the beach; we were more concerned with jellyfish and stomach cramps. As a kid, I reminded myself of the fact that we were swimming in the Atlantic Ocean, half a world away from the Pacific waters that seeped into the places where siyokoy would roam. There was comfort in knowing that however hair-raising my elders’ stories were, those monsters weren’t here now.</p><p class="calibre_1">And then, when I was 18, I read American Gods by Neil Gaiman.</p><p class="calibre_1">And then I started watching Supernatural.</p><p class="calibre_1">My world has not been the same since.</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_"><img src="images/00066.jpg" srcset="/img/loading.gif" class="calibre_24">
+</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_1">By the time “Weekend at Bobby’s” aired in 2010, I’d had a couple of years to sit with the truth bombs from American Gods. The deities and monsters from the Old Countries were here with us in the new land—well, “new” to us as immigrants over the span of America’s lifetime—because we feed them, call out to them, hide from them, and remember them. They were part of the balance of new hopes and old fears. Supernatural had woven that narrative thread into the larger show mythology, both prior to “Weekend at Bobby’s” (e.g., Hold Nickar in “A Very Supernatural Christmas” in season 3 and all the gods present in “Hammer of the Gods” in season 5) as well as after (e.g., Prometheus in “Remember the Titans” in season 8). Thus, by the time I watched “Weekend at Bobby’s,” I didn’t think it was entirely unexpected that our protagonists would fight a Japanese monster that is rarely seen outside of Japan. Maybe the ōkami have always roamed the American Midwest, and it just so happened that Bobby and Rufus crossed paths with one—and finished the job with a woodchipper.</p><p class="calibre_1">That episode, however, was the start of a flood of questions for me. How does Supernatural present the Other (i.e., anyone or anything deemed by the majority as “different”)? It was interesting that the monster of the week was from a place and culture far away from Wisconsin—but what does “interesting” mean here? Was the ōkami a tokenized occurrence? But hasn’t Supernatural been doing this all along? Is this TV status quo for serialized shows featuring the X-of-the-week-along-with-overarching-mythology pattern? These questions made me rethink what I had watched before, and framed what I watched later.</p><p class="calibre_1">“Wendigo” from season 1, for example, was an episode that I took at face value when I watched it in 2005. “Cool,” I thought. “Here is a monster from the Native American world, which is not usually seen on TV.” As a budding linguist interested in cultural anthropology, I was fascinated to hear Dean talk about Anasazi symbols for protection and Sam talk about the Cree language etymology of wendigo. In only the second episode of the series, we established that our boys would be dealing with more than just ghosts—they would be going head-to-head with monsters from various cultures that have walked this landscape longer than we can imagine.</p><p class="calibre_1">Fast-forward to 2019, when “Don’t Go in the Woods” from season 14 aired. In a season full of stand-out episodes—“Prophet and Loss” and “Lebanon” are at the top of my list—this one stood out because of its contrast to “Wendigo,” in that in this later episode, the Native world takes center stage in nuanced ways. The story is about a father—Sheriff Mason Romero (masterfully played by Native actor Adam Beach)—and his son Tom, and how ghosts of the past catch up with the next generations. These are themes we’ve seen for years with Dean, Sam, and their father John, and heightened especially in season 14 with Dean, Sam, and Cas raising Lucifer’s son, Jack. What struck me the most was that this episode was crafted in a way that allowed the Native story to exist on its own, unlike in the earlier episode “Wendigo,” yet with thematic ties to the larger Supernatural mythology: A father trying to protect his son by lying to him, which ultimately could result in dire consequences. A son going through the challenges of navigating the world of divorced parents, as well as the spectrum of the worlds within and outside of his tribe. A man’s memory of childhood monster stories coming back to harm his own child.</p><p class="calibre_1">“Don’t Go in the Woods” was one of the most impactful Supernatural chapters regarding the show’s construction of modern Indigeneity. Yes, the tokenization is still there, especially given that this was a monster-of-the-week episode. I also wonder about the creative choice to focus on a kohonta, which appears to be a concept created for this episode as opposed to being based on a specific Native belief, and the fact that Sheriff Romero’s tribe is not identified by name. I would like to think that this suppression (erasure?) of specific Native identity allowed for the father-son dynamic to take center stage. To that end, it did. However, we also see the complexity of modern Indigenous life, where the “exotic” aspects of an unnamed tribe’s past have direct impacts on the “mundane” problems of a divorced father scolding his angst-ridden teenage son for not studying.</p><p class="calibre_1">We have seen Native story lines, characters (and Native actors cast as those characters), words, and symbols appear from time to time on Supernatural. “Don’t Go in the Woods” went a long way to show us that the monsters we fight—whether they are supernatural cursed cannibals or the small-yet-accreted decisions we make to deceive those we love for their protection—are common to us all. More importantly, though, we need to see that being Native is mundane and exceptional at the same time. I needed to see it, because as a Filipino who hasn’t seen Dean fight an aswang (yet!) or heard Sam pronounce some Tagalog words as part of his research (yet!), I nonetheless see myself in the journeys that Supernatural has taken us on, most especially in the growth of how the Native story gets to tell itself. These stories have legs, because they have walked miles and miles for generations, and they have many places to go yet.</p><p class="calibre_1">That intersection of the mundane/exceptional/supernatural took a similar turn with “Into the Mystic” in season 11. My initial draw to that episode was that there was another American Gods–like angle of a monster of the Old Country finding its way to the New World. After eleven years, of course the Winchesters would tangle with a banshee! What was surprising was meeting the kick-ass deaf hunter, Eileen Leahy. Again, as a linguist, my eye/ear was attuned to how American Sign Language (ASL) would be featured throughout the episode. Oh yes, we all remember that embarrassing—yet supremely awesome—scene of Sam doing his best to sign “thank you” to Eileen, and being schooled in the most chill way possible. A deaf hunter? Why not?! How cool! Again, as with “Wendigo,” I remember enjoying the episode at face value. It brought in new “exotic” elements, such as seeing ASL dialogue, which didn’t have a precedent on Supernatural (or most other shows, for that matter).</p><p class="calibre_1">But with a show that has fifteen years of stories to tell, I was compelled to reread certain chapters to gain deeper understandings of that fictitious world, and thus our own real world. This rereading of Supernatural happened a few months ago, during my first semester back at graduate school. After finishing my PhD in linguistics and working in the educational nonprofit sector for a few years, I knew that my passion lay in helping people through language, and I started my journey in speech-language pathology. I co-facilitated an event in which we brought students and faculty together to talk about how we see populations, topics, and ideas connected to our professional practice represented in our favorite popular media, such as TV and movies.</p><p class="calibre_1">One of our faculty members shared the trailer for Still Alice (the 2014 movie about early-onset Alzheimer’s disease) because she works with adult communities. I reflected to the group that it was important to discuss such examples because neurodegenerative diseases do not only affect people we consider elderly; they can affect those who are relatively young and healthy. I then summarized for them the Supernatural episode “Regarding Dean” from season 12, in which we see Dean essentially go through acute and rapid dementia. I can’t imagine what Jensen Ackles had to channel in order to go through that heartbreaking mirror scene. How is it possible for someone like Dean Winchester to be defeated by dementia? How could Sam watch his brother fade away like that? And how could Supernatural throw us such a sucker punch of a plot thread even after twelve years?</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_"><img src="images/00076.jpg" srcset="/img/loading.gif" class="calibre_15">
+</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_1">Reflecting on those scenes made me realize that the representation of people with disabilities—the intentional crafting of those stories—has been long running on Supernatural. Throughout season 5, I had never thought about Bobby being a person with a disability after he was injured at the start of that season. It was “easy” for me, as someone who has never used a wheelchair, to focus only on Bobby as the badass hunter, just without his ability to walk. In retrospect, I see that the very fact that he is in a wheelchair is a crucial element in his character development. It is not “Bobby (in a wheelchair).” Being in a wheelchair is a part of who Bobby is, and how he grows; his disability shouldn’t be ignored. I’m sure there was someone out there who watched season 5 Bobby and thought, “That’s me!”</p><p class="calibre_1">At my school event, I also reflected on how Castiel is portrayed in many ways like a person who has challenges with pragmatics and social cues, which is something relatable to many fans. In various on-screen moments, his challenges are couched in humor (e.g., “I don’t understand that reference”). In real life, people who have friends and family members who are considered, for example, on the autism spectrum sometimes share similar anecdotes. Many fans can relate to Castiel’s experience, or Abed on Community, or many others because art does imitate life to some degree. Castiel’s entire character arc of his developing humanity provides glimpses into the real challenges of others in our communities, while also making it clear that Castiel is a hero. Supernatural has helped me reflect more deeply about my professional service to others in ways I never could have predicted when I first watched the pilot that night on September 13, 2005.</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_"><img src="images/00086.jpg" srcset="/img/loading.gif" class="calibre_15">
+</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_1">It has been difficult preparing for the end of Supernatural for many reasons—the foremost being that we do not want to say goodbye to this wild car ride in the Impala. There are so many more stories to tell, so many more monsters to encounter and defeat, so many more voices with something to say (or sign) in their own words. I take comfort knowing that I can be a part of sharing those words: geeking out with classmates, imagining worlds with cousins in which our Filipino monsters and heroes take the stage, or starting conversations about topics like dementia because I can play a clip about Dean that says more than a thousand words. Supernatural has given us a fifteen-year foundation to continue fighting against the monsters¹—whether corporeal bullies or intangible repressions of our identities, from the Old World or in our emerging landscapes—and to do so in the armor of our own design.</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_"><img src="images/00066.jpg" srcset="/img/loading.gif" class="calibre_24">
+</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_1"><span class="italic">Emerson would like to thank Judia Griner for the crucial feedback.</span></p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_1">1. Oh, and of course there’s my own head canon in which Dean and Sam had probably stopped by some Filipino turo-turo restaurant to get food (Dean’s favorite is the adobong baboy) during a long road trip and somehow they encountered an aswang and Sam did some research in which he pronounced aswang perfectly and Dean chopped off the aswang’s head right before its long, undulating tongue was about to attack an innocent victim. It took place in, let’s say, season 13 when they road-tripped it to San Francisco. Totally happened, totoo ang lahat.</p><div class="mbp_pagebreak" id="calibre_pb_28"></div>
+</body></html>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/10/03/there_will_be_peace_when_you_are_done/index_split_025/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/10/03/there_will_be_peace_when_you_are_done/index_split_027/">
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                  
+                
+                
+  <div class="disqus" style="width:100%">
+    <div id="disqus_thread"></div>
+    <script>
+      Fluid.utils.waitElementVisible('disqus_thread', function() {
+        Fluid.utils.createCssLink('https://cdn.jsdelivr.net/npm/disqusjs@1.0/dist/disqusjs.css');
+        Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/disqusjs@1.0/dist/disqus.js', function () {
+          new DisqusJS({
+            shortname: 'fluid',
+            apikey: ''
+          });
+        });
+      });
+    </script>
+    <noscript>Please enable JavaScript to view the
+      <a target="_blank" href="https://disqus.com/?ref_noscript" rel="nofollow noopener noopener">comments powered by Disqus.</a>
+    </noscript>
+  </div>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+</body>
+</html>

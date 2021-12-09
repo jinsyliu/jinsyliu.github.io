@@ -1,0 +1,520 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  
+    <meta name="description" content="">
+  
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+  <title>Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Liu Keqin</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-10-03 02:12" pubdate>
+        2020年10月3日 凌晨
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      3.1k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      61
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none"></h1>
+            
+            <div class="markdown-body">
+              <?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>There’ll Be Peace When You Are Done</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+<link rel="stylesheet" type="text/css" href="page_styles.css">
+</head>
+  <body class="calibre">
+<p id="filepos538955" class="calibre_">
+<a href="index_split_006.html#filepos9784">APRIL VIAN</a>
+</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_1">Let me tell you a story.</p><p class="calibre_1">My husband introduced me to Supernatural five years ago. It began innocently enough, something we could watch together. I was hesitant at first, as it wasn’t my typical genre. A week later I was wrapping up the first season. My love for the show was unexpected and initially embarrassing, and I had no reason to give when someone asked why I liked it.</p><p class="calibre_1">I caught up quickly and fell into the fandom slowly. As I caught up to the current season, I began to like fan pages and started to follow the actors on social media, then I eventually found GISHWHES, the global fandom charity scavenger hunt organized by Supernatural actor Misha Collins. I remained a loyal fan, tuning in weekly; I supported the causes of the actors and wore the shirts and the jewelry. Friendships were made and strengthened. However, I still couldn’t quite explain my fascination with this show. It was more than just the story, more than the actors, something I couldn’t quite put my finger on . . . something I thought but couldn’t quite say.</p><p class="calibre_1">In 2017, I went to my first Supernatural convention, and I can now point to the reasons I am fascinated by the show. I have hundreds of them. With every Q&amp;A, every photo, every song, I learned something, felt something change. Just a few days before the convention, I would’ve been embarrassed to say that a fan convention had altered me in any way, and I would’ve been scared to write. I had the opportunity to listen to some amazing people and experienced a great deal in such a short time. The lessons did not stop after the convention, and I continue to look back at that weekend for inspiration, for hope, and for friendship.</p><p class="calibre_1">As I sit down to write this, less than two weeks afterward, the con feels like a dream, and I stare at the photos in disbelief. I don’t know how long this will last. There is every possibility that by the end of the week, the routine of work and kids and dinner and chores will take over and the magic and the peace that I have felt since attending will fade. But I hope not. I sincerely hope that the lessons I learned during that time stick with me and that I will recall the words and the stories, not only of the actors and the musicians but also of the other members of the SPNFamily, and that I will be able to maintain this perspective and this feeling.</p><p class="calibre_1">I have heard a lot about post-con depression, but that’s not what I feel. I feel exhilarated and renewed, and I want to keep it. Like a lot of the Supernatural Family, I suffer from anxiety. Generally I shy away from big crowds and strangers; I keep physical contact limited to those who are closest to me. I don’t talk to people I don’t know; I get nervous in lines or even walking in front of people. I would take a failing grade before speaking in front of a class. At the con, I spent three days surrounded by large crowds of strangers, a large number of whom felt the need to hug me. I didn’t shy away from it. I walked down the aisles without a second thought of how I looked or whether I would trip. I bought more photo ops and have stared at them in wonder. I don’t like to be touched, especially by strangers, but there I am in the middle of a group hug with one of my best friends, along with Mark Sheppard (who played Crowley) and Misha.</p><p class="calibre_1">My friend Jackie and I began our journey in the middle of the night, arriving at our hotel to room with two strangers already there and asleep. With no other choice, I crawled into bed with a total stranger at 1:00 in the morning and hoped for the best. This would be the first of many opportunities to conquer anxiety, to take a chance.</p><p class="calibre_1">Bright and early Friday morning, Jackie and I were expectedly giddy with anticipation for what lay ahead. Rich Speight and Rob Benedict came out to kick off the weekend. The first song I recall hearing was “Wagon Wheel.” This has been a longtime favorite in my family—one we sing at every bonfire and get-together. At that moment I felt at home and experienced an odd connection to our host for the weekend. The next day, Rob and Jason Manns sang “Hallelujah,” another favorite. At this time, I didn’t understand these connections, but the understanding would come. I found myself impulsively buying a photo op with Rob. I wasn’t really sure why, but I felt like I had to meet him. Rob was our first photo op. We made it through mostly in control and with the expected jokes and posts about hugging “God.”</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_"><img src="images/00042.jpg" srcset="/img/loading.gif" class="calibre_44">
+</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_1">As the weekend progressed, I found myself talking to strangers. I dressed as a gypsy and wore more makeup than I have since high school. I spoke with celebrities like they were friends. Aside from overcoming deep-seated fears and social anxieties, I found myself being inspired to be kinder, to take better care of myself, to love myself, and to actually be myself. Maybe I even found myself during that weekend.</p><p class="calibre_1">By Sunday, I decided I needed a Louden Swain album, and again, I acted on impulse and purchased Saturday Night Special. (I feel the need to reiterate here that this is all very out of the ordinary for me. I don’t follow impulses like that, particularly ones that cost money.) I had kept it together, mostly, through all the photo ops, karaoke, even a casual run-in with Rachel Miner (who plays Meg). My composure cracked with my next impulsive decision to have the album signed by Rob Benedict and the rest of the band. I was able to conjure up an appropriate and clichéd response to, “Hey, how are you?” but that was it. Every question and comment I had been thinking of in line suddenly vanished when the opportunity was presented. I went back to my seat still giddy, if not a little puzzled by my reaction to an actor I had already met and had been confident I could speak to. I’m a pretty controlled person for the most part, so my unexpected reactions and decisions were way out of character for me.</p><p class="calibre_1">The rest of Sunday went by in a blur of laughter and tears. The sadness and feeling of leaving home as we left the hotel was unexpected. We said our goodbyes and the sleeping strangers we met Thursday night had become sisters. On the way home, we played Saturday Night Special to keep the mood going. We listened to every song. I found that I really enjoyed Louden Swain, that the lyrics made sense to me in a way that I couldn’t explain. I marveled at the brain that could write something as potent as “She Waits” and as fun as “Eskimo” . . . the words strung together in such a unique way that spoke to me so clearly.</p><p class="calibre_1">I could go on for days about what I’ve learned and how I changed, but perhaps the biggest change and lesson occurred after I returned. And that is where I truly need to begin. This is where I begin to feel silly. I am no longer embarrassed by my fandom. I’ve met far too many amazing, educated, and talented people to be ashamed at this point. However, events that have unfolded since I have returned home have baffled me. (Before going forward, it is important to understand that I am a scientist at heart and in mind. I have always processed the world differently than others. I analyze everything and everyone; I identify the function of each behavior that I observe. I truly believe that everything happens for a reason and one of my favorite pastimes is discovering what that reason is.) I wasn’t expecting the “why” in this case to be quite so big or bordering on magical.</p><p class="calibre_1">Recounting this experience is unnerving.</p><p class="calibre_1">Monday, I had to return to work. I wasn’t ready for the weekend to be over, absolutely not ready for that feeling of acceptance and excitement to go away. I had discovered that I enjoyed feeling that carefree, taking chances and making new friends. I made a conscious decision to be more myself and to like myself. I drive a lot for work, spending hours a day in the car by myself, so I brought the CD for company in an effort to prolong my post-con buzz. Midway through my day, “She Waits” came on and I found myself sobbing in the car. This was unexpected. Was this part of the post-con crash? What was wrong with me?</p><p class="calibre_1">I listened to it again. In that moment, I realized that Rob had put into words what I had been carrying in my heart for thirty years. The difference here was it had been my mother who left, and I was the one who waited. My parents divorced when I was six years old and my younger brother and I remained with my father. One of the reasons I related to the Winchesters was that we were all raised by a single father during a time when that was rare. From that time on, my mother was in and out of my life. I waited for phone calls, for visits, for some kind of explanation. She would be around for weeks at a time, and then without warning I would find myself waiting for her to show up for a birthday party or promised visit. Eventually I convinced myself that I wasn’t waiting anymore, that I didn’t really care. For years I was angry about this, but until I heard Rob’s words, I had never cried about it, never admitted that I had ever been sad or disappointed about it. Rob’s words reflected the sadness I had never acknowledged. This realization hit me hard as I sat in my car. For the first time I realized that I had waited, had never really stopped waiting, for my mother to return, to have a mom.</p><p class="calibre_1">I only know as much of Rob’s story as he has shared publicly at concerts, so I won’t claim to know his feelings in any way, but still I related to that song. I wondered if perhaps this was why I was drawn to him over the weekend, why I impulsively bought the photo op and the album. Maybe I was just meant to find this band and hear that song.</p><p class="calibre_1">I listened to “She Waits” over and over until I could listen without crying. I discussed the song, my experiences, my unexplained choices at the con with Jackie and my husband. I wanted desperately to share the song with my mother. My relationship with her really hadn’t improved in adulthood. Our communication was sporadic and visits were sparse. Becoming a mother myself had increased my resentment, making it more difficult to understand why she had left. While I had forgiven her, I didn’t understand her. When I was in my early thirties, my mother left a longterm toxic relationship and moved to the state my brother and I resided in. For the past four years my mother had been living within a couple miles of me. We spoke often, celebrated holidays together, but we had never talked about the past, about the missing time. I had forgiven her long ago. Age, maturity, and my career in mental health had given me insight, and I hadn’t knowingly harbored any anger or resentment for quite some time. Just the thought of bringing up these emotions with my mother terrified me. I had put it off, tucked it away, assuming that bringing it up would just result in unnecessary pain for both of us. Until I had heard that song, I’m not sure I had even ever acknowledged that I was still sad, that I had waited, for years, and was even still waiting, though this time to see whether she’d leave again. This realization was scary, to say the least. I’m an adult, married with children. I’m well educated with a graduate degree in psychology. It didn’t seem possible that a song, a convention, a television show of all things, could set off this chain, but here I was. I spent the rest of the week listening to the album in its entirety and worked out how to begin a conversation thirty years in the making.</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_"><img src="images/00052.jpg" srcset="/img/loading.gif" class="calibre_45">
+</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_"><span class="italic">Fans light up the ballroom in support of Rob Benedict during “She Waits.”</span></p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_1">On the Friday after the convention, I texted my mother. I summed up my weekend and told her I had heard a song, acknowledged my part in our emotional distance, and the wall I had put between us, and asked if she wanted to talk. I shouldn’t have been surprised by her swift and enthusiastic “yes.” The next day, my mother came to my home for coffee and a conversation. I explained the best I could what I experienced at the convention, the chain of events that culminated with me crying in my car. I admitted that I had waited, that I had been sad. I told her how disappointed I was when I waited and she didn’t show. That now I found it hard to count on her, to trust her word—that I was still waiting for her to leave again. She understood what I needed to say. She understood my experience and encouraged me to go to another convention to continue to discover myself in this way, surrounded by this newfound support of the SPNFamily.</p><p class="calibre_1">I played her the song and we both cried. She apologized again and again. The album continued to play as we spoke. She shared with me her own history and troubles. We all have our own demons to fight and some of us are better equipped than others. My mother shared with me where she had come from, the demons that followed her into motherhood. She acknowledged that for a long time, she couldn’t always beat them, but she had always loved us. We talked about my children, about going forward. At the end of it, there was a sense of peace and relief that we hadn’t felt between us since I was a child. This conversation had been hanging over every interaction since she had returned to my life. Just like that, it had started mending; this deep wound I hadn’t even acknowledged out loud had healed. I had a mother again.</p><p class="calibre_1">Maybe the reason some things happen is because there is a higher power in charge and all this was part of a larger plan. Perhaps my sudden interest in Rob Benedict and Louden Swain and my impulsive purchases of photos, albums, and kazoos were meant to be, so that I could hear that song and get to this place. It took a whole television show, an entire weekend, for a song. Perhaps spending three days in an environment where I felt loved and accepted, where I could be myself for the first time ever, had relaxed me enough to the point I was finally open to this realization that had been lurking under the surface all along. Or just maybe there is a little magic in this world after all. I like to think that this was meant to happen, that this is just one lesson that I have learned and will learn from my involvement with this fandom.</p><p class="calibre_1">As I write this, the day after meeting with my mother, it has been less than two weeks since I returned from my first con, and I have nine months and four days until my next. I look forward to what I still have to learn and discover. I can’t wait to soak in the energy and love that was so prevalent throughout the convention that it managed to follow me home. I won’t pretend to know any of the actors well enough to be familiar with their stories or their thoughts. But I owe Rob and the other members of Louden Swain a debt of gratitude that cannot be repaid. I truly love each song I’ve heard, and I will purchase more albums and more photos, and perhaps the next time, at the very least, I will be able to manage a thankyou when I go through the autograph line. I found so much inspiration in my time at the convention. I truly believe that the words of all of the actors came together to help me find a place where I had the courage and confidence to move forward.</p><p class="calibre_1">There are some aspects of my life that will remain unchanged. I still have to go to work, and wash the dishes . . . and my children still bicker, although they now also have mastered the kazoo solo. There are still problems to fix. But the undercurrent that carries me through my days has changed. My life no longer feels permeated by anxiety and sadness, by constant feelings of inadequacy. Instead, the undercurrent is calm and supportive, even peaceful. It seems that this conversation with my mother was at the root of much of my anxiety. And from here I am free to move on further than I ever have before. It remains unbelievable to me that all of this came from a television show, and that I am part of a fandom that can create this type of environment, this type of change in an individual. The scientist in me wants to delve into this more, to see how permanent these changes are, to find other stories, to find the sense and the “why” of all of it.</p><p class="calibre_1">I’m sure it would be fascinating research. For now, though, in the interest of a little girl who waited long enough, I’ll just accept the magic.</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_"><img src="images/00062.jpg" srcset="/img/loading.gif" class="calibre_46">
+</p><div class="mbp_pagebreak" id="calibre_pb_80"></div>
+</body></html>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/10/03/there_will_be_peace_when_you_are_done/index_split_077/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/10/03/there_will_be_peace_when_you_are_done/index_split_079/">
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                  
+                
+                
+  <div class="disqus" style="width:100%">
+    <div id="disqus_thread"></div>
+    <script>
+      Fluid.utils.waitElementVisible('disqus_thread', function() {
+        Fluid.utils.createCssLink('https://cdn.jsdelivr.net/npm/disqusjs@1.0/dist/disqusjs.css');
+        Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/disqusjs@1.0/dist/disqus.js', function () {
+          new DisqusJS({
+            shortname: 'fluid',
+            apikey: ''
+          });
+        });
+      });
+    </script>
+    <noscript>Please enable JavaScript to view the
+      <a target="_blank" href="https://disqus.com/?ref_noscript" rel="nofollow noopener noopener">comments powered by Disqus.</a>
+    </noscript>
+  </div>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+</body>
+</html>

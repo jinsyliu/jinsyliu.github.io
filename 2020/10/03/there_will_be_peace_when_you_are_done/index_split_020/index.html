@@ -1,0 +1,518 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  
+    <meta name="description" content="">
+  
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+  <title>Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Liu Keqin</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-10-03 02:12" pubdate>
+        2020年10月3日 凌晨
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      40
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none"></h1>
+            
+            <div class="markdown-body">
+              <?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>There’ll Be Peace When You Are Done</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+<link rel="stylesheet" type="text/css" href="page_styles.css">
+</head>
+  <body class="calibre">
+<p id="filepos143560" class="calibre_">
+<a href="index_split_006.html#filepos9784">LEE RUMOHR</a>
+</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_1">Ihave only filmed one episode of Supernatural , but the experience had an impact on me, and from what I understand, it also had an impact on the fans. The episode “The Chitters,” directed by Eduardo Sánchez, focused on my character, Jesse, his search for the brother he lost as a child and the healing that has eluded him, and his relationship with his partner, César (played by Hugo Ateo). When Hugo and I were on set the very first day, and even during the audition in the room, Eduardo was very nice, and while it might be kind of a cliché to say, he was easy to work with. He gave us free range to do whatever we wanted, which goes along with his personality. Aside from his intimidating tallness, he’s a quiet, gentle dude. Of course, being tall is not uncommon on that set!</p><p class="calibre_1"><span class="italic">Supernatural opened some doors for me professionally, and it definitely attracted some new fans, which is wonderful. I was able to understand how some of the fans were feeling about the episode and my character when they reached out to me personally, which was really nice—and I was able to contact every single person who reached out. I’m not a big celebrity, so I was able to do that. It meant a lot to me that I was able to participate in an episode that had such an impact on a lot of people’s lives, and I hope to take on more roles that speak on important issues.</span></p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_"><img src="images/00025.jpg" srcset="/img/loading.gif" class="calibre_20">
+</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_1">But being a part of Supernatural, just being on the set, was overwhelming at first. At that point, I’d been an actor for more than twenty years, and I’d been on numerous sets, but you don’t get that initial feeling of overwhelming love and welcoming on too many sets. It’s hard to form a family-based level of trust and respect on episodic television because things change so fast that it’s often difficult to form those bonds. Supernatural was at that time eleven seasons in, and you got a good sense of trust on that set. They allowed you to be you. Everybody is just normal, and they appreciate the next person beside them, whoever that is. And amazingly, there wasn’t this feeling of hierarchy, of somebody trying to take the next step on the ladder. Everybody was equal, and that was really nice to see and feel and hear.</p><p class="calibre_1">Jared and Jensen are two strong moving forces on that show. I think, as leads on a TV show, they take the weight on their shoulders for everyone else. They are the faces of the show. And those two guys really are like brothers. I had some great conversations with them, some heart-to-hearts. They told me that they lean on each other. If one of them is feeling off that day and/or week for whatever reason, the other one kicks in and helps out. When you’re on set, you see that and you feel it. You can’t have a successful show without that, but they also treat the crew with equal respect. They don’t think they’re better than anybody else, and that trickles all the way through the whole show. Everybody is the same. It’s very nice to feel that, and I was truly blessed to have that experience. They’ve formed a big family bond there.</p><p class="calibre_1">As a guest actor, the challenge was to make sure that I gained the trust of all of them, not just the actors but also the crew and the network, so that they could feel confident that their choice in picking me for this character was the right one. I hope they were able to get that from me; it felt like they did. Eduardo allowed Hugo and me to experiment and go with the flow. He trusted us. When you’re a guest star on a long-running show, you do get nervous. At least I do, because I want to impress them. I felt like I needed to pick up my game to a degree, to be on their level of professionalism. I have to know my character, and the last thing I’d want to do is screw up my lines. I know it’s normal for actors to mess up, especially with the amount of dialogue that I had. Two of the many scenes I had were four minutes long—so I felt the pressure.</p><p class="calibre_1">The first scene we shot was the one inside the caves, where all the bodies were and where my character’s brother’s body was found. I don’t know if it was strategically planned that they wanted to get the hardest scene done first, but I’m glad that was the first scene up for me, because it got the most challenging emotional scene out of the way. I think it allowed me to get the most difficult part of the episode for my character done, and I also got to show them that they cast the right person for this part—that I had this. From there, I could breathe a little more.</p><p class="calibre_1">I know a lot of people reacted strongly to that emotional scene. I think that with episodic television, as opposed to movies, it can be hard for actors to find a connection with their characters in such a short amount of time, because it’s such a quick take. And you can tell when someone is not connecting and not truly emotionally feeling it. I had to go to a place that I didn’t really want to for that scene. My actual brother is still alive, and he means a lot to me. I had to pretend that he was dead; that’s something you just have to do sometimes as an actor. I purposely didn’t leave the scene, I stayed there while they changed camera lenses or angles or filmed close-ups and so on. I stayed there for the whole scene because I needed to remain in the zone, and they allowed me to be in there. I said, “I’ve got to stay here,” and they were like, “Do what you need to do.” It is a team, a total team effort.</p><p class="calibre_1">I don’t know that much about the overall chemistry and relationships on the show and the characters, but I do know Supernatural has had a strong impact on many people. I think a lot of people have committed their lives to this show because they can somehow relate. It’s about family, about love. I wish I had time to watch it from beginning to end like the true fans have. Those fans are amazing, whether they binge-watched or have been watching from day one, waiting until the next week to watch the next episode. Either way, that’s commitment. And Supernatural has allowed fans to have a relationship with the actors outside of the show, which is part of the legacy. Whether it’s Comic-Cons or conventions or whatever, they have allowed fans to meet them in person and get signatures and photos and make memories. After just one week on the show, I felt a little bit of what it’s like to be part of that family. As an empath, sometimes I feel too much and get overwhelmed with emotion. If someone is hurting, I feel it. So I can totally see how the end of this show is going to feel like, OMG now what am I going to do?</p><p class="calibre_1">That’s why I’m very happy to contribute to this book. It’s almost like another chapter for people and something else for fans to hold on to and read and imagine and sink their teeth into. We all need something to believe in, to inspire us, to pick us up. This show has been that and more for so many people.</p><p class="calibre_1">I admit I do wish that Hugo and I had played a bigger part on the show, and that our characters were more influential in helping the guys out. Our characters did get to retire instead of dying, which a lot of fans were happy about and satisfied with, but they also were sad that Jesse and César didn’t get to come back. We had a good week on the show and made an impact, but deep down I wish we were part of it for longer because it was such a great show to work on. I dreamt a few times that they brought us back and we helped the Winchesters retire. There was a nice parallel between our characters and Sam and Dean, one a hard shell on the outside and soft inside and the other the opposite, and the dream reflected that parallel. I dreamt that Sam and Dean showed up and said, “We need your help. How do we get out of this? How do we retire?” And when I woke up, it felt so real that I had a headache. I was both sweaty and disappointed that it was just a dream. It’s too bad, because I know that a lot of people were wanting a Hunter Husbands spinoff!</p><p class="calibre_1">And that brings me to the most important thing about being on Supernatural: the relationship Hugo and I got to depict.</p><p class="calibre_1">When I auditioned for the role, I had no idea that Jesse was gay. The writers didn’t telegraph that Jesse and César were classified as “different” by our society. Because really, our characters weren’t, and we didn’t play it that way. They were everyday people. The writing allowed us just to be human, something you don’t always see in the way gay characters are written, and that was really nice. I think Hugo and I had a conversation on the very first day while waiting to film the first scene, during which we pieced it together. I’m not sure which one of us said it first: “I think we’re a couple.” That didn’t change my approach at all. I played Jesse the way I’d play anyone else—without trying to change the relationship dynamic or language to match a specific perception of how a gay person would act. How does a gay person act anyway?</p><p class="calibre_1">It’s unfortunate that being gay is still such a topic of speculation and judgment, a lot of which I think is fear based. I’m glad the network, the show, the writers, and Jared and Jensen didn’t focus so much on that, because it’s a secondary plotline outside of what the episode is really about (which is Jesse and his revenge for what happened to his brother twenty-seven years ago). I think the writers did a phenomenal job keeping it as real as possible, of not making the story solely about the characters’ sexuality. And the network did a great job with how they introduced our two characters.</p><p class="calibre_1">The casting of Hugo and me together couldn’t have been any more perfect. When I met Hugo, we just hit it off. It’s one of those things—obviously, there’s a reason why certain people come into your life. Some relationships are just meant to be. When you know, you know.</p><p class="calibre_1">I know that there was a lot of appreciation and gratitude from the gay and lesbian community for bringing in Jesse and César. Unfortunately, there was some negative feedback too, but overall the love and positivity for these two characters overpowered the negativity. I’m glad that in the episode they made Hugo and my characters’ love so matter-of-fact. It was Hugo supporting Jesse, as any loving person in a relationship would do. I think we can all understand that.</p><p class="calibre_1">Before passing judgment, my dad always said, “Lee, you always seek to understand.”</p><p class="calibre_1">And that goes a long way.</p><div class="mbp_pagebreak" id="calibre_pb_22"></div>
+</body></html>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/10/03/there_will_be_peace_when_you_are_done/index_split_018/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/10/03/there_will_be_peace_when_you_are_done/index_split_021/">
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                  
+                
+                
+  <div class="disqus" style="width:100%">
+    <div id="disqus_thread"></div>
+    <script>
+      Fluid.utils.waitElementVisible('disqus_thread', function() {
+        Fluid.utils.createCssLink('https://cdn.jsdelivr.net/npm/disqusjs@1.0/dist/disqusjs.css');
+        Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/disqusjs@1.0/dist/disqus.js', function () {
+          new DisqusJS({
+            shortname: 'fluid',
+            apikey: ''
+          });
+        });
+      });
+    </script>
+    <noscript>Please enable JavaScript to view the
+      <a target="_blank" href="https://disqus.com/?ref_noscript" rel="nofollow noopener noopener">comments powered by Disqus.</a>
+    </noscript>
+  </div>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,521 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  
+    <meta name="description" content="">
+  
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+  <title>Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Liu Keqin</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-10-03 02:12" pubdate>
+        2020年10月3日 凌晨
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.8k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      55
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none"></h1>
+            
+            <div class="markdown-body">
+              <?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>There’ll Be Peace When You Are Done</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+<link rel="stylesheet" type="text/css" href="page_styles.css">
+</head>
+  <body class="calibre">
+<p id="filepos405377" class="calibre_">
+<a href="index_split_006.html#filepos9784">MICHAEL BANH</a>
+</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_1">When Supernatural first came into my life, I had no idea it would have such an influence on me.</p><p class="calibre_1">When I was young, I did not have a lot of self-confidence. I struggled with my self-esteem and always looked to my family, friends, and peers to decide what I should like, how I should act, and who I should be. Nothing made me happier than to be accepted in their eyes, because I wanted to be the person everyone liked. If everyone was proud of me, then I should be proud of myself. I felt confident when others put their trust in my abilities to succeed in any given situation. I never wanted to fail anyone because failing meant that I had disappointed those who believed in me; that thought was ingrained into me. I tried not to allow it to overpower my actions or mind-set, but I accepted that truth and told myself it was okay to live my life with that idea.</p><p class="calibre_1">I tried to excel in every possible way when I was growing up. I strove for a perfect track record in my academics, hobbies, and behavior. I had a very outstanding high school career and felt prepared for college. I chose to major in engineering because my family thought I would shine in such a challenging field. It made sense to me because I had a strong love for math and science and felt engineering was a combination of both subjects. I was confident that I’d selected the perfect field of study and was excited to start this new adventure. I had an amazing support system of friends (shout-out to my best friends, Sydney and Miki) and wonderful love from my mom, sister, and stepdad. I was ready to show everyone what I could achieve.</p><p class="calibre_1">It was February of 2012, and I was beginning my transition to my new life as a college freshman. My new best friend, Miki, introduced me to Tumblr as her favorite social media platform and method of procrastination. She inspired me to create my own Tumblr blog so we could follow each other and share the posts we found there. I would casually open the website to see what was there from time to time, but over a couple of weeks, I began to immerse myself in the dashboard where I would like, re-blog, follow, scroll, and repeat. Suddenly, my dashboard was inundated with posts of a television show I did not recognize. I tried to ignore them, but the posts became persistent enough to the point where it was a daily occurrence. All I could gather after a few days of seeing these posts was that it was a sci-fi/horror show about two brothers, and it was obvious that this show had a large presence on Tumblr and a passionate fan base. It finally caught my interest after a few weeks, and I caved. I had to see why this show was so popular.</p><p class="calibre_1">That show was Supernatural.</p><p class="calibre_1"><span class="italic">Supernatural was in its seventh season when I first watched the pilot one lazy Sunday afternoon, and thankfully, seasons 1 through 6 were already on Netflix. It took a while to stick, but I slowly got into the rhythm of watching one episode each day after my classes. When I got back to my dorm room, I would turn off the lights, hop onto my bed with my laptop, and watch what was in store for Sam and Dean. When I finished with homework or studying (or maybe procrastinating, let’s be honest here), Supernatural became my escape from reality and the stress of school and life. Over time, one episode became a few episodes, and I was eager to leave my last class of the day so I could binge as many episodes as I could in one night.</span></p><p class="calibre_1">As I became more consumed, though, I began to wonder why I kept watching the show. I have never liked horror shows or movies. Things like gore, suspense, and jump scares stress me out. However, for some reason, I carried on watching episodes like “Bloody Mary,” “Skin,” and “The Benders” without questioning it. I did not understand it at first. I just assumed it was a television show that would entertain me for forty-five minutes every night. Over time, I began to understand that I was not watching it for the horror aspect. The supernatural beings, lore, and history were still interesting to me, but in the end, I was watching it for Sam and Dean Winchester. It was Sam and Dean’s story and how they interacted with the supernatural world that captivated me.</p><p class="calibre_1">I became invested in the special bond between them—watching their connection grow as they delved deeper into the supernatural. I enjoyed learning more about the brothers’ personalities, the backstory of how they grew up, and how they both complemented and contrasted each other. I loved watching them work together to assemble the clues of their current case, and it made me feel like I was solving the mystery with them.</p><p class="calibre_1">A month after discovering the show, I could already tell I was turning from a casual viewer into an obsessed fan. Supernatural became the main talking point for me, my favorite style of clothing, a daydream fantasy, my phone background, an attitude, and a way of life. My room eventually turned into a shrine for Supernatural. I had posters of Sam and Dean hanging on my wall alongside Supernatural shirts hanging on hooks, DVDs and Blu-Rays framed perfectly alongside textbooks, and any Supernatural merchandise I could find online displayed on every surface in my room. My obsession affected my daily life to the point that when I took an exam, I imagined Sam and Dean over my shoulder silently cheering me on, feeling that they believed in me.</p><p class="calibre_1">This love spurred me into creating a new Tumblr blog, now named @jaredandjensen so I wouldn’t spam my new college friends with my sudden love for Supernatural. This is where I learned how to make GIF files; I’ve posted 2,000+ Supernatural edits to date. I am grateful to say I have 180,000+ followers who love the show just as much as I do. Thanks to this blog, I was also able to find a wonderful online community of new friends. These friends not only shared a mutual love and excitement for the show and were willing to talk to me about Sam and Dean, but they also felt like another family I could talk to about what was happening in my day-to-day life. I am so thankful to all my fandom friends, and I know these friendships will last a lifetime. Supernatural was my happy place, but it somehow became much more than a television show to me.</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_"><img src="images/00066.jpg" srcset="/img/loading.gif" class="calibre_24">
+</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_1"><span class="italic">Supernatural came into my life at a very interesting time. When I first started watching the show, I felt like I had a strong handle on my life. I was doing well in my classes and had a new group of friends to help me deal with the ups and downs of college life. I did not need any strong revelations to change my life. At the time, Supernatural was just the show that gave me joy and became my go-to method of de-stressing, whether it was rewatching old episodes, making new GIF files, or talking to my friends about the most recent episode.</span></p><p class="calibre_1">While college primarily holds happy memories for me, it challenged me not only academically, but emotionally as well. There were moments when I felt like I did not know what to do or that I was wasting my life away and just going through the motions of trying to accomplish something to get it over with. I watched those around me figuring out their future lives while I was still struggling to figure out what to do at that very moment. It got difficult, especially during my senior year, when I started experiencing long bouts of sadness. I started having trouble in my classes, and as a person who achieved straight As in high school, it was difficult to accept anything else in college. When I failed my first physics class, my morale took a hit. I felt so guilty and upset about failing, but I never vocalized how I was feeling because I did not want anyone to worry about me or to burden them with my problems. I also tried applying to multiple engineering internships and positions throughout my undergraduate years, but I came up empty-handed. I eventually just stopped searching because it felt pointless and I did not want to face rejection again, as previous attempts already made me feel discouraged. I did not want my family to know that I had let them down. If anyone ever asked how I was doing, I gave them a generic “I’m okay,” rather than be truthful. I did not know how to deal with this sadness at first, but because of Supernatural, I learned how.</p><p class="calibre_1">I did not have any prominent male role models when I was growing up until I met Sam and Dean. As a man, I greatly identified with Sam and Dean and their struggles from when they were young boys to adult men. There were a lot of expectations for me to be strong and brave because anything otherwise would make me look weak. I was told being successful meant being the best, where achievements were measured in awards, high GPAs, and bragging rights. Anything else meant you were failing. I also had a father who was tough on me, so I felt very critical about myself and never learned how to manage my feelings. However, through Supernatural, I could see Sam and Dean as multifaceted, complex characters who go beyond the social constructs of what men are supposed to be.</p><p class="calibre_1">Both Sam and Dean are strong when they need to be, but they can be vulnerable at times too. They can be merciless when battling the monster of the week, but be gentle with grieving victims and kids. The brothers showed me there is so much more to people than how skilled they are, and that it’s okay to make mistakes and learn from them. They are nothing but kindhearted, selfless, and brave because they only hope to make the world a better and safer place for everyone. They take risks without knowing the outcome to save someone or one another; they bring peace and comfort to those who are hurting, and they try to be courageous in the face of danger. I wanted to be just like Sam and Dean. However, one of the most important lessons I learned from them was how to express myself.</p><p class="calibre_1">In the early seasons of the show, Sam and Dean struggled to open up emotionally, especially with each other. In later seasons, however, you can see Sam and Dean admitting to not being okay, and that was something I needed to hear. Whenever Sam and Dean talked about their emotions, it was almost like I was talking about my own with them. I was relating to what they were experiencing. There were times when they were stressed with the impending doom of the current season, and it felt like it was all too much for them. I saw myself in their shoes and felt the same way. We did not share the same problems—a world in chaos versus final exams—but the words they spoke mirrored what I was thinking. I was able to express myself through these characters, and it was like going to therapy without having to speak a word.</p><p class="calibre_1">As I neared graduation, I felt an immense pressure to succeed. School was demanding more of me, and the pressure of post-college life started weighing on me. I was working two research positions while taking a full course load. I did not understand how anyone could handle so much at once, and it felt like I was messing everything up. I continued to struggle with the school material I was learning and felt conflicted about whether I even made the right choice to pursue engineering. Did I not study enough? Was I smart enough? The self-inflicted pressure stirred up a lot of self-doubt. Everyone around me was prevailing and finding new ventures, so why wasn’t I? I had worked so hard to get here. I was supposed to make everyone proud, but in my mind, I was falling short.</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_"><img src="images/00057.jpg" srcset="/img/loading.gif" class="calibre_41">
+</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_1">By the end of my senior year, I began openly questioning what had led me to this point. What was I doing here? What do I want? Who am I? I felt like my life had no meaning. I talked to my friends and family, and they told me they were proud of me and impressed with what I had accomplished. They gave me words of encouragement, but it never reached my ears.</p><p class="calibre_1">It was the darkest time of my life, but even then, I looked to Sam and Dean to bring me happiness and support, like they always did. I still had Sam and Dean, and I thought about everything they had gone through. They faced the biggest threats like Azazel, Lucifer, Michael, Amara, and Chuck, but every wound, battle, and breakdown only made them stronger. They showed me that even when times were tough, everything could work out in the end. It was inspiring to see people face their demons (sometimes literally) and still get out of bed every day without knowing whether they were going to succeed or fail.</p><p class="calibre_1">One of my favorite moments in the show was in the season 8 finale when Sam goes through the final Trial to close the Gates of Hell. When Dean tells him that the final Trial means the ultimate sacrifice—Sam’s life—Sam does not question it. Sam confesses that his greatest sin is the number of times he let Dean down. He says he cannot let him down again, but Dean convinces him that together, they will figure it out, just like they always do.</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_"><img src="images/00067.jpg" srcset="/img/loading.gif" class="calibre_23">
+</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_1">Sam and Dean continually go through the challenge of feeling hopeless, and their battle against hopelessness is reflected throughout the show. There are moments where both brothers have lost all confidence and feel like the world around them is falling apart, both literally and metaphorically, but they continue to fight and eventually learn to be proud of what they have accomplished. During the season 9 finale, Dean recognizes his and Sam’s achievements by saying he is proud of them both. It is scenes like these that highlight not only how Sam and Dean acknowledge their successes, but also how they accept themselves for who they are. In season 14, specifically in the 300th episode, “Lebanon,” the show focuses on this idea. Sam asks Dean whether he wishes that everything in this lifetime had never happened and they had just lived normal lives. But Dean says he is good with who he is and who Sam is because their lives are their own.</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_"><img src="images/00077.jpg" srcset="/img/loading.gif" class="calibre_42">
+</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_1">Even though I stumbled a few times, I overcame every obstacle and obtained my bachelor’s degree. I realized that I was so hyper-focused on trying to excel in school that I forgot my love for math and science that made me interested in engineering in the first place. I learned that my achievements should stem from within myself and what I am passionate about rather than the satisfaction of others. I was finally able to restart my search for job opportunities with new ambition, and I found success at a job in research and development and am planning on working towards my master’s degree.</p><p class="calibre_1">It took some time, but I eventually realized self-confidence and self-expression were the most important things I could learn from Supernatural. I never stopped to ask myself whether I was proud of myself rather than think of those who would be proud of me, but it was because of Supernatural that I learned how to do that. Supernatural taught me how to believe in myself. It was Supernatural that was there for me when I needed it most. Thanks to the show, I have realized that I am happy with who I am, and I feel confident saying that.</p><p class="calibre_1">This is me, and I am finally able to say that I am so proud of what I have accomplished.</p><div class="mbp_pagebreak" id="calibre_pb_66"></div>
+</body></html>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/10/03/there_will_be_peace_when_you_are_done/index_split_063/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/10/03/there_will_be_peace_when_you_are_done/index_split_065/">
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                  
+                
+                
+  <div class="disqus" style="width:100%">
+    <div id="disqus_thread"></div>
+    <script>
+      Fluid.utils.waitElementVisible('disqus_thread', function() {
+        Fluid.utils.createCssLink('https://cdn.jsdelivr.net/npm/disqusjs@1.0/dist/disqusjs.css');
+        Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/disqusjs@1.0/dist/disqus.js', function () {
+          new DisqusJS({
+            shortname: 'fluid',
+            apikey: ''
+          });
+        });
+      });
+    </script>
+    <noscript>Please enable JavaScript to view the
+      <a target="_blank" href="https://disqus.com/?ref_noscript" rel="nofollow noopener noopener">comments powered by Disqus.</a>
+    </noscript>
+  </div>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+</body>
+</html>

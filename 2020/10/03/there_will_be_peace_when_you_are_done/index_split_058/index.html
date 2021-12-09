@@ -1,0 +1,518 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  
+    <meta name="description" content="">
+  
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+  <title>Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Liu Keqin</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-10-03 02:12" pubdate>
+        2020年10月3日 凌晨
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.8k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      35
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none"></h1>
+            
+            <div class="markdown-body">
+              <?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>There’ll Be Peace When You Are Done</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+<link rel="stylesheet" type="text/css" href="page_styles.css">
+</head>
+  <body class="calibre">
+<p id="filepos378769" class="calibre_">
+<a href="index_split_006.html#filepos9784">DAWN GRAY</a>
+</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_1">Deep breath in. Remember, you can do this. Let it out slowly; step up to the mic. You don’t have to tap it, but you do .</p><p class="calibre_1">Sitting in front of a keyboard, ready to let all that’s in you out . . . it’s kind of like stepping up to the mic and making your own public announcement. There’s some big secret that no one knows about you, and here you are putting it on paper.</p><p class="calibre_1">So, here’s my book, or a fragment of what it might be if someone picked it up off the shelf. The title of this chapter: “Wayward and the Way I Want to Be.” Catchy, right? As awesome as that might be, it’s also scary AF. See, most of you who know me know me as a researcher, a traveler, a writer, and now a screenwriter. But that’s not who I am. That is who I let the world see. But now, it’s time to tell a different story, one about a girl and a show and that one little line.</p><p class="calibre_1">“As long as everyone wears a condom, we’ll be fine.”</p><p class="calibre_1">Wasn’t the one you thought it would be, was it? No, this part of the story isn’t about the boys and the way that Supernatural changed my life the day Dean came strolling into town to look for Sam because “Dad’s on a hunting trip.” Nope, this one is about the women who kicked me in the ass and made me think . . . made me realize that I could do just about anything.</p><p class="calibre_1">We thought she was going to be just another one of those characters who came and went, but she came, and like the hardass she was, she stayed. In season 5, “Dead Men Don’t Wear Plaid,” Sheriff Jody Mills, played by Kim Rhodes, made me feel like I could live through the worst and still come out on top. She had been through so much. She had the heartbreak and the pain, but she moved with confidence . . . even when Crowley was trying to . . . well, I’m still not sure what he was trying to pull because his game was WAY off. From that point on, I think I found a hero.</p><p class="calibre_1">In 2010, when Kim came onto the screen, I was just starting to break out of a place I never thought I would get away from. I had been divorced for four years at that point, single for two, and I hadn’t been able to leave my house in just about that same amount of time. You see, I was diagnosed with agoraphobia. Shocking, I know, especially for those who know me.</p><p class="calibre_1">My hands shake as I type this.</p><p class="calibre_1">The fear of panic attacks that put me out of work just after my youngest turned three, in 2007, kept me locked down. I wasn’t able to go to the store alone or even get gas in my car. I never left my yard except to bring the kids to school, and even then, I still had my youngest so there was a buffer, but that was just not acceptable.</p><p class="calibre_1">Funny enough, I remember sitting down in front of my TV and watching this woman drive up in a cop car, get out, and approach the boys . . . and that was it. I was hooked on Sheriff Jody Mills. The more I learned about her, the more I decided that I needed to take her lead. Being inside all the time, it was just me and my characters (I had already written several novels by then).</p><p class="calibre_1">I was getting out. I was getting away . . . because if Jody Mills could do it, so could I.</p><p class="calibre_1">Wow, writing this is harder than I thought.</p><p class="calibre_1">I still didn’t tell anyone what was going on. My mother was the only one who knew what I was struggling with because she had gone through the same thing when my siblings and I were younger. I remember leaving the grocery store with her so many times after she panicked, leaving behind an entire carriage of food.</p><p class="calibre_1">I didn’t want to live that way. I didn’t want my kids to see me NOT be strong. So I decided to do the most outrageous thing in the world. I took my ex to court. I petitioned the judge to let me leave Massachusetts with my kids, and I moved 258 miles away to the town in Vermont where I had spent a small portion of my childhood.</p><p class="calibre_1">I was a woman, alone with three small children, and I would be damned if I wasn’t going to be the next Jody Mills and get myself out of my head!</p><p class="calibre_1">And I did just that . . . a little bit at a time. I went to school for medical assisting . . . that didn’t work out so well. I went to counseling, which also didn’t work so well because I had developed coping strategies by then that put the doctors to shame. That is, until I met one person who didn’t want to medicate or “shrink” me. She wanted to help me.</p><p class="calibre_1">Every week, she gave me a new game plan, something else to try that got me out of my habits. She even said, “Think like Jody. Think about what she would do as a sheriff to solve the issue. Don’t just avoid it like an unsolved case.”</p><p class="calibre_1">Holy hell! She was a Supernatural fan. The line stuck.</p><p class="calibre_1">For the next three years, I did what I thought Jody would do. I went out and solved the case of “walking around town,” “going to the store without a plan,” “attending the craft show that would never end,” and before I knew it, there were people in my life who were helping me, too. They knew, they got it, and they understood. WOW! I never imagined I would find my Donna Hanscum and she would be exactly like the blonde version! I also became an EMT-Basic. I worked as an administrative assistant, and I was on a morning news broadcast and several local television shows for my novels.</p><p class="calibre_1">Before I knew what hit me, I was moving again. My middle child was diagnosed with autism spectrum disorder (ASD) and our town had nothing to offer him. So it was back to the state I had run away from.</p><p class="calibre_1">And, back to Start.</p><p class="calibre_1">It took me a year after moving to leave my house again. The kids were older, and they were able to go to the bus alone. They were good. I was not. I needed to do something fast. I was losing again. So, what would Jody do? Enter the case of “the medical assistant.”</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_"><img src="images/00017.jpg" srcset="/img/loading.gif" class="calibre_38">
+</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_1">That’s right, I went back to school. Yep, and here I was at square one again.</p><p class="calibre_1">It took nine months of straight As, showing my kids what I could do, and NOT missing a single day. That felt good, but when I finally got a job at one of the area’s largest hospital’s outpatient clinics, it all went downhill. I lost weight. It was a chore to get in the car to leave for work, and three months in, I resigned. In the course of the next few months, my panic attacks caused me to lose sixty pounds and slip into my own little Supernatural universe to survive.</p><p class="calibre_1">I was living life here, but my reality was Sam and Dean. Until the SPNFamily on Twitter showed me, yet again, that I was stronger than my monsters.</p><p class="calibre_1">Jared’s battle with his own mental health was an opening. My new family was my backbone, and once again those words came back to me.</p><p class="calibre_1"><span class="italic">What would Jody Mills do?</span></p><p class="calibre_1">Well, forget that! She would kick it in the ass!</p><p class="calibre_1">So, I did. I started writing screenplays, and I collaborated with another writer to make a movie. We got all the way to just about production schedule and it tanked, but that was okay because I was so ready for the next step.</p><p class="calibre_1">In my ventures, I met a man who would help me accomplish my dreams. Reno was an acting coach, a director, and a producer, and my life seemed to come full circle because you would never guess what show he worked on: The Suite Life of Zack and Cody.</p><p class="calibre_1">The guy worked with KIM RHODES! Tell me that’s not a sign.</p><p class="calibre_1">In all of this sudden mayhem, I started going to conventions, testing my own limits, and getting back into life and just a little bit out of my own reality, which was still Sam and Dean. You can only have those voices in your head for so long before they become something of a staple.</p><p class="calibre_1">The Wayward movement gave me something else to believe in. Family. This family, while at times intense, can be the most amazing and supportive lot you’ll ever encounter. They help me every day to get through.</p><p class="calibre_1">And every day they show me just how much being part of Supernatural can change your life.</p><p class="calibre_1">In 2018, we shot the trailer for my own TV series. The support from the fandom on helping to raise funds for it has been amazing, and we had hoped in the next six months, episode 1 would be a reality. As things go in the industry, the pilot was put on hold and while things for that series haven’t taken off, three more have been put on the table.</p><p class="calibre_1">Late 2019 brought about the release of the Arcane series of books, and hopefully another adventure into production for a web series. It seems my life is on a hurry up and wait setting sometimes, but I wouldn’t change it for the world.</p><p class="calibre_1">There is just one thing I have left to do, besides hug every single one of you should we ever meet. That would be to tell Kim how much she’s kept me going without even knowing she was doing it. To tell her how much her portrayal of the strong, never-give-up, Wayward sister has helped me kick myself in the ass so many times. It’s amazing that I’ve been to so many cons and never had the opportunity, so here it is right now: Kim, should you see this, thank you! From the bottom of my heart, thank you for everything that you’ve done from the time you stepped on set to this very moment. Thank you for being strong, brave, beautiful. Thank you, for being Wayward AF.</p><div class="mbp_pagebreak" id="calibre_pb_60"></div>
+</body></html>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/10/03/there_will_be_peace_when_you_are_done/index_split_057/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/10/03/there_will_be_peace_when_you_are_done/index_split_059/">
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                  
+                
+                
+  <div class="disqus" style="width:100%">
+    <div id="disqus_thread"></div>
+    <script>
+      Fluid.utils.waitElementVisible('disqus_thread', function() {
+        Fluid.utils.createCssLink('https://cdn.jsdelivr.net/npm/disqusjs@1.0/dist/disqusjs.css');
+        Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/disqusjs@1.0/dist/disqus.js', function () {
+          new DisqusJS({
+            shortname: 'fluid',
+            apikey: ''
+          });
+        });
+      });
+    </script>
+    <noscript>Please enable JavaScript to view the
+      <a target="_blank" href="https://disqus.com/?ref_noscript" rel="nofollow noopener noopener">comments powered by Disqus.</a>
+    </noscript>
+  </div>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+</body>
+</html>

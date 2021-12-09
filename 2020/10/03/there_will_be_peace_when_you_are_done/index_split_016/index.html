@@ -1,0 +1,518 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  
+    <meta name="description" content="">
+  
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+  <title>Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Liu Keqin</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-10-03 02:12" pubdate>
+        2020年10月3日 凌晨
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      6.1k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      121
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none"></h1>
+            
+            <div class="markdown-body">
+              <?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>There’ll Be Peace When You Are Done</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+<link rel="stylesheet" type="text/css" href="page_styles.css">
+</head>
+  <body class="calibre">
+<p id="filepos78171" class="calibre_">
+<a href="index_split_006.html#filepos9784">SHOSHANNAH STERN</a>
+</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_1">American Sign Language is my first language. I use it pretty much all the time. Even when I’m not, the fact that it’s my native language is still pretty obvious because of my accent; a lot of people think I’m from Norway. It’s oddly specific, I know.</p><p class="calibre_1">One time, I decided to just go with it. Someone asked, “Are you from Norway?” and I said, “Yeah, sure, I’m Norwegian.” Then they started speaking what seemed like fluent Norwegian.</p><p class="calibre_1">That didn’t really work out.</p><p class="calibre_1">But to be completely forthright, I’ve never liked talking about my accent. Which is probably because, for a very long time, I never liked having one. I’ve always been a perfectionist about certain things. I don’t like doing things if I don’t feel like I’m good at them, and to this day, I still can’t express myself as easily when I speak as I can when I write or sign. In fact, during my college years, I stopped speaking completely. I’d speak to my extended family in the privacy of our home or to complete strangers when I was really drunk. And that was about it. But after college, I decided to do this totally, completely crazy thing: become an actor. And what I like about acting is that often, it’s about doing things that scare you. So I started speaking again. Even though I was asked almost right away about my accent.</p><p class="calibre_1">For a while, it went better than I had ever thought possible. During this time, I thought maybe my fear about my accent was unfounded—that it was all in my head. And then one day, while filming a show, I was asked if I could make my accent less strong, or even maybe make it go away completely. I didn’t think I had anything to lose by trying, so I did. I didn’t know that by trying, I would enter into one of the most intense low points I’ve ever been at in my life. No matter how many speech therapists I went to, every time I tried to say “New Jersey” I couldn’t isolate the “z” sound that shouldn’t even be in that fucking word because, hello, there’s no “z” in Jersey! I was still saying it wrong.</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_"><img src="images/00063.jpg" srcset="/img/loading.gif" class="calibre_15">
+</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_1">And then a weird thing happened—my voice actually got worse, to the point where my accent became a monster. It became so big and so ugly that I spent days hating it, and wishing that I didn’t have it. I fixated on it. It obscured everything else in my life.</p><p class="calibre_1">One day I was stuck in traffic because someone got naked and was running around and screaming in the middle of the street. The police tried to calm him down, but he kept beating up as many cars as he possibly could. When he ran by me yelling, I thought to myself, “I bet he doesn’t have an accent.” And then the police tackled him. I like to think he woke up the next day and turned his life around, and he’s living his best life now.</p><p class="calibre_1">But in that moment, I caught myself. The monster I was fighting wasn’t my accent. It was me. I was giving it all its power. But even as I recognized that, I still couldn’t quite understand where all that power was coming from. So I picked up a book, and something jumped off the page at me, and it has stayed with me since. Whenever you hear or see (because believe it or not, sign languages have all kinds of accents too) an accent, it means the person who has it learned your language because they want to communicate with you. They want to reach out to you, and they’re willing to put a lot of effort into doing that. That message might be the only reason why I ended up making a grudging sort of peace with my accent—because I (mostly) love people. I’m curious about them. I want to communicate with as many of them as I can. Except when I really, really need my coffee. Coffee first. Then communication. Unless, of course, I need to communicate my need for coffee.</p><p class="calibre_1">The thing is, my native language is one that not many people outside of my community know. Even inside my community, many, maybe even most, people don’t have access to it on a daily basis. That’s why I never take any sort of communication for granted. When you use a minority language, you recognize the value of it more. And beyond that, you recognize that it’s a part of who you are. For example, ASL is what I like to call a pretty blunt language. In English, there are different definitions for a single word. You can say one thing and mean many things. In ASL, there is a different sign for every definition. There are different signs for “run,” depending on whether you’re going for a run, if the water is running, or if there’s a run in your pantyhose. You always have to say exactly what you mean. Maybe that’s why, even when I communicate in English, I don’t really know how to not say what I mean. It often gets me in trouble. In fact, I know that what I’m about to say right now might get me in some.</p><p class="calibre_1">Eileen died. And that sucks.</p><p class="calibre_1">Actually, it was devastating. But to accurately explain why, I have to start not at the beginning, but before the beginning, so I can give you a full illustration of where I was in my life when Eileen came to me. I’d just given birth to my daughter, Mayim. It was an equally beautiful and surprising moment. Before her, I’d never been a patient person. I’d always wished that I could be. I’d see other people with their kids, and they’d have this sort of beatific calm, even when their kid was lying on the floor in the middle of the aisle screaming with snot flying out of their nose. I’d think, “Shit. That is never, ever, going to be me.” I was the type that would hammer the horn and flip people off in traffic. And I live in Los Angeles. Everywhere you go, it’s traffic all day, every day. (It only seems glamorous on the outside. You also think you’ll get used to traffic. You don’t.) So if you’re not blessed with the gift of patience, then you basically flip people off all day, every day.</p><p class="calibre_1">But after I gave birth, I caught my younger brother talking about me. This was maybe the second time he’d met my daughter. I was going to put Mayim down when I caught him telling our parents, “Wow. Shoshannah is so patient with Mayim.” I stopped on the stairs, thinking, what the fuck did he just say? And I realized to my shock that he was right. Somehow, in that short span of time, I had become extremely, even extraordinarily, patient. Just when I let that sink in, my brother added, “Do you think she’s . . . okay?”</p><p class="calibre_1">It was a strange time, even beyond suddenly being bestowed with the patience of a saint, which I, surprisingly, still have. Motherhood, then and now, has been one of the most fulfilling things I’ve ever done. But that fits into the narrative people expect. So it’s a relief that I can say that, and have it be true. What people don’t expect, and often don’t talk about, is that being a new mother is also an exceedingly vulnerable time. It’s a time that requires recalibration. It’s as if you’ve been taken apart, and you now have to put yourself back together again. It allows you to see all the complicated little nuts and bolts that come together to make you who you are. I was prepared for the recalibration of my body, because it had, well, supported an actual life, and because I had a rather complicated birth. But what I hadn’t expected was that I would also have to recalibrate my heart and my mind.</p><p class="calibre_1">I loved Mayim in a way I had never dreamed I could love anything. But that love was accompanied by a sort of guilt I had also never felt before. I felt guilty for loving the same things I loved before she came along . . . for wanting the same things. The message I was getting from the world around me was a mindfuck. People would ask me if I was still going to act, if I was still going to live in LA, if I was still going to teach. (I taught culture and translation at a university for years, right up until I sold the Sundance series I co-created, This Close.) And by answering yes to all those questions, it felt as if I were somehow violating a contract I hadn’t known I signed. It was as if being a mother meant that all the rest should have changed. That I, as a person, should have changed.</p><p class="calibre_1">For some of my friends, that did happen. One of my best friends, who I met when we did a television show together, had her son four days after I had Mayim. After she had her son, and then her daughter, she slowly realized she had absolutely no desire to return to acting. Zero. Her life felt full, fuller even, without it. She didn’t need any of it anymore. I told her I thought that it was wonderful, and I meant it.</p><p class="calibre_1">Motherhood is a different journey for everyone. You have to figure out yours as you’re traveling it, not before. For some people, it transforms them. For me, it was less of a transformation and more of a ground-breaking. I felt like it had opened up layers to me that I didn’t know I had. If anything, I felt like I had become more myself, that there was suddenly more to me than there had been before. Everything I had felt before Mayim, I felt more vitally. Now that I had this new human being depending on me, literally looking up to me, I knew that I wanted—no, I needed—to prove to her that her mother could do . . . it.</p><p class="calibre_1"><span class="bold">It wasn’t anything that could be seen or touched. It was a feeling, a want, a need for something that I couldn’t yet see. It had always been there, before Mayim, but it was Mayim who helped me finally put it into words. Now that she’s older (three at the time I’m writing this), she likes to look at pictures that were taken before she was born, from my wedding or from when I was playing soccer as a child. She always looks at them very intently, and then she’ll ask, “Where was I?” It’s a strange concept to explain to anyone, much less a very small human. At first I tried telling her, “Well, you weren’t here yet.” But she’d always nod and say, “Yes . . . but then where was I?” And so I ended up telling her, and still tell her . . . the truth. That she was a star in the sky.</span></p><p class="calibre_1">But that complex feeling I could so clearly see and feel her struggling with was something I found a strange sort of solidarity with—she wasn’t here until . . . she was. And now that she’s here, it seems very strange, even ridiculous, that there was a time when she wasn’t. It’s so obvious and so right that she is here now, that to think that there was a time when she wasn’t here seems bizarre, even wrong.</p><p class="calibre_1"><span class="bold">It felt exactly like that.</span></p><p class="calibre_1">Here’s the thing. Ever since I was old enough to notice, I’ve known that the world doesn’t always see me as I see myself. A nice way to describe that position would be to say that it’s humbling, but sometimes there really isn’t anything nice about it at all. For me, being creative has always given me somewhere to put it. It’s not just that I want to do what I do, but I need to do it. I’ve gone years on end, several times in my career, without working—not just because I wasn’t booking auditions, but because I couldn’t get in the door to be seen in the first place. And sometimes when I did, they were for characters framed by people who live their lives differently than me. Because of that, I was expected to see my life the same way they did—as one less than theirs, focused on and filled with that loss and devoid of something essential. Sometimes I’d get sent characters that were tragic, tormented, even victimized, by what they couldn’t hear. I’d think, “Fuck this bullshit.”</p><p class="calibre_1">But later, usually in the middle of the night, I’d think, “Should I feel the way these characters do? Is it possible I’m delusional? Could this be like that time I convinced myself that my accent was no longer an issue? Am I just setting myself up for failure for thinking things can be different?” But every time I really considered that, it would surface. And it always won.</p><p class="calibre_1"><span class="bold">It meant that instead of waiting for the world to supply me with a space that felt like my own, I would have to create that space, that it for myself. Just like Mayim made her own place in this world, after being a star in the sky. So I did. And it became This Close.</span></p><p class="calibre_1">But doing anything means that at first you try to do it, and you’re not very good at it. So that’s what I did. I tried. I wrote a bunch of things with my writing partner, Josh Feldman, who is also deaf. The first thing we wrote together was about a private investigator who was deaf and lived in San Francisco, close to where I grew up in the Bay Area. I think her first case was about a missing cat. Like I said, not great. In hindsight, I think we were trying to write what we thought people wanted to see and not the story we wanted to tell. Also, to be fair, there were a lot of shows like that on television at the time. We moved on from that one, thankfully, and wrote the first iteration of This Close, called Fridays. It was about two best friends, Kate, a deaf woman, and Michael, a hearing gay man. It was loosely based on our real-life friendship.</p><p class="calibre_1">With this idea, we went a little bit further than we previously had. At one point, we had a production company show interest in developing it, but then they pulled out. They said they didn’t understand why the character of Kate was deaf. They said there had to be a reason why she was, and we weren’t providing one.</p><p class="calibre_1">But that was the point! I don’t know why I’m deaf. I just am. None of us knows why we are the way we are, why we came into this life in the body that we did. We’re all just trying to figure it out the best we can.</p><p class="calibre_1">So Josh and I did the mature thing. We went to happy hour to drown our sorrows. Surprisingly, that sorrow never came. Instead, we became bizarrely and completely invigorated. By the time we ordered our second round, we decided that instead of trying to explain it to them, or to anybody else, we would just have to show them. And if we wanted to show them, we would just have to do it ourselves. Even though we didn’t really know what we were doing.</p><p class="calibre_1">And since we were going to do it ourselves, why not just go balls to the wall and make both characters deaf? I knew that if we didn’t do it, nobody else would. When I first ran that by Josh, he said, “Wow. But who’s going to play Michael?” He had absolutely no intention of acting, only writing. But I didn’t think I would ever write, other than in secret, so it made sense that we were pushing each other in opposite directions, right out of our respective comfort zones.</p><p class="calibre_1">So, we shot the extremely amateur pilot of Fridays in an extremely beige apartment that belonged to our friend. (It wasn’t her fault it was beige. She was renting.) We shot it in one day for $250 out of our pockets. The next day, my little family and I moved to New York for a job I was doing. While I was there, we put Fridays up on YouTube.</p><p class="calibre_1">For the job I was doing in New York, one day, I had to do this very difficult interview. I don’t know what made that one particularly painful. It was like so many others I’ve had to do in my life, and ones that I have done since. But on that day, it was agonizing. It’s not that the questions were new. I still get them all the time. It’s that they’re questions I have never known the answers to.</p><p class="calibre_1"><span class="italic">What’s it like not being able to hear? I don’t know. I was born this way. I don’t know any different. What sort of challenges have you overcome? Answering stupid fucking questions like that one, maybe?</span></p><p class="calibre_1">But I get it. People who live outside of my experience want to be inspired. They want to see my being deaf as an actual obstacle. I scale that wall, I grovel through the green goo (I’m clearly thinking of Double Dare here) on my hands and knees in slow motion and then . . . I’m up and over and away and I’m free.</p><p class="calibre_1">Only I haven’t actually overcome anything, and I’m not going to. I’m deaf. I’ve always been deaf. I’m always going to be deaf.</p><p class="calibre_1">This might be a good time to share that I am aware of the cochlear implant and I have no interest in getting it. A lot of people, sometimes even strangers, feel it’s helpful to suggest I get one, so I thought I might beat you to the punch. There’s no drama behind that decision for me. I’m simply not a viable candidate for it. I decided to be evaluated for one when I was twenty, out of sheer curiosity. It’s possible that with changing technology, I might be a candidate now. But the thing is, even if I were a candidate and I decided to get one, I would still be a deaf person with a cochlear implant. Once the external device is off (and it’s supposed to come off), the person is still deaf. That’s because there is no cure. And I don’t want a cure. Being deaf is a part of who I am. It’s part of what makes me . . . me. I wouldn’t be who I am today if I weren’t deaf. I don’t know who or what I would be. Maybe I’d be something more, maybe I’d be something less, but what I know for sure is that I’d be completely different.</p><p class="calibre_1">On that day in New York City, these questions forced me right back into the very space I was fighting to get out of. The space they saw me being in, rather than the space I was actually in. It was the space opposite of it.</p><p class="calibre_1">Maybe it was especially painful because I was trying to make Fridays. I was trying to convince myself that once it was out there, it would take on a life of its own. It’d be alive, it’d be here, and there would be no going back. Much like life was with my daughter, who was five months old at the time. But on that day, walking in the cold to catch my train home to my baby, I thought . . . maybe I had been all wrong. Maybe it couldn’t happen. Maybe it was better that I go back to whatever space the world would allow me, even if I didn’t feel as if that space were truly mine. Maybe I was a complete and total moron for thinking things could ever be different. Maybe things couldn’t, and wouldn’t, change.</p><p class="calibre_1">And then, my phone vibrated.</p><p class="calibre_1">It was an email from my manager asking me if I’d be interested in doing the television show Supernatural. No audition. No script. Just, “Hi, are you available to play a hunter on the show?” There wasn’t even a character name for this hunter at first. So when I first looked at this email, I thought they wanted me to play someone named Hunter on the show. I was like, Wait, who’s Hunter? Am I supposed to be familiar with this character? Is this Hunter person like Ruby (who, coincidentally, I had auditioned for years before) who comes back in different forms? Of course, when I read the email more carefully, asked questions, and things came to be, I learned that the character was going to be a hunter who was deaf, she would hopefully be recurring, she might possibly be a love interest for Sam—</p><p class="calibre_1">Okay. I know some of you are probably throwing tomatoes at my head right about now. If I’m being completely honest, which is basically always, I’m still not sure if it makes sense for Sam to have a love interest with the way his life is, so I get it. But it wasn’t like it was a choice I personally made. That was in the character description they sent to me from the beginning. Okay?</p><p class="calibre_1">. . . And her name was going to be Eileen. And because of Robbie Thompson, who had created her for me, she turned out to be a fully realized character who wasn’t defined by her deafness, but she didn’t try to hide it either. She was just like it. She was it. And the timing was something I could not get past. It was like a burning bush. I had asked the universe for a sign, and they sent me Eileen.</p><p class="calibre_1">She was evidence that this crazy thing I was doing just might work. She was proof that there was mainstream interest in characters who were deaf, past them just being deaf. And from that point on, Eileen, and Supernatural, became strangely interwoven with This Close. I shot “Into the Mystic,” my first episode as Eileen, while I was writing the second iteration of the show, which at that point had become a webseries we sold to Super Deluxe. (The VP of development had somehow stumbled across our beige pilot on YouTube and so we redeveloped it with them.) It was called The Chances, and it premiered at the Sundance Film Festival that year.</p><p class="calibre_1">Exactly a year after that festival premiere, I sat down at the premiere dinner of the television show on Sundance Now that the webseries had become, now called This Close. The premiere of the show had also taken place at the Sundance Film Festival, which was a very full and uncanny circle. I was feeling a lot of feelings that night. To distract myself, I asked the general manager of Sundance Now at what moment they decided they wanted the show when they first saw it the year before. He told me it was when Kate shits her pants.</p><p class="calibre_1">Now, Kate never actually does that. At least she hasn’t yet. But she did pee her pants in the very first scene of the first episode of the webseries—the exact same scene I had written in my trailer while shooting “Into the Mystic.”</p><p class="calibre_1">After they saw Kate pee her pants, the network executives at Sundance Now asked us to pitch the show to them. I said that was fine, but we would have to do that within the week because I had to go shoot, once again, Supernatural. So we pitched the show and then I immediately flew to Vancouver to do “The British Invasion,” my second episode as Eileen. By the time we shot “There’s Something About Mary,” my third episode, I knew we were going to make This Close a television show.</p><p class="calibre_1">And in that third episode, Eileen died.</p><p class="calibre_1">I had seen it coming. There was just something about the way her second episode was written, particularly the stuff between her and Sam. I remember thinking, after reading the scene where Sam hugs Eileen at the end of the episode, “Yeah, okay, she’s going to get dead.” I mean that scene was great, but where do you go from there? I felt like there were only two possibilities. Either they get it on, or she dies. The second way seemed more logical for Supernatural. I think I even told Jared that at some point while we were shooting that second episode. I don’t remember what he said in response. In any case, I was nervous about getting the script for Eileen’s third episode.</p><p class="calibre_1">So when I actually saw the script for “There’s Something About Mary” and saw her death on the page, I cried. (And I was in the middle of Trader Joe’s, so it wasn’t a very good look.) But after I had that ugly public cry, I thought, At least that’s done and out of my system.</p><p class="calibre_1">Only it wasn’t. I actually went through a period of grieving. I kept waking up in the middle of the night feeling as if someone had died. I’d feel a heavy sort of physical sadness before I could process it logically and tell myself, “Body, it’s just Eileen. She’s not real.” But it kept happening, so I decided to talk to my sister about it. She’s my best friend and a profoundly brilliant artist who has always had this amazing ability of helping me articulate my feelings. I am not always very good at doing that. I said to her, “I keep feeling as if someone real died, and I don’t know why.” And she said, “Because Eileen was real to you. And thank God for that.”</p><p class="calibre_1">Right after she said that, something clicked. I realized that Eileen was so strong and brave that from the time I first heard (no pun intended) about her, I had unconsciously drawn strength from her. That day on the street in New York City, I had been about to let fear govern me. I had been about to give up. But Eileen wasn’t someone who allowed fear to govern her or any of the choices she made. Without her, I was afraid that I’d become governed by fear again. I remember when I told my husband that my gut feeling had been right and Eileen was going to die, he said, “Well, she can’t. Just don’t do it. Say no.” I laughed. He was joking. Kind of.</p><p class="calibre_1">But I did actually consider doing that. For a heartbeat. And I said to myself, No. I’m going to do this. I am going to fly to Vancouver to die. Because any time I get the chance to work, as difficult as that job may be, it’s still a victory. When I get material that’s difficult for me to swallow, I give it my very best. And if my best isn’t enough, then maybe what’s difficult about it is beyond my reach. My hope is that if the material disturbs me, it’s meant to disturb, so it will also disturb others. Perhaps then a necessary dialogue will be born out of it. That’s the only way change happens. And when Eileen died, that dialogue happened, even in the world of Supernatural, when death isn’t always final. People said that in Eileen’s death, she was marginalized and silenced, killed by a hellhound she couldn’t hear. They said it was especially brutal because she came from a community that is already often marginalized and silenced, both because of the language they use and because they don’t rely on their sense of hearing. And I had never ever seen that discussed like that, out in the open in the mainstream.</p><p class="calibre_1">That’s the way change happens.</p><p class="calibre_1">Every single one of us lives our life always looking out from behind the same two eyes. We can try to imagine what the world looks like through other people’s eyes, but no matter how vivid our imaginations are, we are bound by our own experiences. We’re limited to our own perception. I think the most compelling stories take you out from behind your own two eyes and allow you to look at things through a different sort of lens. Until that happens, I don’t think anyone can ever realize what their own personal lens is. But the conversation I saw after “There’s Something About Mary” was exciting and interesting, and most importantly, it looked at Eileen’s death through her own two eyes, even though that wasn’t the same lens the rest of the show was shown through.</p><p class="calibre_1">And the fact was, in my life, Eileen died around the same time This Close was born. I hadn’t told anyone on the show about it other than my interpreter, because she had asked what I was writing during my first episode. I ran a few lines by her, and she laughed so hard I let myself think, probably for the first time, that maybe I’m on to something here.</p><p class="calibre_1">The timing of Eileen’s death and the birth of This Close wasn’t planned. Meaning, I never asked to be written off the show. I wouldn’t—and to be honest, couldn’t—do that. Doing the show and that character was so fun and meaningful that I would have been happy to do the show for as long as they’d have me. And I had no reason, contract wise, to ask to be written off. Recurring characters like Eileen usually have pretty flexible contracts. If you have a scheduling conflict, you say you can’t do the episode they’re asking you to do, and then you hope they’ll bring you back for another episode when you’re available. But these are just the logistics. The fact is, there’s a reason why death happens. It happens in order to make room for something new. For something else. I believe Eileen’s death made room for the value of her life. And her death taught me a lesson about my own life.</p><p class="calibre_1">Eileen was strong. And then she died alone in that forest because she couldn’t hear the invisible monster that was attacking her. But here’s the thing: whether we like it or not, we are technically always alone. We are always inside our own heads, and that’s where the most vicious monster of all lives. Nobody can hear or see this monster, except for you.</p><p class="calibre_1">We all do the best we can in this strange thing called life. Sometimes our best just isn’t good enough, and that’s when the monster comes out. It makes us think the most monstrous things possible . . . things that we’d physically attack people for saying to someone else. Yet, we allow this monster to say them to us. The monster knows all our weak spots, the vulnerable places in our armor. It has a very long memory. It’s especially good at hoarding painful times and then slowly pulling them up one by one and throwing them at us at full force. It magnifies these times to the point where they’re all that we see, and we feel like they’re all that there is. It makes me wonder where I’d be really, if, somehow, I wasn’t born into my body, into the skin that I’m in. Maybe it would be someplace better. Somewhere easier. And that’s really fucking lonely. But owning that loneliness, talking about it, that’s how Eileen lived, and that’s how I made This Close. Through making that show, I discovered that everyone feels that way, no matter who or what they are. Everyone has their own monster.</p><p class="calibre_1">In retrospect, I think that’s why I always wanted This Close to look gritty. I love movies. I always have. I love the experience of going to movie theaters and sitting down and watching something totally fucking epic—well, when they’re captioned and when the captions actually work, which is rarely, but that’s another story. That beautiful veneer of gloss? It costs a lot of money. It is money. It’s top-of-the-line lighting and cameras and makeup and hair and . . . stuff. But think about what gloss actually does. When there’s gloss on a wooden table, you can’t feel the texture of the actual wood. There are no bumps, no imperfections, no ripples. All you feel is the gloss. It separates you. Sometimes when there’s too much of it, as a by-product, it’s more difficult for me to lose myself in it and forget I’m watching a movie. I feel like I’m watching a spectacle instead. And spectacles are awesome. There’s a time and place for them. But I don’t think anyone’s actual life is a constant spectacle. I don’t think life has that kind of gloss on it every day. And that’s what it’s about. It’s about feeling it all. The smooth parts, the imperfect parts, and yes, even the monstrous parts.</p><p class="calibre_1">So, yes, they killed Eileen. And I hated that they did. I wanted to erase her death and keep what came before, the good, strong, flawed, human parts of her. Just like I once wanted to erase my accent, but keep everything else that made me, me. It doesn’t work that way. Eileen’s death was a part of her story, whether I like it or not. I am in this body, whether I like it or not. My body has strength, and it has weakness. It has an accent. It has limitations. If I allow the monster to focus on the limitations, the good parts fade away. But the opposite is true, too. If you try to erase what you don’t like and keep only the good, easy parts, then you lose all of it. There’s nothing that’s completely good. There’s nothing that’s completely easy. We can’t take away what we don’t like about ourselves or erase what we don’t like about our story. Trying to do so might be the very definition of being wayward.</p><p class="calibre_1">Because just like we all have a monster, we all have an it. I’m not sure we can have one without the other. Maybe they’re one and the same. Our monster makes us weak, but then it also makes us strong. You can let it eat you alive, or you can make that monster your bitch and make it work for you and help you make your own personal it, whatever it means to you. The monster belongs to you. It is yours. It is you.</p><p class="calibre_1">Eileen died. But before that, she was here. She lived.</p><p class="calibre_1">You are here. You are alive. You are enough. You are Wayward.</p><p class="calibre_1">Besides, it turns out that nothing stays dead on Supernatural. Including Eileen.</p><div class="mbp_pagebreak" id="calibre_pb_18"></div>
+</body></html>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/10/03/there_will_be_peace_when_you_are_done/index_split_017/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/10/03/there_will_be_peace_when_you_are_done/index_split_019/">
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                  
+                
+                
+  <div class="disqus" style="width:100%">
+    <div id="disqus_thread"></div>
+    <script>
+      Fluid.utils.waitElementVisible('disqus_thread', function() {
+        Fluid.utils.createCssLink('https://cdn.jsdelivr.net/npm/disqusjs@1.0/dist/disqusjs.css');
+        Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/disqusjs@1.0/dist/disqus.js', function () {
+          new DisqusJS({
+            shortname: 'fluid',
+            apikey: ''
+          });
+        });
+      });
+    </script>
+    <noscript>Please enable JavaScript to view the
+      <a target="_blank" href="https://disqus.com/?ref_noscript" rel="nofollow noopener noopener">comments powered by Disqus.</a>
+    </noscript>
+  </div>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+</body>
+</html>

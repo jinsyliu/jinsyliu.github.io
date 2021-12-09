@@ -1,0 +1,519 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  
+    <meta name="description" content="">
+  
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+  <title>Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Liu Keqin</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-10-03 02:12" pubdate>
+        2020年10月3日 凌晨
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.2k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      43
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none"></h1>
+            
+            <div class="markdown-body">
+              <?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>There’ll Be Peace When You Are Done</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+<link rel="stylesheet" type="text/css" href="page_styles.css">
+</head>
+  <body class="calibre">
+<p id="filepos354529" class="calibre_">
+<a href="index_split_006.html#filepos9784">ALANA KING</a>
+</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_1">I’ve loved stories for as long as I can remember. There’s just something about diving into another world that fascinates me. Stories have motivated me and driven me to try new things outside of my comfort zone that I never would have attempted otherwise. When I was seven years old, I signed up for a taekwondo class because I wanted to be like Kim Possible. I stuck with it to the point where I earned my second-degree black belt. When I was nine years old, I lugged Harry Potter books to school in my backpack, and whenever I felt nervous, I took one out and started to read. I got in trouble for reading in class quite a bit, but I developed an intense love for reading because of those books. When I was twelve years old, I picked up a video camera and tried to make a movie with my friends based on The Hunger Games . I failed miserably, but it led me to discover my passion for filmmaking. And when I was eighteen, my love for Supernatural drove me to take a trip to Pittsburgh for a convention that would forever change my life.</p><p class="calibre_1">When I first started watching Supernatural, I had just finished my junior year of high school. It was, arguably, one of the most difficult years of my life for many reasons—both personal and academic. I was stuck in an extremely toxic friendship, though I didn’t know it at the time, and was unable to reach out or ask others for help with the situation. I isolated myself from my loved ones, buried myself in schoolwork, and almost completely cut myself off creatively from making videos—an outlet that I desperately needed. It all became too much, and I was miserable. That summer, I wanted to find a story to lose myself in completely. So when my cousins suggested Supernatural, I shrugged and said I’d give it a shot. To be completely honest, I’d heard of the show before but had never been interested in starting it. I’ve never done well with the horror genre, so I’d just brushed Supernatural off as “probably too scary for me.” Oh, how wrong I was!</p><p class="calibre_1">The first season was a little scary, I’ll give it that. But it became apparent to me, even after watching the pilot episode, that it was much more than a “jump scare horror” type of show. Needless to say, I binged all ten seasons that were out at the time in less than a month. I lived and breathed Supernatural that summer. When I went back to high school for my senior year in the fall, Supernatural was up and running again with new episodes. Thursday nights became my favorite time of the week, and no matter how much work I had to do, I would always carve out an hour to watch the episodes when they aired. My senior year was as rough as my junior year, especially at the beginning. Behaviors from the previous year followed me, friendships fell apart, and my senior class endured several tragic losses right before graduation. But Supernatural helped me get through it. Whenever I needed an escape, I watched an episode of the show and lost myself in it. Seeing the characters deal with their struggles gave me the strength to take on my own.</p><p class="calibre_1">When high school finally ended, I was relieved to be free of a setting that had become increasingly difficult for me. In the fall, I would head to Chicago to study film and television, something I had dreamed of doing for years. I had a feeling that my college experience would be ten times better than my high school one, even if it would present new challenges. But before I made that big move, I had something equally life-changing ahead of me: my first Supernatural convention. For my high school graduation gift, combined with my eighteenth birthday present, I asked my parents if they would let me go to the Pittsburgh Supernatural convention that would be happening a month after I graduated. Having a chance to meet the cast in person and to hear them speak about the show would be a dream come true. This was the first time a Supernatural convention had ever come close to where I lived, and I was not about to miss it. My parents didn’t understand my love for the show that well yet, but because they’re so supportive, they said yes. A month later, I found myself heading to Pittsburgh with my cousin (and my parents, aunt, and uncle, who drove us—thanks, guys!).</p><p class="calibre_1">I wasn’t sure what to expect from my first Supernatural convention. I had been to general Comic-Cons before, but I had never been to a convention for one specific TV show. That weekend, my mind was blown. Everyone at the convention was so welcoming and lovely. The cast members were all amazing, the panels were incredibly fun, and talking to other fans was easy because we all already had one thing in common: our appreciation for this incredible television show. As someone who has a hard time connecting with other people in social settings, I was surprised how easy it was to talk to everyone at the convention. I left Pittsburgh at the end of that weekend with even more love for Supernatural and a desire to be more involved in the fan community that I had just discovered.</p><p class="calibre_1">Two months after the Pittsburgh convention, I moved to Chicago for college. Freshman year was full of confusion and uncertainty. Moving away from the small Ohio town I’d grown up in to a big city like Chicago was a huge change, and I was intimidated by the daunting tasks of making friends and establishing a new life there. I was on my own, and I didn’t know how to cope with that in the beginning. I made mistakes, put my faith in some of the wrong people, and had my heart broken. The biggest thing that helped me through it all was creating videos for my You-Tube channel. Up until that point, I had only posted videos sporadically and they were all about books. I never took YouTube seriously. But after attending the Supernatural convention in Pittsburgh, I decided to change up my content a little and try to produce videos more consistently. I didn’t want to limit myself in terms of what I could talk about in my videos, so I started making Supernatural-themed content. At first it was just one video a week. I would upload a Supernatural reaction and review every Thursday night, sitting down to edit the videos immediately after a new episode aired so I could get them out as fast as possible. This caused my channel to grow a little and paved the way for other Supernatural-themed videos.</p><p class="calibre_1">For the entirety of my freshman year of college, I worked tirelessly on my YouTube channel and saved up my money to go to the Chicago Supernatural convention in the summer of 2017. Unfortunately, the second semester of that year was harder than the first. Someone I had become close with broke my trust in a huge way, which left me riddled with anxiety. On top of that, I was dealing with homesickness, and the stress of balancing YouTube work with a full-time college course load was beginning to weigh on me. I started to spend more time alone, trying to figure out how to piece my life back together. It was during these months that I began to think I might have a more serious problem on my hands, but I had no idea what was going on. The truth is: I’ve been struggling with rather severe generalized and social anxiety my entire life. It’s held me back from doing some of the things I love and achieving goals I’d set for myself. It’s made me close myself off from potential friendships and relationships. It’s affected me physically. It’s made me incredibly vulnerable to judgment, pressure, and hate. But I never knew what it was, because I was never properly educated or diagnosed.</p><p class="calibre_1">One of my biggest criticisms when it comes to my schools is that none of them ever prioritized positive mental health education. They lacked the proper resources to help students who were struggling, and did not educate us on the topic whatsoever. My first source of information about mental health came from Jared Padalecki’s Always Keep Fighting (AFK) campaign. From the moment I started watching Supernatural, I supported the campaign and worked to learn more about what it represented. AKF means a lot to me because some of my family and friends have struggled with different forms of mental illnesses, like anxiety, depression, and PTSD. I’ve also lost peers and family members to suicide. I knew that mental illnesses existed, I just didn’t have the proper information to realize that I was dealing with one.</p><p class="calibre_1">After my freshman year of college, I moved back home to Ohio for the summer. I was not doing well mentally at all. My anxiety built up so much that it took all of my energy just to get out of bed in the morning. Sometimes I didn’t. I needed help, but I still couldn’t bring myself to admit it; I couldn’t believe that I was struggling with a mental illness. My life was technically great, despite some of the crappy personal things I’d gone through that year. So I was fine, right? No, very wrong.</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_"><img src="images/00096.jpg" srcset="/img/loading.gif" class="calibre_37">
+</p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_1">One night, at 2 a.m., I was sitting on the floor of my bathroom crying. There was a book I had left on the sink earlier that day while I was cleaning called Family Don’t End with Blood, the collection of stories from the Supernatural cast and fans about how the show had impacted and changed their lives. I knew Jared had written a chapter for the book and thought that reading it might help me feel better. So I picked it up, sat on the floor again, flipped to his chapter, and began to read. That action changed my life. I found myself relating to a lot of the things he described about his own struggles with mental health. It made me feel less alone and helped me realize that mental illness could affect anyone, even me.</p><p class="calibre_1">The next morning, I told my mom how I was feeling. We made an appointment with my doctor. I was diagnosed. I started seeing a therapist. I educated myself. I got help. Jared Padalecki helped me help myself, and I will never be able to thank him enough for that.</p><p class="calibre_1">Almost three years have passed since I was at that low point, and looking back, I’m grateful to have had Supernatural with me through such big changes in my life. Graduating from high school, moving to college, coming to terms with the importance of getting the help I need . . . Supernatural has consistently been there for me when everything else was changing around me. I still struggle with anxiety every day, but finding ways to cope with that has been absolutely crucial to where I am now. In the past three years, I have made over 250 videos about the show. I have been to more than fifteen Supernatural conventions, traveled the country, met so many people from all over the world, made more friends than I could have ever imagined, built a platform on YouTube, found my voice. I started fighting for what I believe in, came to terms with my anxiety, helped some of my favorite charities, and worked with some of the most incredible people. All of that was because of Supernatural, and the inspiration from Jared’s Always Keep Fighting campaign.</p><p class="calibre_1"><span class="italic">Supernatural will air its final episode the day after I graduate from college, in the spring of 2020. In the pilot episode of the show, we see Sam Winchester about to graduate from college, preparing for what comes next and not knowing what lies ahead. In a way, I guess things will come full circle for me. When Supernatural comes to a close, it will be time for me to go into the unknown, graduating from college and preparing to take the next step into adulthood. Hopefully I won’t have to stop the apocalypse or take a swan dive into hell, but hey, stuff happens. Nevertheless, Supernatural will be on the air to hold my hand through one more big step in my life, and then we’ll send each other off on our separate ways. I’m terrified of that future without it, but for now, I’m taking the time to be grateful for this show and all that it has given me. Supernatural is special, and I feel so lucky to be a small part of such an amazing family.</span></p><p class="calibre1" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre_"><img src="images/00036.jpg" srcset="/img/loading.gif" class="calibre_14">
+</p><div class="mbp_pagebreak" id="calibre_pb_56"></div>
+</body></html>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/10/03/there_will_be_peace_when_you_are_done/index_split_053/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/10/03/there_will_be_peace_when_you_are_done/index_split_055/">
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                  
+                
+                
+  <div class="disqus" style="width:100%">
+    <div id="disqus_thread"></div>
+    <script>
+      Fluid.utils.waitElementVisible('disqus_thread', function() {
+        Fluid.utils.createCssLink('https://cdn.jsdelivr.net/npm/disqusjs@1.0/dist/disqusjs.css');
+        Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/disqusjs@1.0/dist/disqus.js', function () {
+          new DisqusJS({
+            shortname: 'fluid',
+            apikey: ''
+          });
+        });
+      });
+    </script>
+    <noscript>Please enable JavaScript to view the
+      <a target="_blank" href="https://disqus.com/?ref_noscript" rel="nofollow noopener noopener">comments powered by Disqus.</a>
+    </noscript>
+  </div>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+</body>
+</html>

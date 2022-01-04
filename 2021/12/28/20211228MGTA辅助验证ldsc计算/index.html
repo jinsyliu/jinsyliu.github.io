@@ -1,0 +1,576 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  
+    <meta name="description" content="">
+  
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+  <title>2021.12.28-MTAG方法辅助验证LDSC计算结果（命令行） - Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Liu Keqin</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="2021.12.28-MTAG方法辅助验证LDSC计算结果（命令行）">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-12-28 17:18" pubdate>
+        2021年12月28日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      5.2k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      77
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">2021.12.28-MTAG方法辅助验证LDSC计算结果（命令行）</h1>
+            
+            <div class="markdown-body">
+              <h1><span id="2021-12-28-mtag-fang-fa">2021.12.28-MTAG方法</span><a href="#2021-12-28-mtag-fang-fa" class="header-anchor">#</a></h1><p><a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5805593/">Multi-trait analysis of genome-wide association summary statistics using MTAG</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/JonJala/mtag">mtag (Multi-Trait Analysis of GWAS)</a></p>
+<div class="toc">
+
+<!-- toc -->
+<ul>
+<li><a href="#1-mtag-ji-suan-yuan-li">1. MTAG计算原理</a></li>
+<li><a href="#2-mtag-ming-ling-xing-shi-yong-tutorial">2. MTAG 命令行使用tutorial</a><ul>
+<li><a href="#2-1-cha-xun-shi-yong-fang-fa">2.1. 查询使用方法</a></li>
+<li><a href="#2-2-shu-ru">2.2. 输入</a></li>
+<li><a href="#2-3-shu-chu">2.3. 输出</a></li>
+<li><a href="#2-4-zi-ding-yi-lie-ming-cheng">2.4. 自定义列名称</a></li>
+<li><a href="#2-5-guo-lu-xuan-xiang">2.5. 过滤选项</a></li>
+<li><a href="#2-6-te-shu-qing-kuang">2.6. 特殊情况</a></li>
+<li><a href="#2-7-fdr-ji-suan">2.7. FDR计算</a></li>
+<li><a href="#2-8-qi-ta-xuan-xiang">2.8. 其他选项</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+</div>
+
+<h2><span id="1-mtag-ji-suan-yuan-li">1. MTAG计算原理</span><a href="#1-mtag-ji-suan-yuan-li" class="header-anchor">#</a></h2><h2><span id="2-mtag-ming-ling-xing-shi-yong-tutorial">2. MTAG 命令行使用tutorial</span><a href="#2-mtag-ming-ling-xing-shi-yong-tutorial" class="header-anchor">#</a></h2><h3><span id="2-1-cha-xun-shi-yong-fang-fa">2.1. 查询使用方法</span><a href="#2-1-cha-xun-shi-yong-fang-fa" class="header-anchor">#</a></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">mtag.py -h <span class="hljs-comment">#查询使用方法</span><br></code></pre></td></tr></table></figure>
+<p>usage: mtag.py</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs bash">[-h] [--sumstats [&#123;File1&#125;,&#123;File2&#125;...]]<br>[--gencov_path FILE_PATH] [--residcov_path FILE_PATH]<br>[--out DIR/PREFIX] [--make_full_path] [--meta_format]<br>[--snp_name SNP_NAME] [--z_name Z_NAME] [--beta_name BETA_NAME]<br>[--se_name SE_NAME] [--n_name N_NAME] [--n_value N1, N2,...]<br>[--eaf_name EAF_NAME] [--no_chr_data] [--chr_name CHR_NAME]<br>[--bpos_name BPOS_NAME] [--a1_name A1_NAME] [--a2_name A2_NAME]<br>[--p_name P_NAME] [--include SNPLIST1,SNPLIST2,..]<br>[--exclude SNPLIST1,SNPLIST2,..] [--only_chr CHR_A,CHR_B,..]<br>[--homogNs_frac FRAC] [--homogNs_dist D] [--maf_min MAF_MIN]<br>[--n_min N_MIN] [--n_max N_MAX] [--info_min INFO_MIN]<br>[--incld_ambig_snps] [--no_allele_flipping] [--use_beta_se]<br>[--no_overlap] [--perfect_gencov] [--equal_h2] [--force]<br>[--fdr] [--skip_mtag] [--grid_file GRID_FILE] [--fit_ss]<br>[--intervals INTERVALS] [--cores CORES] [--p_sig P_SIG]<br>[--n_approx] [--ld_ref_panel FOLDER_PATH]<br>[--time_limit TIME_LIMIT] [--std_betas] [--tol TOL]<br>[--numerical_omega] [--verbose] [--chunksize CHUNKSIZE]<br>[--stream_stdout] [--median_z_cutoff MEDIAN_Z_CUTOFF]<br></code></pre></td></tr></table></figure>
+<p><strong>mtag: Multitrait Analysis of GWAS</strong> This program is the implementation of MTAG method described by Turley et. al. Requires the input of a comma-separated list of GWAS summary statistics with identical columns. It is recommended to pass the column names manually to the program using the options below. The implementation of MTAG makes use of the LD Score Regression (ldsc) for cleaning the data and estimating residual variance-covariance matrix, so the input must also be compatible ./munge_sumstats.py command in the ldsc distribution included with mtag. The default estimation method for the genetic covariance matrix Omega is GMM (as described in the paper). Note below: any list of passed to the options below must be comma-separated without whitespace.（该程序是Turley等人描述的MTAG方法的实现。需要输入以逗号分隔的具有相同列的 GWAS 汇总统计信息列表。 建议使用以下选项手动将列名称传递给程序。 MTAG 的实现利用 LD 分数回归 (ldsc) 来清理数据和估计残差方差-协方差矩阵，因此输入还必须与 mtag 中包含的 ldsc 发行版中的 ./munge_sumstats.py 命令兼容。 遗传协方差矩阵 Omega 的默认估计方法是 GMM（如论文中所述）。 下面注意：传递给以下选项的任何列表都必须以逗号分隔，没有空格。）</p>
+<p>optional arguments:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">-h, --<span class="hljs-built_in">help</span>            <span class="hljs-comment">#show this help message and exit</span><br></code></pre></td></tr></table></figure>
+<h3><span id="2-2-shu-ru">2.2. 输入</span><a href="#2-2-shu-ru" class="header-anchor">#</a></h3><p>Input Files:</p>
+<p>Input files to be used by MTAG. The —sumstats option is required, while using the other two options take priority of their corresponding estimation routines, if used.（MTAG 要使用的输入文件。 —sumstats 选项是必需的，而使用其他两个选项时，如果使用，则优先使用它们相应的估计例程。）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">--sumstats [&#123;File1&#125;,&#123;File2&#125;...]<br></code></pre></td></tr></table></figure>
+<p>Specify the list of summary statistics files to perform multitrait analysis. Multiple files paths must be separated by “,”. Please read the documentation to find the up-to-date set of acceptable file formats. A general guideline is that any files you pass into MTAG should also be parsable by ldsc and you should take the additional step of specifying the names of the main columns below to avoid reading errors.（指定汇总统计文件列表以执行多特征分析。 多个文件路径必须用“,”分隔。 请阅读文档以查找最新的可接受文件格式集。 一般准则是，您传递到 MTAG 的任何文件也应该可以被 ldsc 解析，并且您应该采取额外的步骤来指定下面的主要列的名称以避免读取错误。）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">--gencov_path FILE_PATH<br></code></pre></td></tr></table></figure>
+<p>If specified, will read in the genetic covariance matrix saved in the file path below and skip the estimation routine. The rows and columns of the matrix must correspond to the order of the GWAS input files specified. FIles can either be in whitespace-delimited.txt or .npy format. Use with caution as the genetic covariance matrix specified will be weakly nonoptimal.（如果指定，将读取保存在下面文件路径中的遗传协方差矩阵并跳过估计程序。 矩阵的行和列必须对应于指定的 GWAS 输入文件的顺序。 文件可以是 whitespace-delimited.txt 或 .npy 格式。 谨慎使用，因为指定的遗传协方差矩阵将是弱非最优的。）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">--residcov_path FILE_PATH<br></code></pre></td></tr></table></figure>
+<p>If specified, will read in the residual covariance matrix saved in the file path below and skip the estimation routine. The rows and columns of the matrix must correspond to the order of the GWAS input files specified. FIles can either be in .txt or .npy format. Use with caution as the genetic covariance matrix specified will be weakly nonoptimal. File must either be in whitespace-delimited .txt or .npy（如果指定，将读入保存在下面文件路径中的残差协方差矩阵并跳过估计例程。 矩阵的行和列必须对应于指定的 GWAS 输入文件的顺序。 文件可以是 .txt 或 .npy 格式。 谨慎使用，因为指定的遗传协方差矩阵将是弱非最优的。 文件必须是空格分隔的 .txt 或 .npy）</p>
+<h3><span id="2-3-shu-chu">2.3. 输出</span><a href="#2-3-shu-chu" class="header-anchor">#</a></h3><p>Output formatting: Set the output directory and common name of prefix files.（输出格式：设置前缀文件的输出目录和通用名称。）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash">--out DIR/PREFIX      <br><span class="hljs-comment">#Specify the directory and name prefix to output MTAG results. All mtag results will be prefixed with the corresponding tag. Default is ./mtag_results （指定目录和名称前缀以输出 MTAG 结果。 所有 mtag 结果都将以相应的标签为前缀。 默认为 ./mtag_results）</span><br>--make_full_path      <br><span class="hljs-comment">#option to make output path specified in -out if it does not exist.（如果不存在，则在 -out 中指定输出路径的选项。）</span><br>--meta_format         <br><span class="hljs-comment">#In addition to the typical results file that are restricted to the intersection of SNPs across files, this creates a file of the union of SNPs, with applications of the MTAG estimator restricted to the set of traits for which that SNP is available.（除了仅限于跨文件的 SNP 交集的典型结果文件之外，这还会创建一个 SNP 联合文件，其中 MTAG 估计器的应用仅限于该 SNP 可用的特征集。）</span><br></code></pre></td></tr></table></figure>
+<h3><span id="2-4-zi-ding-yi-lie-ming-cheng">2.4. 自定义列名称</span><a href="#2-4-zi-ding-yi-lie-ming-cheng" class="header-anchor">#</a></h3><p>Column names of input files:</p>
+<p>These options manually pass the names of the relevant summary statistics columns used by MTAG. It is recommended to pass these names because only narrow searches for these columns are performed in the default cases. Moreover, it is necessary that these input files be readable by ldsc’s munge_sumstats command.（输入文件的列名：这些选项手动传递 MTAG 使用的相关汇总统计列的名称。 建议传递这些名称，因为在默认情况下只对这些列执行窄搜索。 此外，这些输入文件必须能被 ldsc 的 munge_sumstats 命令读取。）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><code class="hljs bash">--snp_name SNP_NAME   <br><span class="hljs-comment">#Name of the single column that provides the unique identifier for SNPs in the GWAS summary statistics across all GWAS results. Default is &quot;snpid&quot;. This the index that will be used to merge the GWAS summary statistics. Any SNP lists passed to ---include or --exclude should also contain the same name.（为所有 GWAS 结果的 GWAS 汇总统计中的 SNP 提供唯一标识符的单列的名称。 默认值为“snpid”。 这是将用于合并 GWAS 汇总统计信息的索引。 传递给 ---include 或 --exclude 的任何 SNP 列表也应包含相同的名称。）</span><br><br>--z_name Z_NAME       <br><span class="hljs-comment">#The common name of the column of Z scores across all input files. Default is the lowercase letter z.（所有输入文件中 Z 分数列的通用名称。 默认为小写字母 z。）</span><br><br>--beta_name BETA_NAME<br><span class="hljs-comment">#The common name of the column of beta coefficients (effect sizes) across all input files. Must be specified with se. If specified, it will override the z-score column.（所有输入文件中 Beta 系数（效果大小）列的通用名称。 必须用 se 指定。 如果指定，它将覆盖 z-score 列。）</span><br><br>--se_name SE_NAME     <br><span class="hljs-comment">#The common name of the column of standard errors of the betas across all input files. Default is the lowercase letter z. Must be specified with --beta_name.（所有输入文件中 beta 的标准误差列的通用名称。 默认为小写字母 z。 必须用 --beta_name 指定。）</span><br><br>--n_name N_NAME       <br><span class="hljs-comment">#the common name of the column of sample sizes in the GWAS summary statistics files. Default is the lowercase letter n.（GWAS 汇总统计文件中样本大小列的通用名称。 默认为小写字母 n。）</span><br><br>--n_value N1, N2,...  <br><span class="hljs-comment">#Comma separated sample size values for each GWAS summary statistics files. This option is useful for GWAS input that does not include an N column, e.g.BOLT-LMM.（每个 GWAS 汇总统计文件的逗号分隔样本大小值。 此选项对于不包含 N 列的 GWAS 输入很有用，例如 BOLT-LMM。）</span><br><br>--eaf_name EAF_NAME   <br><span class="hljs-comment">#The common name of the column of minor allele frequencies (MAF) in the GWAS input files. The default is &quot;freq&quot;.（GWAS 输入文件中次要等位基因频率 (MAF) 列的通用名称。 默认值为“频率”。）</span><br><br>--no_chr_data         <br><span class="hljs-comment">#If used, will not use information related to the chromosome and base pair position columns. Use only it chromosome/base pair positional data is missing, but are certain that the snpids correctly identify the SNPs across traits.（如果使用，将不使用与染色体和碱基对位置列相关的信息。 仅在染色体/碱基对位置数据缺失时使用，但可以确定 snpid 正确识别跨性状的 SNP。）</span><br><br>--chr_name CHR_NAME   <br><span class="hljs-comment">#Name of the column containing the chromosome of each SNP in the GWAS input. Default is &quot;chr&quot;.（包含 GWAS 输入中每个 SNP 的染色体的列的名称。 默认值为“chr”。）</span><br><br>--bpos_name BPOS_NAME<br><span class="hljs-comment">#Name of the column containing the base pair of each SNP in the GWAS input. Default is &quot;bpos&quot;.（包含 GWAS 输入中每个 SNP 的碱基对的列的名称。 默认为“bpos”。）</span><br><br>--a1_name A1_NAME     <br><span class="hljs-comment">#Name of the column containing the effect allele of each SNP in the GWAS input. Default is &quot;a1&quot;.（包含 GWAS 输入中每个 SNP 的效应等位基因的列的名称。 默认值为“a1”。）</span><br><br>--a2_name A2_NAME     <br><span class="hljs-comment">#Name of the column containing the non-effect allele of each SNP in the GWAS input. Default is &quot;a2&quot;.（包含 GWAS 输入中每个 SNP 的非效应等位基因的列的名称。 默认值为“a2”。）</span><br><br>--p_name P_NAME       <br><span class="hljs-comment">#Name of the column containing the p-value of the effect size in the GWAS input. Default is &quot;p&quot;.（包含 GWAS 输入中效应大小的 p 值的列的名称。 默认值为“p”。）</span><br></code></pre></td></tr></table></figure>
+<h3><span id="2-5-guo-lu-xuan-xiang">2.5. 过滤选项</span><a href="#2-5-guo-lu-xuan-xiang" class="header-anchor">#</a></h3><p>Filter Options:</p>
+<p>The input summary statistics files can be filtered using the options below. Note that there is some default filtering according to sample size and allele frequency, following the recommendations we make in the corresponding paper. All of these column-based options allow a list of values to be passed of the same length as the number of traits.（可以使用以下选项过滤输入摘要统计文件。 请注意，根据我们在相应论文中提出的建议，根据样本大小和等位基因频率进行了一些默认过滤。 所有这些基于列的选项都允许传递与特征数量相同长度的值列表。）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><code class="hljs bash">--include SNPLIST1,SNPLIST2,..<br><span class="hljs-comment">#Restricts MTAG analysis to the union of snps in the list of snplists provided. The header line must match the SNP index that will be used to merge the GWAS input files.（将 MTAG 分析限制为提供的 snplist 列表中的 snps 的并集。 标题行必须与将用于合并 GWAS 输入文件的 SNP 索引匹配。）</span><br><br>--exclude SNPLIST1,SNPLIST2,.., --excludeSNPs SNPLIST1,SNPLIST2,..<br><span class="hljs-comment">#Similar to the --include option, except that the union of SNPs found in the specified files will be excluded from MTAG. Both -exclude and -include may be simultaneously specified, but -exclude will take precedent (i.e., SNPs found in both the -include and -exclude SNP lists will be excluded).（与 --include 选项类似，除了在指定文件中找到的 SNP 的联合将从 MTAG 中排除。 -exclude 和 -include 可以同时指定，但 -exclude 将优先（即，在 -include 和 -exclude SNP 列表中找到的 SNP 将被排除）。）</span><br><br>--only_chr CHR_A,CHR_B,..<br><span class="hljs-comment">#Restrict MTAG to SNPs on one of the listed, comma-separated chromosome. Can be specified simultaneously with --include and --exclude, but will take precedent over both. Not generally recommended. Multiple chromosome numbers should be separated by commas without whitespace. If this option is specified, the GWAS summary statistics must also list the chromosome of each SNPs in a column named \`chr\`. （将 MTAG 限制为列出的以逗号分隔的染色体之一上的 SNP。 可以与--include 和--exclude 同时指定，但优先于两者。 一般不推荐。 多个染色体编号应以逗号分隔，不得有空格。 如果指定了此选项，GWAS 汇总统计还必须在名为 \`chr\` 的列中列出每个 SNP 的染色体。）</span><br><br>--homogNs_frac FRAC   <br><span class="hljs-comment">#Restricts to SNPs within FRAC of the mode of sample sizes for the SNPs as given by (N-Mode)/Mode &lt; FRAC.（仅限于 FRAC 内的 SNP，SNP 的样本大小模式由 (N-Mode)/Mode &lt; FRAC 给出。）</span><br><br>--homogNs_dist D      <br><span class="hljs-comment">#Restricts to SNPs within DIST (in sample size) of the mode of sample sizes for the SNPs. This filter is not applied by default.（仅限于 SNP 样本大小模式的 DISTRICT（样本大小）内的 SNP。 默认情况下不应用此过滤器。）</span><br><br>--maf_min MAF_MIN     <br><span class="hljs-comment">#set the threshold below SNPs with low minor allele frequencies will be dropped. Default is 0.01. Set to 0 to skip MAF filtering.（将阈值设置为低于具有低次要等位基因频率的 SNP 将被删除。 默认值为 0.01。 设置为 0 以跳过 MAF 过滤。）</span><br><br>--n_min N_MIN         <br><span class="hljs-comment">#set the minimum threshold for SNP sample size in input data. Default is 2/3*(90th percentile). Any SNP that does not pass this threshold for all of the GWAS input statistics will not be included in MTAG.（设置输入数据中 SNP 样本大小的最小阈值。 默认值为 2/3*（第 90 个百分位数）。 对于所有 GWAS 输入统计数据，任何未通过此阈值的 SNP 都不会包含在 MTAG 中。）</span><br><br>--n_max N_MAX         <br><span class="hljs-comment">#set the maximum threshold for SNP sample size in input data. Not used by default. Any SNP that does not pass this threshold for any of the GWAS input statistics will not be included in MTAG.（设置输入数据中 SNP 样本大小的最大阈值。 默认不使用。 对于任何 GWAS 输入统计数据，任何未通过此阈值的 SNP 都不会包含在 MTAG 中。）</span><br><br>--info_min INFO_MIN   <br><span class="hljs-comment">#Minimim info score for filtering SNPs for MTAG.（过滤 MTAG 的 SNP 的最低信息分数。）</span><br><br>--incld_ambig_snps    <br><span class="hljs-comment">#Include strand ambiguous SNPs when performing MTAG. by default, they are not used to estimate Omega or Sigma.（执行 MTAG 时包括链模糊 SNP。 默认情况下，它们不用于估计 Omega 或 Sigma。）</span><br><br>--no_allele_flipping  <br><span class="hljs-comment">#Prevents flipping the effect sizes of summary statistics when the effect and non-effect alleles are reversed (reletive the first summary statistics file.（当效应和非效应等位基因颠倒时，防止翻转摘要统计的效应大小（相对于第一个摘要统计文件。）</span><br></code></pre></td></tr></table></figure>
+<h3><span id="2-6-te-shu-qing-kuang">2.6. 特殊情况</span><a href="#2-6-te-shu-qing-kuang" class="header-anchor">#</a></h3><p>Special Cases:</p>
+<p>These options deal with notable special cases of MTAG that yield improvements in runtime. However, they should be used with caution as they will yield non-optimal results if the assumptions implicit in each option are violated.（这些选项处理显着的 MTAG 特殊情况，这些情况会在运行时产生改进。 但是，应谨慎使用它们，因为如果违反每个选项中隐含的假设，它们将产生非最佳结果。）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs bash">--use_beta_se         <br><span class="hljs-comment">#If turned on, MTAG will use the provided BETA and SE columns to perform estimation. By default, MTAG uses the Z-statistic.（如果打开，MTAG 将使用提供的 BETA 和 SE 列来执行估计。 默认情况下，MTAG 使用 Z 统计量。）</span><br><br>--no_overlap          <br><span class="hljs-comment">#Imposes the assumption that there is no sample overlap between the input GWAS summary statistics. MTAG is performed with the off-diagonal terms on the residual covariance matrix set to 0.（假设输入 GWAS 汇总统计数据之间没有样本重叠。 MTAG 是在残差协方差矩阵上的非对角项设置为 0 的情况下执行的。）</span><br><br>--perfect_gencov      <br><span class="hljs-comment">#Imposes the assumption that all traits used are perfectly genetically correlated with each other. The off-diagonal terms of the genetic covariance matrix are set to the square root of the product of the heritabilities（强加这样的假设，即所使用的所有特征在遗传上彼此完全相关。 遗传协方差矩阵的非对角项设置为遗传力乘积的平方根）</span><br><br>--equal_h2            <br><span class="hljs-comment">#Imposes the assumption that all traits passed to MTAG have equal heritability. The diagonal terms of the genetic covariance matrix are set equal to each other.Can only be used in conjunction with --perfect_gencov（假设传递给 MTAG 的所有性状都具有相同的遗传力。 遗传协方差矩阵的对角项设置为彼此相等。只能与--perfect_gencov结合使用）</span><br><br>--force               <br><span class="hljs-comment">#Force MTAG estimation even though the mean chi2 is small.（即使平均 chi2 很小，也强制进行 MTAG 估计。）</span><br></code></pre></td></tr></table></figure>
+<h3><span id="2-7-fdr-ji-suan">2.7. FDR计算</span><a href="#2-7-fdr-ji-suan" class="header-anchor">#</a></h3><p>Max FDR calculation:</p>
+<p>These options are used for the calculation of an upper bound on the false disovery under the model described in Supplementary Note 1.1.4 of Turley et al. (2017). Note that there is one of three ways to define the space of grid points over which the upper bound is searched.（这些选项用于在 Turley 等人的补充说明 1.1.4 中描述的模型下计算错误发现的上限。 (2017)。 请注意，可以使用三种方法之一来定义搜索上限的网格点的空间。）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs bash">--fdr                 <br><span class="hljs-comment">#Perform max FDR calculations （执行最大 FDR 计算）</span><br><br>--skip_mtag           <br><span class="hljs-comment">#Skip calculations of MTAG and perform FDR only.（跳过 MTAG 的计算并仅执行 FDR。）</span><br><br>--grid_file GRID_FILE<br><span class="hljs-comment">#Pre-set list of grid points. Users can define a list of grid points over which the search is conducted. The list of grid points should be passed in text file as a white-space delimited matrix of dimnesions, G x S, where G is the number of grid points and S = 2^T is the number of possible causal states for SNPs. States are ordered according to a tree-like recursive structure from right to left. For example, for 3 traits, with the triple TFT denoting the state for which SNPs are causal for State 1, not causal for state 2, and causal for state 3, then the column ordering of probabilities should be: FFF FFT FTF FTT TFF TFT TTF TTT There should be no headers, or row names in the file. Any rows for which (i) the probabilities do not sum to 1, the prior of a SNP being is causal is 0 for any of the traits, and (iii) the resulting genetic correlation matrix is non positive definite will excluded in the search.（预设的网格点列表。 用户可以定义进行搜索的网格点列表。 网格点列表应作为以空白分隔的维度矩阵 G x S 在文本文件中传递，其中 G 是网格点的数量，S = 2^T 是 SNP 的可能因果状态的数量。 状态按照从右到左的树状递归结构进行排序。 例如，对于 3 个性状，三重 TFT 表示 SNP 是状态 1 的因果关系、状态 2 的非因果关系和状态 3 的因果关系的状态，那么概率的列顺序应该是： FFF FFT FTF FTT TFF TFT TTF TTT 文件中不应有标题或行名称。 任何行 (i) 概率总和不为 1，SNP 的先验是任何性状的因果关系，以及 (iii) 所得遗传相关矩阵是非正定的，将在搜索中排除。）</span><br><br>--fit_ss              <br><span class="hljs-comment">#This estimates the prior probability that a SNP is null for each trait and then proceeds to restrict the grid search to the set of probability vectors that sum to the prior null for each trait. This is useful for restrict the search space of larger-dimensional traits.（这会估计每个特征的 SNP 为空的先验概率，然后继续将网格搜索限制为一组概率向量，这些向量与每个特征的先验空值相加。 这对于限制大维特征的搜索空间很有用。）</span><br><br>--intervals INTERVALS<br><span class="hljs-comment">#Number of intervals that you would like to partition the [0,1] interval. For example example, with two traits and --intervals set 10, then maxFDR will calculated over the set of feasible points in &#123;0.,0.1, 0.2,..,0.9,1.0&#125;^2.（您希望对 [0,1] 区间进行分区的区间数。 例如，如果两个特征和 --intervals 设置为 10，则 maxFDR 将在 &#123;0.,0.1, 0.2,..,0.9,1.0&#125;^2 中的一组可行点上计算。）</span><br><br>--cores CORES         <br><span class="hljs-comment">#Number of threads/cores use to compute the FDR grid points for each trait.（用于计算每个特征的 FDR 网格点的线程/核心数。）</span><br><br>--p_sig P_SIG         <br><span class="hljs-comment">#P-value threshold used for statistical signifiance.Default is p=5.0e-8 (genome-wide significance).（用于统计显着性的 P 值阈值。默认为 p=5.0e-8（全基因组显着性）。）</span><br><br>--n_approx            <br><span class="hljs-comment">#Speed up FDR calculation by replacing the sample size of a SNP for each trait by the mean across SNPs (for each trait). Recommended.（通过将每个性状的 SNP 的样本量替换为跨 SNP 的平均值（对于每个性状）来加快 FDR 计算。 推荐使用。）</span><br></code></pre></td></tr></table></figure>
+<h3><span id="2-8-qi-ta-xuan-xiang">2.8. 其他选项</span><a href="#2-8-qi-ta-xuan-xiang" class="header-anchor">#</a></h3><p>Miscellaneous:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs bash">--ld_ref_panel FOLDER_PATH<br><span class="hljs-comment">#Specify folder of the ld reference panel (split by chromosome) that will be used in the estimation of the error VCV (sigma). This option is passed to --ref-ld-chr and --w-ld-chr when running LD score regression. The default is to use the reference panel of LD scores computed from 1000 Genomes European subjects (eur_w_ld_chr) that is included with the distribution of MTAG（指定将用于估计错误 VCV (sigma) 的 ld 参考面板（按染色体拆分）的文件夹。 在运行 LD 分数回归时，此选项会传递给 --ref-ld-chr 和 --w-ld-chr。 默认是使用从 1000 个欧洲基因组受试者 (eur_w_ld_chr) 计算的 LD 分数参考面板，该参考面板包含在 MTAG 的分布中）</span><br><br>--time_limit TIME_LIMIT<br><span class="hljs-comment">#Set time limit (hours) on the numerical estimation of the variance covariance matrix for MTAG, after which the optimization routine will complete its current iteration and perform MTAG using the last iteration of the genetic VCV.（为 MTAG 的方差协方差矩阵的数值估计设置时间限制（小时），之后优化例程将完成其当前迭代并使用遗传 VCV 的最后一次迭代执行 MTAG。）</span><br><br>--std_betas           <br><span class="hljs-comment">#Results files will have standardized effect sizes, i.e., the weights 1/sqrt(2*MAF*(1-MAF)) are not applied when outputting MTAG results, where MAF is the minor allele frequency.（结果文件将具有标准化的效应大小，即在输出 MTAG 结果时不应用权重 1/sqrt(2*MAF*(1-MAF))，其中 MAF 是次要等位基因频率。）</span><br><br>--tol TOL             <br><span class="hljs-comment">#Set the relative (x) tolerance when numerically estimating the genetic variance-covariance matrix. Not recommended to change unless you are facing strong runtime constraints for a large number of traits.（在数值估计遗传方差-协方差矩阵时设置相对 (x) 容差。 除非您面临大量特征的强大运行时限制，否则不建议更改。）</span><br><br>--numerical_omega     <br><span class="hljs-comment">#Option to use the MLE estimator of the genetic VCV matrix, implemented through a numerical routine.（在数值估计遗传方差-协方差矩阵时设置相对 (x) 容差。 除非您面临大量特征的强大运行时限制，否则不建议更改。）</span><br><br>--verbose             <br><span class="hljs-comment">#When used, will include output from running ldsc scripts as well additional information (such as optimization routine information.（使用时，将包括运行 ldsc 脚本的输出以及附加信息（例如优化例程信息。）</span><br><br>--chunksize CHUNKSIZE<br><span class="hljs-comment">#Chunksize for reading in data.（用于读入数据的块大小。）</span><br><br>--stream_stdout       <br><span class="hljs-comment">#Will streat mtag processing on console in addition to writing to log file.（除了写入日志文件外，还将在控制台上进行 mtag 处理。）</span><br><br>--median_z_cutoff MEDIAN_Z_CUTOFF<br><span class="hljs-comment">#Maximum allowed median Z-score for sumstats during input QC（输入 QC 期间 sumstats 的最大允许中值 Z 分数）</span><br></code></pre></td></tr></table></figure>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/BIOINFO-EXPERIMENT-RECORDS/">BIOINFO EXPERIMENT RECORDS</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/GWAS/">GWAS</a>
+                    
+                      <a class="hover-with-bg" href="/tags/SNP/">SNP</a>
+                    
+                      <a class="hover-with-bg" href="/tags/ASD/">ASD</a>
+                    
+                      <a class="hover-with-bg" href="/tags/MTAG/">MTAG</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/01/04/20220104%E5%9F%BA%E4%BA%8EPASCAL%E7%9A%84%E5%9F%BA%E5%9B%A0%E5%88%86%E6%9E%90_%E6%96%B0%E5%9E%8B%E7%9B%B8%E5%85%B3%E5%9F%BA%E5%9B%A0%E7%9A%84%E7%94%9F%E7%89%A9%E5%AD%A6%E6%B4%9E%E5%AF%9F_%E5%AE%9E%E9%AA%8C%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88%E6%B5%81%E7%A8%8B%E5%9B%BE/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">2022.01.04 基于PASCAL的基因分析——新型相关基因的生物学洞察【实验设计方案流程图】</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/12/24/20211224%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93%E4%B8%8E%E6%98%8E%E5%B9%B4%E8%AE%A1%E5%88%92%E5%B7%A5%E4%BD%9C_%E5%88%98%E5%8F%AF%E9%92%A6/">
+                        <span class="hidden-mobile">2021.12.24 年终总结与明年计划工作</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                  
+                
+                
+  <div class="disqus" style="width:100%">
+    <div id="disqus_thread"></div>
+    <script>
+      Fluid.utils.waitElementVisible('disqus_thread', function() {
+        Fluid.utils.createCssLink('https://cdn.jsdelivr.net/npm/disqusjs@1.0/dist/disqusjs.css');
+        Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/disqusjs@1.0/dist/disqus.js', function () {
+          new DisqusJS({
+            shortname: 'fluid',
+            apikey: ''
+          });
+        });
+      });
+    </script>
+    <noscript>Please enable JavaScript to view the
+      <a target="_blank" href="https://disqus.com/?ref_noscript" rel="nofollow noopener noopener">comments powered by Disqus.</a>
+    </noscript>
+  </div>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+</body>
+</html>

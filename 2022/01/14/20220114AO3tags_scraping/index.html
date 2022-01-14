@@ -20,7 +20,7 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-  <title>20210719实验记录B16多肽溶液配置方法 - Hexo</title>
+  <title>AO3 tags scraping - Hexo</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -165,7 +165,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="20210719实验记录B16多肽溶液配置方法">
+            <span class="h2" id="subtitle" title="AO3 tags scraping">
               
             </span>
 
@@ -175,8 +175,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-07-19 17:18" pubdate>
-        2021年7月19日 下午
+      <time datetime="2022-01-14 12:18" pubdate>
+        2022年1月14日 中午
       </time>
     </span>
   
@@ -187,7 +187,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      4 字
+      245 字
     </span>
   
 
@@ -197,7 +197,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      4
        分钟
     </span>
   
@@ -227,17 +227,11 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">20210719实验记录B16多肽溶液配置方法</h1>
+            <h1 style="display: none">AO3 tags scraping</h1>
             
             <div class="markdown-body">
-              <p><strong>pdf版获取</strong><br><br><br>
-
-	<div class="row">
-    <embed src="https://jinsyliu.github.io/pdf/20210719%E5%AE%9E%E9%AA%8C%E8%AE%B0%E5%BD%95B16%E5%A4%9A%E8%82%BD%E6%BA%B6%E6%B6%B2%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95.pdf" width="100%" height="550" type="application/pdf">
-	</div>
-
-
-<br><br></p>
+              <h1><span id="2022-01-14-ao3-tags-scraping">2022.01.14 AO3 tags scraping</span><a href="#2022-01-14-ao3-tags-scraping" class="header-anchor">#</a></h1><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><code class="hljs R">bottom_s &lt;- read.csv(<span class="hljs-string">&quot;/Users/keqinliu/Downloads/AO3Scraper-master/wincest_bottoms.csv&quot;</span>)<br>bottom_s &lt;- read.delim(<span class="hljs-string">&quot;/Users/keqinliu/Downloads/AO3Scraper-master/wincest_bottoms_fanfic.csv&quot;</span>, sep = <span class="hljs-string">&quot;,&quot;</span>)<br>head(bottom_s$additional.tags)<br>write.table(bottom_s$additional.tags, file = <span class="hljs-string">&quot;/Users/keqinliu/Downloads/AO3Scraper-master/bottoms_tags.txt&quot;</span>, <span class="hljs-built_in">quote</span> = <span class="hljs-literal">FALSE</span>, sep = <span class="hljs-string">&quot;,&quot;</span>, col.names = <span class="hljs-literal">FALSE</span>, row.names = <span class="hljs-literal">FALSE</span>)<br><br>library(tm)<br>library(wordcloud)<br>library(RColorBrewer)<br>library(wordcloud2)<br>library(<span class="hljs-string">&quot;corpus&quot;</span>)<br>library(<span class="hljs-string">&quot;textreadr&quot;</span>)<br><br>wincest_bottomd_fanfic_tags &lt;- read_doc(<span class="hljs-string">&quot;/Users/keqinliu/Downloads/AO3Scraper-master/bottoms_tags.doc&quot;</span>, skip = <span class="hljs-number">0</span>, remove.empty = <span class="hljs-literal">TRUE</span>, trim = <span class="hljs-literal">TRUE</span>, format = <span class="hljs-literal">FALSE</span>)<br><span class="hljs-built_in">class</span>(wincest_bottomd_fanfic_tags)<br><span class="hljs-comment"># large charactar</span><br>wincest_bottomd_fanfic_tags_corpus &lt;- Corpus(VectorSource(wincest_bottomd_fanfic_tags)) <span class="hljs-comment">#Create a corpus </span><br>wincest_bottomd_fanfic_tags_corpus &lt;- tm_map(wincest_bottomd_fanfic_tags_corpus, removeNumbers) <span class="hljs-comment">#filtering</span><br>wincest_bottomd_fanfic_tags_corpus &lt;- tm_map(wincest_bottomd_fanfic_tags_corpus, removePunctuation)<br>wincest_bottomd_fanfic_tags_corpus &lt;- tm_map(wincest_bottomd_fanfic_tags_corpus, stripWhitespace)<br>wincest_bottomd_fanfic_tags_corpus &lt;- tm_map(wincest_bottomd_fanfic_tags_corpus, content_transformer(tolower))<br>wincest_bottomd_fanfic_tags_corpus &lt;- tm_map(wincest_bottomd_fanfic_tags_corpus, removeWords, stopwords(<span class="hljs-string">&quot;english&quot;</span>))<br><br>toSpace &lt;- content_transformer(<span class="hljs-keyword">function</span>(x, pattern) gsub(pattern, <span class="hljs-string">&quot; &quot;</span>, x)) <span class="hljs-comment">#filtering specific words</span><br>wincest_bottomd_fanfic_tags_corpus &lt;- tm_map(wincest_bottomd_fanfic_tags_corpus, toSpace, <span class="hljs-string">&quot;winchester&quot;</span>)<br><span class="hljs-comment">#wincest_bottomd_fanfic_tags_corpus &lt;- tm_map(wincest_bottomd_fanfic_tags_corpus, toSpace, &quot;dean&quot;)</span><br><span class="hljs-comment">#wincest_bottomd_fanfic_tags_corpus &lt;- tm_map(wincest_bottomd_fanfic_tags_corpus, toSpace, &quot;sam&quot;)</span><br>wincest_bottomd_fanfic_tags_corpus &lt;- tm_map(wincest_bottomd_fanfic_tags_corpus, toSpace, <span class="hljs-string">&quot;castiel&quot;</span>)<br><br><br>dtm &lt;- TermDocumentMatrix(wincest_bottomd_fanfic_tags_corpus) <br>matrix &lt;- as.matrix(dtm) <br>words &lt;- sort(rowSums(matrix),decreasing=<span class="hljs-literal">TRUE</span>) <br>df &lt;- data.frame(word = <span class="hljs-built_in">names</span>(words),freq=words)<br><br>set.seed(<span class="hljs-number">1234</span>) <span class="hljs-comment"># for reproducibility </span><br>wordcloud(words = df$word, freq = df$freq, min.freq = <span class="hljs-number">1</span>,           max.words=<span class="hljs-number">200</span>, random.order=<span class="hljs-literal">FALSE</span>, rot.per=<span class="hljs-number">0.35</span>,            colors=brewer.pal(<span class="hljs-number">8</span>, <span class="hljs-string">&quot;Dark2&quot;</span>))<br></code></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/jinsyliu/image/main/jinsyliu_myblog/bottom_sam_tags.png" srcset="/img/loading.gif" alt="bottom sam tags"></p>
 
             </div>
             <hr>
@@ -247,7 +241,7 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/EXPERIMENT-RECORDS/">EXPERIMENT RECORDS</a>
+                      <a class="hover-with-bg" href="/categories/BIOINFO-EXPERIMENT-RECORDS/">BIOINFO EXPERIMENT RECORDS</a>
                     
                   </div>
                 
@@ -255,7 +249,11 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/polypeptide-vaccine/">polypeptide vaccine</a>
+                      <a class="hover-with-bg" href="/tags/R/">R</a>
+                    
+                      <a class="hover-with-bg" href="/tags/AO3/">AO3</a>
+                    
+                      <a class="hover-with-bg" href="/tags/data-scraping/">data scraping</a>
                     
                   </div>
                 
@@ -272,18 +270,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/07/19/20210719%E5%AE%9E%E9%AA%8C%E8%AE%B0%E5%BD%95geo2r/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">20210719实验记录geo2r</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/07/16/20210716GEO2REXPERIMENT&amp;RESULTS/">
-                        <span class="hidden-mobile">2021.7.16 GEO2R EXPERIMENT & RESULTS</span>
+                      <a href="/2022/01/12/20220112%E7%91%9E%E9%87%91%E4%BC%9A%E8%AE%AE%E8%AE%B0%E5%BD%95/">
+                        <span class="hidden-mobile">2022.01.12 会议记录</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

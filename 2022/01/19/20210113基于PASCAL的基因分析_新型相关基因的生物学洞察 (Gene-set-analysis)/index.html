@@ -1,0 +1,507 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  
+    <meta name="description" content="">
+  
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+  <title>Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Liu Keqin</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2022-01-19 17:36" pubdate>
+        2022年1月19日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      5k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      98
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none"></h1>
+            
+            <div class="markdown-body">
+              <h1><span id="2021-01-13-ji-yu-pascal-de-ji-yin-fen-xi-xin-xing-xiang-guan-ji-yin-de-sheng-wu-xue-dong-cha-gene-set-analysis">2021.01.13  基于PASCAL的基因分析——新型相关基因的生物学洞察 (Gene-set-analysis)</span><a href="#2021-01-13-ji-yu-pascal-de-ji-yin-fen-xi-xin-xing-xiang-guan-ji-yin-de-sheng-wu-xue-dong-cha-gene-set-analysis" class="header-anchor">#</a></h1><h2><span id="1-gene-set-analysis">1. gene set analysis</span><a href="#1-gene-set-analysis" class="header-anchor">#</a></h2><p>观察是否在神经功能发育障碍中出现显著富集（0.05阈值）</p>
+<h3><span id="1-1-anxiety">1.1. anxiety</span><a href="#1-1-anxiety" class="header-anchor">#</a></h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs R">anxiety_PathwaySet_chr1 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/anxiety.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220110.sum.chr1.txt&quot;</span>)<br>anxiety_PathwaySet_chr2 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/anxiety.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220110.sum.chr2.txt&quot;</span>)<br>anxiety_PathwaySet_chr3 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/anxiety.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220110.sum.chr3.txt&quot;</span>)<br>anxiety_PathwaySet_chr4 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/anxiety.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220110.sum.chr4.txt&quot;</span>)<br>anxiety_PathwaySet_chr5 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/anxiety.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220110.sum.chr5.txt&quot;</span>)<br>anxiety_PathwaySet_chr6 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/anxiety.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220110.sum.chr6.txt&quot;</span>)<br>anxiety_PathwaySet_chr7 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/anxiety.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220110.sum.chr7.txt&quot;</span>)<br>anxiety_PathwaySet_chr8 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/anxiety.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220110.sum.chr8.txt&quot;</span>)<br>anxiety_PathwaySet_chr9 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/anxiety.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220110.sum.chr9.txt&quot;</span>)<br>anxiety_PathwaySet_chr10 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/anxiety.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220110.sum.chr10.txt&quot;</span>)<br>anxiety_PathwaySet_chr11 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/anxiety.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220110.sum.chr11.txt&quot;</span>)<br>anxiety_PathwaySet_chr12 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/anxiety.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220110.sum.chr12.txt&quot;</span>)<br>anxiety_PathwaySet_chr13 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/anxiety.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220110.sum.chr13.txt&quot;</span>)<br>anxiety_PathwaySet_chr14 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/anxiety.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220110.sum.chr14.txt&quot;</span>)<br>anxiety_PathwaySet_chr15 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/anxiety.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220110.sum.chr15.txt&quot;</span>)<br>anxiety_PathwaySet_chr16 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/anxiety.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220110.sum.chr16.txt&quot;</span>)<br>anxiety_PathwaySet_chr17 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/anxiety.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220110.sum.chr17.txt&quot;</span>)<br>anxiety_PathwaySet_chr18 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/anxiety.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220110.sum.chr18.txt&quot;</span>)<br>anxiety_PathwaySet_chr19 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/anxiety.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220110.sum.chr19.txt&quot;</span>)<br>anxiety_PathwaySet_chr20 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/anxiety.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220110.sum.chr20.txt&quot;</span>)<br>anxiety_PathwaySet_chr21 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/anxiety.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220110.sum.chr21.txt&quot;</span>)<br>anxiety_PathwaySet_chr22 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/anxiety.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220110.sum.chr22.txt&quot;</span>)<br><br>anxiety_PathwaySet &lt;- rbind(anxiety_PathwaySet_chr1, anxiety_PathwaySet_chr2, anxiety_PathwaySet_chr3, anxiety_PathwaySet_chr4, anxiety_PathwaySet_chr5, anxiety_PathwaySet_chr6, anxiety_PathwaySet_chr7, anxiety_PathwaySet_chr8, anxiety_PathwaySet_chr9, anxiety_PathwaySet_chr10, anxiety_PathwaySet_chr11, anxiety_PathwaySet_chr12, anxiety_PathwaySet_chr13, anxiety_PathwaySet_chr14, anxiety_PathwaySet_chr15, anxiety_PathwaySet_chr16, anxiety_PathwaySet_chr17, anxiety_PathwaySet_chr18, anxiety_PathwaySet_chr19, anxiety_PathwaySet_chr20, anxiety_PathwaySet_chr21, anxiety_PathwaySet_chr22)<br><br>anxiety_PathwaySet &lt;- anxiety_PathwaySet[order(anxiety_PathwaySet$chi2Pvalue),] <span class="hljs-comment">#按照chipvalue升序排列</span><br>head(anxiety_PathwaySet)<br>anxiety_PathwaySet_0.05 &lt;- filter(anxiety_PathwaySet, chi2Pvalue&lt;<span class="hljs-number">0.05</span> &amp; empPvalue&lt;<span class="hljs-number">0.05</span>)<br>head(anxiety_PathwaySet_0.05)<br>write.table(anxiety_PathwaySet_0.05, file = <span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/anxiety_PathwaySet_0.05.txt&quot;</span>, <span class="hljs-built_in">quote</span> = <span class="hljs-literal">FALSE</span>, sep = <span class="hljs-string">&quot;\t&quot;</span>, row.names = <span class="hljs-literal">FALSE</span>, col.names = <span class="hljs-literal">TRUE</span>)<br></code></pre></td></tr></table></figure>
+<h3><span id="1-2-cannabis-use-disorder">1.2. cannabis use disorder</span><a href="#1-2-cannabis-use-disorder" class="header-anchor">#</a></h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs R">cannabis_use_disorder_PathwaySet_chr1 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/CUD_EUR_casecontrol_public_20201114_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220107.sum.chr1.txt&quot;</span>)<br>cannabis_use_disorder_PathwaySet_chr2 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/CUD_EUR_casecontrol_public_20201114_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220107.sum.chr2.txt&quot;</span>)<br>cannabis_use_disorder_PathwaySet_chr3 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/CUD_EUR_casecontrol_public_20201114_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220107.sum.chr3.txt&quot;</span>)<br>cannabis_use_disorder_PathwaySet_chr4 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/CUD_EUR_casecontrol_public_20201114_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220107.sum.chr4.txt&quot;</span>)<br>cannabis_use_disorder_PathwaySet_chr5 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/CUD_EUR_casecontrol_public_20201114_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220107.sum.chr5.txt&quot;</span>)<br>cannabis_use_disorder_PathwaySet_chr6 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/CUD_EUR_casecontrol_public_20201114_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220107.sum.chr6.txt&quot;</span>)<br>cannabis_use_disorder_PathwaySet_chr7 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/CUD_EUR_casecontrol_public_20201114_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220107.sum.chr7.txt&quot;</span>)<br>cannabis_use_disorder_PathwaySet_chr8 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/CUD_EUR_casecontrol_public_20201114_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220107.sum.chr8.txt&quot;</span>)<br>cannabis_use_disorder_PathwaySet_chr9 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/CUD_EUR_casecontrol_public_20201114_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220107.sum.chr9.txt&quot;</span>)<br>cannabis_use_disorder_PathwaySet_chr10 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/CUD_EUR_casecontrol_public_20201114_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220107.sum.chr10.txt&quot;</span>)<br>cannabis_use_disorder_PathwaySet_chr11 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/CUD_EUR_casecontrol_public_20201114_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220107.sum.chr11.txt&quot;</span>)<br>cannabis_use_disorder_PathwaySet_chr12 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/CUD_EUR_casecontrol_public_20201114_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220107.sum.chr12.txt&quot;</span>)<br>cannabis_use_disorder_PathwaySet_chr13 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/CUD_EUR_casecontrol_public_20201114_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220107.sum.chr13.txt&quot;</span>)<br>cannabis_use_disorder_PathwaySet_chr14 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/CUD_EUR_casecontrol_public_20201114_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220107.sum.chr14.txt&quot;</span>)<br>cannabis_use_disorder_PathwaySet_chr15 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/CUD_EUR_casecontrol_public_20201114_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220107.sum.chr15.txt&quot;</span>)<br>cannabis_use_disorder_PathwaySet_chr16 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/CUD_EUR_casecontrol_public_20201114_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220107.sum.chr16.txt&quot;</span>)<br>cannabis_use_disorder_PathwaySet_chr17 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/CUD_EUR_casecontrol_public_20201114_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220107.sum.chr17.txt&quot;</span>)<br>cannabis_use_disorder_PathwaySet_chr18 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/CUD_EUR_casecontrol_public_20201114_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220107.sum.chr18.txt&quot;</span>)<br>cannabis_use_disorder_PathwaySet_chr19 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/CUD_EUR_casecontrol_public_20201114_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220107.sum.chr19.txt&quot;</span>)<br>cannabis_use_disorder_PathwaySet_chr20 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/CUD_EUR_casecontrol_public_20201114_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220107.sum.chr20.txt&quot;</span>)<br>cannabis_use_disorder_PathwaySet_chr21 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/CUD_EUR_casecontrol_public_20201114_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220107.sum.chr21.txt&quot;</span>)<br>cannabis_use_disorder_PathwaySet_chr22 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/CUD_EUR_casecontrol_public_20201114_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220107.sum.chr22.txt&quot;</span>)<br><br>cannabis_use_disorder_PathwaySet &lt;- rbind(cannabis_use_disorder_PathwaySet_chr1, cannabis_use_disorder_PathwaySet_chr2, cannabis_use_disorder_PathwaySet_chr3, cannabis_use_disorder_PathwaySet_chr4, cannabis_use_disorder_PathwaySet_chr5, cannabis_use_disorder_PathwaySet_chr6, cannabis_use_disorder_PathwaySet_chr7, cannabis_use_disorder_PathwaySet_chr8, cannabis_use_disorder_PathwaySet_chr9, cannabis_use_disorder_PathwaySet_chr10, cannabis_use_disorder_PathwaySet_chr11, cannabis_use_disorder_PathwaySet_chr12, cannabis_use_disorder_PathwaySet_chr13, cannabis_use_disorder_PathwaySet_chr14, cannabis_use_disorder_PathwaySet_chr15, cannabis_use_disorder_PathwaySet_chr16, cannabis_use_disorder_PathwaySet_chr17, cannabis_use_disorder_PathwaySet_chr18, cannabis_use_disorder_PathwaySet_chr19, cannabis_use_disorder_PathwaySet_chr20, cannabis_use_disorder_PathwaySet_chr21, cannabis_use_disorder_PathwaySet_chr22)<br><br>cannabis_use_disorder_PathwaySet &lt;- cannabis_use_disorder_PathwaySet[order(cannabis_use_disorder_PathwaySet$chi2Pvalue),] <span class="hljs-comment">#按照chipvalue升序排列</span><br>head(cannabis_use_disorder_PathwaySet)<br>cannabis_use_disorder_PathwaySet_0.05 &lt;- filter(cannabis_use_disorder_PathwaySet, chi2Pvalue&lt;<span class="hljs-number">0.05</span> &amp; empPvalue&lt;<span class="hljs-number">0.05</span>)<br>head(cannabis_use_disorder_PathwaySet_0.05)<br>write.table(cannabis_use_disorder_PathwaySet_0.05, file = <span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/cannabis_use_disorder_PathwaySet_0.05.txt&quot;</span>, <span class="hljs-built_in">quote</span> = <span class="hljs-literal">FALSE</span>, sep = <span class="hljs-string">&quot;\t&quot;</span>, row.names = <span class="hljs-literal">FALSE</span>, col.names = <span class="hljs-literal">TRUE</span>)<br></code></pre></td></tr></table></figure>
+<h3><span id="1-3-asd">1.3. asd</span><a href="#1-3-asd" class="header-anchor">#</a></h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><code class="hljs r"><span class="hljs-comment">#整理geneset格式</span><br><span class="hljs-comment">#别忘了在使用filter前加载dplyr包</span><br><br>asd_PathwaySet_chr1 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH_PGC_ASD_Nov2017_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20211231.sum.chr1.txt&quot;</span>)<br>asd_PathwaySet_chr2 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH_PGC_ASD_Nov2017_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220104.sum.chr2.txt&quot;</span>)<br>asd_PathwaySet_chr3 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH_PGC_ASD_Nov2017_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220104.sum.chr3.txt&quot;</span>)<br>asd_PathwaySet_chr4 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH_PGC_ASD_Nov2017_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220104.sum.chr4.txt&quot;</span>)<br>asd_PathwaySet_chr5 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH_PGC_ASD_Nov2017_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220104.sum.chr5.txt&quot;</span>)<br>asd_PathwaySet_chr6 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH_PGC_ASD_Nov2017_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220104.sum.chr6.txt&quot;</span>)<br>asd_PathwaySet_chr7 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH_PGC_ASD_Nov2017_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220104.sum.chr7.txt&quot;</span>)<br>asd_PathwaySet_chr8 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH_PGC_ASD_Nov2017_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220104.sum.chr8.txt&quot;</span>)<br>asd_PathwaySet_chr9 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH_PGC_ASD_Nov2017_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220104.sum.chr9.txt&quot;</span>)<br>asd_PathwaySet_chr10 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH_PGC_ASD_Nov2017_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220104.sum.chr10.txt&quot;</span>)<br>asd_PathwaySet_chr11 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH_PGC_ASD_Nov2017_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220104.sum.chr11.txt&quot;</span>)<br>asd_PathwaySet_chr12 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH_PGC_ASD_Nov2017_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220104.sum.chr12.txt&quot;</span>)<br>asd_PathwaySet_chr13 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH_PGC_ASD_Nov2017_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220104.sum.chr13.txt&quot;</span>)<br>asd_PathwaySet_chr14 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH_PGC_ASD_Nov2017_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220104.sum.chr14.txt&quot;</span>)<br>asd_PathwaySet_chr15 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH_PGC_ASD_Nov2017_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220104.sum.chr15.txt&quot;</span>)<br>asd_PathwaySet_chr16 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH_PGC_ASD_Nov2017_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220104.sum.chr16.txt&quot;</span>)<br>asd_PathwaySet_chr17 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH_PGC_ASD_Nov2017_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220104.sum.chr17.txt&quot;</span>)<br>asd_PathwaySet_chr18 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH_PGC_ASD_Nov2017_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220104.sum.chr18.txt&quot;</span>)<br>asd_PathwaySet_chr19 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH_PGC_ASD_Nov2017_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220104.sum.chr19.txt&quot;</span>)<br>asd_PathwaySet_chr20 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH_PGC_ASD_Nov2017_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220104.sum.chr20.txt&quot;</span>)<br>asd_PathwaySet_chr21 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH_PGC_ASD_Nov2017_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220104.sum.chr21.txt&quot;</span>)<br>asd_PathwaySet_chr22 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH_PGC_ASD_Nov2017_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220104.sum.chr22.txt&quot;</span>)<br><br>asd_PathwaySet &lt;- rbind(asd_PathwaySet_chr1, asd_PathwaySet_chr2, asd_PathwaySet_chr3, asd_PathwaySet_chr4, asd_PathwaySet_chr5, asd_PathwaySet_chr6, asd_PathwaySet_chr7, asd_PathwaySet_chr8, asd_PathwaySet_chr9, asd_PathwaySet_chr10, asd_PathwaySet_chr11, asd_PathwaySet_chr12, asd_PathwaySet_chr13, asd_PathwaySet_chr14, asd_PathwaySet_chr15, asd_PathwaySet_chr16, asd_PathwaySet_chr17, asd_PathwaySet_chr18, asd_PathwaySet_chr19, asd_PathwaySet_chr20, asd_PathwaySet_chr21, asd_PathwaySet_chr22)<br><br>asd_PathwaySet &lt;- asd_PathwaySet[order(asd_PathwaySet$chi2Pvalue),] <span class="hljs-comment">#按照chipvalue升序排列</span><br>head(asd_PathwaySet)<br><span class="hljs-comment">##                                                       Name chi2Pvalue empPvalue chr</span><br><span class="hljs-comment">## 6463             KEGG_TOLL_LIKE_RECEPTOR_SIGNALING_PATHWAY    0.00109  0.001200   7</span><br><span class="hljs-comment">## 8617                            REACTOME_SIGNALLING_BY_NGF    0.00114  0.000388   9</span><br><span class="hljs-comment">## 20464                                 KEGG_RNA_DEGRADATION    0.00156  0.001580  20</span><br><span class="hljs-comment">## 16156 REACTOME_TRANSPORT_OF_MATURE_TRANSCRIPT_TO_CYTOPLASM    0.00170  0.000710  16</span><br><span class="hljs-comment">## 6464              REACTOME_INTERFERON_ALPHA_BETA_SIGNALING    0.00183  0.001940   7</span><br><span class="hljs-comment">## 19387                       REACTOME_GLYCOPROTEIN_HORMONES    0.00190  0.001710  19</span><br><br>asd_PathwaySet_0.05 &lt;- filter(asd_PathwaySet, chi2Pvalue&lt;<span class="hljs-number">0.05</span> &amp; empPvalue&lt;<span class="hljs-number">0.05</span>)<br>head(asd_PathwaySet_0.05)<br><span class="hljs-comment">##                                                   Name chi2Pvalue empPvalue chr</span><br><span class="hljs-comment">## 1            KEGG_TOLL_LIKE_RECEPTOR_SIGNALING_PATHWAY    0.00109  0.001200   7</span><br><span class="hljs-comment">## 2                           REACTOME_SIGNALLING_BY_NGF    0.00114  0.000388   9</span><br><span class="hljs-comment">## 3                                 KEGG_RNA_DEGRADATION    0.00156  0.001580  20</span><br><span class="hljs-comment">## 4 REACTOME_TRANSPORT_OF_MATURE_TRANSCRIPT_TO_CYTOPLASM    0.00170  0.000710  16</span><br><span class="hljs-comment">## 5             REACTOME_INTERFERON_ALPHA_BETA_SIGNALING    0.00183  0.001940   7</span><br><span class="hljs-comment">## 6                       REACTOME_GLYCOPROTEIN_HORMONES    0.00190  0.001710  19</span><br><br>write.table(asd_PathwaySet_0.05, file = <span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/asd_PathwaySet_0.05.txt&quot;</span>, <span class="hljs-built_in">quote</span> = <span class="hljs-literal">FALSE</span>, sep = <span class="hljs-string">&quot;\t&quot;</span>, row.names = <span class="hljs-literal">FALSE</span>, col.names = <span class="hljs-literal">TRUE</span>)<br></code></pre></td></tr></table></figure>
+<h3><span id="1-4-adhd">1.4. adhd</span><a href="#1-4-adhd" class="header-anchor">#</a></h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><code class="hljs r"><span class="hljs-comment">#整理geneset格式</span><br>adhd_PathwaySet_chr1 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH23_adhd_2019_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220106.sum.chr1.txt&quot;</span>)<br>adhd_PathwaySet_chr2 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH23_adhd_2019_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220106.sum.chr2.txt&quot;</span>)<br>adhd_PathwaySet_chr3 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH23_adhd_2019_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220106.sum.chr3.txt&quot;</span>)<br>adhd_PathwaySet_chr4 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH23_adhd_2019_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220106.sum.chr4.txt&quot;</span>)<br>adhd_PathwaySet_chr5 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH23_adhd_2019_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220106.sum.chr5.txt&quot;</span>)<br>adhd_PathwaySet_chr6 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH23_adhd_2019_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220106.sum.chr6.txt&quot;</span>)<br>adhd_PathwaySet_chr7 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH23_adhd_2019_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220106.sum.chr7.txt&quot;</span>)<br>adhd_PathwaySet_chr8 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH23_adhd_2019_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220106.sum.chr8.txt&quot;</span>)<br>adhd_PathwaySet_chr9 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH23_adhd_2019_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220106.sum.chr9.txt&quot;</span>)<br>adhd_PathwaySet_chr10 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH23_adhd_2019_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220106.sum.chr10.txt&quot;</span>)<br>adhd_PathwaySet_chr11 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH23_adhd_2019_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220106.sum.chr11.txt&quot;</span>)<br>adhd_PathwaySet_chr12 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH23_adhd_2019_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220106.sum.chr12.txt&quot;</span>)<br>adhd_PathwaySet_chr13 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH23_adhd_2019_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220106.sum.chr13.txt&quot;</span>)<br>adhd_PathwaySet_chr14 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH23_adhd_2019_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220106.sum.chr14.txt&quot;</span>)<br>adhd_PathwaySet_chr15 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH23_adhd_2019_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220106.sum.chr15.txt&quot;</span>)<br>adhd_PathwaySet_chr16 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH23_adhd_2019_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220106.sum.chr16.txt&quot;</span>)<br>adhd_PathwaySet_chr17 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH23_adhd_2019_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220106.sum.chr17.txt&quot;</span>)<br>adhd_PathwaySet_chr18 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH23_adhd_2019_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220106.sum.chr18.txt&quot;</span>)<br>adhd_PathwaySet_chr19 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH23_adhd_2019_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220106.sum.chr19.txt&quot;</span>)<br>adhd_PathwaySet_chr20 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH23_adhd_2019_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220106.sum.chr20.txt&quot;</span>)<br>adhd_PathwaySet_chr21 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH23_adhd_2019_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220106.sum.chr21.txt&quot;</span>)<br>adhd_PathwaySet_chr22 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH23_adhd_2019_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220106.sum.chr22.txt&quot;</span>)<br><br>adhd_PathwaySet &lt;- rbind(adhd_PathwaySet_chr1, adhd_PathwaySet_chr2, adhd_PathwaySet_chr3, adhd_PathwaySet_chr4, adhd_PathwaySet_chr5, adhd_PathwaySet_chr6, adhd_PathwaySet_chr7, adhd_PathwaySet_chr8, adhd_PathwaySet_chr9, adhd_PathwaySet_chr10, adhd_PathwaySet_chr11, adhd_PathwaySet_chr12, adhd_PathwaySet_chr13, adhd_PathwaySet_chr14, adhd_PathwaySet_chr15, adhd_PathwaySet_chr16, adhd_PathwaySet_chr17, adhd_PathwaySet_chr18, adhd_PathwaySet_chr19, adhd_PathwaySet_chr20, adhd_PathwaySet_chr21)<br><br>adhd_PathwaySet &lt;- adhd_PathwaySet[order(adhd_PathwaySet$chi2Pvalue),] <span class="hljs-comment">#按照chipvalue升序排列</span><br>head(adhd_PathwaySet)<br><span class="hljs-comment">##                                            Name chi2Pvalue empPvalue chr</span><br><span class="hljs-comment">## 19387           KEGG_HEDGEHOG_SIGNALING_PATHWAY   0.000253  2.82e-05  19</span><br><span class="hljs-comment">## 1     REACTOME_O_LINKED_GLYCOSYLATION_OF_MUCINS   0.000666  6.18e-04   1</span><br><span class="hljs-comment">## 2                   REACTOME_SIGNALING_BY_NOTCH   0.000676  1.54e-03   1</span><br><span class="hljs-comment">## 11848             REACTOME_ERKS_ARE_INACTIVATED   0.000861  8.60e-04  12</span><br><span class="hljs-comment">## 11849                 REACTOME_ERK_MAPK_TARGETS   0.000861  9.70e-04  12</span><br><span class="hljs-comment">## 3                          BIOCARTA_TPO_PATHWAY   0.000972  4.12e-03   1</span><br><br>adhd_PathwaySet_0.05 &lt;- filter(adhd_PathwaySet, chi2Pvalue&lt;<span class="hljs-number">0.05</span> &amp; empPvalue&lt;<span class="hljs-number">0.05</span>)<br>head(adhd_PathwaySet_0.05)<br><span class="hljs-comment">##                                        Name chi2Pvalue empPvalue chr</span><br><span class="hljs-comment">## 1           KEGG_HEDGEHOG_SIGNALING_PATHWAY   0.000253  2.82e-05  19</span><br><span class="hljs-comment">## 2 REACTOME_O_LINKED_GLYCOSYLATION_OF_MUCINS   0.000666  6.18e-04   1</span><br><span class="hljs-comment">## 3               REACTOME_SIGNALING_BY_NOTCH   0.000676  1.54e-03   1</span><br><span class="hljs-comment">## 4             REACTOME_ERKS_ARE_INACTIVATED   0.000861  8.60e-04  12</span><br><span class="hljs-comment">## 5                 REACTOME_ERK_MAPK_TARGETS   0.000861  9.70e-04  12</span><br><span class="hljs-comment">## 6                      BIOCARTA_TPO_PATHWAY   0.000972  4.12e-03   1</span><br><br>write.table(adhd_PathwaySet_0.05, file = <span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/adhd_PathwaySet_0.05.txt&quot;</span>, <span class="hljs-built_in">quote</span> = <span class="hljs-literal">FALSE</span>, sep = <span class="hljs-string">&quot;\t&quot;</span>, row.names = <span class="hljs-literal">FALSE</span>, col.names = <span class="hljs-literal">TRUE</span>)<br></code></pre></td></tr></table></figure>
+<h3><span id="1-5-bipolar">1.5. bipolar</span><a href="#1-5-bipolar" class="header-anchor">#</a></h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-comment">#整理geneset格式</span><br>biopolar_PathwaySet_chr1 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH23_bipolar_2021_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220104.sum.chr1.txt&quot;</span>)<br>biopolar_PathwaySet_chr2 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH23_bipolar_2021_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220104.sum.chr2.txt&quot;</span>)<br>biopolar_PathwaySet_chr3 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH23_bipolar_2021_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220104.sum.chr3.txt&quot;</span>)<br>biopolar_PathwaySet_chr4 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH23_bipolar_2021_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220104.sum.chr4.txt&quot;</span>)<br>biopolar_PathwaySet_chr5 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH23_bipolar_2021_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220104.sum.chr5.txt&quot;</span>)<br>biopolar_PathwaySet_chr6 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH23_bipolar_2021_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220104.sum.chr6.txt&quot;</span>)<br>biopolar_PathwaySet_chr7 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH23_bipolar_2021_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220104.sum.chr7.txt&quot;</span>)<br>biopolar_PathwaySet_chr8 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH23_bipolar_2021_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220104.sum.chr8.txt&quot;</span>)<br>biopolar_PathwaySet_chr9 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH23_bipolar_2021_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220104.sum.chr9.txt&quot;</span>)<br>biopolar_PathwaySet_chr10 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH23_bipolar_2021_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220104.sum.chr10.txt&quot;</span>)<br>biopolar_PathwaySet_chr11 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH23_bipolar_2021_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220104.sum.chr11.txt&quot;</span>)<br>biopolar_PathwaySet_chr12 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH23_bipolar_2021_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220104.sum.chr12.txt&quot;</span>)<br>biopolar_PathwaySet_chr13 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH23_bipolar_2021_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220104.sum.chr13.txt&quot;</span>)<br>biopolar_PathwaySet_chr14 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH23_bipolar_2021_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220104.sum.chr14.txt&quot;</span>)<br>biopolar_PathwaySet_chr15 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH23_bipolar_2021_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220104.sum.chr15.txt&quot;</span>)<br>biopolar_PathwaySet_chr16 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH23_bipolar_2021_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220104.sum.chr16.txt&quot;</span>)<br>biopolar_PathwaySet_chr17 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH23_bipolar_2021_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220104.sum.chr17.txt&quot;</span>)<br>biopolar_PathwaySet_chr18 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH23_bipolar_2021_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220104.sum.chr18.txt&quot;</span>)<br>biopolar_PathwaySet_chr19 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH23_bipolar_2021_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220104.sum.chr19.txt&quot;</span>)<br>biopolar_PathwaySet_chr20 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH23_bipolar_2021_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220104.sum.chr20.txt&quot;</span>)<br>biopolar_PathwaySet_chr21 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH23_bipolar_2021_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220104.sum.chr21.txt&quot;</span>)<br>biopolar_PathwaySet_chr22 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/iPSYCH23_bipolar_2021_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220104.sum.chr22.txt&quot;</span>)<br><br>bipolar_PathwaySet &lt;- rbind(biopolar_PathwaySet_chr1, biopolar_PathwaySet_chr2, biopolar_PathwaySet_chr3, biopolar_PathwaySet_chr4, biopolar_PathwaySet_chr5, biopolar_PathwaySet_chr6, biopolar_PathwaySet_chr7, biopolar_PathwaySet_chr8, biopolar_PathwaySet_chr9, biopolar_PathwaySet_chr10, biopolar_PathwaySet_chr11, biopolar_PathwaySet_chr12, biopolar_PathwaySet_chr13, biopolar_PathwaySet_chr14, biopolar_PathwaySet_chr15, biopolar_PathwaySet_chr16, biopolar_PathwaySet_chr17, biopolar_PathwaySet_chr18, biopolar_PathwaySet_chr19, biopolar_PathwaySet_chr20, biopolar_PathwaySet_chr21, biopolar_PathwaySet_chr22)<br>bipolar_PathwaySet &lt;- bipolar_PathwaySet[order(bipolar_PathwaySet$chi2Pvalue),] <span class="hljs-comment">#按照chipvalue升序排列</span><br>head(bipolar_PathwaySet)<br><br>bipolar_PathwaySet_0.05 &lt;- filter(bipolar_PathwaySet, chi2Pvalue&lt;<span class="hljs-number">0.05</span> &amp; empPvalue&lt;<span class="hljs-number">0.05</span>)<br>head(bipolar_PathwaySet_0.05)<br><br>write.table(bipolar_PathwaySet_0.05, file = <span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/bipolar_PathwaySet_0.05.txt&quot;</span>, <span class="hljs-built_in">quote</span> = <span class="hljs-literal">FALSE</span>, sep = <span class="hljs-string">&quot;\t&quot;</span>, row.names = <span class="hljs-literal">FALSE</span>, col.names = <span class="hljs-literal">TRUE</span>)<br></code></pre></td></tr></table></figure>
+<h3><span id="1-6-ocd">1.6. ocd</span><a href="#1-6-ocd" class="header-anchor">#</a></h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-comment">#整理geneset格式</span><br>ocd_PathwaySet_chr1 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/ocd_aug2017_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220107.sum.chr1.txt&quot;</span>)<br>ocd_PathwaySet_chr2 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/ocd_aug2017_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220107.sum.chr2.txt&quot;</span>)<br>ocd_PathwaySet_chr3 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/ocd_aug2017_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220107.sum.chr3.txt&quot;</span>)<br>ocd_PathwaySet_chr4 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/ocd_aug2017_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220107.sum.chr4.txt&quot;</span>)<br>ocd_PathwaySet_chr5 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/ocd_aug2017_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220107.sum.chr5.txt&quot;</span>)<br>ocd_PathwaySet_chr6 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/ocd_aug2017_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220107.sum.chr6.txt&quot;</span>)<br>ocd_PathwaySet_chr7 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/ocd_aug2017_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220107.sum.chr7.txt&quot;</span>)<br>ocd_PathwaySet_chr8 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/ocd_aug2017_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220107.sum.chr8.txt&quot;</span>)<br>ocd_PathwaySet_chr9 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/ocd_aug2017_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220107.sum.chr9.txt&quot;</span>)<br>ocd_PathwaySet_chr10 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/ocd_aug2017_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220107.sum.chr10.txt&quot;</span>)<br>ocd_PathwaySet_chr11 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/ocd_aug2017_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220107.sum.chr11.txt&quot;</span>)<br>ocd_PathwaySet_chr12 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/ocd_aug2017_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220107.sum.chr12.txt&quot;</span>)<br>ocd_PathwaySet_chr13 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/ocd_aug2017_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220107.sum.chr13.txt&quot;</span>)<br>ocd_PathwaySet_chr14 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/ocd_aug2017_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220107.sum.chr14.txt&quot;</span>)<br>ocd_PathwaySet_chr15 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/ocd_aug2017_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220107.sum.chr15.txt&quot;</span>)<br>ocd_PathwaySet_chr16 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/ocd_aug2017_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220107.sum.chr16.txt&quot;</span>)<br>ocd_PathwaySet_chr17 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/ocd_aug2017_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220107.sum.chr17.txt&quot;</span>)<br>ocd_PathwaySet_chr18 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/ocd_aug2017_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220107.sum.chr18.txt&quot;</span>)<br>ocd_PathwaySet_chr19 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/ocd_aug2017_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220107.sum.chr19.txt&quot;</span>)<br>ocd_PathwaySet_chr20 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/ocd_aug2017_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220107.sum.chr20.txt&quot;</span>)<br>ocd_PathwaySet_chr21 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/ocd_aug2017_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220107.sum.chr21.txt&quot;</span>)<br><span class="hljs-comment">#ocd_PathwaySet_chr22 &lt;- read.delim(&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/ocd_aug2017_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220107.sum.chr22.txt&quot;)</span><br><br>ocd_PathwaySet &lt;- rbind(ocd_PathwaySet_chr1, ocd_PathwaySet_chr2, ocd_PathwaySet_chr3, ocd_PathwaySet_chr4, ocd_PathwaySet_chr5, ocd_PathwaySet_chr6, ocd_PathwaySet_chr7, ocd_PathwaySet_chr8, ocd_PathwaySet_chr9, ocd_PathwaySet_chr10, ocd_PathwaySet_chr11, ocd_PathwaySet_chr12, ocd_PathwaySet_chr13, ocd_PathwaySet_chr14, ocd_PathwaySet_chr15, ocd_PathwaySet_chr16, ocd_PathwaySet_chr17, ocd_PathwaySet_chr18, ocd_PathwaySet_chr19, ocd_PathwaySet_chr20, ocd_PathwaySet_chr21<span class="hljs-comment">#, ocd_PathwaySet_chr22)</span><br>ocd_PathwaySet &lt;- ocd_PathwaySet[order(ocd_PathwaySet$chi2Pvalue),] <span class="hljs-comment">#按照chipvalue升序排列</span><br>head(ocd_PathwaySet)<br><span class="hljs-comment">##                                                                Name chi2Pvalue empPvalue chr</span><br><span class="hljs-comment">## 6463                                       REACTOME_NEURONAL_SYSTEM   0.000220  0.000161   7</span><br><span class="hljs-comment">## 6464                                    REACTOME_POTASSIUM_CHANNELS   0.000231  0.000112   7</span><br><span class="hljs-comment">## 4309  REACTOME_APC_C_CDC20_MEDIATED_DEGRADATION_OF_MITOTIC_PROTEINS   0.000580  0.000420   5</span><br><span class="hljs-comment">## 6465                      REACTOME_VOLTAGE_GATED_POTASSIUM_CHANNELS   0.000824  0.000459   7</span><br><span class="hljs-comment">## 11848                REACTOME_PLATELET_ADHESION_TO_EXPOSED_COLLAGEN   0.000861  0.000710  12</span><br><span class="hljs-comment">## 9694                                         KEGG_ADHERENS_JUNCTION   0.000866  0.000536  10</span><br><br>ocd_PathwaySet_0.05 &lt;- filter(ocd_PathwaySet, chi2Pvalue&lt;<span class="hljs-number">0.05</span> &amp; empPvalue&lt;<span class="hljs-number">0.05</span>)<br>head(ocd_PathwaySet_0.05)<br><span class="hljs-comment">##                                                            Name chi2Pvalue empPvalue chr</span><br><span class="hljs-comment">## 1                                      REACTOME_NEURONAL_SYSTEM   0.000220  0.000161   7</span><br><span class="hljs-comment">## 2                                   REACTOME_POTASSIUM_CHANNELS   0.000231  0.000112   7</span><br><span class="hljs-comment">## 3 REACTOME_APC_C_CDC20_MEDIATED_DEGRADATION_OF_MITOTIC_PROTEINS   0.000580  0.000420   5</span><br><span class="hljs-comment">## 4                     REACTOME_VOLTAGE_GATED_POTASSIUM_CHANNELS   0.000824  0.000459   7</span><br><span class="hljs-comment">## 5                REACTOME_PLATELET_ADHESION_TO_EXPOSED_COLLAGEN   0.000861  0.000710  12</span><br><span class="hljs-comment">## 6                                        KEGG_ADHERENS_JUNCTION   0.000866  0.000536  10</span><br>                        <br>write.table(ocd_PathwaySet_0.05, file = <span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/ocd_PathwaySet_0.05.txt&quot;</span>, <span class="hljs-built_in">quote</span> = <span class="hljs-literal">FALSE</span>, sep = <span class="hljs-string">&quot;\t&quot;</span>, row.names = <span class="hljs-literal">FALSE</span>, col.names = <span class="hljs-literal">TRUE</span>)<br></code></pre></td></tr></table></figure>
+<h3><span id="1-7-alcohol-use-disorder">1.7. alcohol use disorder</span><a href="#1-7-alcohol-use-disorder" class="header-anchor">#</a></h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><code class="hljs r"><span class="hljs-comment">#整理geneset格式（加上chr编号）</span><br>alcohol_use_disorder_PathwaySet_chr1 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/pgc_alcdep.eur_discovery.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220110.sum.chr1.txt&quot;</span>)<br>alcohol_use_disorder_PathwaySet_chr2 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/pgc_alcdep.eur_discovery.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220110.sum.chr2.txt&quot;</span>)<br>alcohol_use_disorder_PathwaySet_chr3 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/pgc_alcdep.eur_discovery.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220110.sum.chr3.txt&quot;</span>)<br>alcohol_use_disorder_PathwaySet_chr4 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/pgc_alcdep.eur_discovery.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220110.sum.chr4.txt&quot;</span>)<br>alcohol_use_disorder_PathwaySet_chr5 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/pgc_alcdep.eur_discovery.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220110.sum.chr5.txt&quot;</span>)<br>alcohol_use_disorder_PathwaySet_chr6 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/pgc_alcdep.eur_discovery.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220110.sum.chr6.txt&quot;</span>)<br>alcohol_use_disorder_PathwaySet_chr7 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/pgc_alcdep.eur_discovery.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220110.sum.chr7.txt&quot;</span>)<br>alcohol_use_disorder_PathwaySet_chr8 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/pgc_alcdep.eur_discovery.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220110.sum.chr8.txt&quot;</span>)<br>alcohol_use_disorder_PathwaySet_chr9 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/pgc_alcdep.eur_discovery.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220110.sum.chr9.txt&quot;</span>)<br>alcohol_use_disorder_PathwaySet_chr10 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/pgc_alcdep.eur_discovery.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220110.sum.chr10.txt&quot;</span>)<br>alcohol_use_disorder_PathwaySet_chr11 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/pgc_alcdep.eur_discovery.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220110.sum.chr11.txt&quot;</span>)<br>alcohol_use_disorder_PathwaySet_chr12 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/pgc_alcdep.eur_discovery.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220110.sum.chr12.txt&quot;</span>)<br>alcohol_use_disorder_PathwaySet_chr13 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/pgc_alcdep.eur_discovery.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220110.sum.chr13.txt&quot;</span>)<br>alcohol_use_disorder_PathwaySet_chr14 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/pgc_alcdep.eur_discovery.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220110.sum.chr14.txt&quot;</span>)<br>alcohol_use_disorder_PathwaySet_chr15 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/pgc_alcdep.eur_discovery.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220110.sum.chr15.txt&quot;</span>)<br>alcohol_use_disorder_PathwaySet_chr16 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/pgc_alcdep.eur_discovery.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220110.sum.chr16.txt&quot;</span>)<br>alcohol_use_disorder_PathwaySet_chr17 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/pgc_alcdep.eur_discovery.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220110.sum.chr17.txt&quot;</span>)<br>alcohol_use_disorder_PathwaySet_chr18 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/pgc_alcdep.eur_discovery.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220110.sum.chr18.txt&quot;</span>)<br>alcohol_use_disorder_PathwaySet_chr19 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/pgc_alcdep.eur_discovery.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220110.sum.chr19.txt&quot;</span>)<br>alcohol_use_disorder_PathwaySet_chr20 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/pgc_alcdep.eur_discovery.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220110.sum.chr20.txt&quot;</span>)<br>alcohol_use_disorder_PathwaySet_chr21 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/pgc_alcdep.eur_discovery.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220110.sum.chr21.txt&quot;</span>)<br>alcohol_use_disorder_PathwaySet_chr22 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/pgc_alcdep.eur_discovery.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220110.sum.chr22.txt&quot;</span>)<br><br>alcohol_use_disorder_PathwaySet &lt;- rbind(alcohol_use_disorder_PathwaySet_chr1, alcohol_use_disorder_PathwaySet_chr2, alcohol_use_disorder_PathwaySet_chr3, alcohol_use_disorder_PathwaySet_chr4, alcohol_use_disorder_PathwaySet_chr5, alcohol_use_disorder_PathwaySet_chr6, alcohol_use_disorder_PathwaySet_chr7, alcohol_use_disorder_PathwaySet_chr8, alcohol_use_disorder_PathwaySet_chr9, alcohol_use_disorder_PathwaySet_chr10, alcohol_use_disorder_PathwaySet_chr11, alcohol_use_disorder_PathwaySet_chr12, alcohol_use_disorder_PathwaySet_chr13, alcohol_use_disorder_PathwaySet_chr14, alcohol_use_disorder_PathwaySet_chr15, alcohol_use_disorder_PathwaySet_chr16, alcohol_use_disorder_PathwaySet_chr17, alcohol_use_disorder_PathwaySet_chr18, alcohol_use_disorder_PathwaySet_chr19, alcohol_use_disorder_PathwaySet_chr20, alcohol_use_disorder_PathwaySet_chr21, alcohol_use_disorder_PathwaySet_chr22)<br>alcohol_use_disorder_PathwaySet &lt;- alcohol_use_disorder_PathwaySet[order(alcohol_use_disorder_PathwaySet$chi2Pvalue),] <span class="hljs-comment">#按照chipvalue升序排列</span><br>head(alcohol_use_disorder_PathwaySet)<br><span class="hljs-comment">##                                                                Name chi2Pvalue empPvalue chr</span><br><span class="hljs-comment">## 16156              REACTOME_PRE_NOTCH_TRANSCRIPTION_AND_TRANSLATION   0.000390  0.000147  16</span><br><span class="hljs-comment">## 9694                                           BIOCARTA_FAS_PATHWAY   0.000439  0.000429  10</span><br><span class="hljs-comment">## 5386                                       BIOCARTA_P38MAPK_PATHWAY   0.000580  0.000410   6</span><br><span class="hljs-comment">## 9695                                                 KEGG_APOPTOSIS   0.000676  0.000830  10</span><br><span class="hljs-comment">## 10771 REACTOME_ADVANCED_GLYCOSYLATION_ENDPRODUCT_RECEPTOR_SIGNALING   0.000702  0.000850  11</span><br><span class="hljs-comment">## 22618                                    KEGG_WNT_SIGNALING_PATHWAY   0.000710  0.000322  22</span><br><br>alcohol_use_disorder_PathwaySet_0.05 &lt;- filter(alcohol_use_disorder_PathwaySet, chi2Pvalue&lt;<span class="hljs-number">0.05</span> &amp; empPvalue&lt;<span class="hljs-number">0.05</span>)<br>head(alcohol_use_disorder_PathwaySet_0.05)<br><span class="hljs-comment">##                                                            Name chi2Pvalue empPvalue chr</span><br><span class="hljs-comment">## 1              REACTOME_PRE_NOTCH_TRANSCRIPTION_AND_TRANSLATION   0.000390  0.000147  16</span><br><span class="hljs-comment">## 2                                          BIOCARTA_FAS_PATHWAY   0.000439  0.000429  10</span><br><span class="hljs-comment">## 3                                      BIOCARTA_P38MAPK_PATHWAY   0.000580  0.000410   6</span><br><span class="hljs-comment">## 4                                                KEGG_APOPTOSIS   0.000676  0.000830  10</span><br><span class="hljs-comment">## 5 REACTOME_ADVANCED_GLYCOSYLATION_ENDPRODUCT_RECEPTOR_SIGNALING   0.000702  0.000850  11</span><br><span class="hljs-comment">## 6                                    KEGG_WNT_SIGNALING_PATHWAY   0.000710  0.000322  22</span><br><br>write.table(alcohol_use_disorder_PathwaySet_0.05, file = <span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/alcohol_use_disorder_PathwaySet_0.05.txt&quot;</span>, <span class="hljs-built_in">quote</span> = <span class="hljs-literal">FALSE</span>, sep = <span class="hljs-string">&quot;\t&quot;</span>, row.names = <span class="hljs-literal">FALSE</span>, col.names = <span class="hljs-literal">TRUE</span>)<br></code></pre></td></tr></table></figure>
+<h3><span id="1-8-tourette-syndrome">1.8. tourette syndrome</span><a href="#1-8-tourette-syndrome" class="header-anchor">#</a></h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-comment">#整理geneset格式</span><br>tourette_syndrome_PathwaySet_chr1 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/TS_Oct2018_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220105.sum.chr1.txt&quot;</span>)<br>tourette_syndrome_PathwaySet_chr2 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/TS_Oct2018_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220105.sum.chr2.txt&quot;</span>)<br>tourette_syndrome_PathwaySet_chr3 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/TS_Oct2018_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220105.sum.chr3.txt&quot;</span>)<br>tourette_syndrome_PathwaySet_chr4 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/TS_Oct2018_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220105.sum.chr4.txt&quot;</span>)<br>tourette_syndrome_PathwaySet_chr5 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/TS_Oct2018_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220105.sum.chr5.txt&quot;</span>)<br>tourette_syndrome_PathwaySet_chr6 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/TS_Oct2018_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220105.sum.chr6.txt&quot;</span>)<br>tourette_syndrome_PathwaySet_chr7 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/TS_Oct2018_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220105.sum.chr7.txt&quot;</span>)<br>tourette_syndrome_PathwaySet_chr8 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/TS_Oct2018_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220105.sum.chr8.txt&quot;</span>)<br>tourette_syndrome_PathwaySet_chr9 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/TS_Oct2018_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220105.sum.chr9.txt&quot;</span>)<br>tourette_syndrome_PathwaySet_chr10 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/TS_Oct2018_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220105.sum.chr10.txt&quot;</span>)<br>tourette_syndrome_PathwaySet_chr11 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/TS_Oct2018_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220105.sum.chr11.txt&quot;</span>)<br>tourette_syndrome_PathwaySet_chr12 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/TS_Oct2018_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220105.sum.chr12.txt&quot;</span>)<br>tourette_syndrome_PathwaySet_chr13 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/TS_Oct2018_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220105.sum.chr13.txt&quot;</span>)<br>tourette_syndrome_PathwaySet_chr14 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/TS_Oct2018_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220105.sum.chr14.txt&quot;</span>)<br>tourette_syndrome_PathwaySet_chr15 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/TS_Oct2018_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220105.sum.chr15.txt&quot;</span>)<br>tourette_syndrome_PathwaySet_chr16 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/TS_Oct2018_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220105.sum.chr16.txt&quot;</span>)<br>tourette_syndrome_PathwaySet_chr17 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/TS_Oct2018_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220105.sum.chr17.txt&quot;</span>)<br>tourette_syndrome_PathwaySet_chr18 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/TS_Oct2018_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220105.sum.chr18.txt&quot;</span>)<br>tourette_syndrome_PathwaySet_chr19 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/TS_Oct2018_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220105.sum.chr19.txt&quot;</span>)<br>tourette_syndrome_PathwaySet_chr20 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/TS_Oct2018_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220105.sum.chr20.txt&quot;</span>)<br>tourette_syndrome_PathwaySet_chr21 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/TS_Oct2018_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220105.sum.chr21.txt&quot;</span>)<br>tourette_syndrome_PathwaySet_chr22 &lt;- read.delim(<span class="hljs-string">&quot;/Volumes/My\ Passport\ for\ Mac/biosoftware/PASCAL/output/TS_Oct2018_pascal_form.PathwaySet--msigBIOCARTA_KEGG_REACTOME--20220105.sum.chr22.txt&quot;</span>)<br><br>tourette_syndrome_PathwaySet &lt;- rbind(tourette_syndrome_PathwaySet_chr1, tourette_syndrome_PathwaySet_chr2, tourette_syndrome_PathwaySet_chr3, tourette_syndrome_PathwaySet_chr4, tourette_syndrome_PathwaySet_chr5, tourette_syndrome_PathwaySet_chr6, tourette_syndrome_PathwaySet_chr7, tourette_syndrome_PathwaySet_chr8, tourette_syndrome_PathwaySet_chr9, tourette_syndrome_PathwaySet_chr10, tourette_syndrome_PathwaySet_chr11, tourette_syndrome_PathwaySet_chr12, tourette_syndrome_PathwaySet_chr13, tourette_syndrome_PathwaySet_chr14, tourette_syndrome_PathwaySet_chr15, tourette_syndrome_PathwaySet_chr16, tourette_syndrome_PathwaySet_chr17, tourette_syndrome_PathwaySet_chr18, tourette_syndrome_PathwaySet_chr19, tourette_syndrome_PathwaySet_chr20, tourette_syndrome_PathwaySet_chr21, tourette_syndrome_PathwaySet_chr22)<br><br>tourette_syndrome_PathwaySet &lt;- tourette_syndrome_PathwaySet[order(tourette_syndrome_PathwaySet$chi2Pvalue),] <span class="hljs-comment">#按照chipvalue升序排列</span><br>head(tourette_syndrome_PathwaySet)<br><span class="hljs-comment">##                                                                      Name chi2Pvalue empPvalue chr</span><br><span class="hljs-comment">## 19387                                          KEGG_PYRIMIDINE_METABOLISM   0.000302  4.59e-05  19</span><br><span class="hljs-comment">## 19388                                              KEGG_PURINE_METABOLISM   0.000487  1.76e-04  19</span><br><span class="hljs-comment">## 1078                                       REACTOME_DEVELOPMENTAL_BIOLOGY   0.000555  3.59e-04   2</span><br><span class="hljs-comment">## 14002                                         BIOCARTA_PROTEASOME_PATHWAY   0.000801  4.52e-04  14</span><br><span class="hljs-comment">## 9694  REACTOME_CROSS_PRESENTATION_OF_SOLUBLE_EXOGENOUS_ANTIGENS_ENDOSOMES   0.001130  1.22e-03  10</span><br><span class="hljs-comment">## 1079                                               REACTOME_AXON_GUIDANCE   0.001190  8.60e-04   2</span><br><br>tourette_syndrome_PathwaySet_0.05 &lt;- filter(tourette_syndrome_PathwaySet, chi2Pvalue&lt;<span class="hljs-number">0.05</span> &amp; empPvalue&lt;<span class="hljs-number">0.05</span>)<br>head(tourette_syndrome_PathwaySet_0.05)<br><span class="hljs-comment">##                                                                  Name chi2Pvalue empPvalue chr</span><br><span class="hljs-comment">## 1                                          KEGG_PYRIMIDINE_METABOLISM   0.000302  4.59e-05  19</span><br><span class="hljs-comment">## 2                                              KEGG_PURINE_METABOLISM   0.000487  1.76e-04  19</span><br><span class="hljs-comment">## 3                                      REACTOME_DEVELOPMENTAL_BIOLOGY   0.000555  3.59e-04   2</span><br><span class="hljs-comment">## 4                                         BIOCARTA_PROTEASOME_PATHWAY   0.000801  4.52e-04  14</span><br><span class="hljs-comment">## 5 REACTOME_CROSS_PRESENTATION_OF_SOLUBLE_EXOGENOUS_ANTIGENS_ENDOSOMES   0.001130  1.22e-03  10</span><br><span class="hljs-comment">## 6                                              REACTOME_AXON_GUIDANCE   0.001190  8.60e-04   2</span><br></code></pre></td></tr></table></figure>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/01/14/20220114AO3tags_scraping/">
+                        <span class="hidden-mobile">AO3 tags scraping (bottom_s) & wordcloud</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                  
+                
+                
+  <div class="disqus" style="width:100%">
+    <div id="disqus_thread"></div>
+    <script>
+      Fluid.utils.waitElementVisible('disqus_thread', function() {
+        Fluid.utils.createCssLink('https://cdn.jsdelivr.net/npm/disqusjs@1.0/dist/disqusjs.css');
+        Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/disqusjs@1.0/dist/disqus.js', function () {
+          new DisqusJS({
+            shortname: 'fluid',
+            apikey: ''
+          });
+        });
+      });
+    </script>
+    <noscript>Please enable JavaScript to view the
+      <a target="_blank" href="https://disqus.com/?ref_noscript" rel="nofollow noopener noopener">comments powered by Disqus.</a>
+    </noscript>
+  </div>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+</body>
+</html>
